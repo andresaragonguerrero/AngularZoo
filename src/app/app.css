@@ -1,0 +1,19 @@
+.header {
+  position: relative;
+  display: grid;
+  grid-template-rows: var(--space-6) var(--space-7);
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+}
+
+.footer {
+  position: relative;
+  display: grid;
+  background-color: var(--primary-color);
+}/*# sourceMappingURL=app.css.map */

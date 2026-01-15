@@ -50,19 +50,19 @@ body {
   --space-11: calc(var(--space-base) * 12.00);
   --space-12: calc(var(--space-base) * 20.00);
   /* colors */
-  --primary-color: #e0f31f;
-  --secondary-color: #95f773;
-  --accent-color: #62f554;
-  --text-color: #1b1f02;
-  --background-color: #fcfeee;
+  --primary-color: #f9a010;
+  --secondary-color: #71c5ef;
+  --accent-color: #3b7efa;
+  --text-color: #140c00;
+  --background-color: #fffaf0;
 }
 
 :root.dark {
-  --primary-color: #cddf0c;
-  --secondary-color: #298c08;
-  --accent-color: #17a90a;
-  --text-color: #fafde2;
-  --background-color: #111301;
+  --primary-color: #ef9606;
+  --secondary-color: #10648e;
+  --accent-color: #0547c2;
+  --text-color: #fffaf0;
+  --background-color: #0f0a00;
 }
 
 * {

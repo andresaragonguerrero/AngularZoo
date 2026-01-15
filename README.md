@@ -1,45 +1,57 @@
 ## COMANDOS
+
 ### Compilar y abrir el proyecto
+
 - ng s -o/ ng serve -o
 
 ### Instalar Angular Material
+
 - ng add @angular/material
 
 ### Instalar ngx-translate
+
 - ng add @ngx-translate/core
 - ng add @ngx-translate/http-loader
 
 ## SECCIONES
+
 ### En el header
-- páginas: 
-    - home
-    - comprar tickets/entradas
-    - animales
-    - ecosistemas
-    - hacerse socio/miembro
+
+- páginas:
+
+  - home
+  - comprar tickets/entradas
+  - animales
+  - ecosistemas
+  - hacerse socio/miembro
+  
 - comprar tickets/entradas
 - contacto
 - elegir idioma
 - elegir tema
 
 ### En home
+
 - bienvenida
 - compra de tickets/entradas
-- info del parque: 
-  - nuestros horarios, 
-  - mapa del zoo, 
-  - animales, 
+- info del parque:
+
+  - nuestros horarios,
+  - mapa del zoo,
+  - animales,
   - ecosistemas
 - cursos educativos
-- actividades: 
+- actividades:
+
   - exhibición de aves
   - actividad con fauna africana
   - actividad con monos
 
 ## FUNCIONALIDADES
+
 - cambio de idioma
 - cambio de tema
-- reserva de entradas (enum tipo de entrada: general, oferta, bono anual): 
+- reserva de entradas (enum tipo de entrada: general, oferta, bono anual):
   - comprar entrada:
     - añadir a DBIndex
   - cancelar entrada
@@ -56,6 +68,7 @@
 - apuntarse a un curso
 
 ## INTERFACES
+
 - language
 - theme
 - ticket
@@ -63,10 +76,14 @@
 - course
 
 ## COMPONENTES
+
 ### Principales
+
 - header
 - footer
+
 ### Secundarios (secciones)
+
 - hero:
   - sección de bienvenida con imagen de fondo
 - ticket-purchase
@@ -79,7 +96,9 @@
 - membership
 - courses
 - activities
+
 ### Concretos
+
 - form:
   - darse de alta como socio/miembro
   - comprar una entrada/ticket
@@ -87,6 +106,7 @@
   - apuntarse a un curso
 
 ## SERVICIOS
+
 - language-service: para la elección de idioma
 - theme-service: para la elección del tema
 - ticket-service: para la compra de entradas
