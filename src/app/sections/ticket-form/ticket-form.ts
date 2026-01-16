@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component} from '@angular/core';
 
 @Component({
   selector: 'app-ticket-form',
@@ -6,6 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: './ticket-form.html',
   styleUrl: './ticket-form.scss',
 })
-export class TicketForm {
-
-}
+export class TicketForm {}

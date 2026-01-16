@@ -1,5 +1,14 @@
 <app-hero></app-hero>
-<app-ticket-purchase></app-ticket-purchase>
+
+<!-- alternancia entre secciones: ticket-purchase y ticket-form -->
+@if (!showTicketForm) {
+  <app-ticket-purchase (buyClicked)="showTicketForm = true"></app-ticket-purchase>
+}
+
+@if (showTicketForm) {
+  <app-ticket-form (cancel)="showTicketForm = false"></app-ticket-form>
+}
+
 <app-park-info></app-park-info>
 <app-courses></app-courses>
 <app-activities></app-activities>
