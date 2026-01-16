@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TicketCard } from './ticket-card';
 import { PriceCalculatorService } from '../../services/price-calculator.service';
+import { TicketService } from '../../services/ticket.service';
 
 const mockPriceCalculatorService = {
   updateQuantity: jasmine.createSpy('updateQuantity'),
@@ -11,8 +12,20 @@ const mockPriceCalculatorService = {
     SENIOR: 1,
     ADULT: 1,
     CHILD: 1
+  }),
+  reset: jasmine.createSpy('reset') // añadido
+};
+
+//añadido
+const mockTicketService = {
+  createAndSaveTicket: jasmine.createSpy('createAndSaveTicket').and.returnValue({
+    id: 'test-id-123',
+    date: '2024-01-20',
+    quantities: { ADULT: 1, CHILD: 1, SENIOR: 1 },
+    total: 50
   })
 };
+// fin del añadido
 
 describe('TicketCardComponent', () => {
   let component: TicketCard;
@@ -25,7 +38,13 @@ describe('TicketCardComponent', () => {
         {
           provide: PriceCalculatorService,
           useValue: mockPriceCalculatorService
-        }
+        },
+        // añadido
+        {
+          provide: TicketService,
+          useValue: mockTicketService
+        },
+        // fin del añadido
       ]
     }).compileComponents();
 
@@ -35,13 +54,14 @@ describe('TicketCardComponent', () => {
   });
 
   // Limpiar spies después de cada test
-  // Limpiar spies después de cada test
   afterEach(() => {
     // Resetear todos los spies manualmente
     mockPriceCalculatorService.updateQuantity.calls.reset();
     mockPriceCalculatorService.total.calls.reset();
     mockPriceCalculatorService.getTotalTickets.calls.reset();
     mockPriceCalculatorService.quantities.calls.reset();
+    mockPriceCalculatorService.reset.calls.reset(); // añadido
+    mockTicketService.createAndSaveTicket.calls.reset(); // añadido
   });
 
   it('debería crear el componente', () => {
@@ -91,7 +111,7 @@ describe('TicketCardComponent', () => {
   });
 
   describe('onBuyClick', () => {
-    it('debería llamar al servicio y mostrar en consola', () => {
+    it('debería crear ticket y resetear formulario', () => {
       const consoleSpy = spyOn(console, 'log');
       component.seniorQuantity = 1;
       component.adultQuantity = 2;
@@ -103,6 +123,19 @@ describe('TicketCardComponent', () => {
       expect(mockPriceCalculatorService.total).toHaveBeenCalled();
       expect(mockPriceCalculatorService.getTotalTickets).toHaveBeenCalled();
 
+      // Verifica que se creó el ticket
+      expect(mockTicketService.createAndSaveTicket).toHaveBeenCalledWith({
+        date: jasmine.any(String), // Fecha en formato YYYY-MM-DD
+        quantities: { SENIOR: 1, ADULT: 1, CHILD: 1 },
+        total: 50
+      });
+
+      // Verifica que se reseteó
+      expect(mockPriceCalculatorService.reset).toHaveBeenCalled();
+
+      // Verifica que se imprimió en consola
+      expect(consoleSpy).toHaveBeenCalled();
+
       // Verifica que se imprimió en consola (cualquier llamada)
       expect(consoleSpy).toHaveBeenCalled();
 
@@ -113,6 +146,20 @@ describe('TicketCardComponent', () => {
       );
 
       expect(hasResumen).toBeTrue();
+    });
+
+    it('debería resetear cantidades locales a 0', () => {
+      // Configurar cantidades iniciales
+      component.seniorQuantity = 2;
+      component.adultQuantity = 3;
+      component.childQuantity = 1;
+
+      component.onBuyClick();
+
+      // Verificar que se resetean
+      expect(component.seniorQuantity).toBe(0);
+      expect(component.adultQuantity).toBe(0);
+      expect(component.childQuantity).toBe(0);
     });
   });
 });
