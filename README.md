@@ -1,3 +1,5 @@
+# ANGULAR ZOO
+
 ## COMANDOS
 
 ### Compilar y abrir el proyecto
@@ -12,6 +14,10 @@
 
 - ng add @ngx-translate/core
 - ng add @ngx-translate/http-loader
+
+### Ejecutar pruebas unitarias
+
+- ng test
 
 ## SECCIONES
 
