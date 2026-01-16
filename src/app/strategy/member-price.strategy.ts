@@ -1,14 +1,10 @@
 import { Injectable } from "@angular/core";
 
-import { TicketQuantities, TicketType, TICKET_PRICES } from '../models/ticket-type';
-
-interface PriceStrategy {
-  calculatePrice(quantities: TicketQuantities): number;
-  getUnitPrice(TicketType: string): number;
-}
+import { PriceStrategy } from "../interfaces/price-strategy";
+import { TicketQuantities, TICKET_PRICES } from '../models/ticket-type';
 
 @Injectable({ providedIn: 'root' })
-export class MemberPriceStrategy {
+export class MemberPriceStrategy implements PriceStrategy {
   private readonly DISCOUNT = 0.5; // descuento base por ser socio del 50%
 
   calculateTotal(quantities: TicketQuantities): number {
