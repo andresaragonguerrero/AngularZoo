@@ -1,8 +1,12 @@
 import { Component} from '@angular/core';
 
+import { TicketCard } from '../../components/ticket-card/ticket-card';
+
 @Component({
   selector: 'app-ticket-form',
-  imports: [],
+  imports: [
+    TicketCard,
+  ],
   templateUrl: './ticket-form.html',
   styleUrl: './ticket-form.scss',
 })
