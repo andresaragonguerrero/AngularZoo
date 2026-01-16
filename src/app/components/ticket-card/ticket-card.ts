@@ -1,6 +1,7 @@
 import { Component, inject } from '@angular/core';
 
 import { PriceCalculatorService } from '../../services/price-calculator.service';
+import { TicketService } from '../../services/ticket.service';
 
 @Component({
   selector: 'app-ticket-card',
@@ -9,7 +10,12 @@ import { PriceCalculatorService } from '../../services/price-calculator.service'
   styleUrl: './ticket-card.scss',
 })
 export class TicketCard {
-  private readonly priceCalculator = inject(PriceCalculatorService);
+  // private readonly priceCalculator = inject(PriceCalculatorService);
+
+  constructor(
+    private readonly priceCalculator: PriceCalculatorService,
+    private readonly ticketService: TicketService
+  ) { }
 
   seniorQuantity = 0;
   adultQuantity = 0;
@@ -36,7 +42,17 @@ export class TicketCard {
 
   // Función del botón de compra
   onBuyClick(): void {
+    const quantities = this.priceCalculator.quantities();
     const total = this.priceCalculator.total();
+
+    // crear y guardar ticket
+    const ticket = this.ticketService.createAndSaveTicket({
+      date: new Date().toISOString().split('T')[0], // Fecha por defecto
+      quantities,
+      total
+    });
+
+    // a modo de test
     const totalTickets = this.priceCalculator.getTotalTickets();
 
     // test
@@ -48,8 +64,15 @@ export class TicketCard {
     console.log(`Precio total: €${total.toFixed(2)}`);
     console.log('=========================');
 
-    // Verifica si el servicio está funcionando
+    // verifica si el servicio está funcionando
     console.log('Servicio - total signal:', this.priceCalculator.total());
     console.log('Servicio - quantities:', this.priceCalculator.quantities());
+
+    // mostrar confirmación
+    console.log('Ticket guardado:', ticket);
+
+    // resetear formulario
+    this.priceCalculator.reset();
+    this.seniorQuantity = this.adultQuantity = this.childQuantity = 0;
   }
 }

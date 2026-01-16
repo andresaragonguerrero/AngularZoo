@@ -119,3 +119,9 @@
 - membership-service: para darse de alta como socio
 - activity-service: para darse de alta en una actividad
 - course-service: para darse de alta en un curso
+
+## NOTAS TÉCNICAS
+
+Con respecto a la funcionalidad relacionada con la compra de entradas, decidí primero tener dicha característica funcionando de manera básica y esperar a crear la funcionalidad del login para añadir a los miembros en la ecuación.
+
+El flujo transcurre desde que el usuario introduce el número de personas que desean una entrada hasta que se muestra una confirmación. Por el camino, una vez que se introducen las cantidades, un servicio se encarga de contear y calcular los precios. El usuario pulsa a comprar la entrada, en ese momento, mediante el Factory, se crea un objeto ticket con sus características. Finalmente, y esta vez usando Repository, dicha información se almacena en el localStorage del navegador.
