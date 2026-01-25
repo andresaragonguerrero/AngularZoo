@@ -1,5 +1,3 @@
-// src/app/features/auth/models/user.interface.ts
-
 export interface User {
   // Identificación única
   id: string;                     
