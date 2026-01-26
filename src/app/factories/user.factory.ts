@@ -1,32 +1,26 @@
 import { Injectable } from '@angular/core';
+import { User } from '../models/user';
 
-import { Ticket } from '../models/ticket';
-import { TicketQuantities } from '../models/ticket-type';
-
-@Injectable({
-    providedIn: 'root',
-})
-export class TicketFactory {
-
-    createTicket(data: {
-        date: string;
-        quantities: TicketQuantities;
-        total: number;
-    }): Ticket {
-
-        const adultQty = data.quantities.ADULT ?? 0;
-        const childQty = data.quantities.CHILD ?? 0;
-        const seniorQty = data.quantities.SENIOR ?? 0;
+@Injectable({ providedIn: 'root' })
+export class UserFactory {
+    createUser(data: {
+        firstName: string;
+        lastName: string;
+        email: string;
+        age: number;
+        isMember?: boolean;
+    }): User {
+        const now = new Date().toISOString();
 
         return {
             id: this.generateId(),
-            date: data.date || new Date().toISOString().split('T')[0],
-            quantities: {
-                ADULT: Math.max(0, adultQty),
-                CHILD: Math.max(0, childQty),
-                SENIOR: Math.max(0, seniorQty)
-            },
-            total: Math.max(0, data.total),
+            firstName: this.sanitizeName(data.firstName),
+            lastName: this.sanitizeName(data.lastName),
+            email: this.sanitizeEmail(data.email),
+            age: this.validateAge(data.age),
+            isMember: data.isMember ?? false, // Por defecto no es socio
+            createdAt: now,
+            updatedAt: now
         };
     }
 
@@ -35,14 +29,37 @@ export class TicketFactory {
             return crypto.randomUUID();
         }
 
-        return `ticket-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
+        // Fallback
+        return `user-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
     }
 
-    createFromCurrentState(
-        date: string,
-        quantities: TicketQuantities,
-        total: number
-    ): Ticket {
-        return this.createTicket({ date, quantities, total });
+    private sanitizeName(name: string): string {
+        return name.trim()
+            .split(' ')
+            .map(part => part.charAt(0).toUpperCase() + part.slice(1).toLowerCase())
+            .join(' ');
+    }
+
+    private sanitizeEmail(email: string): string {
+        return email.toLowerCase().trim();
+    }
+
+    private validateAge(age: number): number {
+        return Math.max(0, Math.min(Math.round(age), 120));
+    }
+
+    getAgeGroup(age: number): 'CHILD' | 'ADULT' | 'SENIOR' {
+        if (age < 13) return 'CHILD';
+        if (age < 65) return 'ADULT';
+        return 'SENIOR';
+    }
+
+    getFullName(firstName: string, lastName: string): string {
+        return `${this.sanitizeName(firstName)} ${this.sanitizeName(lastName)}`.trim();
+    }
+
+    getBirthYear(age: number): number {
+        const currentYear = new Date().getFullYear();
+        return currentYear - age;
     }
 }
