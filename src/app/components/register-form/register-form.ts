@@ -1,32 +1,27 @@
-import { Component } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
-
-import { UserService } from '../../services/user.service';
+import { Router } from '@angular/router';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-register-form',
-  imports: [
-    ReactiveFormsModule
-  ],
+  imports: [ReactiveFormsModule],
   templateUrl: './register-form.html',
   styleUrl: './register-form.scss',
 })
-
 export class RegisterForm {
+  private readonly authService = inject(AuthService);
+  private readonly fb = inject(FormBuilder);
+  private readonly router = inject(Router);
+
   registerForm: FormGroup;
   isLoading = false;
   emailExists = false;
 
-  registrationSuccess = false;
-  registeredUser: any = null;
-  errorMessage = '';
+  error = this.authService.error;
+  authIsLoading = this.authService.isLoading;
 
-  constructor(
-    private readonly userService: UserService,
-    private readonly fb: FormBuilder,
-    private readonly router: Router,
-  ) {
+  constructor() {
     this.registerForm = this.fb.group({
       firstName: ['', [Validators.required, Validators.minLength(2)]],
       lastName: ['', [Validators.required]],
@@ -41,40 +36,31 @@ export class RegisterForm {
     if (this.registerForm.valid) {
       this.isLoading = true;
       this.emailExists = false;
-      this.registrationSuccess = false;
-      this.errorMessage = '';
+      this.error.set(null);
 
       try {
-        const user = await this.userService.register(this.registerForm.value);
+        const user = await this.authService.register(this.registerForm.value);
 
         if (user) {
-          // redirige después de 2 segundos a home o a tickets, según se prefiera
+          console.log('Registro exitoso. Usuario autenticado:', user.email);
+
+          // Limpia el formulario
+          this.registerForm.reset({
+            agreeToTerms: false,
+            becomeMember: false
+          });
+
+          // Redirige después de 2 segundos
           setTimeout(() => {
             this.router.navigate(['/home']);
           }, 2000);
+
         } else {
           this.emailExists = true;
         }
       } catch (error) {
         console.error('Error:', error);
-      } finally {
-        this.isLoading = false;
-      }
-
-      try {
-        const user = await this.userService.register(this.registerForm.value);
-
-        if (user) {
-          this.registrationSuccess = true;
-          this.registeredUser = user;
-          this.registerForm.reset();
-        } else {
-          this.emailExists = true;
-          this.errorMessage = 'Este email ya está registrado';
-        }
-      } catch (error) {
-        this.errorMessage = 'Error en el registro. Intenta nuevamente.';
-        console.error('Error:', error);
+        this.emailExists = true;
       } finally {
         this.isLoading = false;
       }

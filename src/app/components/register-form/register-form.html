@@ -1,39 +1,87 @@
-<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form">
 
-    <input formControlName="firstName" placeholder="Nombre">
+  <!-- Nombre -->
+  <div class="form-group">
+    <label for="firstName">Nombre</label>
+    <input id="firstName" type="text" formControlName="firstName" placeholder="Nombre..."
+      [class.error]="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched">
+    <small *ngIf="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched">
+      El nombre es requerido (mínimo 2 caracteres)
+    </small>
+  </div>
 
-    <input formControlName="lastName" placeholder="Apellido">
+  <!-- Apellido -->
+  <div class="form-group">
+    <label for="lastName">Apellido</label>
+    <input id="lastName" type="text" formControlName="lastName" placeholder="Apellido..."
+      [class.error]="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched">
+    <small *ngIf="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched">
+      El apellido es requerido
+    </small>
+  </div>
 
-    <input type="email" formControlName="email" placeholder="Email">
-    <div *ngIf="emailExists">Este email ya está registrado</div>
+  <!-- Email -->
+  <div class="form-group">
+    <label for="email">Email</label>
+    <input id="email" type="email" formControlName="email" placeholder="email@email.com"
+      [class.error]="(registerForm.get('email')?.invalid && registerForm.get('email')?.touched) || emailExists">
+    <small *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+      Introduce un email válido
+    </small>
+    <small *ngIf="emailExists" class="error-message">
+      Este email ya está registrado
+    </small>
+  </div>
 
-    <input type="number" formControlName="age" placeholder="Edad">
+  <!-- Edad -->
+  <div class="form-group">
+    <label for="age">Edad</label>
+    <input id="age" type="number" formControlName="age" placeholder="30" min="0" max="120"
+      [class.error]="registerForm.get('age')?.invalid && registerForm.get('age')?.touched">
+    <small *ngIf="registerForm.get('age')?.invalid && registerForm.get('age')?.touched">
+      La edad debe estar entre 0 y 120 años
+    </small>
+  </div>
 
+  <!-- Términos -->
+  <div class="form-group checkbox">
     <label>
-        <input type="checkbox" formControlName="agreeToTerms">
-        Acepto términos y condiciones
+      <input type="checkbox" formControlName="agreeToTerms">
+      Acepto los términos y condiciones del zoo
     </label>
+    <small *ngIf="registerForm.get('agreeToTerms')?.invalid && registerForm.get('agreeToTerms')?.touched">
+      Debes aceptar los términos
+    </small>
+  </div>
 
+  <!-- Socio -->
+  <div class="form-group checkbox">
     <label>
-        <input type="checkbox" formControlName="becomeMember">
-        Quiero hacerme socio (50% descuento en entradas)
+      <input type="checkbox" formControlName="becomeMember">
+      Quiero hacerme socio (50% descuento en todas las entradas)
     </label>
+    <small class="hint">Puedes cambiar esta opción después en tu perfil</small>
+  </div>
 
-    <button type="submit" [disabled]="!registerForm.valid || isLoading">
-        {{ isLoading ? 'Registrando...' : 'Registrarse' }}
-    </button>
+  <!-- Mensajes de error generales -->
+  <div *ngIf="error()" class="error-message">
+    Error {{ error() }}
+  </div>
 
-    <div style="margin-top: 20px; font-size: 12px; color: #666;">
-        <div>Formulario válido: {{ registerForm.valid }}</div>
-        <div>Email existe: {{ emailExists }}</div>
-        <div>Cargando: {{ isLoading }}</div>
-    </div>
+  <!-- Submit -->
+  <button type="submit" [disabled]="!registerForm.valid || isLoading || authIsLoading()" class="submit-button">
+    {{ (isLoading || authIsLoading()) ? 'Registrando...' : 'Registrarse' }}
+  </button>
 
-    <div *ngIf="registrationSuccess" class="success-message">
-        ¡Registro exitoso! Usuario: {{ registeredUser?.firstName }}
-    </div>
-
-    <div *ngIf="errorMessage" class="error-message">
-        {{ errorMessage }}
-    </div>
+  <div class="debug-info" *ngIf="false"> <!-- true para debug -->
+    <hr>
+    <small>
+      <strong>Debug:</strong><br>
+      Form válido: {{ registerForm.valid }}<br>
+      Email existe: {{ emailExists }}<br>
+      Loading: {{ isLoading }}<br>
+      Auth Loading: {{ authIsLoading() }}<br>
+      Error: {{ error() }}
+    </small>
+  </div>
 </form>
