@@ -1,5 +1,5 @@
 import { Component, signal } from '@angular/core';
-import { ThemeService } from '../../services/themeService';
+import { ThemeService } from '../../services/theme.service';
 import { CommonModule } from '@angular/common';
 
 @Component({
