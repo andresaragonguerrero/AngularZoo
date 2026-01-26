@@ -6,6 +6,8 @@ import { AnimalsComponent } from './pages/animals/animals';
 import { EcosystemsComponent } from './pages/ecosystems/ecosystems';
 import { MembershipComponent } from './pages/membership/membership';
 import { TicketsComponent } from './pages/tickets/tickets';
+import { LoginPage } from './pages/login-page/login-page';
+import { RegisterPage } from './pages/register-page/register-page';
 
 export const routes: Routes = [
   {
@@ -22,12 +24,20 @@ export const routes: Routes = [
     component: EcosystemsComponent
   },
   {
+    path: 'home',
+    component: HomeComponent
+  },
+  {
+    path: 'login',
+    component: LoginPage
+  },
+  {
     path: 'membership',
     component: MembershipComponent
   },
-    {
-    path: 'home',
-    component: HomeComponent
+  {
+    path: 'register',
+    component: RegisterPage
   },
   {
     path: 'tickets',
