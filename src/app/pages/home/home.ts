@@ -9,6 +9,7 @@ import { Courses } from "../../sections/courses/courses";
 import { Activities } from "../../sections/activities/activities";
 import { TicketForm } from '../../sections/ticket-form/ticket-form';
 import { RegisterForm } from '../../components/register-form/register-form';
+import { LoginForm } from '../../components/login-form/login-form';
 
 @Component({
   selector: 'app-home',
@@ -21,6 +22,7 @@ import { RegisterForm } from '../../components/register-form/register-form';
     Courses,
     Activities,
     RegisterForm,
+    LoginForm,
   ],
   templateUrl: './home.html',
   styleUrl: './home.scss',
