@@ -60,14 +60,16 @@ body {
 }
 
 :root.dark {
-  --primary-color: #0f0a00;
+  --primary-color: #ffac1c;
   --secondary-color: #10648e;
   --accent-color: #0547c2;
   --text-color: #fffaf0;
-  --background-color: #ffac1c;
+  --background-color: #0f0a00;
 }
 
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
