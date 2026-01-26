@@ -1,4 +1,3 @@
-// src/app/features/tickets/repositories/ticket.repository.ts
 import { Injectable } from '@angular/core';
 import { Ticket } from '../models/ticket';
 

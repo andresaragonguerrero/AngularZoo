@@ -2,12 +2,15 @@
 
 <!-- alternancia entre secciones: ticket-purchase y ticket-form -->
 @if (!showTicketForm) {
-  <app-ticket-purchase (buyClicked)="showTicketForm = true"></app-ticket-purchase>
+<app-ticket-purchase (buyClicked)="showTicketForm = true"></app-ticket-purchase>
 }
 
 @if (showTicketForm) {
-  <app-ticket-form (cancel)="showTicketForm = false"></app-ticket-form>
+<app-ticket-form (cancel)="showTicketForm = false"></app-ticket-form>
 }
+
+<!-- este formulario debe ir en la página de registro de usuarios -->
+<app-register-form></app-register-form>
 
 <app-park-info></app-park-info>
 <app-courses></app-courses>

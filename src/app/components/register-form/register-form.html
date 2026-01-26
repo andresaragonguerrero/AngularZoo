@@ -1,1 +1,39 @@
-<p>register-form works!</p>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+
+    <input formControlName="firstName" placeholder="Nombre">
+
+    <input formControlName="lastName" placeholder="Apellido">
+
+    <input type="email" formControlName="email" placeholder="Email">
+    <div *ngIf="emailExists">Este email ya está registrado</div>
+
+    <input type="number" formControlName="age" placeholder="Edad">
+
+    <label>
+        <input type="checkbox" formControlName="agreeToTerms">
+        Acepto términos y condiciones
+    </label>
+
+    <label>
+        <input type="checkbox" formControlName="becomeMember">
+        Quiero hacerme socio (50% descuento en entradas)
+    </label>
+
+    <button type="submit" [disabled]="!registerForm.valid || isLoading">
+        {{ isLoading ? 'Registrando...' : 'Registrarse' }}
+    </button>
+
+    <div style="margin-top: 20px; font-size: 12px; color: #666;">
+        <div>Formulario válido: {{ registerForm.valid }}</div>
+        <div>Email existe: {{ emailExists }}</div>
+        <div>Cargando: {{ isLoading }}</div>
+    </div>
+
+    <div *ngIf="registrationSuccess" class="success-message">
+        ¡Registro exitoso! Usuario: {{ registeredUser?.firstName }}
+    </div>
+
+    <div *ngIf="errorMessage" class="error-message">
+        {{ errorMessage }}
+    </div>
+</form>

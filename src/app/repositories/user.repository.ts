@@ -1,4 +1,3 @@
-// src/app/features/auth/repositories/user.repository.ts
 import { Injectable } from '@angular/core';
 import { User } from '../models/user';
 

@@ -8,6 +8,7 @@ import { ParkInfo } from "../../sections/park-info/park-info";
 import { Courses } from "../../sections/courses/courses";
 import { Activities } from "../../sections/activities/activities";
 import { TicketForm } from '../../sections/ticket-form/ticket-form';
+import { RegisterForm } from '../../components/register-form/register-form';
 
 @Component({
   selector: 'app-home',
@@ -18,8 +19,9 @@ import { TicketForm } from '../../sections/ticket-form/ticket-form';
     TicketForm,
     ParkInfo,
     Courses,
-    Activities
-],
+    Activities,
+    RegisterForm,
+  ],
   templateUrl: './home.html',
   styleUrl: './home.scss',
 })
