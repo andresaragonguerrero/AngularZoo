@@ -51,12 +51,16 @@ body {
   --space-10: calc(var(--space-base) * 8.00);
   --space-11: calc(var(--space-base) * 12.00);
   --space-12: calc(var(--space-base) * 20.00);
+
   /* colors */
-  --primary-color: #fffaf0;
-  --secondary-color: #71c5ef;
-  --accent-color: #3b7efa;
-  --text-color: #140c00;
-  --background-color: #ffac1c;
+  :root {
+    --primary-color: #FFDE21;
+    --secondary-color: #008000;
+    --accent-color: #2A6F8F;
+    --background-color: #FFF8EC;
+    --text-color: #3B2A1A;
+  }
+
 }
 
 :root.dark {
@@ -84,4 +88,8 @@ body {
 
 ul {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
 }
