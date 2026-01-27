@@ -1,0 +1,18 @@
+.setting-icon-list {
+  height: var(--space-6);
+
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.setting-icon-item {
+  display: flex;
+  align-items: center;
+}
+
+.text-language {
+  font-size: 16px;
+  font-family: var(--secondary-font-family);
+  font-weight: normal;
+}

@@ -1,0 +1,56 @@
+.auth-list {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.auth-item {
+  min-height: var(--space-7);
+  min-width: calc(var(--space-7) + var(--space-7));
+
+  padding: 0 var(--space-3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+
+  border: none;
+  border-radius: 5px;
+  outline: none;
+
+  cursor: pointer;
+}
+
+.svg-icon {
+  color: #3B2A1A; // text-color
+}
+
+.link {
+  font-size: 16px;
+  font-family: var(--primary-font-family);
+  font-weight: normal;
+}
+
+// login
+
+.link-login {
+  color: #3B2A1A; // text-color
+}
+
+.auth-item__login:hover {
+  background-color: #FFDE21; // primary-color
+}
+
+// register
+.auth-item__register {
+  outline: 2px solid #3B2A1A; // text-color
+}
+
+.link-register {
+  color: #3B2A1A; // text-color
+}
+
+.auth-item__register:hover {
+  background-color: #FFDE21; // primary-color
+}

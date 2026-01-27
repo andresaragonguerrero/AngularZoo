@@ -3,15 +3,24 @@ import { ThemeService } from '../../services/theme.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+// componentes
+import { PageSettings } from "../page-settings/page-settings";
+import { Nav } from "../nav/nav";
+import { Auth } from "../auth/auth";
+
 @Component({
   selector: 'app-header',
   imports: [
     RouterModule,
-    CommonModule
-  ],
+    CommonModule,
+    PageSettings,
+    Nav,
+    Auth
+],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
+
 export class Header {
   theme = signal<'light' | 'dark'>('light');
   isMenuOpen = signal(false);
