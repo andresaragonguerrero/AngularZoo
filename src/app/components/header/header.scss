@@ -25,12 +25,14 @@
   font-size: 30px;
   font-family: var(--primary-font-family);
   font-weight: bolder;
+  color: var(--text-color);
 }
 
 .top-bar__email {
   font-size: 16px;
   font-family: var(--primary-font-family);
   font-weight: normal;
+  color: var(--text-color);
 }
 
 .top-bar__wrapper {
@@ -49,4 +51,8 @@
 
   display: flex;
   align-items: center;
+}
+
+.svg-icon {
+  color: var(--text-color);
 }
