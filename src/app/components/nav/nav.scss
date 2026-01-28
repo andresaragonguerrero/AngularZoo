@@ -4,10 +4,61 @@
   gap: var(--space-7);
 }
 
+.nav-item {
+  position: relative;
+}
+
 .nav-link {
+  position: relative;
+
   font-size: 20px;
   font-family: var(--primary-font-family);
   font-weight: normal;
 
   cursor: pointer;
+}
+
+.nav-item:hover .nav-link {
+  color: var(--secondary-color);
+}
+
+.nav-item:active .nav-link {
+  color: var(--text-color);
+  transform: scale(.9);
+}
+
+.nav-link::before {
+  content: "";
+
+  height: 2px;
+  width: 0%;
+
+  position: absolute;
+  bottom: calc(var(--space-1) * -1);
+  left: 50%;
+
+  background-color: var(--secondary-color);
+  transition: width 0.2s ease-in-out;
+}
+
+.nav-item:hover .nav-link::before {
+  width: 30%;
+}
+
+.nav-link::after {
+  content: "";
+
+  height: 2px;
+  width: 0%;
+
+  position: absolute;
+  bottom: calc(var(--space-1) * -1);
+  right: 50%;
+
+  background-color: var(--secondary-color);
+  transition: width 0.2s ease-in-out;
+}
+
+.nav-item:hover .nav-link::after {
+  width: 30%;
 }
