@@ -1,14 +1,14 @@
 .top-bar,
 .bottom-bar {
-  width: 90%;
-
   position: relative;
   margin: 0 auto;
-  padding: var(--space-2) 0;
+  padding: var(--space-2) calc(var(--space-7) * 3);
 
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  background-color: var(--background-color);
 }
 
 .top-bar__logo {

@@ -17,6 +17,11 @@
   cursor: pointer;
 }
 
+.auth-item::before,
+.auth-item::after {
+  pointer-events: none;
+}
+
 .auth-item::before {
   content: "";
 
