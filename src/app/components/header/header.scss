@@ -2,7 +2,6 @@
 .bottom-bar {
   position: relative;
   margin: 0 auto;
-  padding: var(--space-2) calc(var(--space-7) * 3);
 
   display: flex;
   justify-content: space-between;
@@ -11,17 +10,20 @@
   background-color: var(--background-color);
 }
 
+.top-bar {
+  padding: 0 calc(var(--space-7) * 3);
+}
+
+.bottom-bar {
+  padding: var(--space-1) calc(var(--space-7) * 3);
+}
+
 .top-bar__logo {
   height: 6rem;
   width: 6rem;
 }
 
 .top-bar__title {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-
   font-size: 30px;
   font-family: var(--primary-font-family);
   font-weight: bolder;
