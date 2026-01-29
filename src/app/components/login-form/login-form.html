@@ -1,59 +1,66 @@
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
-  <h2>Iniciar Sesión</h2>
 
-  <!-- Email -->
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input id="email" type="email" formControlName="email" placeholder="tucorreo@ejemplo.com"
-      [class.error]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
-    @if (loginForm.get('email')?.invalid && loginForm.get('email')?.touched) {
-    <small>
-      Introduce un email válido
-    </small>
-    }
-  </div>
+  <section class="section__form-header">
+    <h2 class="form-title">Inicia sesión</h2>
 
-  <!-- Password (placeholder) -->
-  @if (false) { <!-- Oculto por ahora -->
-  <div class="form-group">
-    <label for="password">Contraseña</label>
-    <div class="password-input">
-      <input [type]="showPassword() ? 'text' : 'password'" id="password" formControlName="password"
-        placeholder="••••••••" [class.error]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
-      <button type="button" (click)="togglePasswordVisibility()" class="toggle-password">
-        {{ showPassword() ? '👁️' : '👁️‍🗨️' }}
-      </button>
+    <h3 class="form-description">Rellena los campos de abajo para acceder a descuentos</h3>
+  </section>
+
+  <section class="section__form-content">
+    <!-- Email -->
+    <div class="form-group">
+      <label class="label" for="email">Email</label>
+      <input class="input" id="email" type="email" formControlName="email" placeholder="email@email.com"
+        autocomplete="off" [class.error]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+      @if (loginForm.get('email')?.invalid && loginForm.get('email')?.touched) {
+      <small class="small">
+        Introduce un email válido
+      </small>
+      }
     </div>
 
-    @if (loginForm.get('password')?.invalid && loginForm.get('password')?.touched) {
-    <small>
-      Mínimo 6 caracteres
-    </small>
+    <!-- Password (placeholder) -->
+    @if (false) { <!-- Oculto por ahora -->
+    <div class="form-group">
+      <label class="label" for="password">Contraseña</label>
+      <div class="password-input">
+        <input class="input" [type]="showPassword() ? 'text' : 'password'" id="password" formControlName="password"
+          placeholder="••••••••"
+          [class.error]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
+        <button type="button" (click)="togglePasswordVisibility()" class="toggle-password">
+          {{ showPassword() ? '👁️' : '👁️‍🗨️' }}
+        </button>
+      </div>
+
+      @if (loginForm.get('password')?.invalid && loginForm.get('password')?.touched) {
+      <small class="small">
+        Mínimo 6 caracteres
+      </small>
+      }
+    </div>
     }
-  </div>
-  }
 
-  <!-- Info: sin contraseñas por ahora -->
-  <div class="info-message">
-    <p>Por ahora solo necesitas tu email. Las contraseñas se añadirán pronto.</p>
-  </div>
+    <!-- Info: sin contraseñas por ahora -->
+    <div class="info-message">
+      <em class="info-message__text">Por ahora solo necesitas tu email. Las contraseñas se añadirán pronto.</em>
+    </div>
 
-  <!-- Mensajes de error -->
-  @if (error()) {
-  <div class="error-message">
-    Error{{ error() }}
-  </div>
-  }
-
+    <!-- Mensajes de error -->
+    @if (error()) {
+    <div class="error-message">
+      Error{{ error() }}
+    </div>
+    }
+  </section>
 
   <!-- Submit -->
   <button type="submit" [disabled]="!loginForm.valid || isLoading() || authIsLoading()" class="submit-button">
-    {{ (isLoading() || authIsLoading()) ? 'Iniciando sesión...' : 'Iniciar Sesión' }}
+    {{ (isLoading() || authIsLoading()) ? 'Iniciando sesión...' : 'Iniciar sesión' }}
   </button>
 
   <!-- Enlaces -->
-  <div class="links">
-    <p>¿No tienes cuenta? <a routerLink="/membership" class="link">Regístrate aquí</a></p>
+  <div class="container-links">
+    <p><span class="text">¿No tienes cuenta? </span><a routerLink="/register" class="link">Regístrate aquí</a></p>
     <p><a href="#" class="link">¿Olvidaste tu contraseña?</a></p>
   </div>
 
