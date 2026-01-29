@@ -6,3 +6,67 @@
     align-items: center;
     gap: var(--space-2);
 }
+
+.login-card {
+    height: calc(var(--space-7) * 7);
+    width: calc(var(--space-9) * 3);
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-image {
+    height: 75%;
+    width: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+.card-content {
+    height: 25%;
+    
+    padding: var(--space-2) 0;
+
+    display: grid;
+    place-items: center;
+    gap: var(--space-2);
+
+    background-color: var(--text-color);
+}
+
+.card-title {
+    font-size: 24px;
+    font-family: var(--primary-font-family);
+    font-weight: bolder;
+
+    color: var(--background-color);
+}
+
+.submit-button {
+    min-height: var(--space-5);
+    min-width: calc(var(--space-9) * 2);
+
+    padding: var(--space-1) 0;
+
+    font-size: 16px;
+    font-family: var(--secondary-font-family);
+    font-weight: bold;
+
+    border: 2px solid var(--background-color);
+
+    color: var(--background-color);
+    background-color: var(--text-color);
+}
+
+.submit-button:hover {
+    border: 2px solid var(--secondary-color);
+    color: var(--secondary-color);
+}
+
+.submit-button:active {
+    border: 2px solid var(--text-color);
+    color: var(--text-color);
+    transform: scale(.9);
+}
