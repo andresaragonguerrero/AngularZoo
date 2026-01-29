@@ -1,72 +1,81 @@
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form">
 
-  <!-- Nombre -->
-  <div class="form-group">
-    <label for="firstName">Nombre</label>
-    <input id="firstName" type="text" formControlName="firstName" placeholder="Nombre..."
-      [class.error]="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched">
-    <small *ngIf="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched">
-      El nombre es requerido (mínimo 2 caracteres)
-    </small>
-  </div>
+  <section class="section__form-header">
+    <h2 class="form-title">Regístrate y hazte socio</h2>
 
-  <!-- Apellido -->
-  <div class="form-group">
-    <label for="lastName">Apellido</label>
-    <input id="lastName" type="text" formControlName="lastName" placeholder="Apellido..."
-      [class.error]="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched">
-    <small *ngIf="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched">
-      El apellido es requerido
-    </small>
-  </div>
+    <h3 class="form-description">Rellena los campos de abajo para acceder a descuentos</h3>
+  </section>
 
-  <!-- Email -->
-  <div class="form-group">
-    <label for="email">Email</label>
-    <input id="email" type="email" formControlName="email" placeholder="email@email.com"
-      [class.error]="(registerForm.get('email')?.invalid && registerForm.get('email')?.touched) || emailExists">
-    <small *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
-      Introduce un email válido
-    </small>
-    <small *ngIf="emailExists" class="error-message">
-      Este email ya está registrado
-    </small>
-  </div>
+  <section class="section__form-content">
+    <!-- Nombre -->
+    <div class="form-group">
+      <label class="label" for="firstName">Nombre</label>
+      <input class="input-text" id="firstName" type="text" formControlName="firstName" placeholder="Nombre..."
+        [class.error]="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched">
+      <small class="small" *ngIf="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched">
+        El nombre es requerido (mínimo 2 caracteres)
+      </small>
+    </div>
 
-  <!-- Edad -->
-  <div class="form-group">
-    <label for="age">Edad</label>
-    <input id="age" type="number" formControlName="age" placeholder="30" min="0" max="120"
-      [class.error]="registerForm.get('age')?.invalid && registerForm.get('age')?.touched">
-    <small *ngIf="registerForm.get('age')?.invalid && registerForm.get('age')?.touched">
-      La edad debe estar entre 0 y 120 años
-    </small>
-  </div>
+    <!-- Apellido -->
+    <div class="form-group">
+      <label class="label" for="lastName">Apellido</label>
+      <input class="input-text" id="lastName" type="text" formControlName="lastName" placeholder="Apellido..."
+        [class.error]="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched">
+      <small class="small" *ngIf="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched">
+        El apellido es requerido
+      </small>
+    </div>
 
-  <!-- Términos -->
-  <div class="form-group checkbox">
-    <label>
-      <input type="checkbox" formControlName="agreeToTerms">
-      Acepto los términos y condiciones del zoo
-    </label>
-    <small *ngIf="registerForm.get('agreeToTerms')?.invalid && registerForm.get('agreeToTerms')?.touched">
-      Debes aceptar los términos
-    </small>
-  </div>
+    <!-- Email -->
+    <div class="form-group">
+      <label class="label" for="email">Email</label>
+      <input class="input-text" id="email" type="email" formControlName="email" placeholder="email@email.com"
+        [class.error]="(registerForm.get('email')?.invalid && registerForm.get('email')?.touched) || emailExists">
+      <small class="" *ngIf="registerForm.get('email')?.invalid && registerForm.get('email')?.touched">
+        Introduce un email válido
+      </small>
+      <small class="small" *ngIf="emailExists" class="error-message">
+        Este email ya está registrado
+      </small>
+    </div>
 
-  <!-- Socio -->
-  <div class="form-group checkbox">
-    <label>
-      <input type="checkbox" formControlName="becomeMember">
-      Quiero hacerme socio (50% descuento en todas las entradas)
-    </label>
-    <small class="hint">Puedes cambiar esta opción después en tu perfil</small>
-  </div>
+    <!-- Edad -->
+    <div class="form-group">
+      <label class="label" for="age">Edad</label>
+      <input class="input-text" id="age" type="number" formControlName="age" placeholder="30" min="0" max="120"
+        [class.error]="registerForm.get('age')?.invalid && registerForm.get('age')?.touched">
+      <small class="small" *ngIf="registerForm.get('age')?.invalid && registerForm.get('age')?.touched">
+        La edad debe estar entre 0 y 120 años
+      </small>
+    </div>
 
-  <!-- Mensajes de error generales -->
-  <div *ngIf="error()" class="error-message">
-    Error {{ error() }}
-  </div>
+    <!-- Términos -->
+    <div class="form-group checkbox">
+      <label class="label">
+        <input class="input-checkbox" type="checkbox" formControlName="agreeToTerms">
+        Acepto los términos y condiciones del zoo
+      </label>
+      <small class="small"
+        *ngIf="registerForm.get('agreeToTerms')?.invalid && registerForm.get('agreeToTerms')?.touched">
+        Debes aceptar los términos
+      </small>
+    </div>
+
+    <!-- Socio -->
+    <div class="form-group checkbox">
+      <label class="label">
+        <input class="input-checkbox" type="checkbox" formControlName="becomeMember">
+        Quiero hacerme socio (50% descuento en todas las entradas)
+      </label>
+      <small class="small">Puedes cambiar esta opción después en tu perfil</small>
+    </div>
+
+    <!-- Mensajes de error generales -->
+    <div *ngIf="error()" class="error-message">
+      Error {{ error() }}
+    </div>
+  </section>
 
   <!-- Submit -->
   <button type="submit" [disabled]="!registerForm.valid || isLoading || authIsLoading()" class="submit-button">

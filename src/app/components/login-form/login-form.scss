@@ -1,9 +1,28 @@
 .login-form {
-    padding: var(--space-3);
+    position: relative;
+
+    height: calc(var(--space-7) * 7);
+    padding: var(--space-4);
 
     display: grid;
     place-items: center;
     gap: var(--space-6);
+}
+
+.login-form::after {
+    content: "";
+
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: var(--text-color);
+    opacity: 0.05;
+
+    pointer-events: none;
 }
 
 .section__form-header {
@@ -61,8 +80,6 @@
     font-size: 20px;
     font-family: var(--secondary-font-family);
     font-weight: normal;
-
-    cursor: text;
 
     color: var(--text-color);
 
