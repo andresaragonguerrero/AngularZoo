@@ -166,6 +166,10 @@
 
 .article__regular-admission
 .content__ticket-price {
+    display: flex;
+    align-items: center;
+    gap: var(--space-1);
+
     color: grey;
 }
 
