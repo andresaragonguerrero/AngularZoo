@@ -1,8 +1,84 @@
-<!-- alternancia entre secciones: ticket-purchase y ticket-form -->
-@if (!showTicketForm) {
-<app-ticket-purchase (buyClicked)="showTicketForm = true"></app-ticket-purchase>
-}
+<div class="content-wrapper">
+    <section class="section-header">
+        <h1 class="section-title">Compra de entradas</h1>
+    </section>
 
-@if (showTicketForm) {
-<app-ticket-form (cancel)="showTicketForm = false"></app-ticket-form>
-}
+    <section class="section__form-display">
+
+        <!-- contenedor venta entradas (no miembros) -->
+        <article class="article__regular-admission">
+
+            <div class="article-header">
+                <h1 class="article-title">Acceso al zoo</h1>
+                <h2 class="article-subtitle">
+                    Todos los visitantes deben tener una fecha específica de entrada.
+                </h2>
+            </div>
+
+            <ul class="article-content">
+
+                <li class="article__content-row">
+                    <p class="content__ticket-age">Ancianos <span class="parenthesis-info">(mayores de 65 años)</span></p>
+                    <p class="content__ticket-price">18 Euros</p>
+                </li>
+
+                <li class="article__content-row">
+                    <p class="content__ticket-age">Adultos <span class="parenthesis-info">(mayores de 25 años)</span></p>
+                    <p class="content__ticket-price">20 Euros</p>
+                </li>
+
+                <li class="article__content-row">
+                    <p class="content__ticket-age">Jóvenes <span class="parenthesis-info">(mayores de 14 años)</span></p>
+                    <p class="content__ticket-price">16 Euros</p>
+                </li>
+
+                <li class="article__content-row">
+                    <p class="content__ticket-age">Niños <span class="parenthesis-info">(mayores de 3 años)</span></p>
+                    <p class="content__ticket-price">14 Euros</p>
+                </li>
+            </ul>
+            <!-- alternancia entre secciones: ticket-purchase y ticket-form -->
+            <!-- @if (!showTicketForm) {
+            <app-ticket-purchase (buyClicked)="showTicketForm = true"></app-ticket-purchase>
+            }
+            @if (showTicketForm) {
+            <app-ticket-form (cancel)="showTicketForm = false"></app-ticket-form>
+            } -->
+        </article>
+
+        <!-- contenedor venta entradas para miembros -->
+        <article class="article__member-admission">
+
+            <div class="article-header">
+                <h1 class="article-title">Acceso para miembros</h1>
+                <h2 class="article-subtitle">
+                    Todos los miembros deben revervar una fecha específica de entradas.
+                    El número de socio es imprescindible para hacer una reverva.
+                </h2>
+            </div>
+
+            <ul class="article-content">
+
+                <li class="article__content-row">
+                    <p class="content__ticket-age">Ancianos <span class="parenthesis-info">(mayores de 65 años)</span></p>
+                    <p class="content__ticket-price">Entrada gratuita</p>
+                </li>
+
+                <li class="article__content-row">
+                    <p class="content__ticket-age">Adultos <span class="parenthesis-info">(mayores de 25 años)</span></p>
+                    <p class="content__ticket-price">50% de descuento</p>
+                </li>
+
+                <li class="article__content-row">
+                    <p class="content__ticket-age">Jóvenes <span class="parenthesis-info">(mayores de 14 años)</span></p>
+                    <p class="content__ticket-price">Entrada gratuita</p>
+                </li>
+
+                <li class="article__content-row">
+                    <p class="content__ticket-age">Niños <span class="parenthesis-info">(mayores de 3 años)</span></p>
+                    <p class="content__ticket-price">Entrada gratuita</p>
+                </li>
+            </ul>
+        </article>
+    </section>
+</div>

@@ -1,0 +1,175 @@
+.content-wrapper {
+    // padding: var(--space-5) 0;
+
+    display: grid;
+    place-items: center;
+}
+
+.section-header {
+    height: var(--space-8);
+    width: 100%;
+
+    position: relative;
+    padding: var(--space-7) 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section-header::before {
+    content: "";
+
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: var(--text-color);
+    opacity: .05;
+}
+
+.section-title {
+    font-size: 30px;
+    font-family: var(--primary-font-family);
+    font-weight: bold;
+
+    color: var(--text-color);
+}
+
+.section__form-display {
+    padding: var(--space-6) calc(var(--space-7) * 3);
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.article__member-admission,
+.article__regular-admission {
+    position: relative;
+    padding: var(--space-7);
+
+    display: grid;
+    grid-template-rows: 20% 80%;
+    place-items: center;
+    gap: var(--space-3);
+}
+
+.article__member-admission::before,
+.article__regular-admission::before {
+    content: "";
+
+    height: 100%;
+    width: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    pointer-events: none;
+
+    background-color: var(--text-color);
+    opacity: .05;
+}
+
+.article__member-admission::after {
+    content: "";
+
+    height: 100%;
+    width: 1px;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    background-color: var(--text-color);
+}
+
+.article__regular-admission::after {
+    content: "";
+
+    height: 100%;
+    width: 1px;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: var(--text-color);
+}
+
+.article-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-4);
+}
+
+.article-title {
+    font-size: 24px;
+    font-family: var(--primary-font-family);
+    font-weight: bold;
+
+    color: var(--secondary-color);
+}
+
+.article-subtitle {
+    font-size: 18px;
+    font-family: var(--secondary-font-family);
+    font-weight: normal;
+
+    color: var(--text-color);
+}
+
+.article-content {
+    width: 100%;
+
+    display: grid;
+    gap: var(--space-3);
+}
+
+.article__content-row {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.article__content-row::after {
+    content: "";
+
+    height: 1px;
+    width: 100%;
+
+    position: absolute;
+    bottom: calc((var(--space-3) * -1) / 2);
+    left: 0;
+
+    background-color: var(--text-color);
+}
+
+.content__ticket-age {
+    font-size: 18px;
+    font-family: var(--secondary-font-family);
+    font-weight: normal;
+
+    color: var(--text-color);
+}
+
+.parenthesis-info {
+    color: grey;
+}
+
+.article__regular-admission
+.content__ticket-price {
+    color: grey;
+}
+
+.article__member-admission
+.content__ticket-price {
+    color: var(--secondary-color);
+}
