@@ -60,7 +60,7 @@
 
   <!-- Enlaces -->
   <div class="container-links">
-    <p><span class="text">¿No tienes cuenta? </span><a routerLink="/register" class="link">Regístrate aquí</a></p>
+    <p><span class="text">¿No tienes cuenta? </span><a routerLink="/register" class="link" (click)="$event.stopPropagation()">Regístrate aquí</a></p>
     <p><a href="#" class="link">¿Olvidaste tu contraseña?</a></p>
   </div>
 
