@@ -10,19 +10,23 @@ import {
 import { CommonModule } from '@angular/common';
 
 import { PriceCalculatorService } from '../../services/price-calculator.service';
-import { AuthService } from '../../services/auth.service';
+// import { AuthService } from '../../services/auth.service';
+import { TicketSummaryModal } from '../ticket-summary-modal/ticket-summary-modal';
 
 @Component({
   selector: 'app-ticket-form',
-  standalone: true,
-  imports: [ReactiveFormsModule, CommonModule],
+  imports: [
+    ReactiveFormsModule,
+    CommonModule,
+    TicketSummaryModal
+  ],
   templateUrl: './ticket-form.html',
   styleUrl: './ticket-form.scss',
 })
 export class TicketForm {
   private readonly fb = inject(FormBuilder);
-  private readonly priceCalculator = inject(PriceCalculatorService);
-  private readonly authService = inject(AuthService);
+  priceCalculator = inject(PriceCalculatorService);
+  // private readonly authService = inject(AuthService);
 
   ticketForm: FormGroup = this.fb.group(
     {
@@ -32,6 +36,8 @@ export class TicketForm {
     },
     { validators: this.minOneTicketValidator }
   );
+
+  showSummary = false;
 
   // Exponer signals al template
   isMember = this.priceCalculator.isMember;
@@ -81,5 +87,14 @@ export class TicketForm {
     console.log('Tipo de usuario:', isMember ? 'SOCIO' : 'NO SOCIO');
     console.log('Cantidades:', quantities);
     console.log('TOTAL:', totalPrice, '€');
+
+    this.showSummary = true;
+  }
+
+  confirmPurchase(): void {
+    console.log('Compra confirmada');
+    this.showSummary = false;
+
+    // (más adelante aquí irá TicketService.createAndSaveTicket)
   }
 }

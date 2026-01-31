@@ -1,0 +1,31 @@
+<div class="modal-backdrop">
+    
+  <div class="modal">
+
+    <h2>Resumen de compra</h2>
+
+    <p>
+      Tipo de usuario:
+      <strong>{{ isMember ? 'Socio' : 'No socio' }}</strong>
+    </p>
+
+    <ul>
+      <li>Adultos: {{ quantities.ADULT }}</li>
+      <li>Niños: {{ quantities.CHILD }}</li>
+      <li>Seniors: {{ quantities.SENIOR }}</li>
+    </ul>
+
+    <h3>Total: {{ total }} €</h3>
+
+    <div class="actions">
+      <button class="button" (click)="confirm.emit()">
+        Confirmar
+      </button>
+
+      <button class="button button-secondary" (click)="cancel.emit()">
+        Cancelar
+      </button>
+    </div>
+
+  </div>
+</div>
