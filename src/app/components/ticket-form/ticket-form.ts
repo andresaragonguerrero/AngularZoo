@@ -10,7 +10,6 @@ import {
 import { CommonModule } from '@angular/common';
 
 import { PriceCalculatorService } from '../../services/price-calculator.service';
-// import { AuthService } from '../../services/auth.service';
 import { TicketSummaryModal } from '../ticket-summary-modal/ticket-summary-modal';
 
 @Component({
@@ -26,7 +25,6 @@ import { TicketSummaryModal } from '../ticket-summary-modal/ticket-summary-modal
 export class TicketForm {
   private readonly fb = inject(FormBuilder);
   priceCalculator = inject(PriceCalculatorService);
-  // private readonly authService = inject(AuthService);
 
   ticketForm: FormGroup = this.fb.group(
     {
