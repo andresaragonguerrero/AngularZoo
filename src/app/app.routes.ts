@@ -8,6 +8,7 @@ import { MembershipComponent } from './pages/membership/membership';
 import { TicketsComponent } from './pages/tickets/tickets';
 import { LoginPage } from './pages/login-page/login-page';
 import { RegisterPage } from './pages/register-page/register-page';
+import { TicketPurchase } from './pages/ticket-purchase/ticket-purchase';
 
 export const routes: Routes = [
   {
@@ -32,8 +33,8 @@ export const routes: Routes = [
     component: LoginPage
   },
   {
-    path: 'membership',
-    component: MembershipComponent
+    path: 'purchase',
+    component: TicketPurchase
   },
   {
     path: 'register',

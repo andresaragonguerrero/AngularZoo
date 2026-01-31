@@ -1,13 +1,11 @@
 import { Component } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
-import { TicketPurchase } from "../../sections/ticket-purchase/ticket-purchase";
-import { TicketForm } from '../../sections/ticket-form/ticket-form';
 
 @Component({
   selector: 'app-tickets',
   imports: [
-    TicketPurchase,
-    TicketForm,
+    RouterLink,
   ],
   templateUrl: './tickets.html',
   styleUrl: './tickets.scss',
