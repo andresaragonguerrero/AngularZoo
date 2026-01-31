@@ -1,0 +1,47 @@
+<form [formGroup]="ticketForm">
+  <div class="select-senior-type">
+    <p>Senior</p>
+    <input type="number" class="input-number" placeholder="0" formControlName="senior">
+    <!-- mensaje de error -->
+    @if (ticketForm.get('senior')?.invalid && ticketForm.get('senior')?.touched) {
+    <div class="error-message">
+      Valor mínimo: 0
+    </div>
+    }
+  </div>
+
+  <div class="select-adult-type">
+    <p>Adulto</p>
+    <input type="number" class="input-number" placeholder="0" formControlName="adult">
+    <!-- mensaje de error -->
+    @if (ticketForm.get('adult')?.invalid && ticketForm.get('adult')?.touched) {
+    <div class="error-message">
+      Valor mínimo: 0
+    </div>
+    }
+  </div>
+
+  <div class="select-child-type">
+    <p>Niño</p>
+    <input type="number" class="input-number" placeholder="0" formControlName="child">
+    <!-- mensaje de error -->
+    @if (ticketForm.get('child')?.invalid && ticketForm.get('child')?.touched) {
+    <div class="error-message">
+      Valor mínimo: 0
+    </div>
+    }
+  </div>
+
+  <!-- en un futuro habrá que añadir un input type date para seleccionar la fecha -->
+
+  @if (ticketForm.errors?.['minOneTicket'] && ticketForm.touched) {
+  <div class="error-message">
+    Debes comprar al menos 1 entrada
+  </div>
+  }
+
+  <!-- Botón de compra -->
+  <button class="button button-buy-ticket" (click)="onBuyClick()">
+    Comprar entradas
+  </button>
+</form>

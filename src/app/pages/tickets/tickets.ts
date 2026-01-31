@@ -1,6 +1,8 @@
-import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { Component, inject } from '@angular/core';
+import { Router, RouterLink } from '@angular/router';
 
+import { PriceCalculatorService } from '../../services/price-calculator.service';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-tickets',
@@ -11,6 +13,29 @@ import { RouterLink } from '@angular/router';
   styleUrl: './tickets.scss',
 })
 export class TicketsComponent {
-  // lógica para alternar entre las secciones información de las entradas y su compra
-  showTicketForm = false;
+  
+  private priceCalculator = inject(PriceCalculatorService);
+  private router = inject(Router);
+  private authService = inject(AuthService);
+
+  // el usuario pulsa el botón de compra de entradas regular
+  buyAsGuest() {
+    this.priceCalculator.setMemberStatus(false);
+    this.router.navigate(['/purchase']);
+  }
+
+  // el usuario pulsa el botón para acceder al espacio de compra de entradas para miembros
+  buyAsMember() {
+    // si no se logueó -> /login
+    if (!this.authService.isAuthenticated()) {
+      this.router.navigate(['/login'], {
+        queryParams: { redirectTo: '/purchase', mode: 'member' }
+      });
+      return;
+    }
+
+    // si se logueó ya
+    this.priceCalculator.setMemberStatus(true);
+    this.router.navigate(['/purchase']);
+  }
 }

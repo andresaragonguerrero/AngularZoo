@@ -66,15 +66,7 @@
                     </p>
                 </li>
             </ul>
-            <!-- alternancia entre secciones: ticket-purchase y ticket-form -->
-            <!-- @if (!showTicketForm) {
-            <app-ticket-purchase (buyClicked)="showTicketForm = true"></app-ticket-purchase>
-            }
-            @if (showTicketForm) {
-            <app-ticket-form (cancel)="showTicketForm = false"></app-ticket-form>
-            } -->
-
-            <button routerLink="/purchase" class="submit-button">
+            <button routerLink="/purchase" class="submit-button" (click)="buyAsGuest()">
                 Hazte con ellas ahora
             </button>
         </article>
@@ -116,7 +108,7 @@
                 </li>
             </ul>
 
-            <button routerLink="/purchase" class="submit-button">
+            <button routerLink="/purchase" class="submit-button" (click)="buyAsMember()">
                 Resérvalas ahora
             </button>
         </article>

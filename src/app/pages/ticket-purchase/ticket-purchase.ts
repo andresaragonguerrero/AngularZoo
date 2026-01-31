@@ -1,8 +1,11 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { TicketForm } from "../../components/ticket-form/ticket-form";
 
 @Component({
   selector: 'app-ticket-purchase',
-  imports: [],
+  imports: [
+    TicketForm
+  ],
   templateUrl: './ticket-purchase.html',
   styleUrl: './ticket-purchase.scss',
 })
