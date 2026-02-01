@@ -95,4 +95,17 @@ export class TicketForm {
 
     // (más adelante aquí irá TicketService.createAndSaveTicket)
   }
+
+  // Funcionalidad para seleccionar la cantidad de entradas (Numeric Stepper)
+  increment(controlName: 'senior' | 'adult' | 'child') {
+    const control = this.ticketForm.get(controlName);
+    control?.setValue((control.value ?? 0) + 1);
+  }
+
+  decrement(controlName: 'senior' | 'adult' | 'child') {
+    const control = this.ticketForm.get(controlName);
+    const value = control?.value ?? 0;
+    control?.setValue(Math.max(0, value - 1));
+  }
+
 }

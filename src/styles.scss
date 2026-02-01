@@ -85,6 +85,18 @@ body {
   background-color: var(--background-color);
 }
 
+// elimina de todos los navegadores los selectores del input type="number"
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+
 ul {
   list-style: none;
 }

@@ -1,9 +1,52 @@
+.ticket-form {
+  display: grid;
+  place-items: center;
+  gap: var(--space-5);
+}
+
+.form-group {
+  min-width: calc(var(--space-9) * 4);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .error-message {
-  color: #dc3545;
-  font-size: 0.875rem;
-  margin-top: 0.25rem;
+  font-size: 16px;
+  font-family: var(--secondary-font-family);
+  font-weight: normal;
+
+  color: var(--error-color);
 }
 
 .input-number.ng-invalid.ng-touched {
-  border-color: #dc3545;
+  border-color: var(--error-color);
+}
+
+.submit-button {
+  min-height: var(--space-5);
+  min-width: calc(var(--space-9) * 2);
+
+  padding: var(--space-1) 0;
+
+  font-size: 16px;
+  font-family: var(--secondary-font-family);
+  font-weight: bold;
+
+  border: 2px solid var(--text-color);
+
+  color: var(--text-color);
+  background-color: var(--background-color);
+}
+
+.submit-button:hover {
+  border: 2px solid var(--secondary-color);
+  color: var(--secondary-color);
+}
+
+.submit-button:active {
+  border: 2px solid var(--text-color);
+  color: var(--text-color);
+  transform: scale(.9);
 }
