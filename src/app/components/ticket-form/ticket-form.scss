@@ -12,6 +12,104 @@
   align-items: center;
 }
 
+.label-container {
+  width: 70%;
+
+  padding: var(--space-1);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--space-1);
+}
+
+.label {
+  font-size: 24px;
+  font-family: var(--secondary-font-family);
+  font-weight: bold;
+
+  color: var(--secondary-color);
+}
+
+.text-info {
+  font-size: 20px;
+  font-family: var(--secondary-font-family);
+  font-weight: normal;
+
+  color: var(--secondary-color);
+}
+
+.text-info__detail {
+  color: var(--text-color);
+}
+
+.input-container {
+  height: 100%;
+  width: 30%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: var(--space-1);
+}
+
+.increment-button,
+.decrement-button {
+  height: var(--space-5);
+  width: var(--space-5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  outline: none;
+  border: none;
+  border-radius: 50%;
+
+  cursor: pointer;
+
+  transition: transform .2s ease;
+}
+
+.increment-button {
+  color: var(--background-color);
+  background-color: var(--secondary-color);
+}
+
+.decrement-button {
+  color: var(--background-color);
+  background-color: var(--error-color);
+}
+
+.increment-button:hover,
+.decrement-button:hover {
+  transform: scale(1.2);
+}
+
+.increment-button:active,
+.decrement-button:active {
+  transform: scale(.9);
+}
+
+.input-number {
+  height: var(--space-6);
+  width: var(--space-6);
+
+  outline: none;
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+
+  text-align: center;
+  font-size: 24px;
+  font-family: var(--secondary-font-family);
+  font-weight: normal;
+
+  cursor: not-allowed;
+
+  background-color: var(--background-color);
+}
+
 .error-message {
   font-size: 16px;
   font-family: var(--secondary-font-family);
