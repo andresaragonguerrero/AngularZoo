@@ -1,23 +1,23 @@
-<!--
-dos tablas dependiendo de si un usuario es socio o no:
+<div class="content-wrapper">
+  <section class="section-header">
+    <h1 class="section-header__title">Conseguir entradas</h1>
+    <h2 class="section-header__subtitle">Acceso al zoo</h2>
+    <p class="section-header__description">Actualmente el horario diario es de 9am - 18pm.</p>
+  </section>
 
-  - tabla con los precios de los entradas: no socios
-    - adulto, anciano (senior), niño (3- 12 años), niño (0- 2 años) + precios de cada categoría
-  - tabla con los precios de las entradas: socios
-  - adulto, anciano (senior), niño (3- 12 años), niño (0- 2 años) + precios de cada categoría con descuentros
+  <app-ticket-form></app-ticket-form>
 
-botones de compra de entradas que redirigen a una nueva vista.
-Tengo pensada que esta vista se encuentre en la carpeta componentes junto a Header y Footer
+  <section class="section__admission-info">
+    <h2 class="admission-info__title">Recordatorio</h2>
+    <h3 class="admission-info__children-info">Los niños menores de 2 años tienen entrada gratuita.</h3>
+    <div class="admission-info__conditions-container">
+      <h2>Texto mock de título</h2>
 
-botón para hacerse socio
-información de las ventajas de hacerse socio
-
-horarios del parque: realmente es una carga de la sección horarios
--->
-
-<!-- no socios -->
-<app-ticket-form></app-ticket-form>
-<!-- <button class="button button-buy-tickets" type="button" (click)="onBuyClicked()">Comprar tickets</button> -->
-
-<!-- socios -->
-<!-- <button class="button button-buy-tickets" type="button" (click)="onBuyClicked()">Comprar tickets</button> -->
+      <ul class="admission-info__condition-list">
+        <li class="admission-info__condition-item">- Texto mock de condición 1</li>
+        <li class="admission-info__condition-item">- Texto mock de condición 2</li>
+        <li class="admission-info__condition-item">- Texto mock de condición 3</li>
+      </ul>
+    </div>
+  </section>
+</div>
