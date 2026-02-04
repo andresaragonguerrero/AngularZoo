@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { AuthService, LoginCredentials } from '../../services/auth.service';
+import { NotificationService } from '../../services/notification.service';
 
 @Component({
   selector: 'app-login-form',
@@ -16,6 +17,7 @@ import { AuthService, LoginCredentials } from '../../services/auth.service';
 })
 export class LoginForm {
   private readonly authService = inject(AuthService);
+  private readonly notificationService = inject(NotificationService);
   private readonly fb = inject(FormBuilder);
   private readonly router = inject(Router);
 
@@ -34,35 +36,36 @@ export class LoginForm {
   }
 
   async onSubmit() {
-    if (this.loginForm.valid) {
-      this.isLoading.set(true);
-      this.authService.error.set(null);
+    if (this.loginForm.valid) return;
 
-      try {
-        const credentials: LoginCredentials = {
-          email: this.loginForm.get('email')?.value,
-          // password: this.loginForm.get('password')?.value
-        };
+    this.isLoading.set(true);
+    this.authService.error.set(null);
 
-        const success = await this.authService.login(credentials);
+    try {
+      const credentials: LoginCredentials = {
+        email: this.loginForm.get('email')?.value,
+        // password: this.loginForm.get('password')?.value
+      };
 
-        if (success) {
-          console.log('Login exitoso');
+      const success = await this.authService.login(credentials);
 
-          setTimeout(() => {
-            this.router.navigate(['/home']);
-          }, 1000);
+      if (success) {
 
-          // Limpiar formulario
-          this.loginForm.reset();
-        } else {
-          console.log('Login fallido');
-        }
-      } catch (error) {
-        console.error('Error:', error);
-      } finally {
-        this.isLoading.set(false);
+        this.notificationService.success("Sesión iniciada correctamente");
+
+        setTimeout(() => {
+          this.router.navigate(['/home']);
+        }, 1000);
+
+        this.loginForm.reset();
+
+      } else {
+        console.log('Login fallido');
       }
+    } catch (error) {
+      console.error('Error:', error);
+    } finally {
+      this.isLoading.set(false);
     }
   }
 
