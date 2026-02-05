@@ -20,7 +20,6 @@
     </div>
 
     <!-- Password (placeholder) -->
-    @if (false) { <!-- Oculto por ahora -->
     <div class="form-group">
       <label class="label" for="password">Contraseña</label>
       <div class="password-input">
@@ -31,18 +30,9 @@
           {{ showPassword() ? '👁️' : '👁️‍🗨️' }}
         </button>
       </div>
-
-      @if (loginForm.get('password')?.invalid && loginForm.get('password')?.touched) {
-      <small class="small">
+      <small class="small" *ngIf="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
         Mínimo 6 caracteres
       </small>
-      }
-    </div>
-    }
-
-    <!-- Info: sin contraseñas por ahora -->
-    <div class="info-message">
-      <em class="info-message__text">Por ahora solo necesitas tu email. Las contraseñas se añadirán pronto.</em>
     </div>
 
     <!-- Mensajes de error -->
@@ -60,7 +50,8 @@
 
   <!-- Enlaces -->
   <div class="container-links">
-    <p><span class="text">¿No tienes cuenta? </span><a routerLink="/register" class="link" (click)="$event.stopPropagation()">Regístrate aquí</a></p>
+    <p><span class="text">¿No tienes cuenta? </span><a routerLink="/register" class="link"
+        (click)="$event.stopPropagation()">Regístrate aquí</a></p>
     <p><a href="#" class="link">¿Olvidaste tu contraseña?</a></p>
   </div>
 

@@ -7,6 +7,7 @@ export class UserFactory {
         firstName: string;
         lastName: string;
         email: string;
+        password: string;
         age: number;
         isMember?: boolean;
     }): User {
@@ -17,6 +18,7 @@ export class UserFactory {
             firstName: this.sanitizeName(data.firstName),
             lastName: this.sanitizeName(data.lastName),
             email: this.sanitizeEmail(data.email),
+            password: data.password,
             age: this.validateAge(data.age),
             isMember: data.isMember ?? false, // Por defecto no es socio
             createdAt: now,

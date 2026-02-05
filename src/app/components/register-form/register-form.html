@@ -40,6 +40,21 @@
       </small>
     </div>
 
+    <!-- Contraseña -->
+    <div class="form-group">
+      <label class="label" for="password">Contraseña</label>
+
+      <input class="input-text" id="password" type="password" formControlName="password">
+
+      @if (registerForm.get('password')?.invalid &&
+      registerForm.get('password')?.touched) {
+
+      <small class="small">
+        Mínimo 6 caracteres, una mayúscula y un número
+      </small>
+      }
+    </div>
+
     <!-- Edad -->
     <div class="form-group">
       <label class="label" for="age">Edad</label>

@@ -2,10 +2,14 @@ import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-register-form',
-  imports: [ReactiveFormsModule],
+  imports: [
+    ReactiveFormsModule,
+    CommonModule,
+  ],
   templateUrl: './register-form.html',
   styleUrl: './register-form.scss',
 })
@@ -26,9 +30,17 @@ export class RegisterForm {
       firstName: ['', [Validators.required, Validators.minLength(2)]],
       lastName: ['', [Validators.required]],
       email: ['', [Validators.required, Validators.email]],
+      password: [
+        '',
+        [
+          Validators.required,
+          Validators.minLength(6),
+          // Validators.pattern(/^(?=.*[A-Z])(?=.*\d).+$/)
+        ]
+      ],
       age: [null, [Validators.required, Validators.min(0), Validators.max(120)]],
       agreeToTerms: [false, [Validators.requiredTrue]],
-      becomeMember: [false]
+      becomeMember: [false],
     });
   }
 

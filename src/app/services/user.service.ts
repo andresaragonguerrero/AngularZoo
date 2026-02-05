@@ -8,6 +8,7 @@ export interface UserRegistrationData {
   firstName: string;
   lastName: string;
   email: string;
+  password: string;
   age: number;
   agreeToTerms: boolean;
   becomeMember?: boolean;
@@ -35,6 +36,7 @@ export class UserService {
       firstName: userData.firstName,
       lastName: userData.lastName,
       email: userData.email,
+      password: userData.password,
       age: userData.age,
       isMember: userData.becomeMember ?? false
     });
@@ -135,6 +137,11 @@ export class UserService {
     } else if (!this.isValidEmail(data.email)) {
       errors.push('El email no es válido');
     }
+
+    if (!data.password || data.password.length < 6) {
+      errors.push('La contraseña debe tener al menos 6 caracteres');
+    }
+
 
     if (!data.age || data.age < 0 || data.age > 120) {
       errors.push('La edad debe estar entre 0 y 120 años');

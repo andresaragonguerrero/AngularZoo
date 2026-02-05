@@ -31,7 +31,7 @@ export class LoginForm {
   constructor() {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      // password: ['', [Validators.required, Validators.minLength(6)]] // para ampliar en un futuro: place holder
+      password: ['', [Validators.required, Validators.minLength(6)]]
     });
   }
 
@@ -44,7 +44,7 @@ export class LoginForm {
     try {
       const credentials: LoginCredentials = {
         email: this.loginForm.get('email')?.value,
-        // password: this.loginForm.get('password')?.value
+        password: this.loginForm.get('password')?.value
       };
 
       const success = await this.authService.login(credentials);
