@@ -6,7 +6,8 @@ export interface User {
   firstName: string;             
   lastName: string;               
   email: string;                  
-  age: number;                    
+  age: number;            
+  password: string;        
   
   // Estado de socio
   isMember: boolean;              

@@ -5,7 +5,7 @@ import { PriceCalculatorService } from './price-calculator.service';
 
 export interface LoginCredentials {
   email: string;
-  password?: string; // en un futuro, se añadirán contraseñas
+  password: string;
 }
 
 @Injectable({ providedIn: 'root' })
@@ -34,6 +34,7 @@ export class AuthService {
     age: number;
     agreeToTerms: boolean;
     becomeMember?: boolean;
+    password: string;
   }): Promise<User | null> {
     this.isLoading.set(true);
     this.error.set(null);
@@ -52,7 +53,6 @@ export class AuthService {
         // Guardar en localStorage (sesión persistente)
         this.saveSessionToStorage(user);
 
-        console.log('Usuario registrado y sesión iniciada:', user.email);
         return user;
       } else {
         this.error.set('Este email ya está registrado');
@@ -71,12 +71,19 @@ export class AuthService {
     this.error.set(null);
 
     try {
-      // Por ahora: buscar usuario por email (sin contraseña)
+
       const user = await this.userService.getUserByEmail(credentials.email);
 
       if (user) {
         // para un futuro: verificar contraseña hash
-        // const isValid = await this.verifyPassword(credentials.password, user.passwordHash);
+        const isValid = await this.verifyPassword(
+          credentials.password,
+          user.password);
+
+        if (!isValid) {
+          this.error.set('Contraseña incorrecta');
+          return false;
+        }
 
         this._currentUser.set(user);
         this._isAuthenticated.set(true);
@@ -87,7 +94,6 @@ export class AuthService {
         // Guardar sesión
         this.saveSessionToStorage(user);
 
-        console.log('Sesión iniciada:', user.email);
         return true;
       } else {
         this.error.set('Usuario no encontrado');
@@ -197,9 +203,10 @@ export class AuthService {
     localStorage.removeItem('zoo_current_user_id');
   }
 
-  private async verifyPassword(inputPassword: string, storedHash: string): Promise<boolean> {
-    // para un futuro: implementar bcrypt o similar
-    // placeholder
-    return Promise.resolve(true);
+  private async verifyPassword(
+    inputPassword: string,
+    storedPassword: string
+  ): Promise<boolean> {
+    return Promise.resolve(inputPassword === storedPassword);
   }
 }
