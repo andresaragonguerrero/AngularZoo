@@ -1,60 +1,103 @@
-.top-bar,
-.bottom-bar {
+.header {
   position: relative;
-  margin: 0 auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.top-bar {
+  height: calc(var(--space-4) * 5);
+  width: 70%;
+
+  position: relative;
 
   display: flex;
   justify-content: space-between;
   align-items: center;
-
-  background-color: var(--background-color);
 }
 
-.top-bar {
-  padding: 0 calc(var(--space-7) * 3);
-}
+.section-settings {
+  height: 100%;
+  width: 30%;
 
-.bottom-bar {
-  padding: var(--space-1) calc(var(--space-7) * 3);
-}
-
-.top-bar__logo {
-  height: 6rem;
-  width: 6rem;
-}
-
-.top-bar__title {
-  font-size: 30px;
-  font-family: var(--primary-font-family);
-  font-weight: bolder;
-  color: var(--text-color);
-}
-
-.top-bar__email {
-  font-size: 16px;
-  font-family: var(--primary-font-family);
-  font-weight: normal;
-  color: var(--text-color);
-}
-
-.top-bar__wrapper {
   display: flex;
+  justify-content: flex-start;
   align-items: center;
-  gap: var(--space-1);
+  gap: var(--space-2);
 }
 
-.bottom-bar__logo-container {
+.section-title {
+  height: 100%;
+  width: 40%;
+
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
-.top-bar__networks {
-  height: var(--space-6);
+.info-links__list {
+  height: 100%;
+  width: 30%;
+
+  position: relative;
 
   display: flex;
+  justify-content: flex-end;
   align-items: center;
+  gap: var(--space-2);
+}
+
+.info-link__item {
+  
+
+  position: relative;
+  padding: var(--space-1);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+}
+
+.info-link__item:hover {
+  background-color: var(--text-color);
+}
+
+.info-link__item:hover .link {
+  color: var(--background-color);
 }
 
 .svg-icon {
   color: var(--text-color);
+}
+
+.motto {
+  font-size: 16px;
+  font-family: var(--primary-font-family);
+  font-weight: normal;
+
+  color: var(--text-color);
+}
+
+.link {
+  font-size: 14px;
+  font-family: var(--secondary-font-family);
+
+  white-space: pre-line; // obliga al texto a colocarse en dos líneas
+
+  color: var(--text-color);
+}
+
+.bottom-bar {
+  width: 70%;
+
+  padding: var(--space-2) 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
