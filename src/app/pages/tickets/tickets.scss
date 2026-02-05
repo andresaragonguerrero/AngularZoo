@@ -30,11 +30,8 @@
 }
 
 .section-title {
-    // font-size: 30px;
-    // font-family: var(--primary-font-family);
-    // font-weight: bold;
 
-    // color: var(--text-color);
+    color: var(--text-color);
 }
 
 .section__form-display {
@@ -107,18 +104,10 @@
 }
 
 .article-title {
-    font-size: 24px;
-    font-family: var(--primary-font-family);
-    font-weight: bold;
-
     color: var(--secondary-color);
 }
 
 .article-subtitle {
-    font-size: 18px;
-    font-family: var(--secondary-font-family);
-    font-weight: normal;
-
     color: var(--text-color);
 }
 
