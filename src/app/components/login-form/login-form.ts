@@ -31,12 +31,12 @@ export class LoginForm {
   constructor() {
     this.loginForm = this.fb.group({
       email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]] // para ampliar en un futuro: place holder
+      // password: ['', [Validators.required, Validators.minLength(6)]] // para ampliar en un futuro: place holder
     });
   }
 
   async onSubmit() {
-    if (this.loginForm.valid) return;
+    if (!this.loginForm.valid) return;
 
     this.isLoading.set(true);
     this.authService.error.set(null);
