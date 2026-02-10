@@ -2,7 +2,7 @@
 
   @if (!isAuthenticated()) {
   <!-- Usuario NO autenticado -->
-  <li class="auth-item auth-item__login">
+  <li class="button auth-button login-button" aria-label="Acceder al usuario">
     <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" height="27px" width="27px"
       fill="currentColor">
       <path
@@ -11,18 +11,18 @@
     <a class="link link-login" routerLink="/login">Sign in</a>
   </li>
 
-  <li class="auth-item auth-item__register">
+  <li class="button auth-button register-button">
     <a class="link link-register" routerLink="/register">Sign up</a>
   </li>
   }
 
   @if (isAuthenticated()) {
   <!-- Usuario autenticado -->
-  <li class="auth-item auth-item__user">
+  <li class="auth-button user-info" aria-label="Registrarse como usuario">
     <span class="user-name">
       Hola, {{ userDisplayName() }}
     </span>
-    <button type="button" class="logout-button" (click)="logout()">
+    <button type="button" class="logout-button" (click)="logout()" aria-label="Cerrar sesión">
       Cerrar sesión
     </button>
   </li>

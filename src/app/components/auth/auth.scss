@@ -4,52 +4,63 @@
   gap: var(--space-1);
 }
 
-.auth-item {
-  height: calc(var(--space-3) * 3);
-  width: calc(var(--space-4) * 7);
-
-  position: relative;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.auth-button {
   gap: var(--space-1);
+
+  border: 2px solid var(--text-color);
+  box-shadow: var(--shadow-sm);
+  
+  transition:
+    border .3s ease-out,
+    box-shadow .3s ease-out,
 }
 
-.auth-item::before {
+.login-button,
+.register-button {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.login-button::before,
+.register-button::before {
   content: "";
 
   height: 100%;
-  width: 100%;
+  width: 0%;
 
   position: absolute;
   top: 0;
   left: 0;
+  z-index: -1;
 
-  opacity: .05;
-  background-color: var(--text-color);
+  transition: width .2s ease-out;
 }
 
-.auth-item__register {
-  border: 2px solid var(--text-color);
+.login-button:hover::before,
+.register-button:hover::before {
+  width: 100%;
 }
 
-.svg-icon {
-  color: var(text-color);
+.login-button::before {
+  background-color: var(--primary-color);
+}
+
+.register-button::before {
+  background-color: var(--accent-color);
 }
 
 .link {
-  font-size: 16px;
-  font-family: var(--secondary-font-family);
-
   color: var(--text-color);
+  transition: color .3s ease-out;
 }
 
-.auth-item:hover {
-  background-color: var(--text-color);
+.svg-icon {
+  color: var(--text-color);
+  transition: color .3s;
 }
 
-.auth-item:hover .svg-icon,
-.auth-item:hover .link {
+.auth-button:hover .link,
+.auth-button:hover .svg-icon {
   color: var(--background-color);
 }

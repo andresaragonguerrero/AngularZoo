@@ -1,66 +1,55 @@
 .nav-list {
+  width: 80%;
+
+  margin: 0 auto;
+  padding: var(--space-1) 0;
+
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: var(--space-7);
 }
 
-.nav-item {
-  position: relative;
+.button-nav {
+  z-index: 1;
+
+  overflow: hidden;
+
+  border: 2px solid var(--accent-color);
+}
+
+.button-nav::before {
+  content: "";
+
+  height: 100%;
+  width: 0%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  background-color: var(--accent-color);
+
+  transition: width .2s ease-out;
+}
+
+.button-nav:hover::before {
+  width: 100%;
 }
 
 .nav-link {
-  position: relative;
-
-  font-size: 20px;
-  font-family: var(--primary-font-family);
-  font-weight: normal;
-  
-  color: var(--text-color);
-
-  cursor: pointer;
+  color: var(--accent-color);
 }
 
-.nav-item:hover .nav-link {
-  color: var(--secondary-color);
+.button-nav:hover .nav-link {
+  color: var(--primary-color);
 }
 
-.nav-item:active .nav-link {
-  color: var(--text-color);
-  transform: scale(.9);
+// cuando un enlace es activo, se le asigna la clase "active" y se le da un estilo diferente
+.button-nav:has(.nav-link.active)::before {
+  width: 100%;
 }
 
-.nav-link::before {
-  content: "";
-
-  height: 2px;
-  width: 0%;
-
-  position: absolute;
-  bottom: calc(var(--space-1) * -1);
-  left: 50%;
-
-  background-color: var(--secondary-color);
-  transition: width 0.2s ease-in-out;
-}
-
-.nav-item:hover .nav-link::before {
-  width: 30%;
-}
-
-.nav-link::after {
-  content: "";
-
-  height: 2px;
-  width: 0%;
-
-  position: absolute;
-  bottom: calc(var(--space-1) * -1);
-  right: 50%;
-
-  background-color: var(--secondary-color);
-  transition: width 0.2s ease-in-out;
-}
-
-.nav-item:hover .nav-link::after {
-  width: 30%;
+.button-nav:has(.nav-link.active) .nav-link {
+  color: var(--primary-color);
 }

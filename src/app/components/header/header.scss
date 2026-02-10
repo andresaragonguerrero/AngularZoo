@@ -1,103 +1,50 @@
 .header {
-  position: relative;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  background-color: var(--background-color);
+
+  box-shadow: var(--shadow-lg);
 }
 
-.top-bar {
-  height: calc(var(--space-4) * 5);
-  width: 70%;
+// HEADER-TOP
+.header-top {
+  width: 80%;
 
-  position: relative;
-
+  margin: 0 auto;
+  padding: var(--space-2) 0;
+  
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.section-settings {
-  height: 100%;
-  width: 30%;
-
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-  gap: var(--space-2);
-}
-
-.section-title {
-  height: 100%;
-  width: 40%;
+.branding {
+  flex-shrink: 0;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
-.info-links__list {
-  height: 100%;
-  width: 30%;
+.site-tagline {
+  font-size: clamp(16px, 2.5vw, 20px);
+  font-family: var(--primary-font-family);
+  font-weight: normal;
+  line-height: 1.2;
 
-  position: relative;
+  color: var(--text-color);
+}
 
+.header-controls {
   display: flex;
   justify-content: flex-end;
   align-items: center;
   gap: var(--space-2);
 }
 
-.info-link__item {
-  
-
-  position: relative;
-  padding: var(--space-1);
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  cursor: pointer;
-}
-
-.info-link__item:hover {
-  background-color: var(--text-color);
-}
-
-.info-link__item:hover .link {
-  color: var(--background-color);
-}
-
-.svg-icon {
-  color: var(--text-color);
-}
-
-.motto {
-  font-size: 16px;
-  font-family: var(--primary-font-family);
-  font-weight: normal;
-
-  color: var(--text-color);
-}
-
-.link {
-  font-size: 14px;
-  font-family: var(--secondary-font-family);
-
-  white-space: pre-line; // obliga al texto a colocarse en dos líneas
-
-  color: var(--text-color);
-}
-
-.bottom-bar {
-  width: 70%;
-
-  padding: var(--space-2) 0;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.header-nav {
+  background-color: var(--primary-color);
 }

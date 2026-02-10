@@ -24,6 +24,7 @@ import { Auth } from "../auth/auth";
 export class Header {
   theme = signal<'light' | 'dark'>('light');
   isMenuOpen = signal(false);
+  isHamOpen = signal(false);
 
   constructor(
     private readonly themeService: ThemeService,
@@ -41,5 +42,9 @@ export class Header {
 
   closeMenu() {
     this.isMenuOpen.set(false);
+  }
+
+  toggleHam() {
+    this.isHamOpen.update(value => !value);
   }
 }

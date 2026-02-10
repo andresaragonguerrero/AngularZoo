@@ -1,8 +1,8 @@
 <div class="setting-icon-list">
 
   <!-- para mostrar/ocultar los iconos -->
-  <button class="button-trigger" type="button" (click)="toggleColapsed()">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" height="27px" width="27px" fill="currentColor">
+  <button class="button-trigger" type="button" (click)="toggleColapsed()" aria-label="Abrir o cerrar el menú de configuración">
+    <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" height="27px" width="27px" fill="currentColor">
       <path
         d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z" />
     </svg>
@@ -10,8 +10,8 @@
 
   <div class="setting-content" [class.expanded]="!settingsOpen()">
     <!-- tema -->
-    <button class="setting-icon-item" type="button" (click)="toggleTheme()" (keydown.enter)="toggleTheme()">
-      <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" height="27px" width="27px"
+    <button class="setting-icon-item" type="button" (click)="toggleTheme()" (keydown.enter)="toggleTheme()" aria-label="Botón para cambiar de tema">
+      <svg aria-hidden="true" class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" height="27px" width="27px"
         fill="currentColor">
         <path
           d="M320 64C178.6 64 64 178.6 64 320C64 461.4 178.6 576 320 576C388.8 576 451.3 548.8 497.3 504.6C504.6 497.6 506.7 486.7 502.6 477.5C498.5 468.3 488.9 462.6 478.8 463.4C473.9 463.8 469 464 464 464C362.4 464 280 381.6 280 280C280 207.9 321.5 145.4 382.1 115.2C391.2 110.7 396.4 100.9 395.2 90.8C394 80.7 386.6 72.5 376.7 70.3C358.4 66.2 339.4 64 320 64z" />
@@ -19,8 +19,8 @@
     </button>
 
     <!-- contraste -->
-    <button class="setting-icon-item">
-      <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" height="27px" width="27px"
+    <button class="setting-icon-item" type="button" aria-label="Botón para cambiar el contraste">
+      <svg aria-hidden="true" class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" height="27px" width="27px"
         fill="currentColor">
         <path
           d="M512 320C512 214 426 128 320 128L320 512C426 512 512 426 512 320zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320z" />
@@ -29,7 +29,7 @@
 
     <!-- idioma -->
     <div class="setting-icon-item">
-      <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" height="27px" width="27px"
+      <svg aria-hidden="true" class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" height="27px" width="27px"
         fill="currentColor">
         <path
           d="M511.6 239C480 164.4 406.1 112 320 112C297.9 112 276.6 115.5 256.6 121.8C256.2 123.8 256 125.9 256 128L256 201.4C256 213.9 266.1 224 278.6 224C284.6 224 290.4 221.6 294.6 217.4L310.6 201.4C316.6 195.4 324.7 192 333.2 192L338.7 192C367.2 192 381.5 226.5 361.3 246.6C355.3 252.6 347.2 256 338.7 256L277.2 256C268.7 256 260.6 259.4 254.6 265.4L233.3 286.7C227.3 292.7 223.9 300.8 223.9 309.3L223.9 352C223.9 369.7 238.2 384 255.9 384L287.9 384C305.6 384 319.9 398.3 319.9 416L319.9 448C319.9 465.7 334.2 480 351.9 480L354.6 480C363.1 480 371.2 476.6 377.2 470.6L406.5 441.3C412.5 435.3 415.9 427.2 415.9 418.7L415.9 400C415.9 391.2 423.1 384 431.9 384C440.7 384 447.9 376.8 447.9 368L447.9 333.3C447.9 324.8 444.5 316.7 438.5 310.7L422.5 294.7C418.3 290.5 415.9 284.7 415.9 278.7C415.9 266.2 426 256.1 438.5 256.1L483.5 256.1C495.9 256.1 506.2 249 511.5 239.1zM64 320C64 178.6 178.6 64 320 64C461.4 64 576 178.6 576 320C576 461.4 461.4 576 320 576C178.6 576 64 461.4 64 320z" />

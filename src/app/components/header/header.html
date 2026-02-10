@@ -1,28 +1,26 @@
 <header class="header">
-  <div class="top-bar">
-    <section class="section-settings">
-      <app-auth></app-auth>
-      <app-page-settings></app-page-settings>
-    </section>
+  <!-- Barra superior -->
+  <div class="header-top">
+    
+    <div class="branding">
+      <h1 class="site-title">Senda Animal</h1>
+      <p class="site-tagline">Una reserva salvaje</p>
+    </div>
 
-    <section class="section-title">
-      <h1 class="title">Senda Animal</h1>
-      <p class="motto">Una reserva salvaje</p>
-    </section>
+    <div class="header-controls">
+      
+      <app-auth class="auth-component"></app-auth>
+      <app-page-settings class="page-settings-component"></app-page-settings>
 
-    <ul class="info-links__list">
-      <li class="info-link__item">
-        <p class="link">Sobre nosotros</p>
-      </li>
-      <li class="info-link__item">
-        <p class="link">Contácta con nosotros</p>
-      </li>
-      <li class="info-link__item">
-        <p class="link">Trabaja con nosotros</p>
-      </li>
-    </ul>
+      <!-- <button class="menu-toggle" type="button" (click)="toggleMenu()" [attr.aria-expanded]="isHamOpen()"
+        aria-label="Abrir menú de navegación">
+        <span class="menu-icon"></span>
+      </button> -->
+    </div>
   </div>
-  <div class="bottom-bar">
-    <app-nav></app-nav>
+
+  <!-- Barra de navegación -->
+  <div class="header-nav" [class.is-open]="isHamOpen()">
+    <app-nav class="nav-component"></app-nav>
   </div>
 </header>
