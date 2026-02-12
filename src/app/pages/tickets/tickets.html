@@ -3,10 +3,10 @@
         <h1 class="section-title">Compra de entradas</h1>
     </section>
 
-    <section class="section__form-display">
+    <section class="section-form-display">
 
         <!-- contenedor venta entradas (no miembros) -->
-        <article class="article__regular-admission">
+        <article class="article article-regular-admission">
 
             <div class="article-header">
                 <h2 class="article-title">Acceso al zoo</h2>
@@ -19,10 +19,10 @@
 
             <ul class="article-content">
 
-                <li class="article__content-row">
-                    <p class="content__ticket-age">Ancianos <span class="parenthesis-info">(mayores de 65 años)</span>
+                <li class="article-content-row">
+                    <p class="content-ticket-age">Ancianos <span class="parenthesis-info">(mayores de 65 años)</span>
                     </p>
-                    <p class="content__ticket-price">18
+                    <p class="content-ticket-price">18
                         <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="-75 -60 117.75 120"
                             fill="currentColor">
                             <path
@@ -31,10 +31,10 @@
                     </p>
                 </li>
 
-                <li class="article__content-row">
-                    <p class="content__ticket-age">Adultos <span class="parenthesis-info">(mayores de 18 años)</span>
+                <li class="article-content-row">
+                    <p class="content-ticket-age">Adultos <span class="parenthesis-info">(mayores de 18 años)</span>
                     </p>
-                    <p class="content__ticket-price">20
+                    <p class="content-ticket-price">20
                         <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="-75 -60 117.75 120"
                             fill="currentColor">
                             <path
@@ -43,10 +43,10 @@
                     </p>
                 </li>
 
-                <li class="article__content-row">
-                    <p class="content__ticket-age">Jóvenes <span class="parenthesis-info">(mayores de 3 años)</span>
+                <li class="article-content-row">
+                    <p class="content-ticket-age">Jóvenes <span class="parenthesis-info">(mayores de 3 años)</span>
                     </p>
-                    <p class="content__ticket-price">16
+                    <p class="content-ticket-price">16
                         <svg xmlns="http://www.w3.org/2000/svg" width="16px" height="16px" viewBox="-75 -60 117.75 120"
                             fill="currentColor">
                             <path
@@ -55,18 +55,19 @@
                     </p>
                 </li>
 
-                <li class="article__content-row">
-                    <p class="content__ticket-age">Niños <span class="parenthesis-info">(menores de 3 años)</span></p>
-                    <p class="content__ticket-price">Entrada gratuita</p>
+                <li class="article-content-row">
+                    <p class="content-ticket-age">Niños <span class="parenthesis-info">(menores de 3 años)</span></p>
+                    <p class="content-ticket-price">Entrada gratuita</p>
                 </li>
             </ul>
-            <button routerLink="/purchase" class="submit-button" (click)="buyAsGuest()">
+            <button routerLink="/purchase" class="button submit-button-guest" (click)="buyAsGuest()">
                 Hazte con ellas ahora
             </button>
         </article>
 
         <!-- contenedor venta entradas para miembros -->
-        <article class="article__member-admission">
+        <article class="article article-member-admission">
+            <span class="badge-member">Exclusivo miembros</span>
 
             <div class="article-header">
                 <h2 class="article-title">Acceso para miembros</h2>
@@ -78,31 +79,31 @@
 
             <ul class="article-content">
 
-                <li class="article__content-row">
-                    <p class="content__ticket-age">Ancianos <span class="parenthesis-info">(mayores de 65 años)</span>
+                <li class="article-content-row">
+                    <p class="content-ticket-age">Ancianos <span class="parenthesis-info">(mayores de 65 años)</span>
                     </p>
-                    <p class="content__ticket-price">50% de descuento</p>
+                    <p class="content-ticket-price">50% de descuento</p>
                 </li>
 
-                <li class="article__content-row">
-                    <p class="content__ticket-age">Adultos <span class="parenthesis-info">(mayores de 18 años)</span>
+                <li class="article-content-row">
+                    <p class="content-ticket-age">Adultos <span class="parenthesis-info">(mayores de 18 años)</span>
                     </p>
-                    <p class="content__ticket-price">50% de descuento</p>
+                    <p class="content-ticket-price">50% de descuento</p>
                 </li>
 
-                <li class="article__content-row">
-                    <p class="content__ticket-age">Jóvenes <span class="parenthesis-info">(mayores de 3 años)</span>
+                <li class="article-content-row">
+                    <p class="content-ticket-age">Jóvenes <span class="parenthesis-info">(mayores de 3 años)</span>
                     </p>
-                    <p class="content__ticket-price">50% de descuento</p>
+                    <p class="content-ticket-price">50% de descuento</p>
                 </li>
 
-                <li class="article__content-row">
-                    <p class="content__ticket-age">Niños <span class="parenthesis-info">(menores de 3 años)</span></p>
-                    <p class="content__ticket-price">Entrada gratuita</p>
+                <li class="article-content-row">
+                    <p class="content-ticket-age">Niños <span class="parenthesis-info">(menores de 3 años)</span></p>
+                    <p class="content-ticket-price">Entrada gratuita</p>
                 </li>
             </ul>
 
-            <button routerLink="/purchase" class="submit-button" (click)="buyAsMember()">
+            <button routerLink="/purchase" class="button submit-button-member" (click)="buyAsMember()">
                 Resérvalas ahora
             </button>
         </article>

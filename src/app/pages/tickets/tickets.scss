@@ -15,34 +15,25 @@
     align-items: center;
 }
 
-.section-header::before {
-    content: "";
-
-    height: 100%;
-    width: 100%;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    background-color: var(--text-color);
-    opacity: .05;
-}
-
 .section-title {
 
     color: var(--text-color);
 }
 
-.section__form-display {
+.section-form-display {
     padding: var(--space-6) calc(var(--space-7) * 3);
 
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: var(--space-2);
 }
 
-.article__member-admission,
-.article__regular-admission {
+.article {
+    box-shadow: var(--shadow-sm);
+}
+
+.article-member-admission,
+.article-regular-admission {
     position: relative;
     padding: var(--space-7);
 
@@ -52,47 +43,8 @@
     gap: var(--space-3);
 }
 
-.article__member-admission::before,
-.article__regular-admission::before {
-    content: "";
-
-    height: 100%;
-    width: 100%;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    pointer-events: none;
-
-    background-color: var(--text-color);
-    opacity: .05;
-}
-
-.article__member-admission::after {
-    content: "";
-
-    height: 100%;
-    width: 1px;
-
-    position: absolute;
-    top: 0;
-    left: 0;
-
-    background-color: var(--text-color);
-}
-
-.article__regular-admission::after {
-    content: "";
-
-    height: 100%;
-    width: 1px;
-
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    background-color: var(--text-color);
+.article-member-admission {
+    border-top: 4px solid var(--accent-color);
 }
 
 .article-header {
@@ -104,11 +56,20 @@
 }
 
 .article-title {
-    color: var(--secondary-color);
+    font-size: 28px;
+    font-weight: 600;
+    text-align: center;
+    color: var(--text-color);
 }
 
 .article-subtitle {
-    color: var(--text-color);
+    max-width: 90%;
+
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.6;
+    
+    color: color-mix(in srgb, var(--text-color) 65%, transparent);
 }
 
 .article-content {
@@ -118,28 +79,23 @@
     gap: var(--space-3);
 }
 
-.article__content-row {
+.article-content-row {
     position: relative;
+    padding-bottom: var(--space-3);
 
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    border-bottom: 1px solid rgba(45, 45, 45, 0.12);
 }
 
-.article__content-row::after {
-    content: "";
-
-    height: 1px;
-    width: 100%;
-
-    position: absolute;
-    bottom: calc((var(--space-3) * -1) / 2);
-    left: 0;
-
-    background-color: var(--text-color);
+.article-content-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
 }
 
-.content__ticket-age {
+.content-ticket-age {
     font-size: 18px;
     font-family: var(--secondary-font-family);
     font-weight: normal;
@@ -151,41 +107,108 @@
     color: grey;
 }
 
-.article__regular-admission .content__ticket-price {
+.content-ticket-price {
+    font-size: 18px;
+    font-family: var(--primary-font-family);
+}
+
+.article-regular-admission .content-ticket-price {
     display: flex;
     align-items: center;
     gap: var(--space-1);
 
-    color: grey;
-}
-
-.article__member-admission .content__ticket-price {
-    color: var(--secondary-color);
-}
-
-.submit-button {
-    min-height: var(--space-5);
-    min-width: calc(var(--space-9) * 2);
-
-    padding: var(--space-1) 0;
-
-    font-size: 16px;
-    font-family: var(--secondary-font-family);
-    font-weight: bold;
-
-    border: 2px solid var(--text-color);
-
     color: var(--text-color);
+}
+
+.article-member-admission .content-ticket-price {
+    color: var(--primary-color);
+}
+
+.submit-button-guest,
+.submit-button-member {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+// submit para guest
+.submit-button-guest {
+    border: 2px solid var(--primary-color);
+
+    color: var(--primary-color);
     background-color: var(--background-color);
 }
 
-.submit-button:hover {
-    border: 2px solid var(--secondary-color);
-    color: var(--secondary-color);
+.submit-button-guest:hover {
+    color: var(--background-color);
 }
 
-.submit-button:active {
-    border: 2px solid var(--text-color);
+.submit-button-guest::before {
+    content: "";
+
+    height: 100%;
+    width: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    background-color: var(--primary-color);
+
+    transition: width .2s ease-out;
+}
+
+.submit-button-guest:hover::before {
+    width: 100%;
+}
+
+// submit para member
+.submit-button-member {
+    border: 2px solid var(--accent-color);
+
+    color: var(--accent-color);
+    background-color: var(--background-color);
+}
+
+.submit-button-member:hover {
+    color: var(--background-color);
+}
+
+.submit-button-member::before {
+    content: "";
+
+    height: 100%;
+    width: 0;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    background-color: var(--accent-color);
+
+    transition: width .2s ease-out;
+}
+
+.submit-button-member:hover::before {
+    width: 100%;
+}
+
+.badge-member {
+    position: absolute;
+    padding: var(--space-1) var(--space-3);
+    top: calc(var(--space-4) * -1);
+    right: var(--space-4);
+
+    border: 1px solid var(--accent-color);
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-family: var(--secondary-font-family);
+    font-weight: bold;
+
     color: var(--text-color);
-    transform: scale(.9);
+    background-color: var(--accent-color);
+    box-shadow: var(--shadow-md);
 }
