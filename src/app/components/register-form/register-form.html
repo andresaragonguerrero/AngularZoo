@@ -11,132 +11,91 @@
     <!-- Nombre -->
     <div class="form-group">
       <label class="label" for="firstName">Nombre</label>
-      <input
-        class="input-text"
-        id="firstName"
-        type="text"
-        formControlName="firstName"
-        placeholder="Nombre..."
-        [class.error]="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched"
-      >
+      <input class="input-text" id="firstName" type="text" formControlName="firstName" placeholder="Nombre..."
+        [class.error]="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched">
 
       @if (registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched) {
-        <small class="small">
-          El nombre es requerido (mínimo 2 caracteres)
-        </small>
+      <small class="small">
+        El nombre es requerido (mínimo 2 caracteres)
+      </small>
       }
     </div>
 
     <!-- Apellido -->
     <div class="form-group">
       <label class="label" for="lastName">Apellido</label>
-      <input
-        class="input-text"
-        id="lastName"
-        type="text"
-        formControlName="lastName"
-        placeholder="Apellido..."
-        [class.error]="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched"
-      >
+      <input class="input-text" id="lastName" type="text" formControlName="lastName" placeholder="Apellido..."
+        [class.error]="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched">
 
       @if (registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched) {
-        <small class="small">
-          El apellido es requerido
-        </small>
+      <small class="small">
+        El apellido es requerido
+      </small>
       }
     </div>
 
     <!-- Email -->
     <div class="form-group">
       <label class="label" for="email">Email</label>
-      <input
-        class="input-text"
-        id="email"
-        type="email"
-        formControlName="email"
-        placeholder="email@email.com"
-        [class.error]="(registerForm.get('email')?.invalid && registerForm.get('email')?.touched) || emailExists"
-      >
+      <input class="input-text" id="email" type="email" formControlName="email" placeholder="email@email.com"
+        [class.error]="(registerForm.get('email')?.invalid && registerForm.get('email')?.touched) || emailExists">
 
       @if (registerForm.get('email')?.invalid && registerForm.get('email')?.touched) {
-        <small class="small">
-          Introduce un email válido
-        </small>
+      <small class="small">
+        Introduce un email válido
+      </small>
       }
 
       @if (emailExists) {
-        <small class="small error-message">
-          Este email ya está registrado
-        </small>
+      <small class="small error-message">
+        Este email ya está registrado
+      </small>
       }
     </div>
 
     <!-- Contraseña -->
     <div class="form-group">
       <label class="label" for="password">Contraseña</label>
-      <input
-        class="input-text"
-        id="password"
-        type="password"
-        formControlName="password"
-      >
+      <input class="input-text" id="password" type="password" formControlName="password">
 
       @if (registerForm.get('password')?.invalid && registerForm.get('password')?.touched) {
-        <small class="small">
-          Mínimo 6 caracteres, una mayúscula y un número
-        </small>
+      <small class="small">
+        Mínimo 6 caracteres, una mayúscula y un número
+      </small>
       }
     </div>
 
     <!-- Edad -->
     <div class="form-group">
       <label class="label" for="age">Edad</label>
-      <input
-        class="input-text"
-        id="age"
-        type="number"
-        formControlName="age"
-        placeholder="30"
-        min="0"
-        max="120"
-        [class.error]="registerForm.get('age')?.invalid && registerForm.get('age')?.touched"
-      >
+      <input class="input-text" id="age" type="number" formControlName="age" placeholder="30" min="0" max="120"
+        [class.error]="registerForm.get('age')?.invalid && registerForm.get('age')?.touched">
 
       @if (registerForm.get('age')?.invalid && registerForm.get('age')?.touched) {
-        <small class="small">
-          La edad debe estar entre 0 y 120 años
-        </small>
+      <small class="small">
+        La edad debe estar entre 0 y 120 años
+      </small>
       }
     </div>
 
     <!-- Términos -->
     <div class="form-group checkbox">
+      <input class="input-checkbox" type="checkbox" formControlName="agreeToTerms" id="agreeToTerms">
       <label for="agreeToTerms" class="label">
-        <input
-          class="input-checkbox"
-          type="checkbox"
-          formControlName="agreeToTerms"
-          id="agreeToTerms"
-        >
         Acepto los términos y condiciones del zoo
       </label>
 
       @if (registerForm.get('agreeToTerms')?.invalid && registerForm.get('agreeToTerms')?.touched) {
-        <small class="small">
-          Debes aceptar los términos
-        </small>
+      <small class="small">
+        Debes aceptar los términos
+      </small>
       }
     </div>
 
     <!-- Socio -->
     <div class="form-group checkbox">
+      <input class="input-checkbox" type="checkbox" formControlName="becomeMember" id="becomeMember">
       <label for="becomeMember" class="label">
-        <input
-          class="input-checkbox"
-          type="checkbox"
-          formControlName="becomeMember"
-          id="becomeMember"
-        >
         Quiero hacerme socio (50% descuento en todas las entradas)
       </label>
       <small class="small">
@@ -146,32 +105,28 @@
 
     <!-- Mensajes de error generales -->
     @if (error()) {
-      <div class="error-message">
-        Error {{ error() }}
-      </div>
+    <div class="error-message">
+      Error {{ error() }}
+    </div>
     }
   </section>
 
   <!-- Submit -->
-  <button
-    type="submit"
-    class="submit-button"
-    [disabled]="!registerForm.valid || isLoading || authIsLoading()"
-  >
+  <button type="submit" class="submit-button" [disabled]="!registerForm.valid || isLoading || authIsLoading()">
     {{ (isLoading || authIsLoading()) ? 'Registrando...' : 'Registrarse' }}
   </button>
 
   @if (false) { <!-- true para debug -->
-    <div class="debug-info">
-      <hr>
-      <small>
-        <strong>Debug:</strong><br>
-        Form válido: {{ registerForm.valid }}<br>
-        Email existe: {{ emailExists }}<br>
-        Loading: {{ isLoading }}<br>
-        Auth Loading: {{ authIsLoading() }}<br>
-        Error: {{ error() }}
-      </small>
-    </div>
+  <div class="debug-info">
+    <hr>
+    <small>
+      <strong>Debug:</strong><br>
+      Form válido: {{ registerForm.valid }}<br>
+      Email existe: {{ emailExists }}<br>
+      Loading: {{ isLoading }}<br>
+      Auth Loading: {{ authIsLoading() }}<br>
+      Error: {{ error() }}
+    </small>
+  </div>
   }
 </form>
