@@ -1,6 +1,6 @@
 <div class="app-content-wrapper">
   <app-header class="header"></app-header>
-  <main>
+  <main class="main" [class.header-sticky]="headerService.mode() === 'sticky'">
     <router-outlet></router-outlet>
   </main>
   <app-footer></app-footer>

@@ -37,7 +37,10 @@ body {
   /* fonts*/
   --primary-font-family: "Inter", sans-serif;
   --secondary-font-family: "Krub", sans-serif;
+
   /* sizes */
+  --header-height: 118.4px;
+
   --space-base: 1rem;
   --space-1: calc(var(--space-base) * 0.25);
   --space-2: calc(var(--space-base) * 0.50);
@@ -66,7 +69,7 @@ body {
   --link-color: #3b82f6;
 
   /* Colores de superficie */
-  --surface-color: #FFFFFF; 
+  --surface-color: #FFFFFF;
   --surface-hover: #F5F0E5;
 
   /* Sombras */

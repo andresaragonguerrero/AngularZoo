@@ -6,7 +6,13 @@
   background-color: var(--background-color);
 
   box-shadow: var(--shadow-lg);
+
+  &.is-fixed {
+    position: fixed;
+    width: 100%;
+  }
 }
+
 
 // HEADER-TOP
 .header-top {
@@ -14,7 +20,7 @@
 
   margin: 0 auto;
   padding: var(--space-2) 0;
-  
+
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal, OnInit, OnDestroy } from '@angular/core';
 import { ThemeService } from '../../services/theme.service';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -8,6 +8,9 @@ import { PageSettings } from "../page-settings/page-settings";
 import { Nav } from "../nav/nav";
 import { Auth } from "../auth/auth";
 
+// servicios
+import { HeaderService } from '../../services/header.service';
+
 @Component({
   selector: 'app-header',
   imports: [
@@ -16,7 +19,7 @@ import { Auth } from "../auth/auth";
     PageSettings,
     Nav,
     Auth
-],
+  ],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
@@ -25,6 +28,8 @@ export class Header {
   theme = signal<'light' | 'dark'>('light');
   isMenuOpen = signal(false);
   isHamOpen = signal(false);
+
+  headerService = inject(HeaderService);
 
   constructor(
     private readonly themeService: ThemeService,
