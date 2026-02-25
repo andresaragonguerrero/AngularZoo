@@ -5,10 +5,10 @@
 }
 
 .form-group {
-  min-width: calc(var(--space-9) * 4);
+  // min-width: calc(var(--space-9) * 4);
+  width: 100%;
 
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
 
@@ -126,7 +126,10 @@
   min-height: var(--space-5);
   min-width: calc(var(--space-9) * 2);
 
+  position: relative;
   padding: var(--space-1) 0;
+  z-index: 1;
+  overflow: hidden;
 
   font-size: 16px;
   font-family: var(--secondary-font-family);
@@ -134,13 +137,34 @@
 
   border: 2px solid var(--text-color);
 
+  cursor: pointer;
+
   color: var(--text-color);
   background-color: var(--background-color);
 }
 
 .submit-button:hover {
-  border: 2px solid var(--secondary-color);
-  color: var(--secondary-color);
+  color: var(--background-color);
+}
+
+.submit-button::before {
+  content: "";
+
+  height: 100%;
+  width: 0%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  background-color: var(--secondary-color);
+
+  transition: width 0.2s ease-out;
+}
+
+.submit-button:hover::before {
+  width: 100%;
 }
 
 .submit-button:active {
