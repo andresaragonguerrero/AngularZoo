@@ -11,6 +11,7 @@ import { CommonModule } from '@angular/common';
 
 // Servicios
 import { PriceCalculatorService } from '../../services/price-calculator.service';
+import { AvailabilityService } from '../../services/availability.service';
 
 // Componentes
 import { TicketSummaryModal } from '../ticket-summary-modal/ticket-summary-modal';
@@ -28,6 +29,7 @@ import { TicketSummaryModal } from '../ticket-summary-modal/ticket-summary-modal
 export class TicketForm {
   private readonly fb = inject(FormBuilder);
   priceCalculator = inject(PriceCalculatorService);
+  availabilityService = inject(AvailabilityService);
 
   ticketForm: FormGroup = this.fb.group(
     {
@@ -54,19 +56,13 @@ export class TicketForm {
 
   today: string = this.getToday();
 
-  private minOneTicketValidator(
-    control: AbstractControl
-  ): ValidationErrors | null {
-    const values = control.value as {
-      senior: number;
-      adult: number;
-      child: number;
-    };
+  private minOneTicketValidator(control: AbstractControl): ValidationErrors | null {
+    const { senior, adult, child } = control.value;
 
-    const totalTickets = Object.values(values).reduce(
-      (sum: number, val: number) => sum + (val || 0),
-      0
-    );
+    const totalTickets =
+      (Number(senior) || 0) +
+      (Number(adult) || 0) +
+      (Number(child) || 0);
 
     return totalTickets >= 1 ? null : { minOneTicket: true };
   }
@@ -133,7 +129,29 @@ export class TicketForm {
   }
 
   confirmPurchase(): void {
-    console.log('Compra confirmada');
+    const date = this.ticketForm.get('date')?.value;
+    const hour = this.ticketForm.get('hour')?.value;
+
+    if (!date || !hour) return;
+
+    const totalTickets = this.priceCalculator.getTotalTickets();
+
+    const available = this.availabilityService.checkAvailability(
+      date,
+      hour,
+      totalTickets
+    );
+
+    if (!available) {
+      alert('No hay suficientes plazas disponibles para esta hora.');
+      return;
+    }
+
+    // Reservar plazas
+    this.availabilityService.reserve(date, hour, totalTickets);
+
+    console.log('Compra confirmada y plazas reservadas');
+
     this.showSummary = false;
 
     // (más adelante aquí irá TicketService.createAndSaveTicket)
