@@ -74,10 +74,4 @@ export class LoginForm {
   togglePasswordVisibility() {
     this.showPassword.update(value => !value);
   }
-
-  // Para testing rápido
-  async quickLogin(email: string) {
-    this.loginForm.patchValue({ email });
-    await this.onSubmit();
-  }
 }
