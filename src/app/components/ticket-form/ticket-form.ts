@@ -9,7 +9,10 @@ import {
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
+// Servicios
 import { PriceCalculatorService } from '../../services/price-calculator.service';
+
+// Componentes
 import { TicketSummaryModal } from '../ticket-summary-modal/ticket-summary-modal';
 
 @Component({

@@ -1,7 +1,12 @@
-// src/app/features/auth/services/user.service.ts
 import { Injectable, inject } from '@angular/core';
+
+// factorías
 import { UserFactory } from '../factories/user.factory';
+
+// repositorios
 import { UserRepository } from '../repositories/user.repository';
+
+// modelos
 import { User } from '../models/user';
 
 export interface UserRegistrationData {

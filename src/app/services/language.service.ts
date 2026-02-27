@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable, signal } from '@angular/core';
+
+// Servicios
 import { TranslateService } from '@ngx-translate/core';
 
 type SupportedLanguage = 'es' | 'en' | 'fr';

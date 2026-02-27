@@ -9,10 +9,12 @@
 
   border: 2px solid var(--text-color);
   box-shadow: var(--shadow-sm);
-  
+
   transition:
     border .3s ease-out,
-    box-shadow .3s ease-out,
+    box-shadow .3s ease-out;
+
+  cursor: pointer;
 }
 
 .login-button,
@@ -60,7 +62,75 @@
   transition: color .3s;
 }
 
-.auth-button:hover .link,
-.auth-button:hover .svg-icon {
+login-button .auth-button:hover .link,
+login-button .auth-button:hover .svg-icon {
+  color: var(--background-color);
+}
+
+.user-info {
+  position: relative;
+  z-index: 1;
+
+  display: flex;
+  align-items: center;
+
+  background-color: var(--background-color);
+}
+
+.user-info:hover .logout-button {
+  color: var(--background-color);
+}
+
+.user-info::before {
+  content: "";
+
+  height: 100%;
+  width: 0%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+
+  background-color: var(--error-color);
+
+  transition: width .2s ease-out;
+}
+
+.user-info:hover::before {
+  width: 100%;
+}
+
+.user-info .user-name {
+  position: relative;
+  padding: 0 var(--space-2);
+
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+
+  font-size: 16px;
+  font-family: var(--secondary-font-family);
+  font-weight: bold;
+
+  color: var(--background-color);
+  background-color: var(--secondary-color);
+}
+
+.logout-button {
+  padding: 0 var(--space-2);
+
+  border: none;
+  outline: none;
+
+  font-size: 16px;
+  font-family: var(--secondary-font-family);
+  font-weight: bold;
+
+  color: var(--text-color);
+  background-color: transparent;
+}
+
+.user-info .svg-icon {
   color: var(--background-color);
 }

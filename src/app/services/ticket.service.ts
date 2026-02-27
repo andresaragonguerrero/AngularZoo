@@ -1,7 +1,12 @@
 import { Injectable, inject } from '@angular/core';
 
+// Factorías
 import { TicketFactory } from '../factories/ticket.factory';
+
+// Repositorios
 import { TicketRepository } from '../repositories/ticket.repository';
+
+// Modelos
 import { Ticket } from '../models/ticket';
 
 @Injectable({

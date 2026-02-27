@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+
+// Modelos
 import { TicketQuantities } from '../../models/ticket-type';
 
 @Component({

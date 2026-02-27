@@ -9,6 +9,7 @@ import { RegisterForm } from '../../components/register-form/register-form';
   templateUrl: './register-page.html',
   styleUrl: './register-page.scss',
 })
+
 export class RegisterPage {
 
 }

@@ -204,3 +204,76 @@ El flujo transcurre desde que el usuario introduce el número de personas que de
 - membership-service: para darse de alta como socio
 - activity-service: para darse de alta en una actividad
 - course-service: para darse de alta en un curso
+  
+## ESTRUCTURA DE CARPETAS
+
+src/app/
+├── app.ts                 (root standalone component)
+├── app.routes.ts          (definición de rutas)
+├── components/            (UI reutilizables + formularios)
+├── pages/                 (componentes de página enlazadas a rutas)
+├── sections/              (sub‑componentes del home)
+├── services/              (lógica de negocio / estado)
+├── interfaces/            (contratos TS)
+├── models/                (tipos de datos)
+├── factories/             (creadores de entidades)
+├── repositories/          (persistencia: IndexedDB & localStorage)
+└── strategy/              (pricing strategies)
+
+## DIAGRAMA MERMAID
+
+graph LR
+  App --> Header
+  App --> Footer
+  App --> RouterOutlet
+
+  Header --> PageSettings
+  Header --> Nav
+  Header --> Auth
+
+  PageSettings --> ThemeService
+  Auth --> AuthService
+  Auth --> NotificationService
+  Nav --> Router
+
+  HomeComponent --> Hero
+  HomeComponent --> ParkInfo
+  HomeComponent --> Courses
+  HomeComponent --> Activities
+  HomeComponent --> HeaderService
+
+  TicketsComponent --> PriceCalculatorService
+  TicketsComponent --> AuthService
+  TicketsComponent --> Router
+
+  LoginPage --> LoginForm
+  LoginForm --> AuthService
+  LoginForm --> NotificationService
+  LoginForm --> Router
+
+  RegisterPage --> RegisterForm
+  RegisterForm --> AuthService
+  RegisterForm --> Router
+
+  TicketPurchase --> TicketForm
+  TicketForm --> PriceCalculatorService
+  TicketForm --> TicketSummaryModal
+
+  TicketSummaryModal --> TicketQuantities
+  TicketSummaryModal --> total((number))
+  TicketSummaryModal --> isMember((boolean))
+
+  PriceCalculatorService --> MemberPriceStrategy
+  PriceCalculatorService --> NonMemberPriceStrategy
+
+  MemberPriceStrategy --> PriceStrategy
+  NonMemberPriceStrategy --> PriceStrategy
+
+  UserService --> UserFactory
+  UserService --> UserRepository
+
+  AuthService --> UserService
+  AuthService --> PriceCalculatorService
+
+  TicketService --> TicketFactory
+  TicketService --> TicketRepository

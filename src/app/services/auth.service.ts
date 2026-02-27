@@ -1,6 +1,10 @@
 import { Injectable, inject, signal } from '@angular/core';
-import { UserService } from './user.service';
+
+// modelos
 import { User } from '../models/user';
+
+// servicios
+import { UserService } from './user.service';
 import { PriceCalculatorService } from './price-calculator.service';
 
 export interface LoginCredentials {

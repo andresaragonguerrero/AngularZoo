@@ -1,6 +1,9 @@
 import { Injectable } from "@angular/core";
 
+// Estrategias
 import { PriceStrategy } from "../interfaces/price-strategy";
+
+// Modelos
 import { TicketQuantities, TICKET_PRICES } from '../models/ticket-type';
 
 @Injectable({ providedIn: 'root' })
