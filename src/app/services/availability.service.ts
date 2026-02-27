@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 
+// Repositorios
+import { AvailabilityRepository } from '../repositories/availability.repository';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -8,35 +11,47 @@ export class AvailabilityService {
   // Máximo de entradas disponibles por hora
   private readonly MAX_CAPACITY = 60;
 
-  // clave: "2026-03-21_14:00"
-  private slots: Record<string, number> = {};
-
-  private buildKey(date: string, hour: string): string {
-    return `${date}_${hour}`;
-  }
+  constructor(
+    private readonly availabilityRepository: AvailabilityRepository
+  ) { }
 
   checkAvailability(date: string, hour: string, quantity: number): boolean {
-    const key = this.buildKey(date, hour);
-    const booked = this.slots[key] ?? 0;
+    const slot = this.availabilityRepository.findSlot(date, hour);
 
-    return booked + quantity <= this.MAX_CAPACITY;
+    const booked = slot?.booked ?? 0;
+    const capacity = slot?.capacity ?? this.MAX_CAPACITY;
+
+    return quantity + booked <= capacity;
   }
 
   reserve(date: string, hour: string, quantity: number): void {
-    const key = this.buildKey(date, hour);
-    const booked = this.slots[key] ?? 0;
+    const keySlot = this.availabilityRepository.findSlot(date, hour);
 
-    this.slots[key] = booked + quantity;
+    if (!keySlot) {
+      this.availabilityRepository.saveSlot({
+        date,
+        hour,
+        booked: quantity,
+        capacity: this.MAX_CAPACITY
+      });
+      return;
+    }
+
+    const updatedSlot = {
+      ...keySlot,
+      booked: keySlot.booked + quantity
+    };
+
+    this.availabilityRepository.saveSlot(updatedSlot);
   }
 
   getRemainingSpots(date: string, hour: string): number {
-    const key = this.buildKey(date, hour);
-    const booked = this.slots[key] ?? 0;
+    const slot = this.availabilityRepository.findSlot(date, hour);
 
-    return this.MAX_CAPACITY - booked;
-  }
+    if (!slot) {
+      return this.MAX_CAPACITY;
+    }
 
-  clear(): void {
-    this.slots = {};
+    return slot.capacity - slot.booked;
   }
 }
