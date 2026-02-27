@@ -31,6 +31,8 @@ export class TicketForm {
 
   ticketForm: FormGroup = this.fb.group(
     {
+      date: ['', Validators.required],
+      hour: ['', Validators.required],
       senior: [0, [Validators.min(0), Validators.required]],
       adult: [0, [Validators.min(0), Validators.required]],
       child: [0, [Validators.min(0), Validators.required]],
@@ -44,6 +46,13 @@ export class TicketForm {
   isMember = this.priceCalculator.isMember;
   unitPrices = this.priceCalculator.unitPrices;
   total = this.priceCalculator.total;
+
+  availableHours: string[] = [];
+
+  private readonly OPEN_HOUR = 14;
+  private readonly CLOSE_HOUR = 22;
+
+  today: string = this.getToday();
 
   private minOneTicketValidator(
     control: AbstractControl
@@ -92,6 +101,37 @@ export class TicketForm {
     this.showSummary = true;
   }
 
+  onDateChange(): void {
+    const today = new Date();
+    const selectedDate = this.ticketForm.get('date')?.value;
+
+    if (!selectedDate) {
+      this.availableHours = [];
+      return;
+    }
+
+    const date = new Date(selectedDate);
+    const day = date.getDay();
+
+    today.setHours(0, 0, 0, 0);
+
+    if (date <= today) {
+      this.availableHours = [];
+      this.ticketForm.get('date')?.setErrors({ pastDate: true });
+      return;
+    }
+
+    const isOpenDay = [0, 3, 4, 5, 6].includes(day);
+
+    if (!isOpenDay) {
+      this.availableHours = [];
+      this.ticketForm.get('hour')?.setValue('');
+      return;
+    }
+
+    this.generateHours();
+  }
+
   confirmPurchase(): void {
     console.log('Compra confirmada');
     this.showSummary = false;
@@ -111,4 +151,18 @@ export class TicketForm {
     control?.setValue(Math.max(0, value - 1));
   }
 
+  // Generar horas dinámicamente
+  private generateHours(): void {
+    this.availableHours = [];
+
+    for (let hour = this.OPEN_HOUR; hour < this.CLOSE_HOUR; hour++) {
+      const formatted = `${hour.toString().padStart(2, '0')}:00`;
+      this.availableHours.push(formatted);
+    }
+  }
+
+  private getToday(): string {
+    const now = new Date();
+    return now.toISOString().split('T')[0];
+  }
 }

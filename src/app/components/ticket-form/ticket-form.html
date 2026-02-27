@@ -169,7 +169,21 @@
     </div>
   </div>
 
-  <!-- en un futuro habrá que añadir un input type date para seleccionar la fecha -->
+  <!-- selección de fecha -->
+  <div class="date-selection">
+    <label for="date">Fecha de visita</label>
+    <input type="date" id="date" formControlName="date" [min]="today" (change)="onDateChange()" />
+  </div>
+
+  <div class="hour-selection" *ngIf="availableHours.length > 0">
+    <label for="hour">Hora de entrada</label>
+    <select id="hour" formControlName="hour">
+      <option value="">Selecciona una hora</option>
+      <option *ngFor="let hour of availableHours" [value]="hour">
+        {{ hour }}
+      </option>
+    </select>
+  </div>
 
   @if (ticketForm.errors?.['minOneTicket'] && ticketForm.touched) {
   <div class="error-message">
