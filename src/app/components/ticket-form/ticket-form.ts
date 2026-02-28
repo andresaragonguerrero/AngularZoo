@@ -129,19 +129,19 @@ export class TicketForm {
   }
 
   confirmPurchase(): void {
-    const date = this.ticketForm.get('date')?.value;
-    const hour = this.ticketForm.get('hour')?.value;
+    const { date, hour, senior, adult, child } = this.ticketForm.value;
 
     if (!date || !hour) return;
 
-    const quantities = this.priceCalculator.quantities();
-    const totalPrice = this.priceCalculator.total();
+    const isMember = this.priceCalculator.isMember();
 
     const result = this.ticketService.purchase({
       date,
       hour,
-      quantities,
-      total: totalPrice
+      senior: Number(senior),
+      adult: Number(adult),
+      child: Number(child),
+      isMember
     });
 
     if (!result.success) {
@@ -153,6 +153,7 @@ export class TicketForm {
 
     this.showSummary = false;
     this.ticketForm.reset();
+    this.priceCalculator.reset();
   }
 
   // Funcionalidad para seleccionar la cantidad de entradas (Numeric Stepper)

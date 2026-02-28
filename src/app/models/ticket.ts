@@ -3,6 +3,7 @@ export interface Ticket {
 
     // para simplificar, se empleará "new Date().toISOString()"
     date: string;
+    hour: string;
 
     quantities: {
         ADULT: number;

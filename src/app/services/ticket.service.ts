@@ -11,6 +11,7 @@ import { Ticket } from '../models/ticket';
 
 // Servicios
 import { AvailabilityService } from './availability.service';
+import { PriceCalculatorService } from './price-calculator.service';
 
 @Injectable({
   providedIn: 'root',
@@ -20,10 +21,12 @@ export class TicketService {
   private factory = inject(TicketFactory);
   private repository = inject(TicketRepository);
   private availabilityService = inject(AvailabilityService);
+  private priceCalculator = inject(PriceCalculatorService);
 
   // crea y guarda una nueva entrada
   createAndSaveTicket(data: {
     date: string;
+    hour: string;
     quantities: { ADULT: number; CHILD: number; SENIOR: number };
     total: number;
   }): Ticket {
@@ -56,32 +59,53 @@ export class TicketService {
   purchase(data: {
     date: string;
     hour: string;
-    quantities: { ADULT: number; CHILD: number; SENIOR: number };
-    total: number;
+    senior: number;
+    child: number;
+    adult: number;
+    isMember: boolean;
   }): { success: boolean; ticket?: Ticket } {
 
-    const quantity =
-      data.quantities.ADULT +
-      data.quantities.CHILD +
-      data.quantities.SENIOR;
+    const totalTickets =
+      data.senior +
+      data.adult +
+      data.child;
 
     const available = this.availabilityService.checkAvailability(
       data.date,
       data.hour,
-      quantity
+      totalTickets
     );
 
     if (!available) {
       return { success: false };
     }
 
+    this.priceCalculator.setMemberStatus(data.isMember);
+
+    this.priceCalculator.updateQuantities({
+      SENIOR: data.senior,
+      ADULT: data.adult,
+      CHILD: data.child
+    });
+
+    const totalPrice = this.priceCalculator.total();
+
     this.availabilityService.reserve(
       data.date,
       data.hour,
-      quantity
+      totalTickets
     );
 
-    const ticket = this.factory.createTicket(data);
+    const ticket = this.factory.createTicket({
+      date: data.date,
+      hour: data.hour,
+      quantities: {
+        SENIOR: data.senior,
+        ADULT: data.adult,
+        CHILD: data.child
+      },
+      total: totalPrice
+    });
 
     this.repository.save(ticket);
 

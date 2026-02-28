@@ -11,6 +11,7 @@ export class TicketFactory {
 
   createTicket(data: {
     date: string;
+    hour: string;
     quantities: TicketQuantities;
     total: number;
   }): Ticket {
@@ -22,6 +23,7 @@ export class TicketFactory {
     return {
       id: this.generateId(),
       date: data.date || new Date().toISOString().split('T')[0],
+      hour: data.hour,
       quantities: {
         ADULT: Math.max(0, adultQty),
         CHILD: Math.max(0, childQty),
@@ -42,9 +44,10 @@ export class TicketFactory {
 
   createFromCurrentState(
     date: string,
+    hour: string,
     quantities: TicketQuantities,
     total: number
   ): Ticket {
-    return this.createTicket({ date, quantities, total });
+    return this.createTicket({ date, hour, quantities, total });
   }
 }
