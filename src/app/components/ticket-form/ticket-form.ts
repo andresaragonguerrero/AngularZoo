@@ -11,7 +11,6 @@ import { CommonModule } from '@angular/common';
 
 // Servicios
 import { TicketService } from '../../services/ticket.service';
-import { PriceCalculatorService } from '../../services/price-calculator.service';
 
 // Componentes
 import { TicketSummaryModal } from '../ticket-summary-modal/ticket-summary-modal';
@@ -28,7 +27,6 @@ import { TicketSummaryModal } from '../ticket-summary-modal/ticket-summary-modal
 })
 export class TicketForm {
   private readonly fb = inject(FormBuilder);
-  priceCalculator = inject(PriceCalculatorService);
   ticketService = inject(TicketService);
 
   ticketForm: FormGroup = this.fb.group(
@@ -44,10 +42,9 @@ export class TicketForm {
 
   showSummary = false;
 
-  // Exponer signals al template
-  isMember = this.priceCalculator.isMember;
-  unitPrices = this.priceCalculator.unitPrices;
-  total = this.priceCalculator.total;
+  isMember = this.ticketService.isMember;
+  unitPrices = this.ticketService.unitPrices;
+  total = this.ticketService.total;
 
   availableHours: string[] = [];
 
@@ -78,21 +75,11 @@ export class TicketForm {
     const { senior, adult, child } = this.ticketForm.value;
 
     // Actualizar cantidades en el servicio
-    this.priceCalculator.updateQuantities({
+    this.ticketService.updateQuantities({
       SENIOR: senior,
       ADULT: adult,
-      CHILD: child,
+      CHILD: child
     });
-
-    // Leer total calculado por la estrategia
-    const totalPrice = this.priceCalculator.total();
-    const quantities = this.priceCalculator.quantities();
-    const isMember = this.priceCalculator.isMember();
-
-    console.log('COMPRA');
-    console.log('Tipo de usuario:', isMember ? 'SOCIO' : 'NO SOCIO');
-    console.log('Cantidades:', quantities);
-    console.log('TOTAL:', totalPrice, '€');
 
     this.showSummary = true;
   }
@@ -133,7 +120,7 @@ export class TicketForm {
 
     if (!date || !hour) return;
 
-    const isMember = this.priceCalculator.isMember();
+    const isMember = this.ticketService.isMember();
 
     const result = this.ticketService.purchase({
       date,
@@ -153,7 +140,7 @@ export class TicketForm {
 
     this.showSummary = false;
     this.ticketForm.reset();
-    this.priceCalculator.reset();
+    this.ticketForm.reset();
   }
 
   // Funcionalidad para seleccionar la cantidad de entradas (Numeric Stepper)

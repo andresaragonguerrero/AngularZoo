@@ -23,6 +23,21 @@ export class TicketService {
   private availabilityService = inject(AvailabilityService);
   private priceCalculator = inject(PriceCalculatorService);
 
+  // Exponer signals del priceCalculator
+  quantities = this.priceCalculator.quantities;
+  total = this.priceCalculator.total;
+  unitPrices = this.priceCalculator.unitPrices;
+  isMember = this.priceCalculator.isMember;
+
+  // Delegaciones públicas
+  setMemberStatus(isMember: boolean): void {
+    this.priceCalculator.setMemberStatus(isMember);
+  }
+
+  updateQuantities(quantities: { ADULT: number; CHILD: number; SENIOR: number }): void {
+    this.priceCalculator.updateQuantities(quantities);
+  }
+
   // crea y guarda una nueva entrada
   createAndSaveTicket(data: {
     date: string;

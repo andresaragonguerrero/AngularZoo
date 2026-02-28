@@ -194,7 +194,7 @@
   <button type="submit" class="submit-button">Comprar entradas</button>
 
   @if (showSummary){
-  <app-ticket-summary-modal [quantities]="priceCalculator.quantities()" [total]="priceCalculator.total()"
+  <app-ticket-summary-modal [quantities]="ticketService.quantities()" [total]="ticketService.total()"
     [isMember]="isMember()" (confirm)="confirmPurchase()" (cancel)="showSummary = false"></app-ticket-summary-modal>
   }
 </form>
