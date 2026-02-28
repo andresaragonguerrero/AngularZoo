@@ -10,8 +10,8 @@ import {
 import { CommonModule } from '@angular/common';
 
 // Servicios
+import { TicketService } from '../../services/ticket.service';
 import { PriceCalculatorService } from '../../services/price-calculator.service';
-import { AvailabilityService } from '../../services/availability.service';
 
 // Componentes
 import { TicketSummaryModal } from '../ticket-summary-modal/ticket-summary-modal';
@@ -29,7 +29,7 @@ import { TicketSummaryModal } from '../ticket-summary-modal/ticket-summary-modal
 export class TicketForm {
   private readonly fb = inject(FormBuilder);
   priceCalculator = inject(PriceCalculatorService);
-  availabilityService = inject(AvailabilityService);
+  ticketService = inject(TicketService);
 
   ticketForm: FormGroup = this.fb.group(
     {
@@ -134,27 +134,25 @@ export class TicketForm {
 
     if (!date || !hour) return;
 
-    const totalTickets = this.priceCalculator.getTotalTickets();
+    const quantities = this.priceCalculator.quantities();
+    const totalPrice = this.priceCalculator.total();
 
-    const available = this.availabilityService.checkAvailability(
+    const result = this.ticketService.purchase({
       date,
       hour,
-      totalTickets
-    );
+      quantities,
+      total: totalPrice
+    });
 
-    if (!available) {
+    if (!result.success) {
       alert('No hay suficientes plazas disponibles para esta hora.');
       return;
     }
 
-    // Reservar plazas
-    this.availabilityService.reserve(date, hour, totalTickets);
-
-    console.log('Compra confirmada y plazas reservadas');
+    console.log('Compra confirmada y plazas reservadas', result.ticket);
 
     this.showSummary = false;
-
-    // (más adelante aquí irá TicketService.createAndSaveTicket)
+    this.ticketForm.reset();
   }
 
   // Funcionalidad para seleccionar la cantidad de entradas (Numeric Stepper)

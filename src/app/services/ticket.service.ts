@@ -9,13 +9,17 @@ import { TicketRepository } from '../repositories/ticket.repository';
 // Modelos
 import { Ticket } from '../models/ticket';
 
+// Servicios
+import { AvailabilityService } from './availability.service';
+
 @Injectable({
   providedIn: 'root',
 })
 export class TicketService {
-  
+
   private factory = inject(TicketFactory);
   private repository = inject(TicketRepository);
+  private availabilityService = inject(AvailabilityService);
 
   // crea y guarda una nueva entrada
   createAndSaveTicket(data: {
@@ -46,5 +50,41 @@ export class TicketService {
   // Vacía los datos de las entradas
   clearAllTickets(): void {
     this.repository.clear();
+  }
+
+  // Compra de una entrada
+  purchase(data: {
+    date: string;
+    hour: string;
+    quantities: { ADULT: number; CHILD: number; SENIOR: number };
+    total: number;
+  }): { success: boolean; ticket?: Ticket } {
+
+    const quantity =
+      data.quantities.ADULT +
+      data.quantities.CHILD +
+      data.quantities.SENIOR;
+
+    const available = this.availabilityService.checkAvailability(
+      data.date,
+      data.hour,
+      quantity
+    );
+
+    if (!available) {
+      return { success: false };
+    }
+
+    this.availabilityService.reserve(
+      data.date,
+      data.hour,
+      quantity
+    );
+
+    const ticket = this.factory.createTicket(data);
+
+    this.repository.save(ticket);
+
+    return { success: true, ticket };
   }
 }
