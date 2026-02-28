@@ -1,10 +1,14 @@
 <div class="content-wrapper">
 
     <section class="section-header">
-        <h1 class="section-title">Cursos disponibles</h1>
+        <h1 class="section-title">Inscripción a curso</h1>
     </section>
 
     <section class="section-form-display">
+
+        <!-- ============================= -->
+        <!-- Columna izquierda: cursos -->
+        <!-- ============================= -->
 
         <article class="article article-regular-admission">
 
@@ -16,29 +20,25 @@
 
                 <p>{{ course.description }}</p>
 
-                <p>
-                    Inicio: {{ course.startDate }}
-                </p>
+                <p>Inicio: {{ course.startDate }}</p>
 
-                <p>
-                    Precio: {{ course.price }} €
-                </p>
+                <p>Precio: {{ getPrice(course) }} €</p>
+
+                <button class="button submit-button-guest" (click)="enroll(course)">
+                    Inscribirse
+                </button>
 
             </div>
 
             }
 
-            <div class="course-list-footer">
-
-                <button class="button submit-button-guest" routerLink="/course-purchase">
-
-                    Inscribirse a un curso
-
-                </button>
-
-            </div>
-
         </article>
+
+        <!-- ============================= -->
+        <!-- Columna derecha: panel membresía -->
+        <!-- ============================= -->
+
+        @if (!isMember) {
 
         <article class="article article-member-admission">
 
@@ -53,9 +53,8 @@
                 </h2>
 
                 <h3 class="article-subtitle">
-                    Los socios disfrutan de descuentos automáticos,
-                    cursos gratuitos seleccionados y acceso prioritario
-                    a las inscripciones.
+                    Los socios disfrutan de descuentos automáticos
+                    y cursos gratuitos seleccionados.
                 </h3>
 
             </div>
@@ -63,32 +62,26 @@
             <ul class="article-content">
 
                 <li class="article-content-row">
-                    <p class="content-ticket-age">
-                        Cursos gratuitos seleccionados
-                    </p>
+                    <p class="content-ticket-age">Cursos gratuitos seleccionados</p>
                 </li>
 
                 <li class="article-content-row">
-                    <p class="content-ticket-age">
-                        Descuentos automáticos
-                    </p>
+                    <p class="content-ticket-age">Descuentos automáticos</p>
                 </li>
 
                 <li class="article-content-row">
-                    <p class="content-ticket-age">
-                        Acceso prioritario a inscripciones
-                    </p>
+                    <p class="content-ticket-age">Acceso prioritario</p>
                 </li>
 
             </ul>
 
-            <button class="button submit-button-member" routerLink="/register" [queryParams]="{ becomeMember: true }">
-
+            <button class="button submit-button-member" (click)="goToMembership()">
                 Hazte socio
-
             </button>
 
         </article>
+
+        }
 
     </section>
 

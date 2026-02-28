@@ -39,7 +39,7 @@ export class CourseService {
 
     const existing = this.courseRepository.findAll();
 
-    if (existing.length === 0) {
+    if(!seeded && existing.length === 0) {
 
       courses.forEach(data => {
         const course = this.courseFactory.createCourse(data);
@@ -58,8 +58,9 @@ export class CourseService {
     const season = this.getSeasonFromMonth(month);
 
     return this.courseRepository
-      .findAll()
-      .filter(course => course.season === season);
+      .findAll();
+    // TODO: Reintroducir filtrado por temporada cuando el dominio esté estabilizado
+    // .filter(course => course.season === season);
   }
 
   private getSeasonFromMonth(month: number): Season {
