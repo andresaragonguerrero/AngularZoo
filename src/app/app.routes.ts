@@ -4,11 +4,12 @@ import { Routes } from '@angular/router';
 import { HomeComponent } from './pages/home/home';
 import { AnimalsComponent } from './pages/animals/animals';
 import { EcosystemsComponent } from './pages/ecosystems/ecosystems';
-import { MembershipComponent } from './pages/membership/membership';
 import { TicketsComponent } from './pages/tickets/tickets';
 import { LoginPage } from './pages/login-page/login-page';
 import { RegisterPage } from './pages/register-page/register-page';
 import { TicketPurchase } from './pages/ticket-purchase/ticket-purchase';
+import { CourseComponent } from './pages/courses/courses';
+import { ActivityComponent } from './pages/activities/activities';
 
 export const routes: Routes = [
   {
@@ -43,6 +44,14 @@ export const routes: Routes = [
   {
     path: 'tickets',
     component: TicketsComponent
+  },
+  {
+    path: 'courses',
+    component: CourseComponent
+  },
+  {
+    path: 'activities',
+    component: ActivityComponent
   },
   {
     path: '**',

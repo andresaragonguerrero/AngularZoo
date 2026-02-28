@@ -1,4 +1,6 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+
+// Componentes
 import { TicketForm } from "../../components/ticket-form/ticket-form";
 
 @Component({

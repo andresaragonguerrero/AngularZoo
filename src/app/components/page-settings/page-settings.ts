@@ -1,4 +1,6 @@
 import { Component, signal } from '@angular/core';
+
+// servicios
 import { ThemeService } from '../../services/theme.service';
 
 @Component({

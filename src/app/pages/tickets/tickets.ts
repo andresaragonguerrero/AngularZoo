@@ -15,9 +15,9 @@ import { AuthService } from '../../services/auth.service';
 })
 export class TicketsComponent {
   
-  private priceCalculator = inject(PriceCalculatorService);
-  private router = inject(Router);
-  private authService = inject(AuthService);
+  private readonly priceCalculator = inject(PriceCalculatorService);
+  private readonly router = inject(Router);
+  private readonly authService = inject(AuthService);
 
   // el usuario pulsa el botón de compra de entradas regular
   buyAsGuest() {

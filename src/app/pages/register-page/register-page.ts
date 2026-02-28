@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+
+// Componentes
 import { RegisterForm } from '../../components/register-form/register-form';
 
 @Component({

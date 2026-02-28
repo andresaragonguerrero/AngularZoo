@@ -1,14 +1,14 @@
-import { Component, inject, signal, OnInit, OnDestroy } from '@angular/core';
-import { ThemeService } from '../../services/theme.service';
+import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
-// componentes
+// Componentes
 import { PageSettings } from "../page-settings/page-settings";
 import { Nav } from "../nav/nav";
 import { Auth } from "../auth/auth";
 
-// servicios
+// Servicios
+import { ThemeService } from '../../services/theme.service';
 import { HeaderService } from '../../services/header.service';
 
 @Component({

@@ -154,17 +154,21 @@ El flujo transcurre desde que el usuario introduce el número de personas que de
 
 ## FUNCIONALIDADES PENSADAS
 
-- ***cambio de idioma***
+- *** cambio de idioma ***
 
-- ***cambio de tema***
+- *** cambio de tema ***
 
-- ***reserva de entradas (enum tipo de entrada: general, oferta, bono anual***
+- *** reserva de entradas (enum tipo de entrada: general, oferta, bono anual) ***
 
-- ***hacerse socio***
+- *** hacerse socio ***
 
-- ***apuntarse a una actividad***
+-*** muestra de cursos dependiendo de la temporada ***
 
-- ***apuntarse a un curso***
+-*** acceso a actividades dependiendo de la temporada ***
+
+- *** apuntarse a una actividad ***
+
+- *** apuntarse a un curso ***
 
 ## COMPONENTES
 
@@ -226,14 +230,18 @@ graph LR
   App --> Header
   App --> Footer
   App --> RouterOutlet
+  App --> HeaderService
 
   Header --> PageSettings
   Header --> Nav
   Header --> Auth
+  Header --> HeaderService
 
   PageSettings --> ThemeService
+
   Auth --> AuthService
   Auth --> NotificationService
+
   Nav --> Router
 
   HomeComponent --> Hero
@@ -247,22 +255,25 @@ graph LR
   TicketsComponent --> Router
 
   LoginPage --> LoginForm
+
   LoginForm --> AuthService
   LoginForm --> NotificationService
   LoginForm --> Router
 
   RegisterPage --> RegisterForm
+
   RegisterForm --> AuthService
   RegisterForm --> Router
 
   TicketPurchase --> TicketForm
-  TicketForm --> PriceCalculatorService
+  TicketForm --> TicketService (facade pattern)
   TicketForm --> TicketSummaryModal
 
   TicketSummaryModal --> TicketQuantities
   TicketSummaryModal --> total((number))
   TicketSummaryModal --> isMember((boolean))
 
+  PriceCalculatorService --> PriceStrategy
   PriceCalculatorService --> MemberPriceStrategy
   PriceCalculatorService --> NonMemberPriceStrategy
 
@@ -277,3 +288,9 @@ graph LR
 
   TicketService --> TicketFactory
   TicketService --> TicketRepository
+  TicketService --> AvailabilityService
+  TicketService --> PriceCalculatorService
+
+  AvailabilityService --> AvailabilityRepository
+
+  LanguageService --> TranslateService
