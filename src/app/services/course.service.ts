@@ -4,6 +4,9 @@ import { Injectable, inject } from '@angular/core';
 import { CourseRepository } from '../repositories/course.repository';
 import { EnrollmentRepository } from '../repositories/enrollment.repository';
 
+// Factorías
+import { CourseFactory } from '../factories/course.factory';
+
 // Modelos
 import { Course } from '../models/course.model';
 import { Enrollment } from '../models/enrollment.model';
@@ -16,10 +19,19 @@ export class CourseService {
 
   private readonly courseRepository = inject(CourseRepository);
   private readonly enrollmentRepository = inject(EnrollmentRepository);
+  private readonly courseFactory = inject(CourseFactory);
 
   private readonly STORAGE_SEED_KEY = 'zoo_courses_seeded';
 
-  initSeed(courses: Course[]): void {
+  initSeed(courses: Array<{
+    name: string;
+    description: string;
+    season: Season;
+    startDate: string;
+    capacity: number;
+    price: number;
+    isFreeForMembers: boolean;
+  }>): void {
 
     const seeded = localStorage.getItem(this.STORAGE_SEED_KEY);
 
@@ -28,7 +40,11 @@ export class CourseService {
     const existing = this.courseRepository.findAll();
 
     if (existing.length === 0) {
-      courses.forEach(course => this.courseRepository.save(course));
+
+      courses.forEach(data => {
+        const course = this.courseFactory.createCourse(data);
+        this.courseRepository.save(course);
+      });
     }
 
     localStorage.setItem(this.STORAGE_SEED_KEY, 'true');
