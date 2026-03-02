@@ -15,6 +15,7 @@ import { NotificationService } from '../../services/notification.service';
   templateUrl: './auth.html',
   styleUrl: './auth.scss',
 })
+
 export class Auth {
   private readonly authService = inject(AuthService);
   private readonly notificationService = inject(NotificationService);
