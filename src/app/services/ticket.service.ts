@@ -16,6 +16,7 @@ import { PriceCalculatorService } from './price-calculator.service';
 @Injectable({
   providedIn: 'root',
 })
+
 export class TicketService {
 
   private factory = inject(TicketFactory);

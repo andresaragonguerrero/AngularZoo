@@ -7,6 +7,7 @@ import { PriceStrategy } from "../interfaces/price-strategy";
 import { TicketQuantities, TICKET_PRICES } from '../models/ticket-type';
 
 @Injectable({ providedIn: 'root' })
+
 export class NonMemberPriceStrategy implements PriceStrategy {
   calculateTotal(quantities: TicketQuantities): number {
     let total = 0;

@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { Ticket } from '../models/ticket';
 
 @Injectable({ providedIn: 'root' })
+
 export class TicketRepository {
   private readonly STORAGE_KEY = 'zoo_tickets';
 

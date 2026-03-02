@@ -13,6 +13,7 @@ export interface LoginCredentials {
 }
 
 @Injectable({ providedIn: 'root' })
+
 export class AuthService {
   private readonly userService = inject(UserService);
   private readonly priceCalculator = inject(PriceCalculatorService);

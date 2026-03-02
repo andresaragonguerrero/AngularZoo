@@ -6,6 +6,7 @@ import { AvailabilityRepository } from '../repositories/availability.repository'
 @Injectable({
   providedIn: 'root',
 })
+
 export class AvailabilityService {
 
   // Máximo de entradas disponibles por hora

@@ -10,6 +10,7 @@ export interface Notification {
 @Injectable({
   providedIn: 'root',
 })
+
 export class NotificationService {
   private readonly _notification = signal<Notification | null>(null);
 

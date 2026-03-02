@@ -6,10 +6,6 @@
 
     <section class="section-form-display">
 
-        <!-- ============================= -->
-        <!-- Columna izquierda: cursos -->
-        <!-- ============================= -->
-
         <article class="article article-regular-admission">
 
             @for (course of courses; track course.id) {
@@ -33,10 +29,6 @@
             }
 
         </article>
-
-        <!-- ============================= -->
-        <!-- Columna derecha: panel membresía -->
-        <!-- ============================= -->
 
         @if (!isMember) {
 

@@ -11,6 +11,7 @@ import { TicketQuantities } from '../models/ticket-type';
 @Injectable({
   providedIn: 'root',
 })
+
 export class PriceCalculatorService {
   private _quantities = signal<TicketQuantities>({
     ADULT: 0,

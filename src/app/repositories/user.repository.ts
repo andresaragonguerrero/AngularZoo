@@ -4,6 +4,7 @@ import { Injectable } from '@angular/core';
 import { User } from '../models/user';
 
 @Injectable({ providedIn: 'root' })
+
 export class UserRepository {
   private readonly DB_NAME = 'ZooUsersDB';
   private readonly STORE_NAME = 'users';

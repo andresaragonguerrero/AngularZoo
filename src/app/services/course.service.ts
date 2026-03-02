@@ -15,6 +15,7 @@ import { Season } from '../models/season.enum';
 @Injectable({
   providedIn: 'root'
 })
+
 export class CourseService {
 
   private readonly courseRepository = inject(CourseRepository);

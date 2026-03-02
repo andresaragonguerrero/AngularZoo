@@ -1,6 +1,31 @@
+.hero-wrapper {
+  height: 100vh;
+  width: 100%;
+
+  position: relative;
+}
+
 .hero-background {
   height: 100vh;
   width: 100%;
 
   object-fit: cover;
+}
+
+.title {
+  width: 60%;
+
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: var(--space-8);
+  z-index: 0;
+
+  font-size: 80px;
+  font-family: var(--primary-font-family);
+  font-weight: bolder;
+  text-align: left;
+
+  text-shadow: var(--shadow-xl);
+  color: #FFF8EC;
 }

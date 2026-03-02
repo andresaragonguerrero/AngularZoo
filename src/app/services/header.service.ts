@@ -3,6 +3,7 @@ import { Injectable, signal } from '@angular/core';
 export type HeaderMode = 'fixed' | 'sticky';
 
 @Injectable({ providedIn: 'root' })
+
 export class HeaderService {
   mode = signal<HeaderMode>('sticky');
 

@@ -223,3 +223,8 @@ src/app/
 ├── factories/             (creadores de entidades)
 ├── repositories/          (persistencia: IndexedDB & localStorage)
 └── strategy/              (pricing strategies)
+
+## EVOLUTIONARY ARCHITECTURE TRACKING
+
+### Componentes
+

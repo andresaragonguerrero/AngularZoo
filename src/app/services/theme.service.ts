@@ -3,6 +3,7 @@ import { Injectable, signal } from "@angular/core";
 type Theme = 'light' | 'dark';
 
 @Injectable({ providedIn: 'root' })
+
 export class ThemeService {
     currentTheme = signal<Theme>('light');
 
