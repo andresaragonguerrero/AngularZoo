@@ -1,12 +1,10 @@
 .park-overview {
-    max-height: 100vh;
-    display: flex;
+    display: grid;
+    grid-template-columns: 40% 60%;
 }
 
 .park-intro {
-    width: 40%;
-
-    padding: var(--space-8) 0;
+    padding: var(--space-6);
 
     display: flex;
     flex-direction: column;
@@ -36,10 +34,8 @@
 }
 
 .visitor-area {
-    width: 60%;
-
     display: grid;
-    grid-template-rows: 65% 35%;
+    grid-template-rows: 80% 20%;
 }
 
 .article-wrapper {
@@ -54,20 +50,21 @@
     object-fit: cover;
 }
 
-.visitor-info,
-.schedule-panel {
+.visitor-info {
     padding: var(--space-4);
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    gap: var(--space-2);
+    justify-content: flex-start;
+    gap: var(--space-4);
 
     background-color: var(--primary-color);
 }
 
 .section-heading {
+    padding: var(--space-2) 0;
+
     font-size: 18px;
     font-family: var(--primary-font-family);
     font-weight: normal;
@@ -75,15 +72,16 @@
 }
 
 .info-block {
-    height: 100%;
     width: 100%;
 
-    padding: var(--space-4);
-
-    display: grid;
-    gap: var(--space-2);
+    padding: var(--space-2);
 
     box-shadow: var(--shadow-md);
+}
+
+.visitor-info .info-block {
+    display: grid;
+    gap: var(--space-2);
 }
 
 .info-title-wrapper {
@@ -93,6 +91,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    gap: var(--space-2);
 }
 
 .info-title-wrapper .svg-icon {
@@ -111,7 +110,7 @@
     padding: var(--space-2);
 
     display: grid;
-    gap: var(--space-2);
+    gap: var(--space-4);
 
     border-top: 2px solid var(--accent-color);
 }
@@ -121,8 +120,24 @@
     align-items: center;
     gap: var(--space-2);
 
+    color: var(--accent-color);
+}
+
+.info-item .text,
+.info-block .text {
     font-size: 18px;
     font-family: var(--secondary-font-family);
+}
+
+.schedule-panel {
+    padding: var(--space-4);
+    background-color: var(--primary-600);
+}
+
+.schedule-panel .info-block {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
 
     color: var(--accent-color);
 }
