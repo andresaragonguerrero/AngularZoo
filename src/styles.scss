@@ -56,11 +56,11 @@ body {
   --space-12: calc(var(--space-base) * 20.00);
 
   /* colors */
-  --primary-color: #2C5F2D; // Verde bosque (headers, nav)
-  --secondary-color: #3B2A1A; // Marrón tierra (textos secundarios)
-  --accent-color: #FFDE21; // Amarillo (botones, highlights)
-  --background-color: #FFF8EC; // Crema cálido
-  --text-color: #2D2D2D; // Gris oscuro (mejor que marrón para lectura)
+  --primary-color: #2C5F2D;
+  --secondary-color: #3B2A1A;
+  --accent-color: #FFDE21;
+  --background-color: #FFF8EC;
+  --text-color: #2D2D2D;
 
   /* Estados */
   --success-color: #4CAF50;

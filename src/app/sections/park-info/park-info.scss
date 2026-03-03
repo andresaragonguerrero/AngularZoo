@@ -1,8 +1,6 @@
 .park-overview {
     max-height: 100vh;
     display: flex;
-
-    background-color: lightblue;
 }
 
 .park-intro {
@@ -23,7 +21,7 @@
 
     padding: 3px;
 
-    border: 2px solid var(--background-color);
+    border: 2px solid var(--primary-color);
     border-radius: 50%;
     object-fit: cover;
 }
@@ -33,6 +31,8 @@
     font-weight: bold;
     font-family: var(--primary-font-family);
     text-align: center;
+
+    color: var(--primary-color);
 }
 
 .visitor-area {
@@ -40,13 +40,11 @@
 
     display: grid;
     grid-template-rows: 65% 35%;
-
-    background-color: lightgoldenrodyellow;
 }
 
 .article-wrapper {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 40% 60%;
 }
 
 .visitor-image {
@@ -54,4 +52,77 @@
     width: 100%;
 
     object-fit: cover;
+}
+
+.visitor-info,
+.schedule-panel {
+    padding: var(--space-4);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: var(--space-2);
+
+    background-color: var(--primary-color);
+}
+
+.section-heading {
+    font-size: 18px;
+    font-family: var(--primary-font-family);
+    font-weight: normal;
+    text-transform: uppercase;
+}
+
+.info-block {
+    height: 100%;
+    width: 100%;
+
+    padding: var(--space-4);
+
+    display: grid;
+    gap: var(--space-2);
+
+    box-shadow: var(--shadow-md);
+}
+
+.info-title-wrapper {
+    padding: var(--space-2);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.info-title-wrapper .svg-icon {
+    color: var(--accent-color);
+}
+
+.info-title {
+    font-size: 22px;
+    font-family: var(--primary-font-family);
+    font-weight: light;
+
+    color: var(--accent-color);
+}
+
+.info-list {
+    padding: var(--space-2);
+
+    display: grid;
+    gap: var(--space-2);
+
+    border-top: 2px solid var(--accent-color);
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+
+    font-size: 18px;
+    font-family: var(--secondary-font-family);
+
+    color: var(--accent-color);
 }
