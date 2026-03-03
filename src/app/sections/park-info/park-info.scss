@@ -1,0 +1,57 @@
+.park-overview {
+    max-height: 100vh;
+    display: flex;
+
+    background-color: lightblue;
+}
+
+.park-intro {
+    width: 40%;
+
+    padding: var(--space-8) 0;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: var(--space-4);
+}
+
+.intro-image {
+    height: 19rem;
+    width: 19rem;
+
+    padding: 3px;
+
+    border: 2px solid var(--background-color);
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.intro-title {
+    font-size: 70px;
+    font-weight: bold;
+    font-family: var(--primary-font-family);
+    text-align: center;
+}
+
+.visitor-area {
+    width: 60%;
+
+    display: grid;
+    grid-template-rows: 65% 35%;
+
+    background-color: lightgoldenrodyellow;
+}
+
+.article-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.visitor-image {
+    height: 100%;
+    width: 100%;
+
+    object-fit: cover;
+}
