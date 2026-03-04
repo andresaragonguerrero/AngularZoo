@@ -9,8 +9,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    gap: var(--space-4);
+    justify-content: flex-start;
+    gap: var(--space-6);
 }
 
 .intro-image {
@@ -38,13 +38,26 @@
 .intro-description {
     width: 90%;
 
-    font-size: 26px;
+    font-size: 24px;
     font-weight: normal;
     font-family: var(--secondary-font-family);
     text-align: center;
     line-height: 1.5;
 
     color: var(--primary-400);
+}
+
+.intro-block {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+
+    color: var(--primary-color);
+}
+
+.intro-block .text {
+    font-size: 18px;
+    font-family: var(--secondary-font-family);
 }
 
 .visitor-area {
@@ -58,7 +71,7 @@
     width: 100%;
 
     display: grid;
-    grid-template-columns: 50% 50%;
+    grid-template-columns: 40% 60%;
 }
 
 .visitor-image {
