@@ -32,13 +32,10 @@ export class CoursePurchase implements OnInit {
 
     this.courseService.getCoursesForCurrentSeason()
       .subscribe(courses => {
-
         this.courses = courses;
 
         this.route.queryParams.subscribe(params => {
-
           const courseId = params['courseId'];
-
           if (courseId) {
             this.selectedCourse = this.courses
               .find(c => c.id === courseId);

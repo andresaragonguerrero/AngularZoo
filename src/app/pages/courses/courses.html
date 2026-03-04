@@ -9,35 +9,17 @@
         <article class="article article-regular-admission">
 
             @for (course of courses; track course.id) {
-
             <div class="course-card">
-
                 <h2>{{ course.name }}</h2>
-
                 <p>{{ course.description }}</p>
+                <p>Inicio: {{ course.startDate }}</p>
+                <p>Precio: {{ course.price }} €</p>
 
-                <p>
-                    Inicio: {{ course.startDate }}
-                </p>
-
-                <p>
-                    Precio: {{ course.price }} €
-                </p>
-
-            </div>
-
-            }
-
-            <div class="course-list-footer">
-
-                <button class="button submit-button-guest" routerLink="/course-purchase">
-
-                    Inscribirse a un curso
-
+                <button class="button submit-button-guest" (click)="enroll(course.id)">
+                    Inscribirse
                 </button>
-
             </div>
-
+            }
         </article>
 
         <article class="article article-member-admission">
@@ -51,7 +33,6 @@
                 <h2 class="article-title">
                     Ventajas de ser socio
                 </h2>
-
                 <h3 class="article-subtitle">
                     Los socios disfrutan de descuentos automáticos,
                     cursos gratuitos seleccionados y acceso prioritario
@@ -67,13 +48,11 @@
                         Cursos gratuitos seleccionados
                     </p>
                 </li>
-
                 <li class="article-content-row">
                     <p class="content-ticket-age">
                         Descuentos automáticos
                     </p>
                 </li>
-
                 <li class="article-content-row">
                     <p class="content-ticket-age">
                         Acceso prioritario a inscripciones
@@ -83,13 +62,8 @@
             </ul>
 
             <button class="button submit-button-member" routerLink="/register" [queryParams]="{ becomeMember: true }">
-
                 Hazte socio
-
             </button>
-
         </article>
-
     </section>
-
 </div>

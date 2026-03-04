@@ -44,7 +44,7 @@ export class CourseComponent implements OnInit {
 
     const mode = this.isMember() ? 'member' : 'guest';
 
-    this.router.navigate(['/courses/purchase'], {
+    this.router.navigate(['/course-purchase'], {
       queryParams: {
         courseId,
         mode

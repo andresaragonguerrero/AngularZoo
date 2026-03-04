@@ -8,73 +8,21 @@
 
         <article class="article article-regular-admission">
 
-            @for (course of courses; track course.id) {
-
+            @if (selectedCourse) {
             <div class="course-card">
+                <h2>{{ selectedCourse.name }}</h2>
 
-                <h2>{{ course.name }}</h2>
+                <p>{{ selectedCourse.description }}</p>
+                <p>Inicio: {{ selectedCourse.startDate }}</p>
+                <p>Precio: {{ getPrice(selectedCourse) }} €</p>
 
-                <p>{{ course.description }}</p>
-
-                <p>Inicio: {{ course.startDate }}</p>
-
-                <p>Precio: {{ getPrice(course) }} €</p>
-
-                <button class="button submit-button-guest" (click)="enroll(course)">
+                <button class="button submit-button-guest" (click)="enroll(selectedCourse)">
                     Inscribirse
                 </button>
-
             </div>
-
             }
 
         </article>
-
-        @if (!isMember) {
-
-        <article class="article article-member-admission">
-
-            <span class="badge-member">
-                Exclusivo miembros
-            </span>
-
-            <div class="article-header">
-
-                <h2 class="article-title">
-                    Ventajas de ser socio
-                </h2>
-
-                <h3 class="article-subtitle">
-                    Los socios disfrutan de descuentos automáticos
-                    y cursos gratuitos seleccionados.
-                </h3>
-
-            </div>
-
-            <ul class="article-content">
-
-                <li class="article-content-row">
-                    <p class="content-ticket-age">Cursos gratuitos seleccionados</p>
-                </li>
-
-                <li class="article-content-row">
-                    <p class="content-ticket-age">Descuentos automáticos</p>
-                </li>
-
-                <li class="article-content-row">
-                    <p class="content-ticket-age">Acceso prioritario</p>
-                </li>
-
-            </ul>
-
-            <button class="button submit-button-member" (click)="goToMembership()">
-                Hazte socio
-            </button>
-
-        </article>
-
-        }
-
     </section>
 
 </div>
