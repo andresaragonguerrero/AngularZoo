@@ -11,6 +11,7 @@ import { TicketPurchase } from './pages/ticket-purchase/ticket-purchase';
 import { CourseComponent } from './pages/courses/courses';
 import { ActivityComponent } from './pages/activities/activities';
 import { CoursePurchase } from './pages/course-purchase/course-purchase';
+import { ActivityPurchase } from './pages/activity-purchase/activity-purchase';
 
 export const routes: Routes = [
   {
@@ -57,6 +58,10 @@ export const routes: Routes = [
   {
     path: 'activities',
     component: ActivityComponent
+  },
+    {
+    path: 'activity-purchase',
+    component: ActivityPurchase
   },
   {
     path: '**',

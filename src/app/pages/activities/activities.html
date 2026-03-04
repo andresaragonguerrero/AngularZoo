@@ -1,1 +1,68 @@
-<p>activities works!</p>
+<div class="content-wrapper">
+
+    <section class="section-header">
+        <h1 class="section-title">Actividades disponibles</h1>
+    </section>
+
+    <section class="section-form-display">
+        <article class="article article-regular-admission">
+
+            @for (activity of activities; track activity.id) {
+            <div class="activity-card">
+                <h2>{{ activity.name }}</h2>
+                <p>{{ activity.description }}</p>
+                <p>Inicio: {{ activity.season }}</p>
+                <p>Precio: {{ activity.price }} €</p>
+
+                <button class="button submit-button-guest" (click)="enroll(activity.id)">
+                    Inscribirse
+                </button>
+            </div>
+            }
+        </article>
+
+        <article class="article article-member-admission">
+
+            <span class="badge-member">
+                Exclusivo miembros
+            </span>
+
+            <div class="article-header">
+
+                <h2 class="article-title">
+                    Ventajas de ser socio
+                </h2>
+                <h3 class="article-subtitle">
+                    Los socios disfrutan de descuentos automáticos,
+                    actividades gratuitas seleccionadas y acceso prioritario
+                    a las inscripciones.
+                </h3>
+
+            </div>
+
+            <ul class="article-content">
+
+                <li class="article-content-row">
+                    <p class="content-ticket-age">
+                        Actividades gratuitas seleccionadas
+                    </p>
+                </li>
+                <li class="article-content-row">
+                    <p class="content-ticket-age">
+                        Descuentos automáticos
+                    </p>
+                </li>
+                <li class="article-content-row">
+                    <p class="content-ticket-age">
+                        Acceso prioritario a inscripciones
+                    </p>
+                </li>
+
+            </ul>
+
+            <button class="button submit-button-member" routerLink="/register" [queryParams]="{ becomeMember: true }">
+                Hazte socio
+            </button>
+        </article>
+    </section>
+</div>
