@@ -1,11 +1,7 @@
 import { Injectable, inject } from '@angular/core';
 
 // Repositorios
-import { CourseRepository } from '../repositories/course.repository';
 import { EnrollmentRepository } from '../repositories/enrollment.repository';
-
-// Factorías
-import { CourseFactory } from '../factories/course.factory';
 
 // Modelos
 import { Course } from '../models/course.model';
