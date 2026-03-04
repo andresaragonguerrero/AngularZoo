@@ -1,1 +1,28 @@
-<p>activity-purchase works!</p>
+<div class="content-wrapper">
+
+    <section class="section-header">
+        <h1 class="section-title">Inscripción a actividades</h1>
+    </section>
+
+    <section class="section-form-display">
+
+        <article class="article article-regular-admission">
+
+            @if (selectedActivity) {
+            <div class="activity-card">
+                <h2>{{ selectedActivity.name }}</h2>
+
+                <p>{{ selectedActivity.description }}</p>
+                <p>{{ selectedActivity.daysOfWeek }}</p>
+                <p>Precio: {{ getPrice(selectedActivity) }} €</p>
+
+                <button class="button submit-button-guest" (click)="enroll(selectedActivity)">
+                    Inscribirse
+                </button>
+            </div>
+            }
+
+        </article>
+    </section>
+
+</div>

@@ -11,7 +11,9 @@ import { Course } from '../../models/course';
 @Component({
   selector: 'app-course-purchase',
   standalone: true,
-  imports: [RouterModule],
+  imports: [
+    RouterModule,
+  ],
   templateUrl: './course-purchase.html',
   styleUrl: './course-purchase.scss'
 })
