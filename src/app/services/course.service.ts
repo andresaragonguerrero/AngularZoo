@@ -11,6 +11,8 @@ import { CourseFactory } from '../factories/course.factory';
 import { Course } from '../models/course.model';
 import { Enrollment } from '../models/enrollment.model';
 import { Season } from '../models/season.enum';
+import { ZooDataService } from './zoo-data.service';
+import { map, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -18,53 +20,23 @@ import { Season } from '../models/season.enum';
 
 export class CourseService {
 
-  private readonly courseRepository = inject(CourseRepository);
+  private readonly zooDataService = inject(ZooDataService);
   private readonly enrollmentRepository = inject(EnrollmentRepository);
-  private readonly courseFactory = inject(CourseFactory);
 
-  private readonly STORAGE_SEED_KEY = 'zoo_courses_seeded';
+  getCoursesForCurrentSeason(): Observable<Course[]> {
 
-  initSeed(courses: Array<{
-    name: string;
-    description: string;
-    season: Season;
-    startDate: string;
-    capacity: number;
-    price: number;
-    isFreeForMembers: boolean;
-  }>): void {
-
-    const seeded = localStorage.getItem(this.STORAGE_SEED_KEY);
-
-    if (seeded) return;
-
-    const existing = this.courseRepository.findAll();
-
-    if(!seeded && existing.length === 0) {
-
-      courses.forEach(data => {
-        const course = this.courseFactory.createCourse(data);
-        this.courseRepository.save(course);
-      });
-    }
-
-    localStorage.setItem(this.STORAGE_SEED_KEY, 'true');
+    return this.zooDataService.getZooData().pipe(
+      map(data => {
+        const season = this.getCurrentSeason();
+        return data.courses.filter(
+          (course: Course) => course.season === season
+        );
+      })
+    );
   }
 
-  getCoursesForCurrentSeason(): Course[] {
-
-    const now = new Date();
-    const month = now.getMonth() + 1;
-
-    const season = this.getSeasonFromMonth(month);
-
-    return this.courseRepository
-      .findAll();
-    // TODO: Reintroducir filtrado por temporada cuando el dominio esté estabilizado
-    // .filter(course => course.season === season);
-  }
-
-  private getSeasonFromMonth(month: number): Season {
+  private getCurrentSeason(): Season {
+    const month = new Date().getMonth() + 1;
 
     if (month >= 3 && month <= 5) return Season.SPRING;
     if (month >= 6 && month <= 8) return Season.SUMMER;
@@ -79,15 +51,9 @@ export class CourseService {
     pricePaid: number;
   }): { success: boolean; enrollment?: Enrollment } {
 
-    const course = this.courseRepository.findById(data.courseId);
+    const enrollments = this.enrollmentRepository.findByCourse(data.courseId);
 
-    if (!course) {
-      return { success: false };
-    }
-
-    const enrollments = this.enrollmentRepository.findByCourse(course.id);
-
-    if (enrollments.length >= course.capacity) {
+    if (enrollments.length >= 30) {
       return { success: false };
     }
 
@@ -99,7 +65,7 @@ export class CourseService {
 
     const enrollment: Enrollment = {
       id: crypto.randomUUID(),
-      courseId: course.id,
+      courseId: data.courseId,
       userId: data.userId,
       pricePaid: data.pricePaid,
       createdAt: new Date().toISOString()
@@ -111,9 +77,5 @@ export class CourseService {
       success: true,
       enrollment
     };
-  }
-
-  getUserEnrollments(userId: string): Enrollment[] {
-    return this.enrollmentRepository.findByUser(userId);
   }
 }

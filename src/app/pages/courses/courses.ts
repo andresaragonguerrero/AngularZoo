@@ -7,7 +7,6 @@ import { AuthService } from '../../services/auth.service';
 
 // Models
 import { Course } from '../../models/course.model';
-import { Season } from '../../models/season.enum';
 
 @Component({
   selector: 'app-courses',
@@ -31,42 +30,14 @@ export class CourseComponent implements OnInit {
   );
 
   ngOnInit(): void {
-
-    this.courseService.initSeed([
-      {
-        name: 'Curso de cuidado de primates',
-        description: 'Aprende sobre comportamiento y conservación de primates en el zoo.',
-        season: Season.SPRING,
-        startDate: '2026-04-15',
-        capacity: 25,
-        price: 40,
-        isFreeForMembers: true
-      },
-      {
-        name: 'Observación de aves tropicales',
-        description: 'Ruta guiada para identificar especies de aves del parque.',
-        season: Season.SUMMER,
-        startDate: '2026-07-01',
-        capacity: 20,
-        price: 30,
-        isFreeForMembers: false
-      },
-      {
-        name: 'Conservación de ecosistemas acuáticos',
-        description: 'Introducción a la vida en ecosistemas de agua dulce.',
-        season: Season.AUTUMN,
-        startDate: '2026-10-05',
-        capacity: 30,
-        price: 35,
-        isFreeForMembers: true
-      }
-    ]);
-
     this.loadCourses();
   }
 
   private loadCourses(): void {
-    this.courses = this.courseService.getCoursesForCurrentSeason();
+    this.courseService.getCoursesForCurrentSeason()
+      .subscribe(courses => {
+        this.courses = courses;
+      });
   }
 
   enroll(courseId: string): void {

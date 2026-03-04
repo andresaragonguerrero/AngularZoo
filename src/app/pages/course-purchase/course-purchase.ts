@@ -23,26 +23,28 @@ export class CoursePurchase implements OnInit {
   private readonly authService = inject(AuthService);
 
   courses: Course[] = [];
-
   selectedCourse?: Course;
-
   isMember = false;
 
   ngOnInit(): void {
 
     this.isMember = this.authService.currentUser()?.isMember ?? false;
 
-    this.courses = this.courseService.getCoursesForCurrentSeason();
+    this.courseService.getCoursesForCurrentSeason()
+      .subscribe(courses => {
 
-    this.route.queryParams.subscribe(params => {
+        this.courses = courses;
 
-      const courseId = params['courseId'];
+        this.route.queryParams.subscribe(params => {
 
-      if (courseId) {
-        this.selectedCourse = this.courses
-          .find(c => c.id === courseId);
-      }
-    });
+          const courseId = params['courseId'];
+
+          if (courseId) {
+            this.selectedCourse = this.courses
+              .find(c => c.id === courseId);
+          }
+        });
+      });
   }
 
   getPrice(course: Course): number {
