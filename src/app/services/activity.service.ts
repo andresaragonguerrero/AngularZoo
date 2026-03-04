@@ -1,33 +1,32 @@
-import { Injectable, inject } from '@angular/core';
+import { inject, Injectable } from '@angular/core';
 import { map, Observable } from 'rxjs';
 
 // Servicios
 import { ZooDataService } from './zoo-data.service';
 
 // Repositorios
-import { CourseEnrollmentRepository } from '../repositories/courseEnrollment.repository';
+import { ActivityEnrollementRepository } from '../repositories/activityEnrollment.repository';
 
 // Modelos
-import { Course } from '../models/course';
-import { CourseEnrollment } from '../models/courseEnrollment.model';
+import { Activity } from '../models/activity';
+import { ActivityEnrollment } from '../models/activityEnrollment.model';
 import { Season } from '../models/season.enum';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
-
-export class CourseService {
+export class ActivityService {
 
   private readonly zooDataService = inject(ZooDataService);
-  private readonly courseEnrollmentRepository = inject(CourseEnrollmentRepository);
+  private readonly activityEnrollmentRepository = inject(ActivityEnrollementRepository);
 
-  getCoursesForCurrentSeason(): Observable<Course[]> {
+  getActivitiesForCurrentSeason(): Observable<Activity[]> {
 
     return this.zooDataService.getZooData().pipe(
       map(data => {
         const season = this.getCurrentSeason();
-        return data.courses.filter(
-          (course: Course) => course.season === season
+        return data.activities.filter(
+          (activity: Activity) => activity.season === season
         );
       })
     );
@@ -43,13 +42,13 @@ export class CourseService {
     return Season.WINTER;
   }
 
-  enrollCourse(data: {
-    courseId: string;
+  enrollActivity(data: {
+    activityId: string;
     userId: string;
     pricePaid: number;
-  }): { success: boolean; enrollment?: CourseEnrollment } {
+  }): { success: boolean; enrollment?: ActivityEnrollment } {
 
-    const enrollments = this.courseEnrollmentRepository.findByCourse(data.courseId);
+    const enrollments = this.activityEnrollmentRepository.findByActivity(data.activityId);
 
     if (enrollments.length >= 30) {
       return { success: false };
@@ -61,15 +60,15 @@ export class CourseService {
       return { success: false };
     }
 
-    const enrollment: CourseEnrollment = {
+    const enrollment: ActivityEnrollment = {
       id: crypto.randomUUID(),
-      courseId: data.courseId,
+      activityId: data.activityId,
       userId: data.userId,
       pricePaid: data.pricePaid,
       createdAt: new Date().toISOString()
     };
 
-    this.courseEnrollmentRepository.save(enrollment);
+    this.activityEnrollmentRepository.save(enrollment);
 
     return {
       success: true,

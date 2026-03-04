@@ -1,35 +1,35 @@
 import { Injectable } from '@angular/core';
 
 // Modelos
-import { Enrollment } from '../models/enrollment.model';
+import { CourseEnrollment } from '../models/courseEnrollment.model';
 
 @Injectable({
     providedIn: 'root'
 })
-export class EnrollmentRepository {
+export class CourseEnrollmentRepository {
 
-    private readonly STORAGE_KEY = 'zoo_enrollments';
+    private readonly STORAGE_KEY = 'zoo_course_enrollments';
 
-    save(enrollment: Enrollment): void {
+    save(enrollment: CourseEnrollment): void {
         const enrollments = this.findAll();
         enrollments.push(enrollment);
         localStorage.setItem(this.STORAGE_KEY, JSON.stringify(enrollments));
     }
 
-    findAll(): Enrollment[] {
+    findAll(): CourseEnrollment[] {
         const data = localStorage.getItem(this.STORAGE_KEY);
         return data ? JSON.parse(data) : [];
     }
 
-    findById(id: string): Enrollment | undefined {
+    findById(id: string): CourseEnrollment | undefined {
         return this.findAll().find(e => e.id === id);
     }
 
-    findByCourse(courseId: string): Enrollment[] {
+    findByCourse(courseId: string): CourseEnrollment[] {
         return this.findAll().filter(e => e.courseId === courseId);
     }
 
-    findByUser(userId: string): Enrollment[] {
+    findByUser(userId: string): CourseEnrollment[] {
         return this.findAll().filter(e => e.userId === userId);
     }
 
