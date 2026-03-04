@@ -4,7 +4,7 @@
 }
 
 .park-intro {
-    padding: var(--space-6);
+    padding: var(--space-8) var(--space-6);
 
     display: flex;
     flex-direction: column;
@@ -22,10 +22,12 @@
     border: 2px solid var(--primary-color);
     border-radius: 50%;
     object-fit: cover;
+
+    box-shadow: var(--shadow-md);
 }
 
 .intro-title {
-    font-size: 70px;
+    font-size: 60px;
     font-weight: bold;
     font-family: var(--primary-font-family);
     text-align: center;
@@ -33,14 +35,28 @@
     color: var(--primary-color);
 }
 
+.intro-description {
+    width: 80%;
+
+    font-size: 30px;
+    font-weight: normal;
+    font-family: var(--secondary-font-family);
+    text-align: center;
+    line-height: 1.5;
+
+    color: var(--primary-400);
+}
+
 .visitor-area {
+    max-height: 100vh;
+
     display: grid;
-    grid-template-rows: 80% 20%;
+    grid-template-rows: 65% 35%;
 }
 
 .article-wrapper {
     display: grid;
-    grid-template-columns: 40% 60%;
+    grid-template-columns: 50% 50%;
 }
 
 .visitor-image {
@@ -51,12 +67,12 @@
 }
 
 .visitor-info {
-    padding: var(--space-4);
+    padding: var(--space-5);
 
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: center;
     gap: var(--space-4);
 
     background-color: var(--primary-color);
@@ -130,14 +146,47 @@
 }
 
 .schedule-panel {
-    padding: var(--space-4);
+    padding: var(--space-5);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: var(--space-4);
+
     background-color: var(--primary-600);
 }
 
 .schedule-panel .info-block {
-    display: flex;
-    align-items: center;
+    padding: var(--space-4) var(--space-6);
+
+    display: grid;
     gap: var(--space-2);
 
     color: var(--accent-color);
+}
+
+.info-block-row {
+    padding: var(--space-2) var(--space-4);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid var(--accent-color);
+}
+
+.info-block-row:last-child {
+    border: none;
+}
+
+.info-block-content {
+    font-size: 18px;
+    font-family: var(--secondary-font-family);
+    
+}
+
+.schedule-panel .info-block:last-child {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
 }
