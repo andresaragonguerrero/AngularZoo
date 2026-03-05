@@ -1,43 +1,18 @@
 <ul class="info-block">
-    <!-- 
-                        habrá que crear un componente que reciba los datos de un JSON con los cursos y actividades organizadas
-                        por ahora, solamente se empleará un mock
-                    -->
-
     <li class="info-block-row">
-        <p class="info-block-content">14:00 H</p>
+        <p class="info-block-content">14:00</p>
         <p class="info-block-content">Apertura del zoo</p>
     </li>
+    
+    @for (activity of activities; track activity.id) {
     <li class="info-block-row">
-        <p class="info-block-content">15:00 H</p>
-        <p class="info-block-content">Épica con caballos</p>
+        <p class="info-block-content">{{ activity.time }}</p>
+        <p class="info-block-content">{{ activity.name }}</p>
     </li>
+    }
+
     <li class="info-block-row">
-        <p class="info-block-content">16:00 H</p>
-        <p class="info-block-content">Alimentar a los elefantes</p>
-    </li>
-    <li class="info-block-row">
-        <p class="info-block-content">17:00 H</p>
-        <p class="info-block-content">Curso de adiestrador de perros</p>
-    </li>
-    <li class="info-block-row">
-        <p class="info-block-content">18:00 H</p>
-        <p class="info-block-content">Espectáculo con delfines</p>
-    </li>
-    <li class="info-block-row">
-        <p class="info-block-content">19:00 H</p>
-        <p class="info-block-content">Espectáculo con focas</p>
-    </li>
-    <li class="info-block-row">
-        <p class="info-block-content">20:00 H</p>
-        <p class="info-block-content">Actividad con girafas</p>
-    </li>
-    <li class="info-block-row">
-        <p class="info-block-content">21:00 H</p>
-        <p class="info-block-content">Espectáculo con primates</p>
-    </li>
-    <li class="info-block-row">
-        <p class="info-block-content">22:00 H</p>
+        <p class="info-block-content">22:00</p>
         <p class="info-block-content">Cierre del zoo</p>
     </li>
 </ul>

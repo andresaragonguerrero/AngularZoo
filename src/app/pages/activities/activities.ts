@@ -17,7 +17,7 @@ import { Activity } from '../../models/activity';
   styleUrl: './activities.scss',
 })
 export class ActivityComponent implements OnInit {
-  private readonly courseService = inject(ActivityService);
+  private readonly activityService = inject(ActivityService);
   private readonly authService = inject(AuthService);
   private readonly router = inject(Router);
 
@@ -32,7 +32,7 @@ export class ActivityComponent implements OnInit {
   }
 
   private loadActivities(): void {
-    this.courseService.getActivitiesForCurrentSeason()
+    this.activityService.getActivitiesForCurrentSeason()
       .subscribe(activities => {
         this.activities = activities;
       });
