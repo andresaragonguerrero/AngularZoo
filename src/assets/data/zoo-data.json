@@ -211,7 +211,7 @@
                 "MONDAY",
                 "WEDNESDAY"
             ],
-            "time": "10:00",
+            "time": "15:00",
             "location": "Educational Room",
             "price": 12,
             "isFreeForMembers": true
@@ -225,7 +225,7 @@
                 "TUESDAY",
                 "THURSDAY"
             ],
-            "time": "14:00",
+            "time": "16:00",
             "location": "Savannah Zone",
             "price": 8,
             "isFreeForMembers": false
@@ -239,7 +239,7 @@
                 "SATURDAY",
                 "SUNDAY"
             ],
-            "time": "09:00",
+            "time": "20:00",
             "location": "Aviary and Gardens",
             "price": 0,
             "isFreeForMembers": true
@@ -253,7 +253,7 @@
                 "WEDNESDAY",
                 "FRIDAY"
             ],
-            "time": "11:00",
+            "time": "15:00",
             "location": "Amphitheater",
             "price": 5,
             "isFreeForMembers": true
@@ -268,7 +268,7 @@
                 "TUESDAY",
                 "WEDNESDAY"
             ],
-            "time": "15:00",
+            "time": "16:30",
             "location": "Kids Zone",
             "price": 10,
             "isFreeForMembers": false
@@ -282,7 +282,7 @@
                 "TUESDAY",
                 "FRIDAY"
             ],
-            "time": "13:00",
+            "time": "17:00",
             "location": "Big Cat Enclosure",
             "price": 15,
             "isFreeForMembers": false
@@ -297,7 +297,7 @@
                 "WEDNESDAY",
                 "SATURDAY"
             ],
-            "time": "10:30",
+            "time": "16:30",
             "location": "Aquarium",
             "price": 7,
             "isFreeForMembers": true
@@ -311,7 +311,7 @@
                 "THURSDAY",
                 "SATURDAY"
             ],
-            "time": "16:00",
+            "time": "18:00",
             "location": "Reptile House",
             "price": 12,
             "isFreeForMembers": false
@@ -325,7 +325,7 @@
                 "MONDAY",
                 "FRIDAY"
             ],
-            "time": "14:00",
+            "time": "21:00",
             "location": "Primate Area",
             "price": 10,
             "isFreeForMembers": true
@@ -340,7 +340,7 @@
                 "THURSDAY",
                 "SATURDAY"
             ],
-            "time": "11:00",
+            "time": "19:00",
             "location": "Educational Room",
             "price": 18,
             "isFreeForMembers": false
@@ -354,7 +354,7 @@
                 "SATURDAY",
                 "SUNDAY"
             ],
-            "time": "08:00",
+            "time": "20:30",
             "location": "Various Zones",
             "price": 14,
             "isFreeForMembers": false
@@ -369,7 +369,7 @@
                 "THURSDAY",
                 "FRIDAY"
             ],
-            "time": "17:00",
+            "time": "19:00",
             "location": "Nocturnal Zone",
             "price": 9,
             "isFreeForMembers": true
@@ -383,7 +383,7 @@
                 "MONDAY",
                 "WEDNESDAY"
             ],
-            "time": "14:00",
+            "time": "15:30",
             "location": "Educational Room",
             "price": 6,
             "isFreeForMembers": true
@@ -397,7 +397,7 @@
                 "WEDNESDAY",
                 "SUNDAY"
             ],
-            "time": "11:00",
+            "time": "21:00",
             "location": "Amphitheater",
             "price": 0,
             "isFreeForMembers": true
@@ -410,7 +410,7 @@
             "daysOfWeek": [
                 "SATURDAY"
             ],
-            "time": "10:00",
+            "time": "17:00",
             "location": "Gardens",
             "price": 11,
             "isFreeForMembers": false
@@ -424,7 +424,7 @@
                 "MONDAY",
                 "WEDNESDAY"
             ],
-            "time": "13:00",
+            "time": "19:00",
             "location": "Amphitheater",
             "price": 5,
             "isFreeForMembers": true
@@ -467,7 +467,7 @@
                 "MONDAY",
                 "FRIDAY"
             ],
-            "time": "11:00",
+            "time": "16:00",
             "location": "Educational Room",
             "price": 0,
             "isFreeForMembers": true
@@ -480,7 +480,7 @@
             "daysOfWeek": [
                 "THURSDAY"
             ],
-            "time": "19:00",
+            "time": "17:00",
             "location": "Theater",
             "price": 16,
             "isFreeForMembers": false
