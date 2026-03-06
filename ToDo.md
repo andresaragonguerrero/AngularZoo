@@ -1,57 +1,37 @@
 # FUNCIONALIDADES POR IMPLEMENTAR
 
-## Por prioridad
+ANIMALES
+- Listado de animales (cards)
+- Sistema de filtros
+  - dieta
+  - ecosistema
+  - continente
+  - estado de conservación
+- Sistema de búsqueda de animales
+- Página de detalle de animal
+- Animales relacionados (mismo ecosistema)
+- Favoritos (guardar en localStorage)
+- Animal aleatorio
 
-### Alta
+ECOSISTEMAS
+- Listado de ecosistemas
+- Página de detalle de ecosistema
+- Mostrar animales del ecosistema
+- Curiosidades o datos interesantes del ecosistema
 
-- **Header con estado de sesión - Mostrar usuario actual + logout**
+EXPLORACIÓN
+- Página "Explorar"
+- Exploración por ecosistema
+- Navegación ecosistema → animales
+- Navegación animal → ecosistema
 
-- **Página membresía/gestión - Cambiar estado socio post-registro**
+DATOS / ARQUITECTURA
+- Crear animals.json
+- Crear ecosystems.json
+- Crear AnimalService
+- Crear EcosystemService
 
-- **Integración UI tickets - Mostrar estado socio/descuento en tiempo real**
-
-- **Logout desde UI - No solo programático**
-
-### Media
-
-- **Validaciones formularios - Mejor UX/feedback**
-
-- **Mensajes toast/alert - Confirmaciones éxito/error**
-
-- **Perfil de usuario - Ver/editar datos personales**
-
-- **Historial de compras - Tickets por usuario**
-
-### Baja
-
-- **Sistema de contraseñas - Hash + seguridad**
-
-- **Roles de usuario - Admin vs usuario normal**
-
-- **Dashboard admin - Gestión usuarios/tickets**
-
-- **API simulada - Backend fake para prácticas**
-
-- **Responsive design - Mobile optimization**
-
-- **Internacionalización - LanguageService ya creado**
-
-## COMPRA DE ENTRADAS
-
-### Patrones de diseño
-
-- Factory para la creación de entradas
-
-- Builder para TicketService: TicketBuilder para crear tickets
-
-- State para el flujo de compra: estado de la compra -> (next, previous, cancel)
-
-- Strategy para el cálculo de los descuentos: DiscountStrategy
-
-- Command para acciones como deshacer compra o volver atrás
-
-- Repository para crear un repositorio de entradas en el localStorage
-
-### No patrones
-
-- Validador de la compra de entradas: TicketValidator
+ESTADÍSTICAS
+- Número de animales por ecosistema
+- Porcentaje de animales por dieta
+- Ecosistema con mayor número de especies
