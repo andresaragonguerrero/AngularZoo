@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 // Modelos
-import { User } from '../models/user';
+import { User } from '../models/user.interface';
 
 @Injectable({ providedIn: 'root' })
 export class UserFactory {

@@ -12,7 +12,11 @@
         "esperanzaVida": 15,
         "pesoMinimo": 120,
         "pesoMaximo": 250,
-        "curiosidades": ["Los leones son los únicos felinos que viven en grupo", "Duermen hasta 20 horas al día", "El rugido puede escucharse desde 9 km de distancia"]
+        "curiosidades": [
+            "Los leones son los únicos felinos que viven en grupo",
+            "Duermen hasta 20 horas al día",
+            "El rugido puede escucharse desde 9 km de distancia"
+        ]
     },
     {
         "id": 2,
@@ -27,7 +31,11 @@
         "esperanzaVida": 70,
         "pesoMinimo": 4000,
         "pesoMaximo": 7000,
-        "curiosidades": ["Pueden reconocerse a sí mismos en un espejo", "Sus colmillos nunca dejan de crecer", "Utilizan herramientas para obtener agua y alimento"]
+        "curiosidades": [
+            "Pueden reconocerse a sí mismos en un espejo",
+            "Sus colmillos nunca dejan de crecer",
+            "Utilizan herramientas para obtener agua y alimento"
+        ]
     },
     {
         "id": 3,
@@ -42,7 +50,11 @@
         "esperanzaVida": 28,
         "pesoMinimo": 700,
         "pesoMaximo": 1900,
-        "curiosidades": ["Su lengua puede medir más de 53 cm", "No tienen cuerdas vocales funcionales", "Pueden dormir mientras están de pie"]
+        "curiosidades": [
+            "Su lengua puede medir más de 53 cm",
+            "No tienen cuerdas vocales funcionales",
+            "Pueden dormir mientras están de pie"
+        ]
     },
     {
         "id": 4,
@@ -57,7 +69,11 @@
         "esperanzaVida": 45,
         "pesoMinimo": 800,
         "pesoMaximo": 1400,
-        "curiosidades": ["Sus cuernos están hechos de queratina, como las uñas humanas", "Pueden alcanzar velocidades de 50 km/h", "Tienen muy mala visión pero excelente olfato"]
+        "curiosidades": [
+            "Sus cuernos están hechos de queratina, como las uñas humanas",
+            "Pueden alcanzar velocidades de 50 km/h",
+            "Tienen muy mala visión pero excelente olfato"
+        ]
     },
     {
         "id": 5,
@@ -72,7 +88,11 @@
         "esperanzaVida": 28,
         "pesoMinimo": 220,
         "pesoMaximo": 385,
-        "curiosidades": ["Las rayas son únicas como las huellas dactilares", "Pueden correr a 65 km/h", "La madre y la cría se memorizar mutuamente por sonidos"]
+        "curiosidades": [
+            "Las rayas son únicas como las huellas dactilares",
+            "Pueden correr a 65 km/h",
+            "La madre y la cría se memorizar mutuamente por sonidos"
+        ]
     },
     {
         "id": 6,
@@ -87,7 +107,11 @@
         "esperanzaVida": 45,
         "pesoMinimo": 1500,
         "pesoMaximo": 4000,
-        "curiosidades": ["Pueden aguantar la respiración hasta 5 minutos", "Su sudor es de color rojo y actúa como protector solar", "Son más rápidos que los humanos en tierra"]
+        "curiosidades": [
+            "Pueden aguantar la respiración hasta 5 minutos",
+            "Su sudor es de color rojo y actúa como protector solar",
+            "Son más rápidos que los humanos en tierra"
+        ]
     },
     {
         "id": 7,
@@ -102,7 +126,11 @@
         "esperanzaVida": 15,
         "pesoMinimo": 100,
         "pesoMaximo": 260,
-        "curiosidades": ["Cada tigre tiene un patrón de rayas único", "Son excelentes nadadores", "Pueden comer hasta 30 kg de carne en una comida"]
+        "curiosidades": [
+            "Cada tigre tiene un patrón de rayas único",
+            "Son excelentes nadadores",
+            "Pueden comer hasta 30 kg de carne en una comida"
+        ]
     },
     {
         "id": 8,
@@ -117,7 +145,11 @@
         "esperanzaVida": 28,
         "pesoMinimo": 75,
         "pesoMaximo": 135,
-        "curiosidades": ["Los osos panda dedican 12-16 horas diarias a comer bambú", "Su estructura ósea parece estar adaptada para ser carnívora", "El gobierno chino los utiliza en diplomacia internacional"]
+        "curiosidades": [
+            "Los osos panda dedican 12-16 horas diarias a comer bambú",
+            "Su estructura ósea parece estar adaptada para ser carnívora",
+            "El gobierno chino los utiliza en diplomacia internacional"
+        ]
     },
     {
         "id": 9,
@@ -132,7 +164,11 @@
         "esperanzaVida": 18,
         "pesoMinimo": 4,
         "pesoMaximo": 15,
-        "curiosidades": ["No beben agua, la obtienen de las hojas de eucalipto", "Tienen huellas dactilares similares a los humanos", "Su nombre significa 'no bebe' en idioma aborigen"]
+        "curiosidades": [
+            "No beben agua, la obtienen de las hojas de eucalipto",
+            "Tienen huellas dactilares similares a los humanos",
+            "Su nombre significa 'no bebe' en idioma aborigen"
+        ]
     },
     {
         "id": 10,
@@ -147,7 +183,11 @@
         "esperanzaVida": 23,
         "pesoMinimo": 18,
         "pesoMaximo": 90,
-        "curiosidades": ["Pueden saltar hasta 9 metros de distancia", "Utilizan su cola como 'quinta pata'", "Son más eficientes energéticamente que los mamíferos placetarios"]
+        "curiosidades": [
+            "Pueden saltar hasta 9 metros de distancia",
+            "Utilizan su cola como 'quinta pata'",
+            "Son más eficientes energéticamente que los mamíferos placetarios"
+        ]
     },
     {
         "id": 11,
@@ -162,7 +202,11 @@
         "esperanzaVida": 15,
         "pesoMinimo": 56,
         "pesoMaximo": 158,
-        "curiosidades": ["Son excelentes nadadores, a diferencia de otros grandes felinos", "Pueden abrir las conchas de caimanes con sus mandíbulas", "Tienen el mordisco más fuerte de todos los grandes felinos"]
+        "curiosidades": [
+            "Son excelentes nadadores, a diferencia de otros grandes felinos",
+            "Pueden abrir las conchas de caimanes con sus mandíbulas",
+            "Tienen el mordisco más fuerte de todos los grandes felinos"
+        ]
     },
     {
         "id": 12,
@@ -177,7 +221,11 @@
         "esperanzaVida": 20,
         "pesoMinimo": 20,
         "pesoMaximo": 70,
-        "curiosidades": ["Pueden alcanzar más de 6 metros de largo", "Sus ojos y fosas nasales están en la parte superior de la cabeza para respirar bajo el agua", "No tienen veneno, son constrictoras"]
+        "curiosidades": [
+            "Pueden alcanzar más de 6 metros de largo",
+            "Sus ojos y fosas nasales están en la parte superior de la cabeza para respirar bajo el agua",
+            "No tienen veneno, son constrictoras"
+        ]
     },
     {
         "id": 13,
@@ -192,7 +240,11 @@
         "esperanzaVida": 28,
         "pesoMinimo": 90,
         "pesoMaximo": 200,
-        "curiosidades": ["Son excepcionales trepadores de árboles", "Son los únicos osos que viven en América del Sur", "Principalmente comen frutas y vegetales"]
+        "curiosidades": [
+            "Son excepcionales trepadores de árboles",
+            "Son los únicos osos que viven en América del Sur",
+            "Principalmente comen frutas y vegetales"
+        ]
     },
     {
         "id": 14,
@@ -207,7 +259,11 @@
         "esperanzaVida": 25,
         "pesoMinimo": 350,
         "pesoMaximo": 900,
-        "curiosidades": ["Pueden correr hasta 55 km/h a pesar de su tamaño", "Históricamente superaban los 60 millones de individuos", "Su población fue diezmada a menos de 1000 en el siglo XIX"]
+        "curiosidades": [
+            "Pueden correr hasta 55 km/h a pesar de su tamaño",
+            "Históricamente superaban los 60 millones de individuos",
+            "Su población fue diezmada a menos de 1000 en el siglo XIX"
+        ]
     },
     {
         "id": 15,
@@ -222,7 +278,11 @@
         "esperanzaVida": 33,
         "pesoMinimo": 150,
         "pesoMaximo": 360,
-        "curiosidades": ["Pueden correr a 55 km/h", "Su sentido del olfato es 7 veces mejor que el de un bloodhound", "Son principalmente herbívoros"]
+        "curiosidades": [
+            "Pueden correr a 55 km/h",
+            "Su sentido del olfato es 7 veces mejor que el de un bloodhound",
+            "Son principalmente herbívoros"
+        ]
     },
     {
         "id": 16,
@@ -237,7 +297,11 @@
         "esperanzaVida": 50,
         "pesoMinimo": 3,
         "pesoMaximo": 6,
-        "curiosidades": ["Pueden alcanzar velocidades de 160 km/h en picada", "Su visión es 8 veces mejor que la humana", "No adquieren las características blancas hasta los 4-5 años"]
+        "curiosidades": [
+            "Pueden alcanzar velocidades de 160 km/h en picada",
+            "Su visión es 8 veces mejor que la humana",
+            "No adquieren las características blancas hasta los 4-5 años"
+        ]
     },
     {
         "id": 17,
@@ -252,7 +316,11 @@
         "esperanzaVida": 15,
         "pesoMinimo": 30,
         "pesoMaximo": 80,
-        "curiosidades": ["Viven en manadas jerárquicamente organizadas", "Su aullido puede escucharse desde 10 km de distancia", "Pueden ayunar hasta 2 semanas"]
+        "curiosidades": [
+            "Viven en manadas jerárquicamente organizadas",
+            "Su aullido puede escucharse desde 10 km de distancia",
+            "Pueden ayunar hasta 2 semanas"
+        ]
     },
     {
         "id": 18,
@@ -267,7 +335,11 @@
         "esperanzaVida": 15,
         "pesoMinimo": 120,
         "pesoMaximo": 240,
-        "curiosidades": ["Sus cascos se adaptan a las estaciones, siendo más blandos en verano", "Pueden ver luz ultravioleta", "Migran más que cualquier otro terrestre mamífero"]
+        "curiosidades": [
+            "Sus cascos se adaptan a las estaciones, siendo más blandos en verano",
+            "Pueden ver luz ultravioleta",
+            "Migran más que cualquier otro terrestre mamífero"
+        ]
     },
     {
         "id": 19,
@@ -282,7 +354,11 @@
         "esperanzaVida": 17,
         "pesoMinimo": 18,
         "pesoMaximo": 36,
-        "curiosidades": ["Pueden saltar hasta 4 metros", "Sus orejas tienen 20 músculos para una orientación precisa", "Son principalmente nocturnos"]
+        "curiosidades": [
+            "Pueden saltar hasta 4 metros",
+            "Sus orejas tienen 20 músculos para una orientación precisa",
+            "Son principalmente nocturnos"
+        ]
     },
     {
         "id": 20,
@@ -297,7 +373,11 @@
         "esperanzaVida": 90,
         "pesoMinimo": 100000,
         "pesoMaximo": 200000,
-        "curiosidades": ["Su corazón pesa como un automóvil pequeño", "Pueden consumir 4 toneladas de alimento diario", "Su lengua puede pesar tanto como un elefante"]
+        "curiosidades": [
+            "Su corazón pesa como un automóvil pequeño",
+            "Pueden consumir 4 toneladas de alimento diario",
+            "Su lengua puede pesar tanto como un elefante"
+        ]
     },
     {
         "id": 21,
@@ -312,7 +392,11 @@
         "esperanzaVida": 45,
         "pesoMinimo": 150,
         "pesoMaximo": 650,
-        "curiosidades": ["Pueden reconocerse por silbidos únicos", "Tienen una corteza cerebral comparable a los primates", "Duermen con un ojo abierto"]
+        "curiosidades": [
+            "Pueden reconocerse por silbidos únicos",
+            "Tienen una corteza cerebral comparable a los primates",
+            "Duermen con un ojo abierto"
+        ]
     },
     {
         "id": 22,
@@ -327,7 +411,11 @@
         "esperanzaVida": 20,
         "pesoMinimo": 25,
         "pesoMaximo": 45,
-        "curiosidades": ["Los machos ayunan hasta 120 días durante la reproducción", "Pueden bucear más de 500 metros de profundidad", "Su grasa corporal representa el 36% de su peso"]
+        "curiosidades": [
+            "Los machos ayunan hasta 120 días durante la reproducción",
+            "Pueden bucear más de 500 metros de profundidad",
+            "Su grasa corporal representa el 36% de su peso"
+        ]
     },
     {
         "id": 23,
@@ -342,7 +430,11 @@
         "esperanzaVida": 25,
         "pesoMinimo": 350,
         "pesoMaximo": 500,
-        "curiosidades": ["Pueden bucear hasta 600 metros", "Tienen una capa de grasa de 6 cm de espesor", "Son capaces de mantener agujeros en el hielo"]
+        "curiosidades": [
+            "Pueden bucear hasta 600 metros",
+            "Tienen una capa de grasa de 6 cm de espesor",
+            "Son capaces de mantener agujeros en el hielo"
+        ]
     },
     {
         "id": 24,
@@ -357,7 +449,11 @@
         "esperanzaVida": 0.4,
         "pesoMinimo": 0.5,
         "pesoMaximo": 0.7,
-        "curiosidades": ["Migran hasta 3000 km", "Tienen 5 ojos en total", "Las larvas son venenosas"]
+        "curiosidades": [
+            "Migran hasta 3000 km",
+            "Tienen 5 ojos en total",
+            "Las larvas son venenosas"
+        ]
     },
     {
         "id": 25,
@@ -372,7 +468,11 @@
         "esperanzaVida": 45,
         "pesoMinimo": 250,
         "pesoMaximo": 750,
-        "curiosidades": ["Pueden no comer durante varios años", "Sus dientes se reemplazan durante toda la vida", "Tienen el mordisco más fuerte del reino animal"]
+        "curiosidades": [
+            "Pueden no comer durante varios años",
+            "Sus dientes se reemplazan durante toda la vida",
+            "Tienen el mordisco más fuerte del reino animal"
+        ]
     },
     {
         "id": 26,
@@ -387,7 +487,11 @@
         "esperanzaVida": 23,
         "pesoMinimo": 500,
         "pesoMaximo": 1000,
-        "curiosidades": ["Pueden atacar a los leones", "Los cuernos de los machos se fusionan en una estructura ósea", "Viven en rebaños que pueden superar los 1000 individuos"]
+        "curiosidades": [
+            "Pueden atacar a los leones",
+            "Los cuernos de los machos se fusionan en una estructura ósea",
+            "Viven en rebaños que pueden superar los 1000 individuos"
+        ]
     },
     {
         "id": 27,
@@ -402,7 +506,11 @@
         "esperanzaVida": 25,
         "pesoMinimo": 0.3,
         "pesoMaximo": 5,
-        "curiosidades": ["Su veneno proviene de su dieta de insectos", "Una sola rana contiene suficiente veneno para matar 100 personas", "Los colores brillantes advierten a los depredadores"]
+        "curiosidades": [
+            "Su veneno proviene de su dieta de insectos",
+            "Una sola rana contiene suficiente veneno para matar 100 personas",
+            "Los colores brillantes advierten a los depredadores"
+        ]
     },
     {
         "id": 28,
@@ -417,7 +525,11 @@
         "esperanzaVida": 50,
         "pesoMinimo": 0.9,
         "pesoMaximo": 1.3,
-        "curiosidades": ["Pueden vivir más de 60 años en cautiverio", "Tienen un grito que alcanza los 130 decibeles", "Utilizan herramientas para obtener alimento"]
+        "curiosidades": [
+            "Pueden vivir más de 60 años en cautiverio",
+            "Tienen un grito que alcanza los 130 decibeles",
+            "Utilizan herramientas para obtener alimento"
+        ]
     },
     {
         "id": 29,
@@ -432,7 +544,11 @@
         "esperanzaVida": 10,
         "pesoMinimo": 35,
         "pesoMaximo": 65,
-        "curiosidades": ["Sus patas tienen membranas entre los dedos", "Pueden contener la respiración hasta 5 minutos", "Viven en grupos de 10-20 individuos"]
+        "curiosidades": [
+            "Sus patas tienen membranas entre los dedos",
+            "Pueden contener la respiración hasta 5 minutos",
+            "Viven en grupos de 10-20 individuos"
+        ]
     },
     {
         "id": 30,
@@ -447,7 +563,11 @@
         "esperanzaVida": 20,
         "pesoMinimo": 3,
         "pesoMaximo": 13,
-        "curiosidades": ["Pueden alcanzar más de 5 metros de largo", "Su veneno puede matar a un elefante", "Pueden 'escupir' veneno hasta 3 metros"]
+        "curiosidades": [
+            "Pueden alcanzar más de 5 metros de largo",
+            "Su veneno puede matar a un elefante",
+            "Pueden 'escupir' veneno hasta 3 metros"
+        ]
     },
     {
         "id": 31,
@@ -462,7 +582,11 @@
         "esperanzaVida": 45,
         "pesoMinimo": 30,
         "pesoMaximo": 90,
-        "curiosidades": ["El 97% de su ADN es idéntico al humano", "Son principalmente solitarios", "Utilizan herramientas en su ambiente natural"]
+        "curiosidades": [
+            "El 97% de su ADN es idéntico al humano",
+            "Son principalmente solitarios",
+            "Utilizan herramientas en su ambiente natural"
+        ]
     },
     {
         "id": 32,
@@ -477,7 +601,11 @@
         "esperanzaVida": 35,
         "pesoMinimo": 900,
         "pesoMaximo": 1400,
-        "curiosidades": ["Menos de 80 individuos permanecen en la naturaleza", "El macho tiene un cuerno de hasta 26 cm", "Están casi extintos"]
+        "curiosidades": [
+            "Menos de 80 individuos permanecen en la naturaleza",
+            "El macho tiene un cuerno de hasta 26 cm",
+            "Están casi extintos"
+        ]
     },
     {
         "id": 33,
@@ -492,7 +620,11 @@
         "esperanzaVida": 0.04,
         "pesoMinimo": 0.1,
         "pesoMaximo": 0.1,
-        "curiosidades": ["Una colonia tiene 20,000-60,000 abejas", "Realizan una danza para comunicar la ubicación del alimento", "Producen miel de múltiples flores"]
+        "curiosidades": [
+            "Una colonia tiene 20,000-60,000 abejas",
+            "Realizan una danza para comunicar la ubicación del alimento",
+            "Producen miel de múltiples flores"
+        ]
     },
     {
         "id": 34,
@@ -507,7 +639,11 @@
         "esperanzaVida": 47,
         "pesoMinimo": 40,
         "pesoMaximo": 200,
-        "curiosidades": ["Migran miles de kilómetros entre zonas de alimentación y reproducción", "Pueden bucear a profundidades de 1000 metros", "Algunas poblaciones están en recuperación"]
+        "curiosidades": [
+            "Migran miles de kilómetros entre zonas de alimentación y reproducción",
+            "Pueden bucear a profundidades de 1000 metros",
+            "Algunas poblaciones están en recuperación"
+        ]
     },
     {
         "id": 35,
@@ -522,7 +658,11 @@
         "esperanzaVida": 25,
         "pesoMinimo": 2.3,
         "pesoMaximo": 3.8,
-        "curiosidades": ["Anidan en madrigueras en tierra", "Migran más de 3000 km en busca de alimento", "Tienen vocalizaciones individuales únnicas"]
+        "curiosidades": [
+            "Anidan en madrigueras en tierra",
+            "Migran más de 3000 km en busca de alimento",
+            "Tienen vocalizaciones individuales únnicas"
+        ]
     },
     {
         "id": 36,
@@ -537,7 +677,11 @@
         "esperanzaVida": 13,
         "pesoMinimo": 3,
         "pesoMaximo": 47,
-        "curiosidades": ["Pueden saltar cascadas de hasta 3.6 metros", "Regresan al río exacto donde nacieron", "Dejan de comer cuando entran en agua dulce"]
+        "curiosidades": [
+            "Pueden saltar cascadas de hasta 3.6 metros",
+            "Regresan al río exacto donde nacieron",
+            "Dejan de comer cuando entran en agua dulce"
+        ]
     },
     {
         "id": 37,
@@ -552,7 +696,11 @@
         "esperanzaVida": 70,
         "pesoMinimo": 300,
         "pesoMaximo": 1000,
-        "curiosidades": ["Pueden alcanzar 6 metros de largo", "Pueden vivir varios años sin comer", "Tienen la mayor presión de mordida de cualquier animal"]
+        "curiosidades": [
+            "Pueden alcanzar 6 metros de largo",
+            "Pueden vivir varios años sin comer",
+            "Tienen la mayor presión de mordida de cualquier animal"
+        ]
     },
     {
         "id": 38,
@@ -567,7 +715,11 @@
         "esperanzaVida": 10,
         "pesoMinimo": 2.5,
         "pesoMaximo": 5,
-        "curiosidades": ["Parecen sonreír en las fotos", "Son endémicos de Australia occidental", "Tienen escasos depredadores naturales"]
+        "curiosidades": [
+            "Parecen sonreír en las fotos",
+            "Son endémicos de Australia occidental",
+            "Tienen escasos depredadores naturales"
+        ]
     },
     {
         "id": 39,
@@ -582,7 +734,11 @@
         "esperanzaVida": 20,
         "pesoMinimo": 0.5,
         "pesoMaximo": 0.7,
-        "curiosidades": ["Su pico es muy ligero a pesar de su tamaño", "Son principalmente frugivoros", "Duermen de manera única: retraen el pico bajo las alas"]
+        "curiosidades": [
+            "Su pico es muy ligero a pesar de su tamaño",
+            "Son principalmente frugivoros",
+            "Duermen de manera única: retraen el pico bajo las alas"
+        ]
     },
     {
         "id": 40,
@@ -597,7 +753,11 @@
         "esperanzaVida": 11,
         "pesoMinimo": 0.5,
         "pesoMaximo": 0.75,
-        "curiosidades": ["Tienen un sentido del olfato excepcional", "Marcan su territorio con glándulas anales", "Su población ha disminuido drasticamente por competencia con visones americanos"]
+        "curiosidades": [
+            "Tienen un sentido del olfato excepcional",
+            "Marcan su territorio con glándulas anales",
+            "Su población ha disminuido drasticamente por competencia con visones americanos"
+        ]
     },
     {
         "id": 41,
@@ -612,7 +772,11 @@
         "esperanzaVida": 6,
         "pesoMinimo": 0.04,
         "pesoMaximo": 0.18,
-        "curiosidades": ["Tienen bolsas en las mejillas para almacenar semillas", "Nunca beben agua, la obtienen de las semillas", "Pueden saltar hasta 2 metros"]
+        "curiosidades": [
+            "Tienen bolsas en las mejillas para almacenar semillas",
+            "Nunca beben agua, la obtienen de las semillas",
+            "Pueden saltar hasta 2 metros"
+        ]
     },
     {
         "id": 42,
@@ -627,7 +791,11 @@
         "esperanzaVida": 20,
         "pesoMinimo": 3,
         "pesoMaximo": 10,
-        "curiosidades": ["Tienen un tercer ojo en la cabeza (glándula pineal)", "Pueden alcanzar más de 2 metros", "Utilizan su cola como arma defensiva"]
+        "curiosidades": [
+            "Tienen un tercer ojo en la cabeza (glándula pineal)",
+            "Pueden alcanzar más de 2 metros",
+            "Utilizan su cola como arma defensiva"
+        ]
     },
     {
         "id": 43,
@@ -642,7 +810,11 @@
         "esperanzaVida": 12,
         "pesoMinimo": 0.025,
         "pesoMaximo": 0.05,
-        "curiosidades": ["Tienen enzimas anticoagulantes en la saliva", "Necesitan comer cada 2-3 días", "Son sociales y comparten comida con compañeros de nidada"]
+        "curiosidades": [
+            "Tienen enzimas anticoagulantes en la saliva",
+            "Necesitan comer cada 2-3 días",
+            "Son sociales y comparten comida con compañeros de nidada"
+        ]
     },
     {
         "id": 44,
@@ -657,7 +829,11 @@
         "esperanzaVida": 40,
         "pesoMinimo": 25,
         "pesoMaximo": 70,
-        "curiosidades": ["Tienen una función de preservación de agua salada", "Los ojos brillan rojo bajo la luz infrarroja", "Construyen nidos con vegetación"]
+        "curiosidades": [
+            "Tienen una función de preservación de agua salada",
+            "Los ojos brillan rojo bajo la luz infrarroja",
+            "Construyen nidos con vegetación"
+        ]
     },
     {
         "id": 45,
@@ -672,7 +848,11 @@
         "esperanzaVida": 30,
         "pesoMinimo": 30,
         "pesoMaximo": 60,
-        "curiosidades": ["Pueden correr a 50 km/h", "Los machos incuban los huevos sin comer durante 8 semanas", "Tienen visión monocular de 270 grados"]
+        "curiosidades": [
+            "Pueden correr a 50 km/h",
+            "Los machos incuban los huevos sin comer durante 8 semanas",
+            "Tienen visión monocular de 270 grados"
+        ]
     },
     {
         "id": 46,
@@ -687,7 +867,11 @@
         "esperanzaVida": 16,
         "pesoMinimo": 12,
         "pesoMaximo": 24,
-        "curiosidades": ["Ladran poco, principalmente aullan", "Han causado el colapso de poblaciones de marsupiales", "Son más pequeños que la mayoría de los perros domesticados"]
+        "curiosidades": [
+            "Ladran poco, principalmente aullan",
+            "Han causado el colapso de poblaciones de marsupiales",
+            "Son más pequeños que la mayoría de los perros domesticados"
+        ]
     },
     {
         "id": 47,
@@ -702,7 +886,11 @@
         "esperanzaVida": 20,
         "pesoMinimo": 1.5,
         "pesoMaximo": 3.5,
-        "curiosidades": ["Tienen ojos reflectantes para la visión nocturna", "Son principalmente nocturnos", "Pueden trepar árboles con facilidad"]
+        "curiosidades": [
+            "Tienen ojos reflectantes para la visión nocturna",
+            "Son principalmente nocturnos",
+            "Pueden trepar árboles con facilidad"
+        ]
     },
     {
         "id": 48,
@@ -717,7 +905,11 @@
         "esperanzaVida": 12,
         "pesoMinimo": 21,
         "pesoMaximo": 72,
-        "curiosidades": ["Pueden acelerar de 0 a 100 km/h en 3 segundos", "No pueden retraer completamente sus garras", "No pueden rugir, solo fuerza y ronronean"]
+        "curiosidades": [
+            "Pueden acelerar de 0 a 100 km/h en 3 segundos",
+            "No pueden retraer completamente sus garras",
+            "No pueden rugir, solo fuerza y ronronean"
+        ]
     },
     {
         "id": 49,
@@ -732,7 +924,11 @@
         "esperanzaVida": 11,
         "pesoMinimo": 21,
         "pesoMaximo": 60,
-        "curiosidades": ["Tienen menos variabilidad genética que otras poblaciones", "Viven en zonas desérticas y semiáridas", "Son especialmente vulnerables a cambios ambientales"]
+        "curiosidades": [
+            "Tienen menos variabilidad genética que otras poblaciones",
+            "Viven en zonas desérticas y semiáridas",
+            "Son especialmente vulnerables a cambios ambientales"
+        ]
     },
     {
         "id": 50,
@@ -747,6 +943,10 @@
         "esperanzaVida": 20,
         "pesoMinimo": 0.5,
         "pesoMaximo": 5,
-        "curiosidades": ["El sonido del cascabel es una advertencia defensiva", "Nacen vivas, no de huevos", "Huyen de los humanos cuando es posible"]
+        "curiosidades": [
+            "El sonido del cascabel es una advertencia defensiva",
+            "Nacen vivas, no de huevos",
+            "Huyen de los humanos cuando es posible"
+        ]
     }
 ]

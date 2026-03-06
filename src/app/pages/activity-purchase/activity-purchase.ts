@@ -6,7 +6,7 @@ import { ActivityService } from '../../services/activity.service';
 import { AuthService } from '../../services/auth.service';
 
 // Modelos
-import { Activity } from '../../models/activity';
+import { Activity } from '../../models/activity.interface';
 
 @Component({
   selector: 'app-activity-purchase',

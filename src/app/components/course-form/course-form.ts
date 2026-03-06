@@ -7,7 +7,7 @@ import { CourseService } from '../../services/course.service';
 import { AuthService } from '../../services/auth.service';
 
 // Modelos
-import { Course } from '../../models/course';
+import { Course } from '../../models/course.interface';
 
 @Component({
   selector: 'app-course-form',

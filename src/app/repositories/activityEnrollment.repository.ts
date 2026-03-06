@@ -1,7 +1,7 @@
 import { Injectable } from "@angular/core";
 
 // Modelos
-import { ActivityEnrollment } from "../models/activityEnrollment.model";
+import { ActivityEnrollment } from "../models/activityEnrollment.interface";
 
 @Injectable({
     providedIn: 'root'

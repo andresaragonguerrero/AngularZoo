@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 // Modelos
-import { AvailabilitySlot } from '../models/availability-slot';
+import { AvailabilitySlot } from '../models/availability-slot.interface';
 
 @Injectable({
   providedIn: 'root'

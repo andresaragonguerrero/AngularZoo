@@ -1,7 +1,7 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 // Modelos
-import { TicketQuantities } from '../../models/ticket-type';
+import { TicketQuantities } from '../../models/ticket-type.interface';
 
 @Component({
   selector: 'app-ticket-summary-modal',

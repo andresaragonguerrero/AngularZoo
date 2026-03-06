@@ -6,7 +6,7 @@ import { MemberPriceStrategy } from '../strategy/member-price.strategy';
 import { NonMemberPriceStrategy } from '../strategy/non-member-price.strategy';
 
 // Modelos
-import { TicketQuantities } from '../models/ticket-type';
+import { TicketQuantities } from '../models/ticket-type.interface';
 
 @Injectable({
   providedIn: 'root',

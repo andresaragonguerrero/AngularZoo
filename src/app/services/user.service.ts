@@ -7,7 +7,7 @@ import { UserFactory } from '../factories/user.factory';
 import { UserRepository } from '../repositories/user.repository';
 
 // modelos
-import { User } from '../models/user';
+import { User } from '../models/user.interface';
 
 export interface UserRegistrationData {
   firstName: string;

@@ -6,7 +6,7 @@ import { CourseService } from '../../services/course.service';
 import { AuthService } from '../../services/auth.service';
 
 // Models
-import { Course } from '../../models/course';
+import { Course } from '../../models/course.interface';
 
 @Component({
   selector: 'app-courses',

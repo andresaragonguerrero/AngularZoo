@@ -1,7 +1,7 @@
 import { Injectable, inject, signal } from '@angular/core';
 
 // modelos
-import { User } from '../models/user';
+import { User } from '../models/user.interface';
 
 // servicios
 import { UserService } from './user.service';

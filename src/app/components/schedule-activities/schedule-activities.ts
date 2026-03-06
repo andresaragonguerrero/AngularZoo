@@ -4,7 +4,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { ActivityService } from '../../services/activity.service';
 
 // Models
-import { Activity } from '../../models/activity';
+import { Activity } from '../../models/activity.interface';
 
 @Component({
   selector: 'app-schedule-activities',

@@ -7,7 +7,7 @@ import { TicketFactory } from '../factories/ticket.factory';
 import { TicketRepository } from '../repositories/ticket.repository';
 
 // Modelos
-import { Ticket } from '../models/ticket';
+import { Ticket } from '../models/ticket.interface';
 
 // Servicios
 import { AvailabilityService } from './availability.service';

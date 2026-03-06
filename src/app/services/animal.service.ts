@@ -9,71 +9,69 @@ import { Animal } from '../models/animal.interface';
   providedIn: 'root',
 })
 export class AnimalService {
-  // Usamos shareReplay para cachear la respuesta y no hacer múltiples peticiones
-  private animalsCache: Observable<Animal[]> | null = null;
+  private animalsCache$?: Observable<Animal[]>;
 
   constructor(private readonly http: HttpClient) { }
 
   getAnimals(): Observable<Animal[]> {
-    this.animalsCache ??= this.http.get<Animal[]>('/assets/data/animals.json').pipe(
-      shareReplay(1)
-    );
+    if (!this.animalsCache$) {
+      this.animalsCache$ = this.http
+        .get<Animal[]>('/assets/data/animals.json')
+        .pipe(shareReplay(1));
+    }
 
-    return this.animalsCache;
+    return this.animalsCache$;
   }
 
   getAnimalById(id: number): Observable<Animal | undefined> {
-    return this.getAnimals().pipe(
-      map(animals => animals.find(animal => animal.id === id))
+    return this.filterAnimals(a => a.id === id).pipe(
+      map(result => result[0])
     );
   }
 
   getAnimalsByEcosystem(ecosystemId: number): Observable<Animal[]> {
-    return this.getAnimals().pipe(
-      map(animals => animals.filter(animal => animal.ecosistemaId === ecosystemId))
-    );
+    return this.filterAnimals(a => a.ecosistemaId === ecosystemId);
   }
 
-  getAnimalsByDiet(diet: string): Observable<Animal[]> {
-    return this.getAnimals().pipe(
-      map(animals => animals.filter(animal => animal.dieta === diet))
-    );
+  getAnimalsByDiet(diet: Animal['dieta']): Observable<Animal[]> {
+    return this.filterAnimals(a => a.dieta === diet);
   }
 
   getAnimalsByContinent(continent: string): Observable<Animal[]> {
-    return this.getAnimals().pipe(
-      map(animals => animals.filter(animal => animal.continente === continent))
-    );
+    return this.filterAnimals(a => a.continente === continent);
   }
 
-  getAnimalsByConservationStatus(status: string): Observable<Animal[]> {
-    return this.getAnimals().pipe(
-      map(animals => animals.filter(animal => animal.estadoConservacion === status))
-    );
+  getAnimalsByConservationStatus(status: Animal['estadoConservacion']): Observable<Animal[]> {
+    return this.filterAnimals(a => a.estadoConservacion === status);
   }
 
   searchAnimals(searchTerm: string): Observable<Animal[]> {
     const term = searchTerm.toLowerCase().trim();
-    return this.getAnimals().pipe(
-      map(animals => animals.filter(animal =>
-        animal.nombre.toLowerCase().includes(term) ||
-        animal.nombreCientifico.toLowerCase().includes(term) ||
-        animal.descripcion.toLowerCase().includes(term)
-      ))
+
+    return this.filterAnimals(a =>
+      a.nombre.toLowerCase().includes(term) ||
+      a.nombreCientifico.toLowerCase().includes(term) ||
+      a.descripcion.toLowerCase().includes(term)
     );
   }
 
   getRandomAnimal(): Observable<Animal | null> {
     return this.getAnimals().pipe(
       map(animals => {
-        if (animals.length === 0) return null;
-        const randomIndex = Math.floor(Math.random() * animals.length);
-        return animals[randomIndex];
+        if (!animals.length) return null;
+        const index = Math.floor(Math.random() * animals.length);
+        return animals[index];
       })
     );
   }
 
   clearCache(): void {
-    this.animalsCache = null;
+    this.animalsCache$ = undefined;
+  }
+
+  private filterAnimals(predicate: (animal: Animal) => boolean): Observable<Animal[]> {
+    return this.getAnimals().pipe(
+      map(animals => animals.filter(predicate))
+    );
   }
 }

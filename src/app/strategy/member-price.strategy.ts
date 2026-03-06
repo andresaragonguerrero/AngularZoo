@@ -4,7 +4,7 @@ import { Injectable } from "@angular/core";
 import { PriceStrategy } from "../interfaces/price-strategy";
 
 // Modelos
-import { TicketQuantities, TICKET_PRICES } from '../models/ticket-type';
+import { TicketQuantities, TICKET_PRICES } from '../models/ticket-type.interface';
 
 @Injectable({ providedIn: 'root' })
 

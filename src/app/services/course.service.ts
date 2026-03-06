@@ -8,8 +8,8 @@ import { ZooDataService } from './zoo-data.service';
 import { CourseEnrollmentRepository } from '../repositories/courseEnrollment.repository';
 
 // Modelos
-import { Course } from '../models/course';
-import { CourseEnrollment } from '../models/courseEnrollment.model';
+import { Course } from '../models/course.interface';
+import { CourseEnrollment } from '../models/courseEnrollment.interface';
 import { Season } from '../models/season.enum';
 
 @Injectable({
