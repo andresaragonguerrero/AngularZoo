@@ -1,5 +1,8 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 
+// Modelos
+import { Animal } from '../../models/animal.interface';
+
 @Component({
   selector: 'app-animal-filters',
   imports: [],
@@ -8,8 +11,8 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class AnimalFilters {
   @Output() searchChange = new EventEmitter<string>();
-  @Output() dietChange = new EventEmitter<string>();
-  @Output() continentChange = new EventEmitter<string>();
+  @Output() dietChange = new EventEmitter<Animal['dieta'] | ''>();
+  @Output() continentChange = new EventEmitter<string | ''>();
   @Output() clear = new EventEmitter<void>();
 
   onSearch(term: string): void {
@@ -17,7 +20,7 @@ export class AnimalFilters {
   }
 
   onDietChange(diet: string): void {
-    this.dietChange.emit(diet);
+    this.dietChange.emit(diet as Animal['dieta'] | '');
   }
 
   onContinentChange(continent: string): void {
