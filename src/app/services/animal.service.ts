@@ -9,18 +9,21 @@ import { Animal } from '../models/animal.interface';
   providedIn: 'root',
 })
 export class AnimalService {
-  private animalsCache$?: Observable<Animal[]>;
+  private animalsCache?: Observable<Animal[]>;
 
   constructor(private readonly http: HttpClient) { }
 
   getAnimals(): Observable<Animal[]> {
-    if (!this.animalsCache$) {
-      this.animalsCache$ = this.http
-        .get<Animal[]>('/assets/data/animals.json')
-        .pipe(shareReplay(1));
-    }
+    // La estrategia que se emplea evita que, cada vez que se quiera obtener un animal,
+    // se tenga que consumir el JSON
+    // Por ello se comprueba si lo ya lo guardamos en caché (animalsCache); 
+    // en caso de no tenerlo lo consumimos del JSON (??= this.http.get<Animal[]>('/assets/data/animals.json'))
+    // y guardamos la última versión en animalsCache
+    this.animalsCache ??= this.http.get<Animal[]>('/assets/data/animals.json').pipe(
+      shareReplay(1)
+    );
 
-    return this.animalsCache$;
+    return this.animalsCache;
   }
 
   getAnimalById(id: number): Observable<Animal | undefined> {
@@ -66,7 +69,7 @@ export class AnimalService {
   }
 
   clearCache(): void {
-    this.animalsCache$ = undefined;
+    this.animalsCache = undefined;
   }
 
   private filterAnimals(predicate: (animal: Animal) => boolean): Observable<Animal[]> {
