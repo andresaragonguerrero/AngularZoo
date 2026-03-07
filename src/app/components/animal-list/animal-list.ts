@@ -1,12 +1,9 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { RouterModule } from '@angular/router';
 
 // Modelos
 import { Animal } from '../../models/animal.interface';
-
-// Servicios
-import { AnimalService } from '../../services/animal.service';
-import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-animal-list',
@@ -17,90 +14,16 @@ import { RouterModule } from '@angular/router';
   templateUrl: './animal-list.html',
   styleUrl: './animal-list.scss',
 })
-export class AnimalList implements OnInit {
-  @Input() showFilters = true;
-  @Input() limit?: number;
-
-  animals: Animal[] = [];
-  filteredAnimals: Animal[] = [];
-
-  isLoading = true;
-  error: string | null = null;
-
-  private searchTerm = '';
-  private dietFilter = '';
-  private continentFilter = '';
+export class AnimalList {
+  @Input() animals: Animal[] = [];
+  @Input() isLoading = false;
+  @Input() error: string | null = null;
 
   private readonly favorites = new Set<number>();
   readonly brokenImages = new Set<number>();
 
-  constructor(private readonly animalService: AnimalService) { }
-
-  ngOnInit(): void {
-    this.loadAnimals();
-  }
-
-  private loadAnimals(): void {
-    this.animalService.getAnimals().subscribe({
-      next: (animals) => {
-        const result = this.limit ? animals.slice(0, this.limit) : animals;
-
-        this.animals = result;
-        this.filteredAnimals = [...result];
-
-        this.isLoading = false;
-      },
-      error: (err) => {
-        console.error('Error al cargar animales:', err);
-        this.error = 'No se pudieron cargar los animales.';
-        this.isLoading = false;
-      }
-    });
-  }
-
   trackByAnimalId(index: number, animal: Animal): number {
     return animal.id;
-  }
-
-  onSearch(term: string): void {
-    this.searchTerm = term.toLowerCase().trim();
-    this.applyFilters();
-  }
-
-  onDietFilter(diet: string): void {
-    this.dietFilter = diet;
-    this.applyFilters();
-  }
-
-  onContinentFilter(continent: string): void {
-    this.continentFilter = continent;
-    this.applyFilters();
-  }
-
-  clearFilters(): void {
-    this.searchTerm = '';
-    this.dietFilter = '';
-    this.continentFilter = '';
-    this.filteredAnimals = [...this.animals];
-  }
-
-  private applyFilters(): void {
-    this.filteredAnimals = this.animals.filter(animal => {
-
-      const matchesSearch =
-        !this.searchTerm ||
-        animal.nombre.toLowerCase().includes(this.searchTerm) ||
-        animal.nombreCientifico.toLowerCase().includes(this.searchTerm) ||
-        animal.descripcion.toLowerCase().includes(this.searchTerm);
-
-      const matchesDiet =
-        !this.dietFilter || animal.dieta === this.dietFilter;
-
-      const matchesContinent =
-        !this.continentFilter || animal.continente === this.continentFilter;
-
-      return matchesSearch && matchesDiet && matchesContinent;
-    });
   }
 
   formatWeight(min: number, max: number): string {
