@@ -1,1 +1,6 @@
-<app-animal-list></app-animal-list>
+<app-animal-filters (searchChange)="onSearch($event)" (dietChange)="onDietChange($event)"
+    (continentChange)="onContinentChange($event)" (clear)="onClear()">
+</app-animal-filters>
+
+<app-animal-list [animals]="filteredAnimals">
+</app-animal-list>
