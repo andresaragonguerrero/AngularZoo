@@ -1,7 +1,7 @@
 # FUNCIONALIDADES POR IMPLEMENTAR
 
 ANIMALES
-- Listado de animales (cards)
+- Listado de animales (cards) - HECHO
 - Sistema de filtros
   - dieta
   - ecosistema
@@ -26,9 +26,9 @@ EXPLORACIÓN
 - Navegación animal → ecosistema
 
 DATOS / ARQUITECTURA
-- Crear animals.json
+- Crear animals.json - HECHO
 - Crear ecosystems.json
-- Crear AnimalService
+- Crear AnimalService - HECHO
 - Crear EcosystemService
 
 ESTADÍSTICAS
