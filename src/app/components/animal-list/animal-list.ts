@@ -18,8 +18,7 @@ import { RouterModule } from '@angular/router';
   styleUrl: './animal-list.scss',
 })
 export class AnimalList implements OnInit {
-  @Input() title = 'Listado de Animales';
-  @Input() showFilters = false;
+  @Input() showFilters = true;
   @Input() limit?: number;
 
   animals: Animal[] = [];

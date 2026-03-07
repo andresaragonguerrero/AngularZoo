@@ -1,0 +1,26 @@
+<div class="filters">
+    <input 
+        type="text" 
+        placeholder="Buscar animal..." 
+        (input)="onSearch($any($event.target).value)" 
+    />
+    
+    <select (change)="onDietChange($any($event.target).value)">
+        <option value="">Todas las dietas</option>
+        <option value="herbívoro">Herbívoro</option>
+        <option value="carnívoro">Carnívoro</option>
+        <option value="omnívoro">Omnívoro</option>
+        <option value="insectívoro">Insectívoro</option>
+    </select>
+    
+    <select (change)="onContinentChange($any($event.target).value)">
+        <option value="">Todos los continentes</option>
+        <option value="África">África</option>
+        <option value="Europa">Europa</option>
+        <option value="Asia">Asia</option>
+        <option value="América">América</option>
+        <option value="Oceanía">Oceanía</option>
+    </select>
+    
+    <button (click)="onClear()">Limpiar filtros</button>
+</div>
