@@ -19,6 +19,15 @@
         <option value="Oceanía">Oceanía</option>
     </select>
 
+    <select #conservationStatus (change)="onConservationStatusChange(conservationStatus.value)">
+        <option value="">Todos los estados de conservación</option>
+        <option value="preocupación menor">Preocupación menor</option>
+        <option value="vulnerable">Vulnerable</option>
+        <option value="en peligro">En peligro</option>
+        <option value="en peligro crítico">En peligro crítico</option>
+        <option value="extinto">Extinto</option>
+    </select>
+
     <button (click)="onClear()">Limpiar filtros</button>
 
 </div>

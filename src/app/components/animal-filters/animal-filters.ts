@@ -13,6 +13,7 @@ export class AnimalFilters {
   @Output() searchChange = new EventEmitter<string>();
   @Output() dietChange = new EventEmitter<Animal['dieta'] | ''>();
   @Output() continentChange = new EventEmitter<string | ''>();
+  @Output() conservationStatusChange = new EventEmitter<Animal['estadoConservacion'] | ''>();
   @Output() clear = new EventEmitter<void>();
 
   onSearch(term: string): void {
@@ -25,6 +26,10 @@ export class AnimalFilters {
 
   onContinentChange(continent: string): void {
     this.continentChange.emit(continent);
+  }
+
+  onConservationStatusChange(conservationStatus: string): void {
+    this.conservationStatusChange.emit(conservationStatus as Animal['estadoConservacion'] | '');
   }
 
   onClear(): void {

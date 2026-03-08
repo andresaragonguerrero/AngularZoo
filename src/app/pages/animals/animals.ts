@@ -14,7 +14,7 @@ import { AnimalFilters } from '../../components/animal-filters/animal-filters';
   selector: 'app-animals',
   imports: [
     AnimalList,
-    AnimalFilters
+    AnimalFilters,
   ],
   templateUrl: './animals.html',
   styleUrl: './animals.scss',
@@ -26,6 +26,7 @@ export class AnimalsComponent implements OnInit {
   private searchTerm = '';
   private dietFilter = '';
   private continentFilter = '';
+  private conservationStatusFilter = '';
 
   constructor(private readonly animalService: AnimalService) { }
 
@@ -51,10 +52,16 @@ export class AnimalsComponent implements OnInit {
     this.applyFilters();
   }
 
+  onConservationStatusChange(status: string): void {
+    this.conservationStatusFilter = status;
+    this.applyFilters();
+  }
+
   onClear(): void {
     this.searchTerm = '';
     this.dietFilter = '';
     this.continentFilter = '';
+    this.conservationStatusFilter = '';
     this.filteredAnimals = [...this.animals];
   }
 
@@ -73,7 +80,11 @@ export class AnimalsComponent implements OnInit {
       const matchesContinent =
         !this.continentFilter || animal.continente === this.continentFilter;
 
-      return matchesSearch && matchesDiet && matchesContinent;
+      const matchesConservationStatus =
+        !this.conservationStatusFilter ||
+        animal.estadoConservacion === this.conservationStatusFilter;
+
+      return matchesSearch && matchesDiet && matchesContinent && matchesConservationStatus;
     });
   }
 }
