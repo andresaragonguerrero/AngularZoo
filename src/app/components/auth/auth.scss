@@ -62,8 +62,8 @@
   transition: color .3s;
 }
 
-login-button .auth-button:hover .link,
-login-button .auth-button:hover .svg-icon {
+.auth-button:hover .link,
+.auth-button:hover .svg-icon {
   color: var(--background-color);
 }
 
