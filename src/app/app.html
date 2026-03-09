@@ -1,5 +1,7 @@
 <div class="app-content-wrapper">
   <app-header class="header"></app-header>
+
+  <!-- [class.header-fixed]="headerService.mode() === 'fixed'" -->
   <main class="main" [class.header-sticky]="headerService.mode() === 'sticky'">
     <router-outlet></router-outlet>
   </main>
