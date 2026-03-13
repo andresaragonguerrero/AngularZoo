@@ -67,6 +67,10 @@
   color: var(--background-color);
 }
 
+.register-button:hover .link {
+  color: var(--secondary-color);
+}
+
 .user-info {
   position: relative;
   z-index: 1;
