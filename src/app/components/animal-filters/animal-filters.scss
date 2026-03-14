@@ -115,3 +115,29 @@
 .filters__clear:active {
     background-color: var(--secondary-800);
 }
+
+@media (max-width: 1024px) {
+    .filters {
+        top: 4rem;
+    }
+
+    .filters__controls {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .filters {
+        top: 4rem;
+    }
+
+    .filters__controls {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .filters {
+        gap: var(--space-3);
+    }
+}
