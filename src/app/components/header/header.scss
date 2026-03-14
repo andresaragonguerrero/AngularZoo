@@ -4,7 +4,6 @@
   z-index: 100;
 
   background-color: var(--background-color);
-
   box-shadow: var(--shadow-lg);
 
   &.is-fixed {
@@ -14,13 +13,12 @@
   }
 }
 
-// HEADER-TOP
+/* ── Header top ──────────────────────────────────────── */
+
 .header-top {
   height: 4.5rem;
   width: 80%;
-
   margin: 0 auto;
-  // padding: var(--space-2) 0;
 
   display: flex;
   justify-content: space-between;
@@ -52,6 +50,200 @@
   gap: var(--space-2);
 }
 
+/* ── Header nav desktop ──────────────────────────────── */
+
 .header-nav {
   background-color: var(--primary-color);
+}
+
+/* ── Hamburguesa — oculta en desktop ─────────────────── */
+
+.ham-button {
+  display: none;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 6px;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  cursor: pointer;
+}
+
+.ham-line {
+  display: block;
+
+  width: 22px;
+  height: 2px;
+
+  background-color: var(--text-color);
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* ── Drawer ──────────────────────────────────────────── */
+
+.drawer-overlay {
+  display: none;
+
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+
+  background-color: rgba(0, 0, 0, 0.45);
+  opacity: 0;
+
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.drawer-overlay.is-open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 201;
+
+  height: 100dvh;
+  width: 300px;
+
+  padding: var(--space-5) var(--space-5) var(--space-7);
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+
+  background-color: var(--background-color);
+  box-shadow: var(--shadow-xl);
+
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+
+  overflow-y: auto;
+}
+
+.drawer.is-open {
+  transform: translateX(0);
+}
+
+.drawer-close {
+  align-self: flex-start;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 2rem;
+  height: 2rem;
+
+  background-color: transparent;
+  border: none;
+  outline: none;
+
+  color: var(--text-color);
+  cursor: pointer;
+
+  transition: color 0.2s ease;
+}
+
+.drawer-close:hover {
+  color: var(--primary-color);
+}
+
+.drawer-bottom {
+  margin-top: auto;
+
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+
+  padding-top: var(--space-5);
+  border-top: 1px solid rgba(44, 95, 45, 0.12);
+}
+
+.ham-button .svg-icon {
+  transition: transform 0.25s ease;
+}
+
+.ham-button:hover .svg-icon {
+  transform: rotate(-15deg);
+}
+
+.ham-button:active .svg-icon {
+  transform: rotate(-15deg) scale(0.9);
+}
+
+.drawer-close .svg-icon {
+  transition: transform 0.25s ease;
+}
+
+.drawer-close:hover .svg-icon {
+  transform: rotate(-15deg);
+}
+
+.drawer-close:active .svg-icon {
+  transform: rotate(-15deg) scale(0.9);
+}
+
+/* ── Breakpoint tablet < 1024px ──────────────────────── */
+
+@media (max-width: 1024px) {
+  .header-top {
+    width: 90%;
+  }
+
+  .header-nav {
+    display: none;
+  }
+
+  .header-controls {
+    display: none;
+  }
+
+  .ham-button {
+    display: flex;
+  }
+
+  .drawer-overlay {
+    display: block;
+  }
+}
+
+/* ── Breakpoint móvil < 768px ────────────────────────── */
+
+@media (max-width: 768px) {
+  .header-top {
+    width: 100%;
+    padding: 0 var(--space-4);
+  }
+
+  .branding {
+    align-items: flex-start;
+  }
+
+  .site-tagline {
+    font-size: 13px;
+  }
+
+  .drawer {
+    width: 280px;
+  }
+}
+
+/* ── Breakpoint móvil pequeño < 480px ────────────────── */
+
+@media (max-width: 480px) {
+  .drawer {
+    width: 100%;
+  }
 }

@@ -1,21 +1,57 @@
 <header class="header" [class.is-fixed]="headerService.mode() === 'fixed'">
-  
+
   <!-- Barra superior -->
   <div class="header-top">
-    
+
     <div class="branding">
       <h1 class="site-title">Senda Animal</h1>
       <p class="site-tagline">Una reserva salvaje</p>
     </div>
 
+    <!-- Desktop: auth + settings -->
     <div class="header-controls">
       <app-auth class="auth-component"></app-auth>
       <app-page-settings class="page-settings-component"></app-page-settings>
     </div>
+
+    <!-- Móvil: botón hamburguesa -->
+    <button class="ham-button" type="button" (click)="toggleHam()" aria-label="Abrir menú">
+      <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"
+        fill="currentColor">
+        <rect y="10.5" width="24" height="3" />
+        <rect y="3.5" width="24" height="3" />
+        <rect y="17.5" width="24" height="3" />
+      </svg>
+    </button>
+
   </div>
 
-  <!-- Barra de navegación -->
-  <div class="header-nav" [class.is-open]="isHamOpen()">
+  <!-- Barra de navegación desktop -->
+  <div class="header-nav">
     <app-nav class="nav-component"></app-nav>
   </div>
+
+  <!-- Overlay oscuro -->
+  <div class="drawer-overlay" [class.is-open]="isHamOpen()" (click)="toggleHam()" onkeypress=""></div>
+
+  <!-- Drawer móvil -->
+  <div class="drawer" [class.is-open]="isHamOpen()">
+
+    <button class="drawer-close" type="button" (click)="toggleHam()" aria-label="Cerrar menú">
+      <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
+        width="24px" height="24px">
+        <polygon
+          points="24.061 2.061 21.939 -0.061 12 9.879 2.061 -0.061 -0.061 2.061 9.879 12 -0.061 21.939 2.061 24.061 12 14.121 21.939 24.061 24.061 21.939 14.121 12 24.061 2.061" />
+      </svg>
+    </button>
+
+    <app-nav class="nav-component nav-component--drawer"></app-nav>
+
+    <div class="drawer-bottom">
+      <app-auth class="auth-component"></app-auth>
+      <app-page-settings class="page-settings-component"></app-page-settings>
+    </div>
+
+  </div>
+
 </header>

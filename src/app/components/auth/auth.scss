@@ -6,14 +6,9 @@
 
 .auth-button {
   gap: var(--space-1);
-
   border: 2px solid var(--text-color);
   box-shadow: var(--shadow-sm);
-
-  transition:
-    border .3s ease-out,
-    box-shadow .3s ease-out;
-
+  transition: border 0.3s ease-out, box-shadow 0.3s ease-out;
   cursor: pointer;
 }
 
@@ -22,6 +17,7 @@
   position: relative;
   z-index: 1;
   overflow: hidden;
+  isolation: isolate;
 }
 
 .login-button::before,
@@ -36,7 +32,7 @@
   left: 0;
   z-index: -1;
 
-  transition: width .2s ease-out;
+  transition: width 0.2s ease-out;
 }
 
 .login-button:hover::before,
@@ -54,12 +50,12 @@
 
 .link {
   color: var(--text-color);
-  transition: color .3s ease-out;
+  transition: color 0.3s ease-out;
 }
 
 .svg-icon {
   color: var(--text-color);
-  transition: color .3s;
+  transition: color 0.3s;
 }
 
 .auth-button:hover .link,
@@ -74,6 +70,7 @@
 .user-info {
   position: relative;
   z-index: 1;
+  isolation: isolate;
 
   display: flex;
   align-items: center;
@@ -97,8 +94,7 @@
   z-index: -1;
 
   background-color: var(--error-color);
-
-  transition: width .2s ease-out;
+  transition: width 0.2s ease-out;
 }
 
 .user-info:hover::before {
@@ -133,8 +129,41 @@
 
   color: var(--text-color);
   background-color: transparent;
+
+  cursor: pointer;
 }
 
 .user-info .svg-icon {
   color: var(--background-color);
+}
+
+/* ── Variante drawer ─────────────────────────────────── */
+
+@media (max-width: 1024px) {
+  .auth-list {
+    flex-direction: column;
+    align-items: stretch;
+    gap: var(--space-2);
+    width: 100%;
+  }
+
+  .auth-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .user-info {
+    width: 100%;
+  }
+
+  .user-info .user-name {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .logout-button {
+    flex: 1;
+    text-align: center;
+    padding: var(--space-2);
+  }
 }
