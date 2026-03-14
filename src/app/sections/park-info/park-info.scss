@@ -258,3 +258,119 @@
 .schedule-panel .info-block:last-child:hover {
     opacity: 1;
 }
+
+/* ── Breakpoint tablet < 1024px ──────────────────────── */
+
+@media (max-width: 1024px) {
+    .title {
+        font-size: 60px;
+        padding: var(--space-6);
+    }
+
+    .park-overview {
+        grid-template-columns: 1fr;
+    }
+
+    .park-intro {
+        padding: var(--space-6) var(--space-5);
+        gap: var(--space-5);
+    }
+
+    .intro-title {
+        font-size: 44px;
+    }
+
+    .intro-description {
+        font-size: 18px;
+    }
+
+    .visitor-area {
+        width: 100%;
+    }
+
+    .article-wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .visitor-info {
+        grid-template-rows: auto auto auto;
+    }
+
+    .schedule-panel {
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .visitor-image {
+        height: 16rem;
+    }
+}
+
+/* ── Breakpoint móvil < 768px ────────────────────────── */
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 44px;
+        padding: var(--space-5);
+    }
+
+    .title span:first-child {
+        font-size: 0.8em;
+    }
+
+    .intro-image {
+        height: 14rem;
+        width: 14rem;
+    }
+
+    .intro-title {
+        font-size: 36px;
+    }
+
+    .intro-description {
+        font-size: 16px;
+        width: 100%;
+    }
+
+    .intro-block .text {
+        font-size: 18px;
+    }
+
+    .info-title {
+        font-size: 18px;
+    }
+
+    .info-item .text,
+    .info-block .text {
+        font-size: 16px;
+    }
+
+    .info-block-content {
+        font-size: 16px;
+    }
+
+    .visitor-image {
+        height: 12rem;
+    }
+}
+
+/* ── Breakpoint móvil pequeño < 480px ────────────────── */
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 34px;
+        padding: var(--space-4);
+    }
+
+    .intro-image {
+        height: 11rem;
+        width: 11rem;
+    }
+
+    .intro-title {
+        font-size: 28px;
+    }
+
+    .schedule-panel .info-block {
+        padding: var(--space-3) var(--space-3);
+    }
+}

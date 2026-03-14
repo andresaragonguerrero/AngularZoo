@@ -36,3 +36,27 @@
     align-items: center;
     gap: var(--space-2);
 }
+
+@media (max-width: 768px) {
+    .info-block {
+        padding: var(--space-4);
+    }
+
+    .info-block-row {
+        padding: var(--space-3) var(--space-2);
+    }
+
+    .info-block-content {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info-block {
+        padding: var(--space-3) var(--space-2);
+    }
+
+    .info-block-content {
+        font-size: 14px;
+    }
+}

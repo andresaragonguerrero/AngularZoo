@@ -62,6 +62,31 @@
   opacity: 0.9;
 }
 
+@media (max-width: 1024px) {
+  .title {
+    font-size: 60px;
+    padding: var(--space-6);
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 44px;
+    padding: var(--space-5);
+  }
+
+  .title span:first-child {
+    font-size: 0.8em;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 32px;
+    padding: var(--space-4);
+  }
+}
+
 @keyframes hero-fade-up {
   from {
     opacity: 0;
