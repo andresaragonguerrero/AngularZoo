@@ -23,14 +23,9 @@
             <img [src]="brokenImages.has(animal.id) ? '/assets/images/placeholder-animal.jpg' : animal.imagen"
                 [alt]="animal.nombre" (error)="handleImageError($event, animal.id)" />
 
+            <div class="animal-card__overlay"></div>
+
             <div class="animal-card__content">
-                <h3>{{ animal.nombre }}</h3>
-                <p class="animal-card__scientific">
-                    {{ animal.nombreCientifico }}
-                </p>
-                <p class="animal-card__description">
-                    {{ animal.descripcion }}
-                </p>
                 <div class="animal-card__meta">
                     <span class="diet-badge" [ngClass]="getDietClass(animal.dieta)">
                         {{ animal.dieta }}
@@ -39,26 +34,32 @@
                         {{ animal.estadoConservacion }}
                     </span>
                 </div>
+                <h3>{{ animal.nombre }}</h3>
+                <p class="animal-card__scientific">{{ animal.nombreCientifico }}</p>
+                <p class="animal-card__description">{{ animal.descripcion }}</p>
                 <p class="animal-card__weight">
                     Peso: {{ formatWeight(animal.pesoMinimo, animal.pesoMaximo) }}
                 </p>
             </div>
 
             <div class="animal-card__actions">
-                <button (click)="toggleFavorite(animal.id)" [class.active]="isFavorite(animal.id)">
+                <button class="animal-card__favorite" (click)="toggleFavorite(animal.id)"
+                    [class.active]="isFavorite(animal.id)">
                     ★
                 </button>
-                <a [routerLink]="['/animals', animal.id]">
+                <a class="animal-card__detail" [routerLink]="['/animals', animal.id]">
                     Ver detalle
                 </a>
             </div>
-        </article>
-        } <!-- for.end-->
 
-        @empty {
-        <div>No se encontraron animales.</div>
-        }<!-- empty.end -->
-        
+        </article>
+
+        } @empty {
+        <div class="animal-list__empty">No se encontraron animales.</div>
+        }
+
     </div>
-    } <!-- if.end -->
+
+    }
+
 </section>
