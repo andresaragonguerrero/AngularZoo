@@ -203,3 +203,67 @@
     background-color: var(--accent-color);
     box-shadow: var(--shadow-md);
 }
+
+@media (max-width: 1024px) {
+    .section-title {
+        text-align: center;
+    }
+
+    .section-form-display {
+        padding: var(--space-6) var(--space-7);
+        gap: var(--space-5);
+    }
+
+    .article-member-admission,
+    .article-regular-admission {
+        padding: var(--space-6);
+    }
+}
+
+@media (max-width: 768px) {
+    .section-form-display {
+        grid-template-columns: 1fr;
+        padding: var(--space-5) var(--space-4);
+        gap: var(--space-8);
+    }
+
+    .article-member-admission,
+    .article-regular-admission {
+        grid-template-rows: auto auto auto;
+        padding: var(--space-5);
+    }
+
+    .article-title {
+        font-size: 22px;
+    }
+
+    .content-ticket-age,
+    .content-ticket-price {
+        font-size: 16px;
+    }
+
+    .badge-member {
+        top: calc(var(--space-3) * -1);
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .section-form-display {
+        padding: var(--space-4) var(--space-3);
+    }
+
+    .article-member-admission,
+    .article-regular-admission {
+        padding: var(--space-4);
+    }
+
+    .article-title {
+        font-size: 20px;
+    }
+
+    .content-ticket-age,
+    .content-ticket-price {
+        font-size: 15px;
+    }
+}
