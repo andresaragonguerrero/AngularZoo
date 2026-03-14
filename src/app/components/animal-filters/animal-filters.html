@@ -1,33 +1,39 @@
 <div class="filters">
 
-    <input type="text" placeholder="Buscar animal..." #search (input)="onSearch(search.value)" />
+    <div class="filters__search">
+        <input type="text" placeholder="Buscar animal..." #search (input)="onSearch(search.value)" />
+    </div>
 
-    <select #diet (change)="onDietChange(diet.value)">
-        <option value="">Todas las dietas</option>
-        <option value="herbívoro">Herbívoro</option>
-        <option value="carnívoro">Carnívoro</option>
-        <option value="omnívoro">Omnívoro</option>
-        <option value="insectívoro">Insectívoro</option>
-    </select>
+    <div class="filters__controls">
 
-    <select #continent (change)="onContinentChange(continent.value)">
-        <option value="">Todos los continentes</option>
-        <option value="África">África</option>
-        <option value="Europa">Europa</option>
-        <option value="Asia">Asia</option>
-        <option value="América">América</option>
-        <option value="Oceanía">Oceanía</option>
-    </select>
+        <select #diet (change)="onDietChange(diet.value)">
+            <option value="">Todas las dietas</option>
+            <option value="herbívoro">Herbívoro</option>
+            <option value="carnívoro">Carnívoro</option>
+            <option value="omnívoro">Omnívoro</option>
+            <option value="insectívoro">Insectívoro</option>
+        </select>
 
-    <select #conservationStatus (change)="onConservationStatusChange(conservationStatus.value)">
-        <option value="">Todos los estados de conservación</option>
-        <option value="preocupación menor">Preocupación menor</option>
-        <option value="vulnerable">Vulnerable</option>
-        <option value="en peligro">En peligro</option>
-        <option value="en peligro crítico">En peligro crítico</option>
-        <option value="extinto">Extinto</option>
-    </select>
+        <select #continent (change)="onContinentChange(continent.value)">
+            <option value="">Todos los continentes</option>
+            <option value="África">África</option>
+            <option value="Europa">Europa</option>
+            <option value="Asia">Asia</option>
+            <option value="América">América</option>
+            <option value="Oceanía">Oceanía</option>
+        </select>
 
-    <button (click)="onClear()">Limpiar filtros</button>
+        <select #conservationStatus (change)="onConservationStatusChange(conservationStatus.value)">
+            <option value="">Todos los estados de conservación</option>
+            <option value="preocupación menor">Preocupación menor</option>
+            <option value="vulnerable">Vulnerable</option>
+            <option value="en peligro">En peligro</option>
+            <option value="en peligro crítico">En peligro crítico</option>
+            <option value="extinto">Extinto</option>
+        </select>
+
+        <button class="filters__clear" (click)="onClear()">Limpiar filtros</button>
+
+    </div>
 
 </div>

@@ -9,14 +9,18 @@
 
             @for (activity of activities; track activity.id) {
             <div class="activity-card">
-                <h2>{{ activity.name }}</h2>
-                <p>{{ activity.description }}</p>
-                <p>Inicio: {{ activity.season }}</p>
-                <p>Precio: {{ activity.price }} €</p>
+                <div class="activity-card__content">
+                    <h2>{{ activity.name }}</h2>
+                    <p>{{ activity.description }}</p>
+                    <p>Inicio: {{ activity.season }}</p>
+                    <p>Precio: {{ activity.price }} €</p>
 
-                <button class="button submit-button-guest" (click)="enroll(activity.id)">
-                    Inscribirse
-                </button>
+                    <button class="button submit-button-guest" (click)="enroll(activity.id)">
+                        Inscribirse
+                    </button>
+                </div>
+                <img class="activity-card__image" alt="imagen del curso"
+                    src="/assets/images/general/group-image.jpg">
             </div>
             }
         </article>

@@ -5,7 +5,6 @@
 }
 
 .form-group {
-  // min-width: calc(var(--space-9) * 4);
   width: 100%;
 
   display: flex;
@@ -25,23 +24,28 @@
 }
 
 .label {
-  font-size: 24px;
+  font-size: 20px;
   font-family: var(--secondary-font-family);
-  font-weight: bold;
+  font-weight: 600;
 
-  color: var(--secondary-color);
+  color: var(--text-color);
 }
 
 .text-info {
-  font-size: 20px;
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+
+  font-size: 14px;
   font-family: var(--secondary-font-family);
   font-weight: normal;
+  font-style: normal;
 
-  color: var(--secondary-color);
+  color: var(--text-muted);
 }
 
 .text-info__detail {
-  color: var(--text-color);
+  color: var(--text-subtle);
 }
 
 .input-container {
@@ -97,21 +101,22 @@
   width: var(--space-6);
 
   outline: none;
-  border: 1px solid var(--text-color);
-  border-radius: 5px;
+  border: 1px solid var(--primary-100);
+  border-radius: 0;
 
   text-align: center;
-  font-size: 24px;
+  font-size: 20px;
   font-family: var(--secondary-font-family);
-  font-weight: normal;
+  font-weight: 600;
 
   cursor: not-allowed;
 
+  color: var(--text-color);
   background-color: var(--background-color);
 }
 
 .error-message {
-  font-size: 16px;
+  font-size: 13px;
   font-family: var(--secondary-font-family);
   font-weight: normal;
 
@@ -122,6 +127,100 @@
   border-color: var(--error-color);
 }
 
+/* ── Selección de fecha ───────────────────────────────── */
+
+.date-selection,
+.hour-selection {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-2);
+
+  padding: var(--space-3) 0;
+  border-top: 1px solid rgba(44, 95, 45, 0.12);
+  border-bottom: 1px solid rgba(44, 95, 45, 0.12);
+}
+
+.hour-selection {
+  border-top: none;
+}
+
+.date-selection label,
+.hour-selection label {
+  font-size: 20px;
+  font-family: var(--secondary-font-family);
+  font-weight: 600;
+  color: var(--text-color);
+}
+
+.date-selection input[type="date"] {
+  padding: var(--space-2) var(--space-4);
+
+  font-size: 15px;
+  font-family: var(--secondary-font-family);
+  color: var(--text-color);
+
+  background-color: var(--background-color);
+  border: 1px solid var(--primary-100);
+  outline: none;
+
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.date-selection input[type="date"]:hover {
+  border-color: var(--primary-300);
+}
+
+.date-selection input[type="date"]:focus {
+  border-color: var(--primary-color);
+}
+
+.date-selection input[type="date"]::-webkit-calendar-picker-indicator {
+  opacity: 0.5;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+}
+
+.date-selection input[type="date"]::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+}
+
+.hour-selection select {
+  padding: var(--space-2) var(--space-4);
+
+  font-size: 15px;
+  font-family: var(--secondary-font-family);
+  color: var(--text-color);
+
+  background-color: var(--background-color);
+  border: 1px solid var(--primary-100);
+  outline: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='%232C5F2D'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right var(--space-3) center;
+  padding-right: var(--space-7);
+
+  cursor: pointer;
+  transition: border-color 0.2s ease;
+}
+
+.hour-selection select:hover {
+  border-color: var(--primary-300);
+}
+
+.hour-selection select:focus {
+  border-color: var(--primary-color);
+}
+
+/* ── Botón de compra ─────────────────────────────────── */
+
 .submit-button {
   min-height: var(--space-5);
   min-width: calc(var(--space-9) * 2);
@@ -131,9 +230,11 @@
   z-index: 1;
   overflow: hidden;
 
-  font-size: 16px;
+  font-size: 14px;
   font-family: var(--secondary-font-family);
-  font-weight: bold;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 
   border: 2px solid var(--text-color);
 
@@ -141,6 +242,8 @@
 
   color: var(--text-color);
   background-color: var(--background-color);
+
+  transition: color 0.2s ease;
 }
 
 .submit-button:hover {

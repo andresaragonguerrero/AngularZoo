@@ -10,16 +10,17 @@
   &.is-fixed {
     position: fixed;
     width: 100%;
+    z-index: 100;
   }
 }
 
-
 // HEADER-TOP
 .header-top {
+  height: 4.5rem;
   width: 80%;
 
   margin: 0 auto;
-  padding: var(--space-2) 0;
+  // padding: var(--space-2) 0;
 
   display: flex;
   justify-content: space-between;

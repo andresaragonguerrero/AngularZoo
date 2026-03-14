@@ -60,14 +60,14 @@
 }
 
 .button-trigger {
-  padding: 3px;
+  padding: 5px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   border: none;
-  border-radius: 50%;
+  border-radius: 0;
   outline: none;
 
   color: var(--text-color);
@@ -87,14 +87,14 @@
 }
 
 .setting-icon-item {
-  padding: 3px;
+  padding: 5px;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   border: none;
-  border-radius: 5px;
+  border-radius: 0;
   outline: none;
 
   color: var(--text-color);

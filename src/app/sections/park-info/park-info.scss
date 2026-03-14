@@ -24,6 +24,13 @@
     object-fit: cover;
 
     box-shadow: var(--shadow-md);
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.intro-image:hover {
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg);
 }
 
 .intro-title {
@@ -33,6 +40,9 @@
     text-align: center;
 
     color: var(--primary-color);
+
+    letter-spacing: -0.02em;
+    line-height: 1.1;
 }
 
 .intro-description {
@@ -44,7 +54,7 @@
     text-align: center;
     line-height: 1.5;
 
-    color: var(--primary-400);
+    color: var(--text-muted);
 }
 
 .intro-block {
@@ -53,6 +63,14 @@
     gap: var(--space-2);
 
     color: var(--primary-color);
+
+    cursor: pointer;
+    transition: color 0.2s ease, gap 0.2s ease;
+}
+
+.intro-block:hover {
+    color: var(--primary-400);
+    gap: var(--space-3);
 }
 
 .intro-block .text {
@@ -80,15 +98,19 @@
     width: 100%;
 
     object-fit: cover;
+
+    transition: opacity 0.3s ease;
+}
+
+.visitor-image:hover {
+    opacity: 0.92;
 }
 
 .visitor-info {
     padding: var(--space-5);
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
+    display: grid;
+    grid-template-rows: 3rem auto 15rem;
     gap: var(--space-4);
 
     background-color: var(--primary-color);
@@ -101,6 +123,9 @@
     font-family: var(--primary-font-family);
     font-weight: normal;
     text-transform: uppercase;
+    letter-spacing: 0.1em;
+
+    color: var(--text-inverse);
 }
 
 .info-block {
@@ -128,6 +153,8 @@
 
 .info-title-wrapper .svg-icon {
     color: var(--accent-color);
+    opacity: 0.85;
+    transition: opacity 0.2s ease;
 }
 
 .info-title {
@@ -136,6 +163,7 @@
     font-weight: light;
 
     color: var(--accent-color);
+    opacity: 0.9;
 }
 
 .info-list {
@@ -153,6 +181,15 @@
     gap: var(--space-2);
 
     color: var(--accent-color);
+    opacity: 0.8;
+
+    cursor: pointer;
+    transition: opacity 0.2s ease, gap 0.2s ease;
+}
+
+.info-item:hover {
+    opacity: 1;
+    gap: var(--space-3);
 }
 
 .info-item .text,
@@ -164,9 +201,8 @@
 .schedule-panel {
     padding: var(--space-5);
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    display: grid;
+    grid-template-rows: 3rem 1fr 5rem;
     gap: var(--space-4);
 
     background-color: var(--primary-600);
@@ -189,6 +225,12 @@
     align-items: center;
 
     border-bottom: 1px solid var(--accent-color);
+
+    transition: background-color 0.2s ease;
+}
+
+.info-block-row:hover {
+    background-color: var(--primary-500, color-mix(in srgb, var(--primary-color) 50%, var(--primary-600)));
 }
 
 .info-block-row:last-child {
@@ -198,11 +240,21 @@
 .info-block-content {
     font-size: 18px;
     font-family: var(--secondary-font-family);
-    
+    color: var(--accent-100);
 }
 
 .schedule-panel .info-block:last-child {
     display: flex;
     align-items: center;
     gap: var(--space-2);
+
+    color: var(--accent-color);
+    opacity: 0.75;
+
+    cursor: pointer;
+    transition: opacity 0.2s ease;
+}
+
+.schedule-panel .info-block:last-child:hover {
+    opacity: 1;
 }

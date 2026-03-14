@@ -3,50 +3,47 @@ p {
   font-family: var(--secondary-font-family);
 }
 
-.section-collaborators,
-.section-links,
-.section-policies {
-  padding: var(--space-5);
+/* ── Links compartidos ───────────────────────────────── */
+
+.article-title {
+  font-size: 18px;
+  font-family: var(--primary-font-family);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
 }
 
 .navbar-link {
   color: var(--text-color);
-  font-size: 14px;
+  font-size: 16px;
   font-family: var(--secondary-font-family);
 
   cursor: pointer;
+  transition: opacity 0.2s ease;
 }
 
 .navbar-link:hover {
   text-decoration: underline;
-  text-underline-offset: 2px;
-  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
 }
 
-.section-policies .section-title,
-.section-policies .navbar-link,
-.section-policies .image-svg,
-.section-policies p {
-  color: var(--background-color);
-}
+/* ── Sección colaboradores ───────────────────────────── */
 
 .section-collaborators {
+  padding: var(--space-7) var(--space-6);
   margin: 0 auto;
 
   display: grid;
-  gap: var(--space-1);
+  gap: var(--space-5);
+
+  background-color: var(--background-color);
+  border-bottom: 1px solid rgba(44, 95, 45, 0.12);
 }
 
-.section-title,
-.article-title {
+.section-collaborators .article-title {
   color: var(--text-color);
-  font-size: 18px;
-  font-family: var(--primary-font-family);
-  font-weight: bold;
-}
-
-.section-collaborators .image-logo {
-  height: var(--space-9);
+  text-align: center;
 }
 
 .container-list-logos {
@@ -54,14 +51,43 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: var(--space-4);
+  gap: var(--space-6);
 }
 
-.section-links,
-.section-policies {
+.section-collaborators .image-logo {
+  height: 6rem;
+}
+
+/* ── Sección enlaces ─────────────────────────────────── */
+
+.section-links {
+  padding: var(--space-7) var(--space-6);
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: var(--space-2);
+
+  background-color: var(--primary-800);
+}
+
+.section-links .navbar-link {
+  opacity: 0.8;
+  color: var(--primary-50);
+  transition: opacity .2s ease;
+}
+
+.section-links .navbar-link:hover {
+  opacity: 1;
+}
+
+.section-links .image-svg {
+  color: var(--primary-100);
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.section-links .image-svg:hover {
+  opacity: 1;
 }
 
 .navbar-links-zoo,
@@ -74,22 +100,62 @@ p {
   gap: var(--space-2);
 }
 
+.section-links .article-title {
+  color: var(--primary-200);
+  text-align: left;
+}
+
 .container-networks {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: var(--space-2);
+  gap: var(--space-3);
 }
 
 .article-tickets-purchase {
   display: grid;
   justify-content: center;
   align-items: center;
+  gap: var(--space-3);
 }
 
+/* ── Sección políticas ───────────────────────────────── */
+
 .section-policies {
+  padding: var(--space-5) var(--space-6);
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: var(--space-2);
+
   background-color: var(--text-color);
+}
+
+.section-policies .navbar-link {
+  font-size: 16px;
+  color: var(--background-muted);
+  opacity: 0.8;
+}
+
+.section-policies .navbar-link:hover {
+  opacity: 1;
+}
+
+.section-policies .image-svg {
+  color: var(--background-color);
+  opacity: 0.6;
+  transition: opacity 0.2s ease;
+}
+
+.section-policies .image-svg:hover {
+  opacity: 1;
+}
+
+.section-policies p {
+  font-size: 12px;
+  color: var(--background-muted);
+  opacity: 0.5;
 }
 
 .article-author {
@@ -99,33 +165,41 @@ p {
   gap: var(--space-2);
 }
 
+.article-author h2 {
+  font-size: 13px;
+  font-family: var(--secondary-font-family);
+  font-weight: 400;
+  color: var(--background-color);
+  opacity: 0.6;
+}
+
 .article-copyright {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  gap: var(--space-1);
 }
 
-.image-svg {
-  color: var(--text-color);
-}
+/* ── Media query ─────────────────────────────────────── */
 
 @media (max-width: 800px) {
+
   .section-collaborators,
   .section-links,
   .section-policies {
-    padding: var(--space-3);
+    padding: var(--space-5) var(--space-4);
   }
 
   .section-links,
   .section-policies {
     display: flex;
     flex-wrap: wrap;
-    gap: var(--space-3);
+    gap: var(--space-4);
   }
 
-  .section-links > *,
-  .section-policies > * {
+  .section-links>*,
+  .section-policies>* {
     width: 100%;
     padding: var(--space-3) 0;
   }

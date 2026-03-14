@@ -9,14 +9,17 @@
 
             @for (course of courses; track course.id) {
             <div class="course-card">
-                <h2>{{ course.name }}</h2>
-                <p>{{ course.description }}</p>
-                <p>Inicio: {{ course.startDate }}</p>
-                <p>Precio: {{ course.price }} €</p>
+                <div class="course-card__content">
+                    <h2>{{ course.name }}</h2>
+                    <p>{{ course.description }}</p>
+                    <p>Inicio: {{ course.startDate }}</p>
+                    <p>Precio: {{ course.price }} €</p>
 
-                <button class="button submit-button-guest" (click)="enroll(course.id)">
-                    Inscribirse
-                </button>
+                    <button class="button submit-button-guest" (click)="enroll(course.id)">
+                        Inscribirse
+                    </button>
+                </div>
+                <img class="course-card__image" alt="imagen del curso" src="/assets/images/animals/abeja-miel.jpg">
             </div>
             }
         </article>

@@ -110,16 +110,19 @@
 .submit-button-guest,
 .submit-button-member {
     position: relative;
-    z-index: 1;
     overflow: hidden;
+    isolation: isolate;
 }
 
-// submit para guest
+/* ── Submit guest ─────────────────────────────────────── */
+
 .submit-button-guest {
     border: 2px solid var(--primary-color);
 
     color: var(--primary-color);
     background-color: var(--background-color);
+
+    transition: color 0.2s ease;
 }
 
 .submit-button-guest:hover {
@@ -139,19 +142,22 @@
 
     background-color: var(--primary-color);
 
-    transition: width .2s ease-out;
+    transition: width 0.2s ease-out;
 }
 
 .submit-button-guest:hover::before {
     width: 100%;
 }
 
-// submit para member
+/* ── Submit member ────────────────────────────────────── */
+
 .submit-button-member {
     border: 2px solid var(--text-color);
 
     color: var(--text-color);
     background-color: var(--accent-color);
+
+    transition: color 0.2s ease;
 }
 
 .submit-button-member:hover {
@@ -162,20 +168,22 @@
     content: "";
 
     height: 100%;
-    width: 0;
+    width: 100%;
 
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
 
     background-color: var(--text-color);
 
-    transition: width .2s ease-out;
+    transform: scaleX(0);
+    transform-origin: left;
+
+    transition: transform 0.2s ease-out;
 }
 
 .submit-button-member:hover::before {
-    width: 100%;
+    transform: scaleX(1);
 }
 
 .badge-member {

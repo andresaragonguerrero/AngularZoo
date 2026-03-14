@@ -5,10 +5,26 @@
   position: relative;
 }
 
+.hero-wrapper::before {
+  content: "";
+  height: 100%;
+  width: 100%;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+
+  background-color: rgba(0, 0, 0, 0.35);
+
+  pointer-events: none;
+}
+
 .hero-background {
   height: 100vh;
   width: 100%;
 
+  display: block;
   object-fit: cover;
 }
 
@@ -26,7 +42,34 @@
   font-family: var(--primary-font-family);
   font-weight: bolder;
   text-align: left;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
 
-  text-shadow: var(--shadow-xl);
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
   color: #FFF8EC;
+
+  animation: hero-fade-up 0.9s ease both;
+}
+
+.title span:first-child {
+  font-weight: 400;
+  opacity: 0.9;
+  font-size: 0.75em;
+}
+
+.title span:last-child {
+  font-weight: 800;
+  opacity: 0.9;
+}
+
+@keyframes hero-fade-up {
+  from {
+    opacity: 0;
+    translate: 0 1.5rem;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
 }

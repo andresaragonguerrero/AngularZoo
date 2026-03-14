@@ -1,45 +1,10 @@
-// Include theming for Angular Material with `mat.theme()`.
-// This Sass mixin will define CSS variables that are used for styling Angular Material
-// components according to the Material 3 design spec.
-// Learn more about theming and how to use it for your application's
-// custom components at https://material.angular.dev/guide/theming
-@use '@angular/material' as mat;
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
 
-html {
-  @include mat.theme((color: (primary: mat.$cyan-palette,
-        tertiary: mat.$orange-palette,
-      ),
-      typography: Roboto,
-      density: 0,
-    ));
-}
-
-body {
-  // Default the application to a light color theme. This can be changed to
-  // `dark` to enable the dark color theme, or to `light dark` to defer to the
-  // user's system settings.
-  color-scheme: light;
-
-  // Set a default background, font and text colors for the application using
-  // Angular Material's system-level CSS variables. Learn more about these
-  // variables at https://material.angular.dev/guide/system-variables
-  background-color: var(--mat-sys-surface);
-  color: var(--mat-sys-on-surface);
-  font: var(--mat-sys-body-medium);
-
-  // Reset the user agent margin.
-  margin: 0;
-}
-
 :root {
-  /* fonts */
   --primary-font-family: "Inter", sans-serif;
   --secondary-font-family: "Krub", sans-serif;
 
-  /* sizes */
-  --header-height: 118.4px;
+  --header-height: 7rem;
 
   --space-base: 1rem;
   --space-1: calc(var(--space-base) * 0.25);
@@ -55,7 +20,6 @@ body {
   --space-11: calc(var(--space-base) * 12.00);
   --space-12: calc(var(--space-base) * 20.00);
 
-  /* ─── Primary (verde bosque) ─── */
   --primary-50: #EAF3EA;
   --primary-100: #C5DFC6;
   --primary-200: #9EC9A0;
@@ -67,20 +31,17 @@ body {
   --primary-800: #133016;
   --primary-900: #0A1F0B;
 
-  /* ─── Secondary (marrón cálido) ─── */
   --secondary-50: #F3EDE7;
   --secondary-100: #DDD0C3;
   --secondary-200: #C6B09C;
   --secondary-300: #AD9074;
   --secondary-400: #967455;
   --secondary-color: #3B2A1A;
-  /* base = 500 */
   --secondary-600: #312314;
   --secondary-700: #271C0F;
   --secondary-800: #1C140A;
   --secondary-900: #110C05;
 
-  /* ─── Accent (amarillo vivo) ─── */
   --accent-50: #FFFDE8;
   --accent-100: #FFF9C2;
   --accent-200: #FFF398;
@@ -92,7 +53,6 @@ body {
   --accent-800: #8C7600;
   --accent-900: #665500;
 
-  /* ─── Background / superficie ─── */
   --background-color: #FFF8EC;
   --background-subtle: #FFF3DC;
   --background-muted: #F5EDD8;
@@ -102,13 +62,11 @@ body {
   --surface-raised: #FDFAF4;
   --surface-overlay: rgba(255, 248, 236, 0.85);
 
-  /* ─── Text ─── */
   --text-color: #2D2D2D;
   --text-muted: #6B6B6B;
   --text-subtle: #9A9A9A;
   --text-inverse: #FFFFFF;
 
-  /* ─── Estados ─── */
   --success-color: #4CAF50;
   --success-light: #E8F5E9;
   --success-dark: #2E7D32;
@@ -124,17 +82,13 @@ body {
   --link-color: #3b82f6;
   --link-hover: #2563EB;
 
-  /* ─── Sombras ─── */
   --shadow-sm: 0 1px 3px rgba(1, 10, 9, 0.08);
   --shadow-md: 0 2px 8px rgba(1, 10, 9, 0.12);
   --shadow-lg: 0 8px 16px rgba(1, 10, 9, 0.16);
   --shadow-xl: 1px 4px 6px rgba(1, 10, 9, 0.80);
 }
 
-/* ─────────────── DARK THEME ─────────────── */
 :root.dark {
-
-  /* Primary */
   --primary-50: #0D1F0E;
   --primary-100: #142F15;
   --primary-200: #1C401E;
@@ -146,7 +100,6 @@ body {
   --primary-800: #C5DFC6;
   --primary-900: #EAF3EA;
 
-  /* Secondary */
   --secondary-50: #110C05;
   --secondary-100: #1C140A;
   --secondary-200: #271C0F;
@@ -158,7 +111,6 @@ body {
   --secondary-800: #DDD0C3;
   --secondary-900: #F3EDE7;
 
-  /* Accent */
   --accent-50: #332B00;
   --accent-100: #4D4000;
   --accent-200: #665500;
@@ -170,7 +122,6 @@ body {
   --accent-800: #FFF9C2;
   --accent-900: #FFFDE8;
 
-  /* Background / superficie */
   --background-color: #1A1A1A;
   --background-subtle: #1F1F1F;
   --background-muted: #252525;
@@ -180,13 +131,11 @@ body {
   --surface-raised: #333333;
   --surface-overlay: rgba(26, 26, 26, 0.88);
 
-  /* Text */
   --text-color: #E8E8E8;
   --text-muted: #A0A0A0;
   --text-subtle: #6B6B6B;
   --text-inverse: #1A1A1A;
 
-  /* Estados */
   --success-light: #1B3A1C;
   --success-dark: #81C784;
 
@@ -198,6 +147,33 @@ body {
 
   --link-color: #60A5FA;
   --link-hover: #93C5FD;
+}
+
+/* ── Aislamiento de stacking contexts ────────────────────────────────────────
+   Evita que elementos interiores con z-index se filtren por encima del header.
+   Aplicar en el componente correspondiente o en styles.scss global.
+────────────────────────────────────────────────────────────────────────────── */
+
+/* Página animales — la grid de cards no debe filtrarse sobre el header */
+.animal-list {
+  isolation: isolate;
+}
+
+/* Cada card crea su propio contexto contenido */
+.animal-card {
+  isolation: isolate;
+}
+
+/* Cursos y actividades — mismo problema potencial */
+.article-regular-admission {
+  isolation: isolate;
+}
+
+/* Botones con efecto ::before — aislar el contexto del botón */
+.submit-button,
+.submit-button-guest,
+.submit-button-member {
+  isolation: isolate;
 }
 
 *,
@@ -213,9 +189,11 @@ html,
 body {
   height: 100%;
   background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: var(--primary-font-family);
+  margin: 0;
 }
 
-// elimina de todos los navegadores los selectores del input type="number"
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
@@ -259,29 +237,22 @@ a {
   text-decoration: none;
 }
 
-// Sección de la cabecera
 .section-header {
   height: auto;
   width: 100%;
-
   position: relative;
   padding: var(--space-7) 0;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
-  background:
-    linear-gradient(to bottom, rgba(44, 95, 45, 0.03) 0%, transparent 100%);
+  background: linear-gradient(to bottom, rgba(44, 95, 45, 0.03) 0%, transparent 100%);
 }
 
 .section-title {
   position: relative;
   margin-bottom: var(--space-3);
   padding-bottom: var(--space-3);
-
   display: inline-block;
-
   font-size: clamp(44px, 5.5vw, 58px);
   font-weight: 700;
   color: var(--text-color);
@@ -289,42 +260,31 @@ a {
 
 .section-title::after {
   content: "";
-
   height: 3px;
   width: var(--space-10);
-
   position: absolute;
   bottom: 0;
   left: 50%;
   transform: translateX(-50%);
-
-  background: linear-gradient(to right,
-      transparent,
-      var(--accent-color),
-      transparent);
+  background: linear-gradient(to right, transparent, var(--accent-color), transparent);
 }
 
 .section-subtitle {
   max-width: 500px;
   margin: 0 auto;
-
   font-size: 16px;
   font-family: var(--secondary-font-family);
   color: var(--secondary-color);
 }
 
-// botones
 .button {
   height: 2rem;
   min-width: 7rem;
-
   position: relative;
   padding: 0 var(--space-4);
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   font-size: 16px;
   font-family: var(--secondary-font-family);
   font-weight: bold;

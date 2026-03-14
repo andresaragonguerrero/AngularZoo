@@ -1,4 +1,5 @@
 .nav-list {
+  max-height: 3rem;
   width: 80%;
 
   margin: 0 auto;
@@ -10,46 +11,52 @@
 }
 
 .button-nav {
-  z-index: 1;
-
-  overflow: hidden;
-
-  border: 2px solid var(--accent-color);
+  border: none;
+  background: transparent;
+  box-shadow: none;
 }
 
-.button-nav::before {
+.nav-link {
+  position: relative;
+
+  padding: var(--space-1) 0;
+
+  font-family: var(--secondary-font-family);
+  font-size: 18px;
+  font-weight: 500;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  color: var(--accent-color);
+
+  transition: color .2s ease-out;
+}
+
+.nav-link::after {
   content: "";
 
-  height: 100%;
-  width: 0%;
+  height: 2px;
+  width: 0;
 
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
-  z-index: -1;
 
   background-color: var(--accent-color);
 
   transition: width .2s ease-out;
 }
 
-.button-nav:hover::before {
+.nav-link:hover::after {
   width: 100%;
 }
 
-.nav-link {
-  color: var(--accent-color);
+.nav-link.active {
+  color: var(--accent-700);
+  font-weight: 700;
 }
 
-.button-nav:hover .nav-link {
-  color: var(--primary-color);
-}
-
-// cuando un enlace es activo, se le asigna la clase "active" y se le da un estilo diferente
-.button-nav:has(.nav-link.active)::before {
+.nav-link.active::after {
   width: 100%;
-}
-
-.button-nav:has(.nav-link.active) .nav-link {
-  color: var(--primary-color);
+  background-color: var(--primary-color);
 }
