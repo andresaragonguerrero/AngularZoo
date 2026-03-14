@@ -149,6 +149,33 @@
   --link-hover: #93C5FD;
 }
 
+/* ── Aislamiento de stacking contexts ────────────────────────────────────────
+   Evita que elementos interiores con z-index se filtren por encima del header.
+   Aplicar en el componente correspondiente o en styles.scss global.
+────────────────────────────────────────────────────────────────────────────── */
+
+/* Página animales — la grid de cards no debe filtrarse sobre el header */
+.animal-list {
+  isolation: isolate;
+}
+
+/* Cada card crea su propio contexto contenido */
+.animal-card {
+  isolation: isolate;
+}
+
+/* Cursos y actividades — mismo problema potencial */
+.article-regular-admission {
+  isolation: isolate;
+}
+
+/* Botones con efecto ::before — aislar el contexto del botón */
+.submit-button,
+.submit-button-guest,
+.submit-button-member {
+  isolation: isolate;
+}
+
 *,
 *::before,
 *::after {
