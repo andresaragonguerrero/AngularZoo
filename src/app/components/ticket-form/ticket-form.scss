@@ -9,6 +9,7 @@
 
   display: flex;
   align-items: center;
+  gap: var(--space-5);
 }
 
 .label-container {
@@ -24,7 +25,7 @@
 }
 
 .label {
-  font-size: 20px;
+  font-size: 26px;
   font-family: var(--secondary-font-family);
   font-weight: 600;
 
@@ -36,7 +37,7 @@
   align-items: center;
   gap: var(--space-1);
 
-  font-size: 14px;
+  font-size: 18px;
   font-family: var(--secondary-font-family);
   font-weight: normal;
   font-style: normal;
@@ -274,4 +275,100 @@
   border: 2px solid var(--text-color);
   color: var(--text-color);
   transform: scale(.9);
+}
+
+@media (max-width: 1024px) {
+  .ticket-form {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .ticket-form {
+    width: 100%;
+    padding: 0 var(--space-4);
+  }
+
+  .form-group {
+    gap: var(--space-3);
+  }
+
+  .label {
+    font-size: 20px;
+  }
+
+  .text-info {
+    font-size: 14px;
+  }
+
+  .input-number {
+    font-size: 18px;
+  }
+
+  .date-selection label,
+  .hour-selection label {
+    font-size: 17px;
+  }
+
+  .date-selection input[type="date"],
+  .hour-selection select {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .ticket-form {
+    padding: 0 var(--space-3);
+    gap: var(--space-4);
+  }
+
+  .form-group {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+
+  .label-container {
+    width: 100%;
+  }
+
+  .input-container {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .label {
+    font-size: 16px;
+  }
+
+  .text-info {
+    font-size: 13px;
+  }
+
+  .input-number {
+    font-size: 16px;
+  }
+
+  .date-selection label,
+  .hour-selection label {
+    font-size: 16px;
+  }
+
+  .date-selection input[type="date"],
+  .hour-selection select {
+    font-size: 13px;
+    width: 100%;
+  }
+
+  .date-selection,
+  .hour-selection {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-3);
+  }
+
+  .submit-button {
+    width: 100%;
+    font-size: 13px;
+  }
 }
