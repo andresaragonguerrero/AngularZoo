@@ -49,7 +49,7 @@ export class CourseForm {
         : this.course.price;
 
     const result = this.courseService.enrollCourse({
-      courseId: this.course.id,
+      course: this.course,
       userId: user.id,
       pricePaid
     });

@@ -12,6 +12,10 @@ import { Course } from '../models/course.interface';
 import { CourseEnrollment } from '../models/courseEnrollment.interface';
 import { Season } from '../models/season.enum';
 
+// Estrategias
+import { DefaultEnrollmentStrategy } from '../strategy/default-enrollment.strategy';
+import { EnrollmentResult } from '../strategy/course-enrollment.strategy';
+
 @Injectable({
   providedIn: 'root'
 })
@@ -20,6 +24,7 @@ export class CourseService {
 
   private readonly zooDataService = inject(ZooDataService);
   private readonly courseEnrollmentRepository = inject(CourseEnrollmentRepository);
+  private readonly enrollmentStrategy = inject(DefaultEnrollmentStrategy);
 
   getCoursesForCurrentSeason(): Observable<Course[]> {
 
@@ -43,37 +48,19 @@ export class CourseService {
     return Season.WINTER;
   }
 
-  enrollCourse(data: {
-    courseId: string;
+  enrollCourse(params: {
+    course: Course;
     userId: string;
     pricePaid: number;
-  }): { success: boolean; enrollment?: CourseEnrollment } {
+  }): EnrollmentResult {
+    return this.enrollmentStrategy.enroll(params);
+  }
 
-    const enrollments = this.courseEnrollmentRepository.findByCourse(data.courseId);
+  getEnrollmentsByCourse(courseId: string): CourseEnrollment[] {
+    return this.courseEnrollmentRepository.findByCourse(courseId);
+  }
 
-    if (enrollments.length >= 30) {
-      return { success: false };
-    }
-
-    const alreadyEnrolled = enrollments.some(e => e.userId === data.userId);
-
-    if (alreadyEnrolled) {
-      return { success: false };
-    }
-
-    const enrollment: CourseEnrollment = {
-      id: crypto.randomUUID(),
-      courseId: data.courseId,
-      userId: data.userId,
-      pricePaid: data.pricePaid,
-      createdAt: new Date().toISOString()
-    };
-
-    this.courseEnrollmentRepository.save(enrollment);
-
-    return {
-      success: true,
-      enrollment
-    };
+  getEnrollmentsByUser(userId: string): CourseEnrollment[] {
+    return this.courseEnrollmentRepository.findByUser(userId);
   }
 }

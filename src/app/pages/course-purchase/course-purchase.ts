@@ -71,7 +71,7 @@ export class CoursePurchase implements OnInit {
         : course.price;
 
     const result = this.courseService.enrollCourse({
-      courseId: course.id,
+      course,
       userId: user.id,
       pricePaid
     });
