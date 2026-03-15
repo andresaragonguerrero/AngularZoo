@@ -16,7 +16,9 @@ import { Activity } from '../../models/activity.interface';
   templateUrl: './activities.html',
   styleUrl: './activities.scss',
 })
+
 export class ActivityComponent implements OnInit {
+  
   private readonly activityService = inject(ActivityService);
   private readonly authService = inject(AuthService);
   private readonly router = inject(Router);

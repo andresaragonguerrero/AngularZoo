@@ -17,6 +17,7 @@ import { Activity } from '../../models/activity.interface';
   styleUrl: './activity-purchase.scss',
 })
 export class ActivityPurchase implements OnInit {
+
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
   private readonly activityService = inject(ActivityService);
@@ -30,17 +31,23 @@ export class ActivityPurchase implements OnInit {
 
     this.isMember = this.authService.currentUser()?.isMember ?? false;
 
-    this.activityService.getActivitiesForCurrentSeason()
+    const activityId = this.route.snapshot.queryParamMap.get('activityId');
+
+    if (!activityId) {
+      this.router.navigate(['/activities']);
+      return;
+    }
+
+    this.activityService
+      .getActivitiesForCurrentSeason()
       .subscribe(activities => {
+
         this.activities = activities;
 
-        this.route.queryParams.subscribe(params => {
-          const courseId = params['courseId'];
-          if (courseId) {
-            this.selectedActivity = this.activities
-              .find(c => c.id === courseId);
-          }
-        });
+        if (activityId) {
+          this.selectedActivity = activities.find(a => a.id === activityId);
+        }
+
       });
   }
 
@@ -58,7 +65,7 @@ export class ActivityPurchase implements OnInit {
     const user = this.authService.currentUser();
 
     if (!user) {
-      alert('Debes iniciar sesión para inscribirte en un curso');
+      alert('Debes iniciar sesión para inscribirte en una actividad');
       this.router.navigate(['/login']);
       return;
     }
@@ -69,13 +76,27 @@ export class ActivityPurchase implements OnInit {
         : activity.price;
 
     const result = this.activityService.enrollActivity({
-      activityId: activity.id,
+      activity,
       userId: user.id,
       pricePaid
     });
 
     if (!result.success) {
-      alert('No se pudo completar la inscripción');
+
+      switch (result.reason) {
+        case 'ACTIVITY_FULL':
+          alert('La actividad está completa');
+          break;
+        case 'ALREADY_ENROLLED':
+          alert('Ya estás inscrito en esta actividad');
+          break;
+        case 'ACTIVITY_NOT_FOUND':
+          alert('La actividad no existe');
+          break;
+        default:
+          alert('No se pudo completar la inscripción');
+      }
+
       return;
     }
 

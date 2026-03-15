@@ -12,6 +12,10 @@ import { Activity } from '../models/activity.interface';
 import { ActivityEnrollment } from '../models/activityEnrollment.interface';
 import { Season } from '../models/season.enum';
 
+// Estrategias
+import { DefaultActivityEnrollmentStrategy } from '../strategy/default-activity-enrollment.strategy';
+import { ActivityEnrollmentResult } from '../strategy/activity-enrollment.strategy';
+
 @Injectable({
   providedIn: 'root',
 })
@@ -19,6 +23,7 @@ export class ActivityService {
 
   private readonly zooDataService = inject(ZooDataService);
   private readonly activityEnrollmentRepository = inject(ActivityEnrollementRepository);
+  private readonly enrollmentStrategy = inject(DefaultActivityEnrollmentStrategy);
 
   getActivitiesForCurrentSeason(): Observable<Activity[]> {
 
@@ -42,37 +47,19 @@ export class ActivityService {
     return Season.WINTER;
   }
 
-  enrollActivity(data: {
-    activityId: string;
+  enrollActivity(params: {
+    activity: Activity;
     userId: string;
     pricePaid: number;
-  }): { success: boolean; enrollment?: ActivityEnrollment } {
+  }): ActivityEnrollmentResult {
+    return this.enrollmentStrategy.enroll(params);
+  }
 
-    const enrollments = this.activityEnrollmentRepository.findByActivity(data.activityId);
+  getEnrollmentsByActivity(activityId: string): ActivityEnrollment[] {
+    return this.activityEnrollmentRepository.findByActivity(activityId);
+  }
 
-    if (enrollments.length >= 30) {
-      return { success: false };
-    }
-
-    const alreadyEnrolled = enrollments.some(e => e.userId === data.userId);
-
-    if (alreadyEnrolled) {
-      return { success: false };
-    }
-
-    const enrollment: ActivityEnrollment = {
-      id: crypto.randomUUID(),
-      activityId: data.activityId,
-      userId: data.userId,
-      pricePaid: data.pricePaid,
-      createdAt: new Date().toISOString()
-    };
-
-    this.activityEnrollmentRepository.save(enrollment);
-
-    return {
-      success: true,
-      enrollment
-    };
+  getEnrollmentsByUser(userId: string): ActivityEnrollment[] {
+    return this.activityEnrollmentRepository.findByUser(userId);
   }
 }

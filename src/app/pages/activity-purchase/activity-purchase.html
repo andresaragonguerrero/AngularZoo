@@ -13,7 +13,7 @@
                 <h2>{{ selectedActivity.name }}</h2>
 
                 <p>{{ selectedActivity.description }}</p>
-                <p>{{ selectedActivity.daysOfWeek }}</p>
+                <p>Días: {{ selectedActivity.daysOfWeek.join(', ') }}</p>
                 <p>Precio: {{ getPrice(selectedActivity) }} €</p>
 
                 <button class="button submit-button-guest" (click)="enroll(selectedActivity)">
