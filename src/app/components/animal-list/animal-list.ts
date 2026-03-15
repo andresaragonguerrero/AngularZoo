@@ -8,6 +8,9 @@ import { Animal } from '../../models/animal.interface';
 // Repositorios
 import { FavoriteAnimalsRepository } from '../../repositories/favoriteAnimals.repository';
 
+// Servicios
+import { AuthService } from '../../services/auth.service';
+
 @Component({
   selector: 'app-animal-list',
   imports: [
@@ -26,7 +29,14 @@ export class AnimalList {
   private readonly favorites = new Set<number>();
   readonly brokenImages = new Set<number>();
 
-  constructor(private readonly favoriteAnimalsRepository: FavoriteAnimalsRepository) { }
+  constructor(
+    private readonly authService: AuthService,
+    private readonly favoriteAnimalsRepository: FavoriteAnimalsRepository
+  ) { }
+
+  private getUserId(): string | null {
+    return this.authService.currentUser()?.id ?? null;
+  }
 
   trackByAnimalId(index: number, animal: Animal): number {
     return animal.id;
@@ -59,14 +69,19 @@ export class AnimalList {
   }
 
   isFavorite(animalId: number): boolean {
-    return this.favoriteAnimalsRepository.isFavorite(animalId);
+    const userId = this.getUserId();
+    if (!userId) return false;
+    return this.favoriteAnimalsRepository.isFavorite(userId, animalId);
   }
 
   toggleFavorite(animalId: number): void {
-    if (this.favoriteAnimalsRepository.isFavorite(animalId)) {
-      this.favoriteAnimalsRepository.remove(animalId);
+    const userId = this.getUserId();
+    if (!userId) return;
+
+    if (this.favoriteAnimalsRepository.isFavorite(userId, animalId)) {
+      this.favoriteAnimalsRepository.remove(userId, animalId);
     } else {
-      this.favoriteAnimalsRepository.add(animalId);
+      this.favoriteAnimalsRepository.add(userId, animalId);
     }
   }
 }

@@ -4,30 +4,34 @@ import { Injectable } from '@angular/core';
     providedIn: 'root',
 })
 export class FavoriteAnimalsRepository {
-    private readonly STORAGE_KEY = 'zoo_favorite_animals';
+    
+    private readonly STORAGE_KEY_PREFIX = 'zoo_favorite_animals_';
 
-    getAll(): number[] {
-        const data = localStorage.getItem(this.STORAGE_KEY);
+    private getKey(userId: string): string {
+        return `${this.STORAGE_KEY_PREFIX}${userId}`;
+    }
+    getAll(userId: string): number[] {
+        const data = localStorage.getItem(this.getKey(userId));
         return data ? JSON.parse(data) : [];
     }
 
-    add(animalId: number): void {
-        const favorites = new Set(this.getAll());
+    add(userId: string, animalId: number): void {
+        const favorites = new Set(this.getAll(userId));
         favorites.add(animalId);
-        localStorage.setItem(this.STORAGE_KEY, JSON.stringify([...favorites]));
+        localStorage.setItem(this.getKey(userId), JSON.stringify([...favorites]));
     }
 
-    remove(animalId: number): void {
-        const favorites = new Set(this.getAll());
+    remove(userId: string, animalId: number): void {
+        const favorites = new Set(this.getAll(userId));
         favorites.delete(animalId);
-        localStorage.setItem(this.STORAGE_KEY, JSON.stringify([...favorites]));
+        localStorage.setItem(this.getKey(userId), JSON.stringify([...favorites]));
     }
 
-    isFavorite(animalId: number): boolean {
-        return this.getAll().includes(animalId);
+    isFavorite(userId: string, animalId: number): boolean {
+        return this.getAll(userId).includes(animalId);
     }
 
-    clear(): void {
-        localStorage.removeItem(this.STORAGE_KEY);
+    clear(userId: string): void {
+        localStorage.removeItem(this.getKey(userId));
     }
 }

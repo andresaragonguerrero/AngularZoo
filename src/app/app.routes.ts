@@ -14,6 +14,9 @@ import { CoursePurchase } from './pages/course-purchase/course-purchase';
 import { ActivityPurchase } from './pages/activity-purchase/activity-purchase';
 import { FavoriteAnimals } from './pages/favorite-animals/favorite-animals';
 
+// Guards
+import { AuthGuard } from './guards/auth';
+
 export const routes: Routes = [
   {
     path: '',
@@ -66,7 +69,8 @@ export const routes: Routes = [
   },
   {
     path: 'favorite-animals',
-    component: FavoriteAnimals
+    component: FavoriteAnimals,
+    canActivate: [AuthGuard]
   },
   {
     path: '**',

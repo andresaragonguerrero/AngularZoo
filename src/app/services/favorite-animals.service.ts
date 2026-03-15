@@ -3,29 +3,41 @@ import { BehaviorSubject } from 'rxjs';
 
 // Repositorios
 import { FavoriteAnimalsRepository } from '../repositories/favoriteAnimals.repository';
+import { AuthService } from './auth.service';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FavoriteAnimalsService {
+
   private readonly repo = inject(FavoriteAnimalsRepository);
-  private readonly favoritesSubject = new BehaviorSubject<number[]>(this.repo.getAll());
-  favorites$ = this.favoritesSubject.asObservable();
+
+  constructor(private readonly authService: AuthService) { }
+
+  private getCurrentUserId(): string | null {
+    return this.authService.currentUser()?.id ?? null;
+  }
 
   toggleFavorite(animalId: number): void {
-    if (this.repo.isFavorite(animalId)) {
-      this.repo.remove(animalId);
+    const userId = this.getCurrentUserId();
+    if (!userId) return;
+
+    if (this.repo.isFavorite(userId, animalId)) {
+      this.repo.remove(userId, animalId);
     } else {
-      this.repo.add(animalId);
+      this.repo.add(userId, animalId);
     }
-    this.favoritesSubject.next(this.repo.getAll());
   }
 
   isFavorite(animalId: number): boolean {
-    return this.repo.isFavorite(animalId);
+    const userId = this.getCurrentUserId();
+    if (!userId) return false;
+    return this.repo.isFavorite(userId, animalId);
   }
 
   getFavorites(): number[] {
-    return this.repo.getAll();
+    const userId = this.getCurrentUserId();
+    if (!userId) return [];
+    return this.repo.getAll(userId);
   }
 }
