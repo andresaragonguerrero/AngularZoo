@@ -2,19 +2,21 @@ import { Component, OnInit } from '@angular/core';
 
 // Componentes
 import { AnimalList } from '../../components/animal-list/animal-list';
+import { AnimalFilters } from '../../components/animal-filters/animal-filters';
+import { AnimalPagination } from '../../components/animal-pagination/animal-pagination';
 
 // Modelos
 import { Animal } from '../../models/animal.interface';
 
 // Servicios
 import { AnimalService } from '../../services/animal.service';
-import { AnimalFilters } from '../../components/animal-filters/animal-filters';
 
 @Component({
   selector: 'app-animals',
   imports: [
     AnimalList,
     AnimalFilters,
+    AnimalPagination,
   ],
   templateUrl: './animals.html',
   styleUrl: './animals.scss',
@@ -22,6 +24,9 @@ import { AnimalFilters } from '../../components/animal-filters/animal-filters';
 export class AnimalsComponent implements OnInit {
   animals: Animal[] = [];
   filteredAnimals: Animal[] = [];
+
+  currentPage = 1;
+  readonly pageSize = 5;
 
   private searchTerm = '';
   private dietFilter = '';
@@ -65,6 +70,16 @@ export class AnimalsComponent implements OnInit {
     this.filteredAnimals = [...this.animals];
   }
 
+  get paginatedAnimals(): Animal[] {
+    const start = (this.currentPage - 1) * this.pageSize;
+    const end = start + this.pageSize;
+    return this.filteredAnimals.slice(start, end);
+  }
+
+  onPageChange(page: number): void {
+    this.currentPage = page;
+  }
+
   private applyFilters(): void {
     this.filteredAnimals = this.animals.filter(animal => {
 
@@ -86,5 +101,11 @@ export class AnimalsComponent implements OnInit {
 
       return matchesSearch && matchesDiet && matchesContinent && matchesConservationStatus;
     });
+
+    const totalPages = Math.ceil(this.filteredAnimals.length / this.pageSize);
+
+    if (this.currentPage > totalPages) {
+      this.currentPage = 1;
+    }
   }
 }

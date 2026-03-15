@@ -5,7 +5,10 @@
         (clear)="onClear()">
     </app-animal-filters>
 
-    <app-animal-list [animals]="filteredAnimals">
+    <!-- [animals]="filteredAnimals" -->
+    <app-animal-list [animals]="paginatedAnimals">
     </app-animal-list>
 
+    <app-animal-pagination [totalItems]="filteredAnimals.length" [currentPage]="currentPage" [pageSize]="pageSize"
+        (pageChange)="onPageChange($event)"></app-animal-pagination>
 </div>
