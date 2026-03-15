@@ -68,6 +68,41 @@ export class AnimalService {
     );
   }
 
+  getAnimalOfTheDay(): Observable<Animal | null> {
+    return this.getAnimals().pipe(
+      map(animals => {
+        if (!animals.length) return null;
+
+        const now = new Date();
+
+        // Formato YYYY-MM-DD
+        const todayKey = `${now.getFullYear()}-${now.getMonth() + 1}-${now.getDate()}`;
+
+        // Comprobar si ya tenemos animal para hoy
+        const stored = localStorage.getItem('dailyAnimal');
+        if (stored) {
+          const parsed = JSON.parse(stored);
+          if (parsed.date === todayKey) {
+            // Devolver animal guardado
+            return animals.find(a => a.id === parsed.animalId) ?? null;
+          }
+        }
+
+        // Calcular animal del día
+        const index = Math.floor(Math.random() * animals.length);
+        const animalOfTheDay = animals[index];
+
+        // Guardar en localStorage
+        localStorage.setItem(
+          'dailyAnimal',
+          JSON.stringify({ date: todayKey, animalId: animalOfTheDay.id })
+        );
+
+        return animalOfTheDay;
+      })
+    );
+  }
+
   clearCache(): void {
     this.animalsCache = undefined;
   }

@@ -26,8 +26,8 @@ export class DailyAnimal implements OnInit {
   constructor(private readonly animalService: AnimalService) { }
 
   ngOnInit(): void {
-    this.animalService.getRandomAnimal().subscribe(a => {
-      this.animal = a;
+    this.animalService.getAnimalOfTheDay().subscribe(animal => {
+      this.animal = animal;
       this.isLoading = false;
     });
   }
