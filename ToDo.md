@@ -1,17 +1,17 @@
 # FUNCIONALIDADES POR IMPLEMENTAR
 
+HOME
+- Sección conservamos la naturaleza (inspiración/copia: https://zoobarcelona.cat/es):
+  - investigación y conservación
+  - educación
+  - cuidados y reintroducción
+- Sección donde se muestre las tarjetas de tres actividades de esta temporada/estación
+- Sección breve de compra de entradas
+
 ANIMALES
-- Listado de animales (cards) - HECHO
-- Sistema de filtros
-  - dieta
-  - ecosistema
-  - continente
-  - estado de conservación
-- Sistema de búsqueda de animales
 - Página de detalle de animal
 - Animales relacionados (mismo ecosistema)
 - Favoritos (guardar en localStorage)
-- Animal aleatorio
 
 ECOSISTEMAS
 - Listado de ecosistemas
@@ -26,12 +26,11 @@ EXPLORACIÓN
 - Navegación animal → ecosistema
 
 DATOS / ARQUITECTURA
-- Crear animals.json - HECHO
 - Crear ecosystems.json
-- Crear AnimalService - HECHO
 - Crear EcosystemService
 
 ESTADÍSTICAS
 - Número de animales por ecosistema
 - Porcentaje de animales por dieta
 - Ecosistema con mayor número de especies
+
