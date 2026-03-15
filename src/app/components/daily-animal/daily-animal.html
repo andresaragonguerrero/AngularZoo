@@ -1,27 +1,54 @@
 <section class="home-animal">
 
     @if (isLoading) {
-    <p>Cargando animal del día...</p>
+    <p class="home-animal__loading">Cargando animal del día...</p>
     }
 
     @if (animal) {
-    <h2>Animal del día: {{ animal.nombre }}</h2>
-    <img [src]="animal.imagen" [alt]="animal.nombre" />
+    <div class="home-animal__image-wrapper">
+        <img class="home-animal__image" [src]="animal.imagen" [alt]="animal.nombre" />
 
-    <p>{{ animal.descripcion }}</p>
+        <!-- Overlay oscuro para mejor legibilidad -->
+        <div class="home-animal__overlay"></div>
 
-    <ul>
-        <li>Dieta: {{ animal.dieta }}</li>
-        <li>Esperanza de vida: {{ animal.esperanzaVida }} años</li>
-        <li>Peso: {{ animal.pesoMinimo }} - {{ animal.pesoMaximo }} kg</li>
-        <li>Estado de conservación: {{ animal.estadoConservacion }}</li>
-    </ul>
+        <!-- Título superpuesto -->
+        <h2 class="home-animal__title-overlay">El animal del día</h2>
+    </div>
 
-    <a [routerLink]="['/animals', animal.id]">Ver ficha completa</a>
+    <div class="home-animal__card">
+        <span class="home-animal__eyebrow">¿Sabías que...?</span>
+
+        <h2 class="home-animal__name">{{ animal.nombre }}</h2>
+
+        <p class="home-animal__description">{{ animal.descripcion }}</p>
+
+        <ul class="home-animal__meta">
+            <li class="home-animal__meta-item">
+                <span class="home-animal__meta-label">Dieta</span>
+                <span class="home-animal__meta-value">{{ animal.dieta }}</span>
+            </li>
+            <li class="home-animal__meta-item">
+                <span class="home-animal__meta-label">Esperanza de vida</span>
+                <span class="home-animal__meta-value">{{ animal.esperanzaVida }} años</span>
+            </li>
+            <li class="home-animal__meta-item">
+                <span class="home-animal__meta-label">Peso</span>
+                <span class="home-animal__meta-value">{{ animal.pesoMinimo }} – {{ animal.pesoMaximo }} kg</span>
+            </li>
+            <li class="home-animal__meta-item">
+                <span class="home-animal__meta-label">Conservación</span>
+                <span class="home-animal__meta-value">{{ animal.estadoConservacion }}</span>
+            </li>
+        </ul>
+
+        <a class="home-animal__link" [routerLink]="['/animals', animal.id]">
+            Ver ficha completa
+        </a>
+    </div>
     }
 
     @if (!isLoading && !animal) {
-    <p>No se encontró ningún animal para hoy.</p>
+    <p class="home-animal__loading">No se encontró ningún animal para hoy.</p>
     }
 
 </section>
