@@ -74,11 +74,22 @@
 }
 
 /* ── Breakpoints ─────────────────────────────────────── */
+@media (max-width: 1024px) {
+
+    .pagination button:first-child,
+    .pagination button:last-child {
+        font-size: 0;
+        padding: 0 var(--space-2);
+        gap: 0;
+    }
+}
 
 @media (max-width: 768px) {
     .pagination {
+        flex-wrap: wrap;
+        justify-content: center;
         padding: var(--space-4);
-        gap: var(--space-1);
+        gap: var(--space-2) var(--space-1);
     }
 
     .pagination button {
@@ -89,32 +100,33 @@
 
     .pagination button:first-child,
     .pagination button:last-child {
+        flex-shrink: 0;
         padding: 0 var(--space-3);
-        font-size: 12px;
+        font-size: 0;
+        gap: 0;
+    }
+
+    .pagination button:not(:first-child):not(:last-child) {
+        flex: 0 0 auto;
     }
 }
 
 @media (max-width: 480px) {
+    .pagination {
+        padding: var(--space-3);
+        gap: var(--space-1) var(--space-1);
+    }
 
     .pagination button:first-child,
     .pagination button:last-child {
-        padding: 0 var(--space-2);
         font-size: 0;
+        padding: 0 var(--space-2);
         gap: 0;
     }
 
     .pagination button:first-child .svg-icon,
     .pagination button:last-child .svg-icon {
-        font-size: 16px;
-    }
-
-    .pagination button:first-child::after {
-        content: "←";
-        font-size: 16px;
-    }
-
-    .pagination button:last-child::after {
-        content: "→";
-        font-size: 16px;
+        width: 20px;
+        height: 20px;
     }
 }
