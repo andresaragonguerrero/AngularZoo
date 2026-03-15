@@ -2,6 +2,14 @@
 <nav class="pagination">
 
     <button type="button" (click)="previous()" [disabled]="currentPage === 1">
+        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"
+            fill="currentColor">
+            <g>
+                <path
+                    d="M16.752,23.994,6.879,14.121a3,3,0,0,1,0-4.242L16.746.012,18.16,1.426,8.293,11.293a1,1,0,0,0,0,1.414l9.873,9.873Z" />
+            </g>
+        </svg>
+
         Anterior
     </button>
 
@@ -13,6 +21,14 @@
 
     <button type="button" (click)="next()" [disabled]="currentPage === totalPages">
         Siguiente
+
+        <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"
+            fill="currentColor">
+            <g>
+                <path
+                    d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+            </g>
+        </svg>
     </button>
 
 </nav>

@@ -20,7 +20,6 @@
 .animal-list__loading,
 .animal-list__error {
     padding: var(--space-8);
-
     font-size: 16px;
     font-family: var(--secondary-font-family);
     text-align: center;
@@ -31,10 +30,24 @@
     color: var(--error-color);
 }
 
+/* ── Grid 3-2 centrado ───────────────────────────────── */
+
 .animal-list__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: var(--space-7);
+}
+
+.animal-card {
+    grid-column: span 2;
+}
+
+.animal-card:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.animal-card:nth-child(5) {
+    grid-column: 4 / span 2;
 }
 
 /* ── Animal card ─────────────────────────────────────── */
@@ -42,19 +55,15 @@
 .animal-card {
     position: relative;
     overflow: hidden;
-
     aspect-ratio: 4 / 3;
-
     cursor: pointer;
 }
 
 .animal-card img {
     height: 100%;
     width: 100%;
-
     display: block;
     object-fit: cover;
-
     transition: transform 0.4s ease;
 }
 
@@ -67,9 +76,7 @@
     position: absolute;
     inset: 0;
     z-index: 0;
-
     background-color: rgba(10, 31, 11, 0);
-
     pointer-events: none;
     transition: background-color 0.35s ease;
 }
@@ -78,23 +85,19 @@
     background-color: rgba(10, 31, 11, 0.55);
 }
 
-/* ── Card content — oculto, sube en hover ────────────── */
+/* ── Card content ────────────────────────────────────── */
 
 .animal-card__content {
     height: 12rem;
-
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     z-index: 2;
     padding: var(--space-3) var(--space-6);
-
     display: grid;
     gap: var(--space-3);
-
     background-color: var(--primary-300);
-
     translate: 0 100%;
     transition: translate 0.35s ease;
 }
@@ -123,7 +126,6 @@
     font-family: var(--secondary-font-family);
     line-height: 1.5;
     color: var(--primary-50);
-
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
@@ -139,23 +141,18 @@
 .diet-badge,
 .status-badge {
     padding: 0 var(--space-2);
-
     display: grid;
     place-items: center;
-
     font-size: 11px;
     font-family: var(--secondary-font-family);
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-
     border: 1px solid var(--text-color);
     border-radius: 0;
-
     background-color: #2d2d2d1c;
 }
 
-/* Dieta */
 .diet-herbivore {
     background-color: var(--primary-800);
     color: var(--primary-50);
@@ -176,7 +173,6 @@
     color: var(--primary-50);
 }
 
-/* Estado de conservación */
 .status-least-concern {
     background-color: var(--success-dark);
     color: #E8F5E9;
@@ -215,12 +211,10 @@
     top: var(--space-4);
     right: var(--space-4);
     z-index: 3;
-
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     gap: var(--space-2);
-
     opacity: 0;
     translate: 0 -0.5rem;
     transition: opacity 0.25s ease, translate 0.25s ease;
@@ -234,17 +228,13 @@
 .animal-card__actions button {
     width: 2.2rem;
     height: 2.2rem;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     font-size: 18px;
     color: var(--background-color);
-
     background-color: rgba(10, 31, 11, 0.6);
     border: 1px solid rgba(255, 248, 236, 0.5);
-
     cursor: pointer;
     transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
@@ -258,17 +248,14 @@
 
 .animal-card__actions a {
     padding: var(--space-1) var(--space-3);
-
     font-size: 12px;
     font-family: var(--secondary-font-family);
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: var(--background-color);
-
     background-color: transparent;
     border: 1px solid rgba(255, 248, 236, 0.5);
-
     transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
@@ -279,21 +266,27 @@
 
 /* ── Empty state ─────────────────────────────────────── */
 
-.animal-list__grid>div {
+.animal-list__empty {
     grid-column: 1 / -1;
-
     padding: var(--space-10);
-
     font-size: 16px;
     font-family: var(--secondary-font-family);
     text-align: center;
     color: var(--text-subtle);
 }
 
+/* ── Breakpoints ─────────────────────────────────────── */
+
 @media (max-width: 1024px) {
     .animal-list__grid {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--space-5);
+    }
+
+    .animal-card,
+    .animal-card:nth-child(4),
+    .animal-card:nth-child(5) {
+        grid-column: span 1;
     }
 }
 

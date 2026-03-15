@@ -1,0 +1,120 @@
+.pagination {
+    width: 100%;
+    padding: var(--space-6) var(--space-6) var(--space-4);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-2);
+
+    border-top: 1px solid var(--primary-100);
+}
+
+.pagination button {
+    min-width: 2.5rem;
+    height: 2.5rem;
+    padding: 0 var(--space-3);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 14px;
+    font-family: var(--secondary-font-family);
+    font-weight: 500;
+    color: var(--text-color);
+
+    background-color: transparent;
+    border: 1px solid var(--primary-100);
+
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border-color: var(--primary-color);
+}
+
+.pagination button.active {
+    background-color: var(--primary-color);
+    color: var(--background-color);
+    border-color: var(--primary-color);
+    font-weight: 700;
+}
+
+.pagination button:disabled {
+    opacity: 0.35;
+    cursor: not-allowed;
+}
+
+/* Anterior y Siguiente con más padding */
+.pagination button:first-child,
+.pagination button:last-child {
+    padding: 0 var(--space-4);
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    gap: var(--space-2);
+}
+
+.pagination .svg-icon {
+    flex-shrink: 0;
+    transition: transform 0.2s ease;
+}
+
+.pagination button:first-child:hover:not(:disabled) .svg-icon {
+    transform: translateX(-3px);
+}
+
+.pagination button:last-child:hover:not(:disabled) .svg-icon {
+    transform: translateX(3px);
+}
+
+/* ── Breakpoints ─────────────────────────────────────── */
+
+@media (max-width: 768px) {
+    .pagination {
+        padding: var(--space-4);
+        gap: var(--space-1);
+    }
+
+    .pagination button {
+        min-width: 2.2rem;
+        height: 2.2rem;
+        font-size: 13px;
+    }
+
+    .pagination button:first-child,
+    .pagination button:last-child {
+        padding: 0 var(--space-3);
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .pagination button:first-child,
+    .pagination button:last-child {
+        padding: 0 var(--space-2);
+        font-size: 0;
+        gap: 0;
+    }
+
+    .pagination button:first-child .svg-icon,
+    .pagination button:last-child .svg-icon {
+        font-size: 16px;
+    }
+
+    .pagination button:first-child::after {
+        content: "←";
+        font-size: 16px;
+    }
+
+    .pagination button:last-child::after {
+        content: "→";
+        font-size: 16px;
+    }
+}
