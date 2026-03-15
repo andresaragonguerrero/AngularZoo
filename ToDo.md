@@ -5,6 +5,7 @@ HOME
   - investigación y conservación
   - educación
   - cuidados y reintroducción
+- Sección donde se muestran los datos del animal del día
 - Sección donde se muestre las tarjetas de tres actividades de esta temporada/estación
 - Sección breve de compra de entradas
 
