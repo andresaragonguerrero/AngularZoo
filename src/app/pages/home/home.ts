@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 // secciones del home
 import { Hero } from '../../sections/hero/hero';
 import { ParkInfo } from "../../sections/park-info/park-info";
+import { DailyAnimal } from '../../components/daily-animal/daily-animal';
 
 // servicios
 import { HeaderService } from '../../services/header.service';
@@ -14,6 +15,7 @@ import { HeaderService } from '../../services/header.service';
     CommonModule,
     Hero,
     ParkInfo,
+    DailyAnimal,
   ],
   templateUrl: './home.html',
   styleUrl: './home.scss',

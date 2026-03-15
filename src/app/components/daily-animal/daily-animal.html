@@ -1,1 +1,27 @@
-<p>daily-animal works!</p>
+<section class="home-animal">
+
+    @if (isLoading) {
+    <p>Cargando animal del día...</p>
+    }
+
+    @if (animal) {
+    <h2>Animal del día: {{ animal.nombre }}</h2>
+    <img [src]="animal.imagen" [alt]="animal.nombre" />
+
+    <p>{{ animal.descripcion }}</p>
+
+    <ul>
+        <li>Dieta: {{ animal.dieta }}</li>
+        <li>Esperanza de vida: {{ animal.esperanzaVida }} años</li>
+        <li>Peso: {{ animal.pesoMinimo }} - {{ animal.pesoMaximo }} kg</li>
+        <li>Estado de conservación: {{ animal.estadoConservacion }}</li>
+    </ul>
+
+    <a [routerLink]="['/animals', animal.id]">Ver ficha completa</a>
+    }
+
+    @if (!isLoading && !animal) {
+    <p>No se encontró ningún animal para hoy.</p>
+    }
+
+</section>
