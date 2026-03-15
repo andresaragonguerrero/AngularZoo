@@ -89,3 +89,45 @@
 .submit-button:hover::before {
     width: 100%
 }
+
+/* ── content-wrapper y login-card breakpoints ────────── */
+
+@media (max-width: 1024px) {
+    .content-wrapper {
+        gap: var(--space-5);
+        padding: var(--space-6) var(--space-5);
+    }
+
+    .login-card {
+        width: 22rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+        padding: var(--space-5) var(--space-5);
+        gap: var(--space-5);
+    }
+
+    .login-card {
+        width: 100%;
+        max-width: 400px;
+        height: 20rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .content-wrapper {
+        padding: var(--space-4) var(--space-2);
+    }
+
+    .login-card {
+        height: 16rem;
+    }
+
+    .card-title {
+        font-size: 16px;
+    }
+}

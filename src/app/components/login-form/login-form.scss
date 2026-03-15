@@ -253,3 +253,69 @@
 .debug-btn:hover {
     background: #e5e7eb;
 }
+
+@media (max-width: 768px) {
+    .login-form {
+        height: auto;
+        padding: var(--space-4) 0;
+
+        gap: var(--space-4);
+    }
+
+    .form-header {
+        height: fit-content;
+    }
+
+    .form-title {
+        font-size: 26px;
+    }
+
+    .form-subtitle {
+        font-size: 16px;
+    }
+
+    .field-label {
+        font-size: 17px;
+    }
+
+    .field-input {
+        font-size: 16px;
+    }
+
+    .form-footer {
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .form-body {
+        gap: var(--space-4);
+    }
+
+    .form-title {
+        font-size: 22px;
+    }
+
+    .form-subtitle {
+        font-size: 14px;
+        width: 90%;
+    }
+
+    .field-label {
+        font-size: 15px;
+    }
+
+    .field-input {
+        font-size: 15px;
+        padding: var(--space-1);
+    }
+
+    .field-error,
+    .alert-error {
+        font-size: 13px;
+    }
+
+    .form-footer {
+        font-size: 14px;
+    }
+}
