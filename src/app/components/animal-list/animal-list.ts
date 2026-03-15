@@ -5,6 +5,9 @@ import { RouterModule } from '@angular/router';
 // Modelos
 import { Animal } from '../../models/animal.interface';
 
+// Repositorios
+import { FavoriteAnimalsRepository } from '../../repositories/favoriteAnimals.repository';
+
 @Component({
   selector: 'app-animal-list',
   imports: [
@@ -15,12 +18,15 @@ import { Animal } from '../../models/animal.interface';
   styleUrl: './animal-list.scss',
 })
 export class AnimalList {
+
   @Input() animals: Animal[] = [];
   @Input() isLoading = false;
   @Input() error: string | null = null;
 
   private readonly favorites = new Set<number>();
   readonly brokenImages = new Set<number>();
+
+  constructor(private readonly favoriteAnimalsRepository: FavoriteAnimalsRepository) { }
 
   trackByAnimalId(index: number, animal: Animal): number {
     return animal.id;
@@ -53,12 +59,14 @@ export class AnimalList {
   }
 
   isFavorite(animalId: number): boolean {
-    return this.favorites.has(animalId);
+    return this.favoriteAnimalsRepository.isFavorite(animalId);
   }
 
   toggleFavorite(animalId: number): void {
-    this.favorites.has(animalId)
-      ? this.favorites.delete(animalId)
-      : this.favorites.add(animalId);
+    if (this.favoriteAnimalsRepository.isFavorite(animalId)) {
+      this.favoriteAnimalsRepository.remove(animalId);
+    } else {
+      this.favoriteAnimalsRepository.add(animalId);
+    }
   }
 }
