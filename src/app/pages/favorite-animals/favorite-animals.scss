@@ -1,0 +1,340 @@
+/* ── Header ──────────────────────────────────────────── */
+
+.section-header {
+    height: auto;
+    width: 100%;
+
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    border-bottom: 1px solid rgba(44, 95, 45, 0.12);
+    background: linear-gradient(to bottom,
+            rgba(44, 95, 45, 0.03) 0%,
+            transparent 100%);
+}
+
+.section-title {
+    position: relative;
+    margin-bottom: var(--space-3);
+    padding-bottom: var(--space-3);
+
+    display: inline-block;
+
+    font-size: clamp(44px, 5.5vw, 58px);
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.section-title::after {
+    content: "";
+
+    height: 3px;
+    width: var(--space-10);
+
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+
+    background: linear-gradient(to right,
+            transparent,
+            var(--accent-color),
+            transparent);
+}
+
+/* ── Sección ─────────────────────────────────────────── */
+
+.favorite-animals {
+    padding: var(--space-8) var(--space-7);
+}
+
+.favorite-animals__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-8);
+}
+
+/* ── Entry ───────────────────────────────────────────── */
+
+.animal-entry {
+    display: grid;
+    grid-template-columns: 30rem 1fr;
+    grid-template-rows: 20rem;
+    align-items: end;
+    gap: var(--space-6);
+}
+
+.animal-entry--reversed {
+    grid-template-columns: 1fr 30rem;
+}
+
+/* ── Info ────────────────────────────────────────────── */
+
+.animal-entry__info {
+    height: 16rem;
+
+    position: relative;
+    padding: var(--space-7);
+
+    display: grid;
+    align-content: end;
+    gap: var(--space-4);
+
+    box-shadow: var(--shadow-md);
+
+    border-left: 3px solid var(--primary-color);
+    background-color: var(--primary-300);
+
+    overflow: hidden;
+}
+
+.animal-entry--reversed .animal-entry__info {
+    border-left: none;
+    border-right: 3px solid var(--primary-color);
+    order: 2;
+}
+
+.animal-entry--reversed .animal-entry__image-wrapper {
+    order: 1;
+}
+
+.animal-entry__index {
+    font-size: 14px;
+    font-family: var(--primary-font-family);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--background-color);
+    opacity: 0.8;
+}
+
+.animal-entry__name {
+    font-size: 24px;
+    font-family: var(--primary-font-family);
+    font-weight: 700;
+    line-height: 1.1;
+    color: var(--background-color);
+}
+
+.animal-entry__scientific {
+    font-size: 16px;
+    font-family: var(--secondary-font-family);
+    font-style: italic;
+    color: var(--background-color);
+    opacity: 0.8;
+}
+
+.animal-entry__description {
+    font-size: 18px;
+    font-family: var(--secondary-font-family);
+    line-height: 1.5;
+    color: var(--background-color);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.animal-entry__actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    margin-top: auto;
+    padding-top: var(--space-2);
+}
+
+.animal-entry__detail {
+    padding: var(--space-1) var(--space-4);
+
+    font-size: 12px;
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+
+    color: var(--background-color);
+    background-color: var(--primary-color);
+
+    transition: opacity 0.2s ease;
+}
+
+.animal-entry__detail:hover {
+    opacity: 0.85;
+}
+
+.animal-entry__favorite {
+    position: absolute;
+    top: var(--space-2);
+    right: var(--space-2);
+    padding: var(--space-1) var(--space-2);
+
+    font-size: 14px;
+    font-family: var(--secondary-font-family);
+    font-weight: 600;
+    color: var(--primary-300);
+
+    box-shadow: var(--shadow-sm);
+    background: var(--background-color);
+    border: none;
+    cursor: pointer;
+
+    transition: color 0.2s ease;
+}
+
+.animal-entry__favorite:hover {
+    color: var(--error-color);
+}
+
+/* ── Imagen ───────────────────────────────────────────── */
+
+.animal-entry__image-wrapper {
+    height: 20rem;
+    width: 32rem;
+
+    border-radius: 5px;
+
+    overflow: hidden;
+}
+
+.animal-entry--reversed .animal-entry__image-wrapper {
+    justify-self: end;
+}
+
+.animal-entry__image {
+    height: 100%;
+    width: 100%;
+
+    display: block;
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.4s ease;
+}
+
+.animal-entry:hover .animal-entry__image {
+    transform: scale(1.03);
+}
+
+/* ── Estados vacío / carga / error ───────────────────── */
+
+.favorite-animals__loading,
+.favorite-animals__error,
+.favorite-animals__empty {
+    padding: var(--space-10);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--space-4);
+
+    font-size: 16px;
+    font-family: var(--secondary-font-family);
+    text-align: center;
+    color: var(--text-muted);
+}
+
+.favorite-animals__error {
+    color: var(--error-color);
+}
+
+.favorite-animals__empty a {
+    padding: var(--space-2) var(--space-6);
+
+    font-size: 13px;
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+
+    color: var(--background-color);
+    background-color: var(--primary-color);
+
+    transition: opacity 0.2s ease;
+}
+
+.favorite-animals__empty a:hover {
+    opacity: 0.85;
+}
+
+/* ── Breakpoints ─────────────────────────────────────── */
+
+@media (max-width: 1024px) {
+    .animal-entry {
+        grid-template-columns: 26rem 1fr;
+    }
+
+    .animal-entry--reversed {
+        grid-template-columns: 1fr 26rem;
+    }
+
+    .animal-entry__image-wrapper {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .favorite-animals {
+        padding: var(--space-5) var(--space-4);
+    }
+
+    .animal-entry,
+    .animal-entry--reversed {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        gap: 0;
+    }
+
+    .animal-entry--reversed .animal-entry__info,
+    .animal-entry--reversed .animal-entry__image-wrapper {
+        order: unset;
+    }
+
+    .animal-entry__info {
+        height: auto;
+        border-right: 3px solid var(--primary-color);
+        border-left: none;
+    }
+
+    .animal-entry--reversed .animal-entry__info {
+        border-left: 3px solid var(--primary-color);
+        border-right: none;
+    }
+
+    .animal-entry__image-wrapper {
+        height: 14rem;
+        width: 100%;
+    }
+
+    .animal-entry__name {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .favorite-animals {
+        padding: var(--space-4) var(--space-3);
+    }
+
+    .favorite-animals__list {
+        gap: var(--space-6);
+    }
+
+    .animal-entry__image-wrapper {
+        height: 12rem;
+
+        box-shadow: var(--shadow-md);
+    }
+
+    .animal-entry__name {
+        font-size: 18px;
+    }
+
+    .animal-entry__description {
+        font-size: 13px;
+    }
+}

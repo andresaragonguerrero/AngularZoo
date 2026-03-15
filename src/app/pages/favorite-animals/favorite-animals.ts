@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 // Servicios
 import { AnimalService } from '../../services/animal.service';
@@ -9,7 +11,10 @@ import { Animal } from '../../models/animal.interface';
 
 @Component({
   selector: 'app-favorite-animals',
-  imports: [],
+  imports: [
+    CommonModule,
+    RouterModule,
+  ],
   templateUrl: './favorite-animals.html',
   styleUrl: './favorite-animals.scss',
 })

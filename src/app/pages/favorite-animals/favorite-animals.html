@@ -1,1 +1,49 @@
-<p>favorite-animals works!</p>
+<header class="section-header">
+    <h1 class="section-title">Animales favoritos</h1>
+</header>
+
+<section class="favorite-animals">
+
+    @if (isLoading) {
+    <p class="favorite-animals__loading">Cargando animales favoritos...</p>
+    }
+
+    @if (error) {
+    <p class="favorite-animals__error">{{ error }}</p>
+    }
+
+    @if (!isLoading && favoriteAnimals.length) {
+    <div class="favorite-animals__list">
+
+        @for (animal of favoriteAnimals; track animal.id; let i = $index) {
+        <article class="animal-entry" [class.animal-entry--reversed]="i % 2 !== 0">
+
+            <div class="animal-entry__info">
+                <button class="animal-entry__favorite active" (click)="toggleFavorite(animal.id)">
+                    ★ Quitar de favoritos
+                </button>
+
+                <span class="animal-entry__index">{{ (i + 1).toString().padStart(2, '0') }}</span>
+                <h3 class="animal-entry__name">{{ animal.nombre }}</h3>
+                <p class="animal-entry__scientific">{{ animal.nombreCientifico }}</p>
+                <p class="animal-entry__description">{{ animal.descripcion }}</p>
+            </div>
+
+            <div class="animal-entry__image-wrapper">
+                <img class="animal-entry__image" [src]="animal.imagen" [alt]="animal.nombre" />
+            </div>
+
+        </article>
+        }
+
+    </div>
+    }
+
+    @if (!isLoading && favoriteAnimals.length === 0) {
+    <div class="favorite-animals__empty">
+        <p>No tienes animales favoritos aún.</p>
+        <a routerLink="/animals">Explorar animales</a>
+    </div>
+    }
+
+</section>
