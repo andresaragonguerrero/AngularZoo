@@ -73,6 +73,11 @@ export const routes: Routes = [
     canActivate: [AuthGuard]
   },
   {
+    path: 'animals/:id',
+    loadComponent: () =>
+      import('./pages/animal-detail/animal-detail').then(m => m.AnimalDetail)
+  },
+  {
     path: '**',
     redirectTo: 'home'
   }
