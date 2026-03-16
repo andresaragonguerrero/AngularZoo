@@ -6,7 +6,7 @@
 
 .auth-button {
   gap: var(--space-1);
-  border: 2px solid var(--text-color);
+  border: 1px solid var(--text-color);
   box-shadow: var(--shadow-sm);
   transition: border 0.3s ease-out, box-shadow 0.3s ease-out;
   cursor: pointer;

@@ -132,10 +132,14 @@
 }
 
 /* ── Enlace ───────────────────────────────────────────── */
-
 .home-animal__link {
     justify-self: start;
     padding: var(--space-2) var(--space-5);
+
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    isolation: isolate;
 
     font-size: 14px;
     font-family: var(--secondary-font-family);
@@ -145,12 +149,33 @@
 
     color: var(--primary-900);
     background-color: var(--accent-color);
+    border: 2px solid var(--primary-900);
 
-    transition: opacity 0.2s ease;
+    transition: color 0.2s ease-out;
+}
+
+.home-animal__link::before {
+    content: "";
+
+    height: 100%;
+    width: 0%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    background-color: var(--primary-900);
+
+    transition: width 0.2s ease-out;
 }
 
 .home-animal__link:hover {
-    opacity: 0.85;
+    color: var(--accent-color);
+}
+
+.home-animal__link:hover::before {
+    width: 100%;
 }
 
 .home-animal__loading {
