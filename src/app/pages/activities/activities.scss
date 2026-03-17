@@ -509,6 +509,8 @@
     gap: var(--space-3);
     align-content: start;
 
+    box-shadow: var(--shadow-sm);
+
     background-color: var(--background-color);
 
     transition: background-color 0.25s ease;
@@ -533,11 +535,11 @@
     font-weight: 800;
     line-height: 1;
     color: var(--text-color);
-    opacity: 0.08;
+    opacity: 0.3;
 }
 
 .activity-compact-card__season {
-    font-size: 11px;
+    font-size: 14px;
     font-family: var(--secondary-font-family);
     font-weight: 600;
     text-transform: uppercase;
@@ -547,7 +549,7 @@
 }
 
 .activity-compact-card__name {
-    font-size: 20px;
+    font-size: 22px;
     font-family: var(--primary-font-family);
     font-weight: 700;
     line-height: 1.15;
@@ -555,7 +557,7 @@
 }
 
 .activity-compact-card__description {
-    font-size: 14px;
+    font-size: 18px;
     font-family: var(--secondary-font-family);
     line-height: 1.6;
     color: var(--text-muted);

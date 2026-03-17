@@ -1,6 +1,8 @@
 .park-overview {
     display: grid;
     grid-template-columns: 40% 60%;
+
+    background-color: var(--accent-50);
 }
 
 .park-intro {
