@@ -1,19 +1,24 @@
 <div class="content-wrapper">
 
+    @if (variant === 'default') {
     <section class="section-header">
         <h1 class="section-title">Actividades disponibles</h1>
     </section>
+    }
 
     <section class="section-form-display">
         <article class="article article-regular-admission">
 
             @for (activity of activities; track activity.id) {
-            <div class="activity-card">
+            <div class="activity-card" [class.compact]="variant === 'compact'">
                 <div class="activity-card__content">
                     <h2>{{ activity.name }}</h2>
                     <p>{{ activity.description }}</p>
                     <p>Inicio: {{ activity.season }}</p>
+
+                    @if (variant === 'default') {
                     <p>Precio: {{ activity.price }} €</p>
+                    }
 
                     <button class="button submit-button-guest" (click)="enroll(activity.id)">
                         Inscribirse
@@ -25,6 +30,7 @@
             }
         </article>
 
+        @if (variant === 'default' && !isMember) {
         <article class="article article-member-admission">
 
             <span class="badge-member">
@@ -68,5 +74,6 @@
                 Hazte socio
             </button>
         </article>
+        }
     </section>
 </div>
