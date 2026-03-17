@@ -459,3 +459,204 @@
         text-align: center;
     }
 }
+
+/* ── Compact variant ─────────────────────────────────── */
+
+.activities-compact {
+    width: 100%;
+    padding: var(--space-8) var(--space-7);
+    display: grid;
+    gap: var(--space-7);
+    background-color: var(--background-subtle);
+}
+
+.activities-compact__header {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.activities-compact__eyebrow {
+    font-size: 11px;
+    font-family: var(--primary-font-family);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.14em;
+    color: var(--primary-color);
+    opacity: 0.6;
+}
+
+.activities-compact__title {
+    font-size: clamp(28px, 3.5vw, 38px);
+    font-family: var(--primary-font-family);
+    font-weight: 700;
+    color: var(--text-color);
+    line-height: 1.1;
+}
+
+.activities-compact__grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--space-5);
+}
+
+/* ── Compact card ────────────────────────────────────── */
+
+.activity-compact-card {
+    padding: var(--space-6) var(--space-5);
+
+    display: grid;
+    gap: var(--space-3);
+    align-content: start;
+
+    background-color: var(--background-color);
+
+    transition: background-color 0.25s ease;
+}
+
+.activity-compact-card:hover {
+    background-color: var(--background-muted);
+}
+
+.activity-compact-card__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding-bottom: var(--space-3);
+    border-bottom: 1px solid color-mix(in srgb, var(--text-color) 10%, transparent);
+}
+
+.activity-compact-card__index {
+    font-size: 28px;
+    font-family: var(--primary-font-family);
+    font-weight: 800;
+    line-height: 1;
+    color: var(--text-color);
+    opacity: 0.08;
+}
+
+.activity-compact-card__season {
+    font-size: 11px;
+    font-family: var(--secondary-font-family);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--primary-color);
+    opacity: 0.7;
+}
+
+.activity-compact-card__name {
+    font-size: 20px;
+    font-family: var(--primary-font-family);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--text-color);
+}
+
+.activity-compact-card__description {
+    font-size: 14px;
+    font-family: var(--secondary-font-family);
+    line-height: 1.6;
+    color: var(--text-muted);
+
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.activity-compact-card__cta {
+    justify-self: start;
+    margin-top: var(--space-2);
+    padding: var(--space-2) var(--space-5);
+
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    isolation: isolate;
+
+    font-size: 12px;
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+
+    color: var(--text-color);
+    background-color: transparent;
+    border: 2px solid var(--text-color);
+
+    cursor: pointer;
+    transition: color 0.2s ease-out;
+}
+
+.activity-compact-card__cta::before {
+    content: "";
+
+    height: 100%;
+    width: 0%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    background-color: var(--primary-color);
+
+    transition: width 0.2s ease-out;
+}
+
+.activity-compact-card__cta:hover {
+    color: var(--background-color);
+    border-color: var(--primary-color);
+}
+
+.activity-compact-card__cta:hover::before {
+    width: 100%;
+}
+
+.activity-compact-card__cta:active {
+    transform: scale(0.97);
+}
+
+/* ── Breakpoints compact ─────────────────────────────── */
+
+@media (max-width: 1024px) {
+    .activities-compact {
+        padding: var(--space-7) var(--space-5);
+    }
+}
+
+@media (max-width: 768px) {
+    .activities-compact {
+        padding: var(--space-6) var(--space-4);
+        gap: var(--space-5);
+    }
+
+    .activities-compact__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-3);
+    }
+
+    .activity-compact-card {
+        padding: var(--space-4) var(--space-4);
+    }
+
+    .activity-compact-card__index {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 480px) {
+    .activities-compact {
+        padding: var(--space-5) var(--space-3);
+    }
+
+    .activity-compact-card__name {
+        font-size: 18px;
+    }
+
+    .activity-compact-card__description {
+        font-size: 13px;
+    }
+}

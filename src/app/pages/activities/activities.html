@@ -6,19 +6,41 @@
     </section>
     }
 
+    @if (variant === 'compact') {
+    <section class="activities-compact">
+        <div class="activities-compact__header">
+            <span class="activities-compact__eyebrow">Temporada actual</span>
+            <h2 class="activities-compact__title">Actividades disponibles</h2>
+        </div>
+        <div class="activities-compact__grid">
+            @for (activity of activities; track activity.id; let i = $index) {
+            <article class="activity-compact-card">
+                <div class="activity-compact-card__top">
+                    <span class="activity-compact-card__index">{{ (i + 1).toString().padStart(2, '0') }}</span>
+                    <span class="activity-compact-card__season">{{ activity.season }}</span>
+                </div>
+                <h3 class="activity-compact-card__name">{{ activity.name }}</h3>
+                <p class="activity-compact-card__description">{{ activity.description }}</p>
+                <button class="activity-compact-card__cta" (click)="enroll(activity.id)">
+                    Inscribirse
+                </button>
+            </article>
+            }
+        </div>
+    </section>
+    }
+
+    @if (variant === 'default') {
     <section class="section-form-display">
         <article class="article article-regular-admission">
 
             @for (activity of activities; track activity.id) {
-            <div class="activity-card" [class.compact]="variant === 'compact'">
+            <div class="activity-card">
                 <div class="activity-card__content">
                     <h2>{{ activity.name }}</h2>
                     <p>{{ activity.description }}</p>
                     <p>Inicio: {{ activity.season }}</p>
-
-                    @if (variant === 'default') {
                     <p>Precio: {{ activity.price }} €</p>
-                    }
 
                     <button class="button submit-button-guest" (click)="enroll(activity.id)">
                         Inscribirse
@@ -30,7 +52,6 @@
             }
         </article>
 
-        @if (variant === 'default' && !isMember) {
         <article class="article article-member-admission">
 
             <span class="badge-member">
@@ -74,6 +95,7 @@
                 Hazte socio
             </button>
         </article>
-        }
     </section>
+    }
+
 </div>
