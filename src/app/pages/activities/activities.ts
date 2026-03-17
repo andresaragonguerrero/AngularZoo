@@ -1,4 +1,4 @@
-import { Component, computed, inject, OnInit } from '@angular/core';
+import { Component, computed, inject, Input, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 
 // Services
@@ -18,7 +18,10 @@ import { Activity } from '../../models/activity.interface';
 })
 
 export class ActivityComponent implements OnInit {
-  
+
+  @Input() limit?: number;
+  @Input() variant: 'default' | 'compact' = 'default';
+
   private readonly activityService = inject(ActivityService);
   private readonly authService = inject(AuthService);
   private readonly router = inject(Router);
