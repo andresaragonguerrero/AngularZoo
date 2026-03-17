@@ -39,7 +39,11 @@ export class ActivityComponent implements OnInit {
   private loadActivities(): void {
     this.activityService.getActivitiesForCurrentSeason()
       .subscribe(activities => {
-        this.activities = activities;
+
+        this.activities = this.limit
+          ? activities.slice(0, this.limit)
+          : activities;
+
       });
   }
 
