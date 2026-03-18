@@ -120,8 +120,8 @@
 .submit-button-guest {
     border: 1px solid var(--primary-color);
 
-    color: var(--primary-color);
-    background-color: var(--background-color);
+    color: var(--background-color);
+    background-color: var(--secondary-color);
 
     transition: color 0.2s ease;
 }
@@ -141,7 +141,7 @@
     left: 0;
     z-index: -1;
 
-    background-color: var(--primary-color);
+    background-color: var(--accent-color);
 
     transition: width 0.2s ease-out;
 }
@@ -155,14 +155,14 @@
 .submit-button-member {
     border: none;
 
-    color: var(--text-color);
+    color: var(--background-color);
     background-color: var(--accent-color);
 
     transition: color 0.2s ease;
 }
 
 .submit-button-member:hover {
-    color: var(--accent-color);
+    color: var(--background-color);
 }
 
 .submit-button-member::before {
@@ -176,7 +176,7 @@
     left: 0;
     z-index: -1;
 
-    background-color: var(--text-color);
+    background-color: var(--secondary-color);
 
     transition: width 0.2s ease-out;
 }
@@ -188,7 +188,7 @@
 .badge-member {
     position: absolute;
     padding: var(--space-1) var(--space-3);
-    top: calc(var(--space-4) * -1);
+    top: -16px;
     right: var(--space-4);
 
     border: 1px solid var(--accent-color);
@@ -198,8 +198,9 @@
     font-family: var(--secondary-font-family);
     font-weight: bold;
 
-    color: var(--text-color);
+    color: var(--background-color);
     background-color: var(--accent-color);
+
     box-shadow: var(--shadow-md);
 }
 

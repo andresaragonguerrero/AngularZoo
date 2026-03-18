@@ -41,11 +41,11 @@
 }
 
 .login-button::before {
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
 }
 
 .register-button::before {
-  background-color: var(--accent-color);
+  background-color: var(--secondary-color);
 }
 
 .link {
@@ -64,7 +64,7 @@
 }
 
 .register-button:hover .link {
-  color: var(--secondary-color);
+  color: var(--background-color);
 }
 
 .user-info {

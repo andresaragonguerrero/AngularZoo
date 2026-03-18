@@ -16,10 +16,8 @@
     justify-content: center;
     gap: var(--space-3);
 
-    border-bottom: 1px solid rgba(44, 95, 45, 0.12);
-    background: linear-gradient(to bottom,
-            rgba(44, 95, 45, 0.03) 0%,
-            transparent 100%);
+    border-bottom: 1px solid rgba(86, 102, 63, 0.15);
+    background: linear-gradient(to bottom, rgba(86, 102, 63, 0.04) 0%, transparent 100%);
 }
 
 .section-title {
@@ -78,7 +76,7 @@
 
     box-shadow: var(--shadow-md);
 
-    background-color: var(--secondary-400);
+    background-color: var(--secondary-color);
     overflow: hidden;
 
     transition: background-color 0.2s ease;
@@ -105,7 +103,7 @@
     font-size: 20px;
     font-family: var(--primary-font-family);
     font-weight: 700;
-    color: var(--secondary-50);
+    color: var(--background-color);
     line-height: 1.2;
 }
 
@@ -113,11 +111,11 @@
     font-size: 15px;
     font-family: var(--secondary-font-family);
     line-height: 1.6;
-    color: var(--secondary-50);
+    color: var(--background-color);
 }
 
 .activity-card__content p:first-of-type {
-    color: var(--primary-50);
+    color: var(--primary-100);
     opacity: 0.85;
 }
 
@@ -125,7 +123,7 @@
     font-size: 14px;
     text-transform: uppercase;
     letter-spacing: 0.06em;
-    color: var(--primary-50);
+    color: var(--primary-100);
     opacity: 0.85;
 }
 
@@ -133,7 +131,7 @@
     font-size: 18px;
     font-weight: 600;
     font-family: var(--primary-font-family);
-    color: var(--primary-50);
+    color: var(--background-color);
 }
 
 .submit-button-guest {
@@ -150,9 +148,9 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
 
-    color: var(--secondary-50);
+    color: var(--background-color);
+    border: 1px solid var(--background-color);
     background-color: transparent;
-    border: 1px solid var(--secondary-50);
 
     cursor: pointer;
     transition: color 0.2s ease;
@@ -169,14 +167,14 @@
     left: 0;
     z-index: -1;
 
-    background-color: var(--primary-color);
+    background-color: var(--secondary-700);
 
     transition: width 0.2s ease-out;
 }
 
 .submit-button-guest:hover {
     color: var(--background-color);
-    border-color: var(--primary-color);
+    border-color: var(--secondary-700);
 }
 
 .submit-button-guest:hover::before {
@@ -188,35 +186,34 @@
 }
 
 .activity-card:hover {
-    background-color: var(--secondary-50);
+    background-color: var(--background-color);
 }
 
 .activity-card:hover h2 {
-    color: var(--secondary-400);
+    color: var(--secondary-color);
 }
 
 .activity-card:hover p {
-    color: var(--secondary-400);
+    color: var(--secondary-color);
 }
 
 .activity-card:hover .submit-button-guest {
-    border: 1px solid var(--secondary-400);
-
-    color: var(--secondary-400);
+    border: 1px solid var(--secondary-color);
+    color: var(--secondary-color);
     background-color: transparent;
 
     transition: color 0.2s ease;
 }
 
 .activity-card:hover .submit-button-guest::before {
-    background-color: var(--secondary-400);
+    background-color: var(--secondary-color);
 
     transition: width 0.2s ease-out;
 }
 
 .activity-card:hover .submit-button-guest:hover {
     color: var(--background-color);
-    border-color: var(--secondary-400);
+    border-color: var(--secondary-color);
 }
 
 /* ── Article member ──────────────────────────────────── */
@@ -230,7 +227,7 @@
     display: grid;
     gap: var(--space-5);
 
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
 }
 
 .badge-member {
@@ -243,8 +240,10 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
 
-    color: var(--primary-900);
+    color: var(--secondary-900);
     background-color: var(--accent-color);
+
+    box-shadow: var(--shadow-sm);
 }
 
 .article-header {
@@ -275,8 +274,9 @@
     gap: var(--space-2);
 
     padding: var(--space-4) 0;
-    border-top: 1px solid var(--primary-400);
-    border-bottom: 1px solid var(--primary-400);
+
+    border-top: 1px solid var(--secondary-400);
+    border-bottom: 1px solid var(--secondary-400);
 }
 
 .article-content-row {
@@ -300,7 +300,7 @@
 .content-ticket-age {
     font-size: 15px;
     font-family: var(--secondary-font-family);
-    color: var(--primary-50);
+    color: var(--background-color);
     line-height: 1.5;
 }
 
@@ -320,9 +320,12 @@
     text-transform: uppercase;
     letter-spacing: 0.08em;
 
-    color: var(--primary-color);
+    border: none;
+
+    color: var(--secondary-900);
     background-color: var(--accent-color);
-    border: 2px solid var(--primary-color);
+
+    box-shadow: var(--shadow-sm);
 
     cursor: pointer;
     transition: color 0.2s ease-out;
@@ -339,9 +342,7 @@
     left: 0;
     z-index: -1;
 
-    border: 1px solid var(--accent-color);
-
-    background-color: var(--primary-color);
+    background-color: var(--secondary-700);
 
     transition: width 0.2s ease-out;
 }
@@ -482,7 +483,7 @@
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.14em;
-    color: var(--primary-color);
+    color: var(--secondary-color);
     opacity: 0.6;
 }
 
@@ -544,7 +545,7 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.1em;
-    color: var(--primary-color);
+    color: var(--text-color);
     opacity: 0.7;
 }
 
@@ -603,14 +604,14 @@
     left: 0;
     z-index: -1;
 
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
 
     transition: width 0.2s ease-out;
 }
 
 .activity-compact-card__cta:hover {
     color: var(--background-color);
-    border-color: var(--primary-color);
+    border-color: var(--secondary-color);
 }
 
 .activity-compact-card__cta:hover::before {

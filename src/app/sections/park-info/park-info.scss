@@ -2,7 +2,7 @@
     display: grid;
     grid-template-columns: 40% 60%;
 
-    background-color: var(--accent-50);
+    background-color: var(--background-color);
 }
 
 .park-intro {
@@ -21,7 +21,7 @@
 
     padding: 3px;
 
-    border: 2px solid var(--primary-color);
+    border: 2px solid var(--secondary-color);
     border-radius: 50%;
     object-fit: cover;
 
@@ -41,7 +41,7 @@
     font-family: var(--primary-font-family);
     text-align: center;
 
-    color: var(--primary-color);
+    color: var(--secondary-color);
 
     letter-spacing: -0.02em;
     line-height: 1.1;
@@ -64,14 +64,14 @@
     align-items: center;
     gap: var(--space-2);
 
-    color: var(--primary-color);
+    color: var(--secondary-color);
 
     cursor: pointer;
     transition: color 0.2s ease, gap 0.2s ease;
 }
 
 .intro-block:hover {
-    color: var(--primary-400);
+    color: var(--secondary-400);
     gap: var(--space-3);
 }
 
@@ -115,7 +115,7 @@
     grid-template-rows: 3rem auto 15rem;
     gap: var(--space-4);
 
-    background-color: var(--primary-color);
+    background-color: var(--secondary-color);
 }
 
 .section-heading {
@@ -154,7 +154,7 @@
 }
 
 .info-title-wrapper .svg-icon {
-    color: var(--accent-color);
+    color: var(--background-color);
     opacity: 0.85;
     transition: opacity 0.2s ease;
 }
@@ -164,7 +164,7 @@
     font-family: var(--primary-font-family);
     font-weight: light;
 
-    color: var(--accent-color);
+    color: var(--background-color);
     opacity: 0.9;
 }
 
@@ -174,7 +174,7 @@
     display: grid;
     gap: var(--space-4);
 
-    border-top: 2px solid var(--accent-color);
+    border-top: 2px solid var(--background-color);
 }
 
 .info-item {
@@ -182,7 +182,7 @@
     align-items: center;
     gap: var(--space-2);
 
-    color: var(--accent-color);
+    color: var(--background-color);
     opacity: 0.8;
 
     cursor: pointer;
@@ -207,7 +207,7 @@
     grid-template-rows: 3rem 1fr 5rem;
     gap: var(--space-4);
 
-    background-color: var(--primary-600);
+    background-color: var(--secondary-600);
 }
 
 .schedule-panel .info-block {
@@ -216,7 +216,7 @@
     display: grid;
     gap: var(--space-2);
 
-    color: var(--accent-color);
+    color: var(--background-color);
 }
 
 .info-block-row {
@@ -226,7 +226,7 @@
     justify-content: space-between;
     align-items: center;
 
-    border-bottom: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--background-color);
 
     transition: background-color 0.2s ease;
 }
@@ -242,7 +242,7 @@
 .info-block-content {
     font-size: 18px;
     font-family: var(--secondary-font-family);
-    color: var(--accent-100);
+    color: var(--primary-100);
 }
 
 .schedule-panel .info-block:last-child {
@@ -250,7 +250,7 @@
     align-items: center;
     gap: var(--space-2);
 
-    color: var(--accent-color);
+    color: var(--background-color);
     opacity: 0.75;
 
     cursor: pointer;

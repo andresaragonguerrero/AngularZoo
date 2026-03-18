@@ -28,14 +28,14 @@
 
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid var(--secondary-400);
+    border-bottom: 1px solid var(--secondary-700);
     outline: none;
 
     transition: border-color 0.2s ease;
 }
 
 .filters__search input[type="text"]::placeholder {
-    color: var(--secondary-400);
+    color: var(--secondary-700);
     font-style: italic;
 }
 
@@ -59,7 +59,7 @@
     color: var(--secondary-100);
 
     background-color: var(--secondary-700);
-    border: 1px solid var(--secondary-600);
+    border: 1px solid var(--secondary-700);
     outline: none;
 
     appearance: none;
@@ -75,17 +75,17 @@
 }
 
 .filters__controls select option {
-    background-color: var(--secondary-800);
+    background-color: var(--secondary-700);
     color: var(--secondary-100);
 }
 
 .filters__controls select:hover {
-    border-color: var(--secondary-400);
+    border-color: var(--accent-color);
 }
 
 .filters__controls select:focus {
-    border-color: var(--accent-600);
-    background-color: var(--secondary-800);
+    border-color: var(--accent-color);
+    background-color: var(--secondary-700);
 }
 
 .filters__clear {
@@ -97,10 +97,10 @@
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.08em;
-    color: var(--secondary-300);
+    color: var(--secondary-700);
 
     background-color: transparent;
-    border: 1px solid var(--secondary-500, var(--secondary-color));
+    border: 1px solid var(--secondary-700, var(--secondary-color));
 
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
@@ -109,7 +109,7 @@
 .filters__clear:hover {
     background-color: var(--secondary-700);
     color: var(--secondary-100);
-    border-color: var(--secondary-400);
+    border-color: var(--accent-color);
 }
 
 .filters__clear:active {
