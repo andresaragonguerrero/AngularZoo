@@ -149,6 +149,46 @@
   --link-hover: #FFAA55;
 }
 
+:root.high-contrast {
+  --primary-color: #f6efdc;
+  --secondary-color: #1a2a00;
+  --accent-color: #b34900;
+
+  --background-color: #ffffff;
+  --background-subtle: #f0f0f0;
+  --background-muted: #e0e0e0;
+
+  --surface-color: #ffffff;
+  --surface-hover: #e8e8e8;
+  --surface-raised: #f5f5f5;
+  --surface-overlay: rgba(255, 255, 255, 0.95);
+
+  --text-color: #000000;
+  --text-muted: #1a1a1a;
+  --text-subtle: #333333;
+  --text-inverse: #ffffff;
+
+  --success-color: #005a00;
+  --success-light: #e0f0e0;
+  --success-dark: #003300;
+
+  --error-color: #8b0000;
+  --error-light: #ffe0e0;
+  --error-dark: #5a0000;
+
+  --warning-color: #b34900;
+  --warning-light: #fff0e0;
+  --warning-dark: #7a3000;
+
+  --link-color: #b34900;
+  --link-hover: #7a3000;
+
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.25);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.35);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.45);
+  --shadow-xl: 1px 4px 6px rgba(0, 0, 0, 0.90);
+}
+
 .animal-list {
   isolation: isolate;
 }
