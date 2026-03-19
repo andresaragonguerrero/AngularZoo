@@ -2,8 +2,8 @@
     "courses": [
         {
             "id": "spring-bird-watching",
-            "name": "Bird Watching and Identification",
-            "description": "Learn to identify native and migratory bird species through observation and expert guidance.",
+            "name": "Observación e identificación de aves",
+            "description": "Aprende a identificar especies de aves nativas y migratorias mediante la observación y la guía de expertos.",
             "season": "SPRING",
             "startDate": "2026-03-15",
             "capacity": 20,
@@ -12,8 +12,8 @@
         },
         {
             "id": "spring-wildlife-photography",
-            "name": "Wildlife Photography Essentials",
-            "description": "Master the techniques of capturing stunning wildlife photography in natural settings.",
+            "name": "Fundamentos de fotografía de vida salvaje",
+            "description": "Domina las técnicas para capturar impresionantes fotografías de fauna en entornos naturales.",
             "season": "SPRING",
             "startDate": "2026-04-01",
             "capacity": 15,
@@ -22,8 +22,8 @@
         },
         {
             "id": "spring-conservation-talk",
-            "name": "Conservation Efforts for Endangered Species",
-            "description": "Discover how zoos contribute to protecting endangered species through breeding programs and habitat restoration.",
+            "name": "Conservación de especies en peligro",
+            "description": "Descubre cómo los zoológicos contribuyen a la protección de especies en peligro mediante programas de cría y restauración de hábitats.",
             "season": "SPRING",
             "startDate": "2026-03-22",
             "capacity": 25,
@@ -32,8 +32,8 @@
         },
         {
             "id": "spring-animal-behavior",
-            "name": "Animal Behavior and Ecology",
-            "description": "Study behavioral patterns and ecological relationships of diverse animal species.",
+            "name": "Comportamiento animal y ecología",
+            "description": "Estudia los patrones de comportamiento y las relaciones ecológicas de diversas especies animales.",
             "season": "SPRING",
             "startDate": "2026-04-10",
             "capacity": 22,
@@ -42,8 +42,8 @@
         },
         {
             "id": "spring-garden-biodiversity",
-            "name": "Zoo Garden and Plant Biodiversity",
-            "description": "Explore the botanical gardens and learn about plant species that support zoo habitats.",
+            "name": "Jardín del zoo y biodiversidad vegetal",
+            "description": "Explora los jardines botánicos y aprende sobre las especies vegetales que apoyan los hábitats del zoo.",
             "season": "SPRING",
             "startDate": "2026-05-05",
             "capacity": 18,
@@ -52,8 +52,8 @@
         },
         {
             "id": "summer-big-cats",
-            "name": "Big Cats: Lions and Tigers",
-            "description": "In-depth study of feline species including behavior, physiology, and conservation status.",
+            "name": "Grandes felinos: leones y tigres",
+            "description": "Estudio en profundidad de especies felinas, incluyendo comportamiento, fisiología y estado de conservación.",
             "season": "SUMMER",
             "startDate": "2026-06-10",
             "capacity": 25,
@@ -62,8 +62,8 @@
         },
         {
             "id": "summer-reptile-care",
-            "name": "Reptile Care and Handling",
-            "description": "Learn proper handling techniques and care requirements for reptiles and amphibians.",
+            "name": "Cuidado y manejo de reptiles",
+            "description": "Aprende técnicas adecuadas de manejo y cuidados de reptiles y anfibios.",
             "season": "SUMMER",
             "startDate": "2026-07-01",
             "capacity": 12,
@@ -72,8 +72,8 @@
         },
         {
             "id": "summer-aquatic-life",
-            "name": "Aquatic Life and Conservation",
-            "description": "Explore freshwater and marine ecosystems and their importance in global conservation.",
+            "name": "Vida acuática y conservación",
+            "description": "Explora ecosistemas de agua dulce y marinos y su importancia en la conservación global.",
             "season": "SUMMER",
             "startDate": "2026-06-20",
             "capacity": 20,
@@ -82,8 +82,8 @@
         },
         {
             "id": "summer-primate-study",
-            "name": "Primate Behavior and Cognition",
-            "description": "Investigate intelligence, social structures, and evolutionary connections of primates.",
+            "name": "Comportamiento y cognición de primates",
+            "description": "Investiga la inteligencia, estructuras sociales y conexiones evolutivas de los primates.",
             "season": "SUMMER",
             "startDate": "2026-07-15",
             "capacity": 18,
@@ -92,8 +92,8 @@
         },
         {
             "id": "summer-zoo-nutrition",
-            "name": "Zoo Animal Nutrition Masterclass",
-            "description": "Comprehensive guide to dietary requirements and nutritional management of diverse animal species.",
+            "name": "Nutrición animal en zoológicos",
+            "description": "Guía completa sobre necesidades dietéticas y gestión nutricional de diversas especies animales.",
             "season": "SUMMER",
             "startDate": "2026-08-01",
             "capacity": 16,
@@ -102,8 +102,8 @@
         },
         {
             "id": "autumn-migration-patterns",
-            "name": "Bird Migration Patterns",
-            "description": "Understanding seasonal migration routes, timing, and the threats migratory birds face.",
+            "name": "Patrones de migración de aves",
+            "description": "Comprende las rutas migratorias, su temporalidad y las amenazas que enfrentan las aves migratorias.",
             "season": "AUTUMN",
             "startDate": "2026-09-15",
             "capacity": 24,
@@ -112,8 +112,8 @@
         },
         {
             "id": "autumn-veterinary-basics",
-            "name": "Veterinary Care Basics",
-            "description": "Introduction to veterinary science and medical care provided in zoological facilities.",
+            "name": "Fundamentos de veterinaria",
+            "description": "Introducción a la ciencia veterinaria y al cuidado médico en instalaciones zoológicas.",
             "season": "AUTUMN",
             "startDate": "2026-10-01",
             "capacity": 14,
@@ -122,8 +122,8 @@
         },
         {
             "id": "autumn-habitat-restoration",
-            "name": "Habitat Restoration Techniques",
-            "description": "Learn methods to restore and maintain natural habitats both in and outside the zoo.",
+            "name": "Técnicas de restauración de hábitats",
+            "description": "Aprende métodos para restaurar y mantener hábitats naturales dentro y fuera del zoo.",
             "season": "AUTUMN",
             "startDate": "2026-09-20",
             "capacity": 19,
@@ -132,8 +132,8 @@
         },
         {
             "id": "autumn-endangered-species",
-            "name": "Endangered Species Protection Programs",
-            "description": "Explore global initiatives to protect critically endangered species from extinction.",
+            "name": "Programas de protección de especies en peligro",
+            "description": "Explora iniciativas globales para proteger especies en peligro crítico de extinción.",
             "season": "AUTUMN",
             "startDate": "2026-10-15",
             "capacity": 23,
@@ -142,8 +142,8 @@
         },
         {
             "id": "autumn-wildlife-conservation",
-            "name": "Wildlife Conservation Strategies",
-            "description": "Comprehensive overview of conservation strategies and their implementation worldwide.",
+            "name": "Estrategias de conservación de fauna",
+            "description": "Visión general de estrategias de conservación y su implementación a nivel mundial.",
             "season": "AUTUMN",
             "startDate": "2026-11-01",
             "capacity": 21,
@@ -152,8 +152,8 @@
         },
         {
             "id": "winter-arctic-animals",
-            "name": "Arctic Animals and Climate Change",
-            "description": "Study Arctic species and the impacts of climate change on polar ecosystems.",
+            "name": "Animales del Ártico y cambio climático",
+            "description": "Estudia especies árticas y el impacto del cambio climático en los ecosistemas polares.",
             "season": "WINTER",
             "startDate": "2026-12-10",
             "capacity": 22,
@@ -162,8 +162,8 @@
         },
         {
             "id": "winter-zoo-management",
-            "name": "Zoo Management and Operations",
-            "description": "Behind-the-scenes look at how zoos are managed, funded, and sustained.",
+            "name": "Gestión y operaciones de zoológicos",
+            "description": "Descubre cómo se gestionan, financian y mantienen los zoológicos.",
             "season": "WINTER",
             "startDate": "2026-01-15",
             "capacity": 17,
@@ -172,8 +172,8 @@
         },
         {
             "id": "winter-wildlife-genetics",
-            "name": "Wildlife Genetics and Evolution",
-            "description": "Explore genetic diversity, evolutionary biology, and selective breeding programs.",
+            "name": "Genética y evolución de la fauna",
+            "description": "Explora la diversidad genética, la biología evolutiva y los programas de cría selectiva.",
             "season": "WINTER",
             "startDate": "2026-12-20",
             "capacity": 16,
@@ -182,8 +182,8 @@
         },
         {
             "id": "winter-animal-enrichment",
-            "name": "Animal Enrichment and Welfare",
-            "description": "Discover how enrichment activities improve animal behavior and overall well-being.",
+            "name": "Enriquecimiento y bienestar animal",
+            "description": "Descubre cómo las actividades de enriquecimiento mejoran el comportamiento y bienestar animal.",
             "season": "WINTER",
             "startDate": "2026-01-25",
             "capacity": 20,
@@ -192,8 +192,8 @@
         },
         {
             "id": "winter-global-ecosystems",
-            "name": "Global Ecosystems and Biodiversity",
-            "description": "Survey of Earth's major ecosystems and the incredible biodiversity they support.",
+            "name": "Ecosistemas globales y biodiversidad",
+            "description": "Recorrido por los principales ecosistemas de la Tierra y la biodiversidad que albergan.",
             "season": "WINTER",
             "startDate": "2026-02-10",
             "capacity": 26,
@@ -204,64 +204,64 @@
     "activities": [
         {
             "id": "spring-animal-encounters",
-            "name": "Meet and Greet with Zoo Animals",
-            "description": "Interactive meet and greet session with friendly zoo animals suitable for all ages.",
+            "name": "Encuentro con animales del zoo",
+            "description": "Sesión interactiva para conocer de cerca animales del zoo, apta para todas las edades.",
             "season": "SPRING",
             "daysOfWeek": [
                 "MONDAY",
                 "WEDNESDAY"
             ],
             "time": "15:00",
-            "location": "Educational Room",
+            "location": "Aula educativa",
             "price": 12,
             "isFreeForMembers": true
         },
         {
             "id": "spring-guided-safari",
-            "name": "Guided Safari Tour",
-            "description": "Led tour through the zoo exploring major animal habitats and learning about species.",
+            "name": "Safari guiado",
+            "description": "Recorrido guiado por el zoo explorando hábitats y aprendiendo sobre las especies.",
             "season": "SPRING",
             "daysOfWeek": [
                 "TUESDAY",
                 "THURSDAY"
             ],
             "time": "16:00",
-            "location": "Savannah Zone",
+            "location": "Zona sabana",
             "price": 8,
             "isFreeForMembers": false
         },
         {
             "id": "spring-nature-walk",
-            "name": "Nature Walk and Bird Spotting",
-            "description": "Peaceful walk through natural areas of the zoo focusing on bird identification.",
+            "name": "Paseo natural y observación de aves",
+            "description": "Recorrido tranquilo centrado en la identificación de aves en entornos naturales.",
             "season": "SPRING",
             "daysOfWeek": [
                 "SATURDAY",
                 "SUNDAY"
             ],
             "time": "20:00",
-            "location": "Aviary and Gardens",
+            "location": "Aviario y jardines",
             "price": 0,
             "isFreeForMembers": true
         },
         {
             "id": "spring-educational-talk",
-            "name": "Educational Talk on Wildlife",
-            "description": "Expert-led presentation on wildlife facts and zoo conservation missions.",
+            "name": "Charla educativa sobre fauna",
+            "description": "Presentación dirigida por expertos sobre fauna y conservación.",
             "season": "SPRING",
             "daysOfWeek": [
                 "WEDNESDAY",
                 "FRIDAY"
             ],
             "time": "15:30",
-            "location": "Amphitheater",
+            "location": "Anfiteatro",
             "price": 5,
             "isFreeForMembers": true
         },
         {
             "id": "spring-children-zoo-camp",
-            "name": "Children's Zoo Camp Activities",
-            "description": "Fun and educational activities designed specifically for children ages 5-12.",
+            "name": "Actividades infantiles del zoo",
+            "description": "Actividades educativas y divertidas para niños de 5 a 12 años.",
             "season": "SPRING",
             "daysOfWeek": [
                 "MONDAY",
@@ -269,28 +269,28 @@
                 "WEDNESDAY"
             ],
             "time": "16:30",
-            "location": "Kids Zone",
+            "location": "Zona infantil",
             "price": 10,
             "isFreeForMembers": false
         },
         {
             "id": "summer-big-cat-experience",
-            "name": "Big Cat Feeding Experience",
-            "description": "Observe and learn about feeding behaviors of lions, tigers, and other large felines.",
+            "name": "Experiencia de alimentación de grandes felinos",
+            "description": "Observa y aprende sobre la alimentación de leones, tigres y otros felinos.",
             "season": "SUMMER",
             "daysOfWeek": [
                 "TUESDAY",
                 "FRIDAY"
             ],
             "time": "17:00",
-            "location": "Big Cat Enclosure",
+            "location": "Zona de grandes felinos",
             "price": 15,
             "isFreeForMembers": false
         },
         {
             "id": "summer-aquarium-tour",
-            "name": "Guided Aquarium Tour",
-            "description": "In-depth exploration of aquatic ecosystems and marine species conservation.",
+            "name": "Visita guiada al acuario",
+            "description": "Exploración en profundidad de ecosistemas acuáticos y conservación marina.",
             "season": "SUMMER",
             "daysOfWeek": [
                 "MONDAY",
@@ -298,42 +298,42 @@
                 "SATURDAY"
             ],
             "time": "16:30",
-            "location": "Aquarium",
+            "location": "Acuario",
             "price": 7,
             "isFreeForMembers": true
         },
         {
             "id": "summer-reptile-show",
-            "name": "Reptile Handling Show",
-            "description": "Educational demonstration featuring live reptile handling and fascinating facts.",
+            "name": "Espectáculo de reptiles",
+            "description": "Demostración educativa con reptiles en vivo y datos curiosos.",
             "season": "SUMMER",
             "daysOfWeek": [
                 "THURSDAY",
                 "SATURDAY"
             ],
             "time": "18:00",
-            "location": "Reptile House",
+            "location": "Casa de reptiles",
             "price": 12,
             "isFreeForMembers": false
         },
         {
             "id": "summer-primate-observation",
-            "name": "Primate Observation Session",
-            "description": "Guided observation of primate behavior and social interactions in their habitat.",
+            "name": "Observación de primates",
+            "description": "Sesión guiada sobre comportamiento y vida social de primates.",
             "season": "SUMMER",
             "daysOfWeek": [
                 "MONDAY",
                 "FRIDAY"
             ],
             "time": "21:00",
-            "location": "Primate Area",
+            "location": "Zona de primates",
             "price": 10,
             "isFreeForMembers": true
         },
         {
             "id": "summer-junior-zookeeper",
-            "name": "Junior Zookeeper Program",
-            "description": "Interactive program where children can learn zookeeper duties and care techniques.",
+            "name": "Programa de joven cuidador",
+            "description": "Programa interactivo donde los niños aprenden tareas de cuidado animal.",
             "season": "SUMMER",
             "daysOfWeek": [
                 "TUESDAY",
@@ -341,28 +341,28 @@
                 "SATURDAY"
             ],
             "time": "19:00",
-            "location": "Educational Room",
+            "location": "Aula educativa",
             "price": 18,
             "isFreeForMembers": false
         },
         {
             "id": "autumn-photography-walk",
-            "name": "Photography Walk with Guide",
-            "description": "Early morning guided walk optimized for wildlife photography enthusiasts.",
+            "name": "Paseo fotográfico guiado",
+            "description": "Recorrido matutino optimizado para fotografía de fauna.",
             "season": "AUTUMN",
             "daysOfWeek": [
                 "SATURDAY",
                 "SUNDAY"
             ],
             "time": "20:30",
-            "location": "Various Zones",
+            "location": "Varias zonas",
             "price": 14,
             "isFreeForMembers": false
         },
         {
             "id": "autumn-evening-stroll",
-            "name": "Evening Wildlife Hunt",
-            "description": "Evening tour observing nocturnal animal activities and twilight behaviors.",
+            "name": "Ruta nocturna de fauna",
+            "description": "Tour nocturno observando animales activos al atardecer.",
             "season": "AUTUMN",
             "daysOfWeek": [
                 "TUESDAY",
@@ -370,83 +370,83 @@
                 "FRIDAY"
             ],
             "time": "19:00",
-            "location": "Nocturnal Zone",
+            "location": "Zona nocturna",
             "price": 9,
             "isFreeForMembers": true
         },
         {
             "id": "autumn-educational-workshop",
-            "name": "Educational Wildlife Workshop",
-            "description": "Interactive workshop covering wildlife facts, conservation, and ecology.",
+            "name": "Taller educativo de fauna",
+            "description": "Taller interactivo sobre fauna, conservación y ecología.",
             "season": "AUTUMN",
             "daysOfWeek": [
                 "MONDAY",
                 "WEDNESDAY"
             ],
             "time": "15:30",
-            "location": "Educational Room",
+            "location": "Aula educativa",
             "price": 6,
             "isFreeForMembers": true
         },
         {
             "id": "autumn-animal-care-demo",
-            "name": "Animal Care Demonstration",
-            "description": "Watch zookeepers demonstrate daily care and feeding routines for various animals.",
+            "name": "Demostración de cuidado animal",
+            "description": "Observa cómo los cuidadores realizan tareas diarias de alimentación y cuidado.",
             "season": "AUTUMN",
             "daysOfWeek": [
                 "WEDNESDAY",
                 "SUNDAY"
             ],
             "time": "16:00",
-            "location": "Amphitheater",
+            "location": "Anfiteatro",
             "price": 0,
             "isFreeForMembers": true
         },
         {
             "id": "autumn-nature-sketching",
-            "name": "Nature Sketching Class",
-            "description": "Artistic class combining nature observation with sketching and drawing techniques.",
+            "name": "Clase de dibujo de naturaleza",
+            "description": "Clase artística combinando observación de la naturaleza y dibujo.",
             "season": "AUTUMN",
             "daysOfWeek": [
                 "SATURDAY"
             ],
             "time": "17:30",
-            "location": "Gardens",
+            "location": "Jardines",
             "price": 11,
             "isFreeForMembers": false
         },
         {
             "id": "winter-arctic-talk",
-            "name": "Arctic Animals Talk and Presentation",
-            "description": "Fascinating presentation about polar species and Arctic ecosystem conservation.",
+            "name": "Charla sobre animales del Ártico",
+            "description": "Presentación sobre especies polares y conservación del Ártico.",
             "season": "WINTER",
             "daysOfWeek": [
                 "MONDAY",
                 "WEDNESDAY"
             ],
             "time": "19:00",
-            "location": "Amphitheater",
+            "location": "Anfiteatro",
             "price": 5,
             "isFreeForMembers": true
         },
         {
             "id": "winter-indoor-aquatic",
-            "name": "Indoor Aquatic Center Tour",
-            "description": "Guided tour of indoor aquatic facilities and climate-controlled habitats.",
+            "name": "Visita al centro acuático interior",
+            "description": "Recorrido por instalaciones acuáticas interiores y hábitats controlados.",
             "season": "WINTER",
             "daysOfWeek": [
                 "TUESDAY",
                 "THURSDAY"
             ],
             "time": "15:00",
-            "location": "Aquarium",
+            "location": "Acuario",
             "price": 8,
             "isFreeForMembers": true
         },
         {
             "id": "winter-holiday-lights",
-            "name": "Holiday Lights and Zoo Tour",
-            "description": "Evening tour celebrating seasonal decorations and festive zoo atmosphere.",
+            "name": "Tour de luces navideñas",
+            "description": "Recorrido nocturno con decoración festiva en el zoo.",
             "season": "WINTER",
             "daysOfWeek": [
                 "FRIDAY",
@@ -454,34 +454,34 @@
                 "SUNDAY"
             ],
             "time": "18:00",
-            "location": "Various Zones",
+            "location": "Varias zonas",
             "price": 13,
             "isFreeForMembers": false
         },
         {
             "id": "winter-animal-wellness",
-            "name": "Animal Wellness and Health Talk",
-            "description": "Educational session on how zoos ensure animal health, nutrition, and well-being.",
+            "name": "Charla sobre bienestar animal",
+            "description": "Sesión sobre salud, nutrición y bienestar en zoológicos.",
             "season": "WINTER",
             "daysOfWeek": [
                 "MONDAY",
                 "FRIDAY"
             ],
             "time": "16:00",
-            "location": "Educational Room",
+            "location": "Aula educativa",
             "price": 0,
             "isFreeForMembers": true
         },
         {
             "id": "winter-conservation-film",
-            "name": "Conservation Documentary Film Screening",
-            "description": "Screening of award-winning conservation and wildlife documentary films.",
+            "name": "Proyección de documental de conservación",
+            "description": "Proyección de documentales premiados sobre fauna y conservación.",
             "season": "WINTER",
             "daysOfWeek": [
                 "THURSDAY"
             ],
             "time": "17:30",
-            "location": "Theater",
+            "location": "Teatro",
             "price": 16,
             "isFreeForMembers": false
         }
