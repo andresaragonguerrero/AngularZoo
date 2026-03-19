@@ -13,6 +13,7 @@ import { ActivityComponent } from './pages/activities/activities';
 import { CoursePurchase } from './pages/course-purchase/course-purchase';
 import { ActivityPurchase } from './pages/activity-purchase/activity-purchase';
 import { FavoriteAnimals } from './pages/favorite-animals/favorite-animals';
+import { ComingSoon } from './pages/coming-soon/coming-soon';
 
 // Guards
 import { AuthGuard } from './guards/auth';
@@ -76,6 +77,10 @@ export const routes: Routes = [
     path: 'animals/:id',
     loadComponent: () =>
       import('./pages/animal-detail/animal-detail').then(m => m.AnimalDetail)
+  },
+  {
+    path: 'coming-soon',
+    component: ComingSoon
   },
   {
     path: '**',

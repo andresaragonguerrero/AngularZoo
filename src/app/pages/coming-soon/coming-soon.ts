@@ -3,14 +3,14 @@ import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
-  selector: 'app-footer',
+  selector: 'app-coming-soon',
   imports: [
     CommonModule,
     RouterModule,
   ],
-  templateUrl: './footer.html',
-  styleUrl: './footer.scss',
+  templateUrl: './coming-soon.html',
+  styleUrl: './coming-soon.scss',
 })
-export class Footer {
+export class ComingSoon {
 
 }

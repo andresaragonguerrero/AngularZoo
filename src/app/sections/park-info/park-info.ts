@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 
 // Componentes
 import { ScheduleActivities } from '../../components/schedule-activities/schedule-activities';
@@ -6,6 +8,8 @@ import { ScheduleActivities } from '../../components/schedule-activities/schedul
 @Component({
   selector: 'app-park-info',
   imports: [
+    CommonModule,
+    RouterModule,
     ScheduleActivities,
   ],
   templateUrl: './park-info.html',
