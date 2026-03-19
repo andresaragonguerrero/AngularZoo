@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 import { Season } from '../models/season.enum';
 
-@Pipe({ name: 'seasonLabel' })
+@Pipe({ name: 'seasonLabel', standalone: true })
 export class SeasonPipe implements PipeTransform {
     transform(value: Season): string {
         const map: Record<Season, string> = {

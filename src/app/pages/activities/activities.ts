@@ -1,17 +1,21 @@
 import { Component, computed, inject, Input, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 
-// Services
+// servicios
 import { ActivityService } from '../../services/activity.service';
 import { AuthService } from '../../services/auth.service';
 
-// Models
+// modelos
 import { Activity } from '../../models/activity.interface';
+
+// pipes
+import { SeasonPipe } from '../../pipes/season.pipe';
 
 @Component({
   selector: 'app-activities',
   imports: [
     RouterModule,
+    SeasonPipe,
   ],
   templateUrl: './activities.html',
   styleUrl: './activities.scss',

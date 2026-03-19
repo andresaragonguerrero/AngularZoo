@@ -17,7 +17,7 @@
             <article class="activity-compact-card">
                 <div class="activity-compact-card__top">
                     <span class="activity-compact-card__index">{{ (i + 1).toString().padStart(2, '0') }}</span>
-                    <span class="activity-compact-card__season">{{ activity.season }}</span>
+                    <span class="activity-compact-card__season">{{ activity.season | seasonLabel }}</span>
                 </div>
                 <h3 class="activity-compact-card__name">{{ activity.name }}</h3>
                 <p class="activity-compact-card__description">{{ activity.description }}</p>
@@ -39,7 +39,7 @@
                 <div class="activity-card__content">
                     <h2>{{ activity.name }}</h2>
                     <p>{{ activity.description }}</p>
-                    <p>Inicio: {{ activity.season }}</p>
+                    <p>Inicio: {{ activity.season | seasonLabel }}</p>
                     <p>Precio: {{ activity.price }} €</p>
 
                     <button class="button submit-button-guest" (click)="enroll(activity.id)">
