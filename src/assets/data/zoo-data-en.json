@@ -1,0 +1,489 @@
+{
+    "courses": [
+        {
+            "id": "spring-bird-watching",
+            "name": "Bird Watching and Identification",
+            "description": "Learn to identify native and migratory bird species through observation and expert guidance.",
+            "season": "SPRING",
+            "startDate": "2026-03-15",
+            "capacity": 20,
+            "price": 35,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "spring-wildlife-photography",
+            "name": "Wildlife Photography Essentials",
+            "description": "Master the techniques of capturing stunning wildlife photography in natural settings.",
+            "season": "SPRING",
+            "startDate": "2026-04-01",
+            "capacity": 15,
+            "price": 45,
+            "isFreeForMembers": false
+        },
+        {
+            "id": "spring-conservation-talk",
+            "name": "Conservation Efforts for Endangered Species",
+            "description": "Discover how zoos contribute to protecting endangered species through breeding programs and habitat restoration.",
+            "season": "SPRING",
+            "startDate": "2026-03-22",
+            "capacity": 25,
+            "price": 25,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "spring-animal-behavior",
+            "name": "Animal Behavior and Ecology",
+            "description": "Study behavioral patterns and ecological relationships of diverse animal species.",
+            "season": "SPRING",
+            "startDate": "2026-04-10",
+            "capacity": 22,
+            "price": 40,
+            "isFreeForMembers": false
+        },
+        {
+            "id": "spring-garden-biodiversity",
+            "name": "Zoo Garden and Plant Biodiversity",
+            "description": "Explore the botanical gardens and learn about plant species that support zoo habitats.",
+            "season": "SPRING",
+            "startDate": "2026-05-05",
+            "capacity": 18,
+            "price": 30,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "summer-big-cats",
+            "name": "Big Cats: Lions and Tigers",
+            "description": "In-depth study of feline species including behavior, physiology, and conservation status.",
+            "season": "SUMMER",
+            "startDate": "2026-06-10",
+            "capacity": 25,
+            "price": 50,
+            "isFreeForMembers": false
+        },
+        {
+            "id": "summer-reptile-care",
+            "name": "Reptile Care and Handling",
+            "description": "Learn proper handling techniques and care requirements for reptiles and amphibians.",
+            "season": "SUMMER",
+            "startDate": "2026-07-01",
+            "capacity": 12,
+            "price": 55,
+            "isFreeForMembers": false
+        },
+        {
+            "id": "summer-aquatic-life",
+            "name": "Aquatic Life and Conservation",
+            "description": "Explore freshwater and marine ecosystems and their importance in global conservation.",
+            "season": "SUMMER",
+            "startDate": "2026-06-20",
+            "capacity": 20,
+            "price": 35,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "summer-primate-study",
+            "name": "Primate Behavior and Cognition",
+            "description": "Investigate intelligence, social structures, and evolutionary connections of primates.",
+            "season": "SUMMER",
+            "startDate": "2026-07-15",
+            "capacity": 18,
+            "price": 45,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "summer-zoo-nutrition",
+            "name": "Zoo Animal Nutrition Masterclass",
+            "description": "Comprehensive guide to dietary requirements and nutritional management of diverse animal species.",
+            "season": "SUMMER",
+            "startDate": "2026-08-01",
+            "capacity": 16,
+            "price": 60,
+            "isFreeForMembers": false
+        },
+        {
+            "id": "autumn-migration-patterns",
+            "name": "Bird Migration Patterns",
+            "description": "Understanding seasonal migration routes, timing, and the threats migratory birds face.",
+            "season": "AUTUMN",
+            "startDate": "2026-09-15",
+            "capacity": 24,
+            "price": 38,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "autumn-veterinary-basics",
+            "name": "Veterinary Care Basics",
+            "description": "Introduction to veterinary science and medical care provided in zoological facilities.",
+            "season": "AUTUMN",
+            "startDate": "2026-10-01",
+            "capacity": 14,
+            "price": 52,
+            "isFreeForMembers": false
+        },
+        {
+            "id": "autumn-habitat-restoration",
+            "name": "Habitat Restoration Techniques",
+            "description": "Learn methods to restore and maintain natural habitats both in and outside the zoo.",
+            "season": "AUTUMN",
+            "startDate": "2026-09-20",
+            "capacity": 19,
+            "price": 42,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "autumn-endangered-species",
+            "name": "Endangered Species Protection Programs",
+            "description": "Explore global initiatives to protect critically endangered species from extinction.",
+            "season": "AUTUMN",
+            "startDate": "2026-10-15",
+            "capacity": 23,
+            "price": 48,
+            "isFreeForMembers": false
+        },
+        {
+            "id": "autumn-wildlife-conservation",
+            "name": "Wildlife Conservation Strategies",
+            "description": "Comprehensive overview of conservation strategies and their implementation worldwide.",
+            "season": "AUTUMN",
+            "startDate": "2026-11-01",
+            "capacity": 21,
+            "price": 32,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "winter-arctic-animals",
+            "name": "Arctic Animals and Climate Change",
+            "description": "Study Arctic species and the impacts of climate change on polar ecosystems.",
+            "season": "WINTER",
+            "startDate": "2026-12-10",
+            "capacity": 22,
+            "price": 44,
+            "isFreeForMembers": false
+        },
+        {
+            "id": "winter-zoo-management",
+            "name": "Zoo Management and Operations",
+            "description": "Behind-the-scenes look at how zoos are managed, funded, and sustained.",
+            "season": "WINTER",
+            "startDate": "2026-01-15",
+            "capacity": 17,
+            "price": 36,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "winter-wildlife-genetics",
+            "name": "Wildlife Genetics and Evolution",
+            "description": "Explore genetic diversity, evolutionary biology, and selective breeding programs.",
+            "season": "WINTER",
+            "startDate": "2026-12-20",
+            "capacity": 16,
+            "price": 58,
+            "isFreeForMembers": false
+        },
+        {
+            "id": "winter-animal-enrichment",
+            "name": "Animal Enrichment and Welfare",
+            "description": "Discover how enrichment activities improve animal behavior and overall well-being.",
+            "season": "WINTER",
+            "startDate": "2026-01-25",
+            "capacity": 20,
+            "price": 28,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "winter-global-ecosystems",
+            "name": "Global Ecosystems and Biodiversity",
+            "description": "Survey of Earth's major ecosystems and the incredible biodiversity they support.",
+            "season": "WINTER",
+            "startDate": "2026-02-10",
+            "capacity": 26,
+            "price": 34,
+            "isFreeForMembers": false
+        }
+    ],
+    "activities": [
+        {
+            "id": "spring-animal-encounters",
+            "name": "Meet and Greet with Zoo Animals",
+            "description": "Interactive meet and greet session with friendly zoo animals suitable for all ages.",
+            "season": "SPRING",
+            "daysOfWeek": [
+                "MONDAY",
+                "WEDNESDAY"
+            ],
+            "time": "15:00",
+            "location": "Educational Room",
+            "price": 12,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "spring-guided-safari",
+            "name": "Guided Safari Tour",
+            "description": "Led tour through the zoo exploring major animal habitats and learning about species.",
+            "season": "SPRING",
+            "daysOfWeek": [
+                "TUESDAY",
+                "THURSDAY"
+            ],
+            "time": "16:00",
+            "location": "Savannah Zone",
+            "price": 8,
+            "isFreeForMembers": false
+        },
+        {
+            "id": "spring-nature-walk",
+            "name": "Nature Walk and Bird Spotting",
+            "description": "Peaceful walk through natural areas of the zoo focusing on bird identification.",
+            "season": "SPRING",
+            "daysOfWeek": [
+                "SATURDAY",
+                "SUNDAY"
+            ],
+            "time": "20:00",
+            "location": "Aviary and Gardens",
+            "price": 0,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "spring-educational-talk",
+            "name": "Educational Talk on Wildlife",
+            "description": "Expert-led presentation on wildlife facts and zoo conservation missions.",
+            "season": "SPRING",
+            "daysOfWeek": [
+                "WEDNESDAY",
+                "FRIDAY"
+            ],
+            "time": "15:30",
+            "location": "Amphitheater",
+            "price": 5,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "spring-children-zoo-camp",
+            "name": "Children's Zoo Camp Activities",
+            "description": "Fun and educational activities designed specifically for children ages 5-12.",
+            "season": "SPRING",
+            "daysOfWeek": [
+                "MONDAY",
+                "TUESDAY",
+                "WEDNESDAY"
+            ],
+            "time": "16:30",
+            "location": "Kids Zone",
+            "price": 10,
+            "isFreeForMembers": false
+        },
+        {
+            "id": "summer-big-cat-experience",
+            "name": "Big Cat Feeding Experience",
+            "description": "Observe and learn about feeding behaviors of lions, tigers, and other large felines.",
+            "season": "SUMMER",
+            "daysOfWeek": [
+                "TUESDAY",
+                "FRIDAY"
+            ],
+            "time": "17:00",
+            "location": "Big Cat Enclosure",
+            "price": 15,
+            "isFreeForMembers": false
+        },
+        {
+            "id": "summer-aquarium-tour",
+            "name": "Guided Aquarium Tour",
+            "description": "In-depth exploration of aquatic ecosystems and marine species conservation.",
+            "season": "SUMMER",
+            "daysOfWeek": [
+                "MONDAY",
+                "WEDNESDAY",
+                "SATURDAY"
+            ],
+            "time": "16:30",
+            "location": "Aquarium",
+            "price": 7,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "summer-reptile-show",
+            "name": "Reptile Handling Show",
+            "description": "Educational demonstration featuring live reptile handling and fascinating facts.",
+            "season": "SUMMER",
+            "daysOfWeek": [
+                "THURSDAY",
+                "SATURDAY"
+            ],
+            "time": "18:00",
+            "location": "Reptile House",
+            "price": 12,
+            "isFreeForMembers": false
+        },
+        {
+            "id": "summer-primate-observation",
+            "name": "Primate Observation Session",
+            "description": "Guided observation of primate behavior and social interactions in their habitat.",
+            "season": "SUMMER",
+            "daysOfWeek": [
+                "MONDAY",
+                "FRIDAY"
+            ],
+            "time": "21:00",
+            "location": "Primate Area",
+            "price": 10,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "summer-junior-zookeeper",
+            "name": "Junior Zookeeper Program",
+            "description": "Interactive program where children can learn zookeeper duties and care techniques.",
+            "season": "SUMMER",
+            "daysOfWeek": [
+                "TUESDAY",
+                "THURSDAY",
+                "SATURDAY"
+            ],
+            "time": "19:00",
+            "location": "Educational Room",
+            "price": 18,
+            "isFreeForMembers": false
+        },
+        {
+            "id": "autumn-photography-walk",
+            "name": "Photography Walk with Guide",
+            "description": "Early morning guided walk optimized for wildlife photography enthusiasts.",
+            "season": "AUTUMN",
+            "daysOfWeek": [
+                "SATURDAY",
+                "SUNDAY"
+            ],
+            "time": "20:30",
+            "location": "Various Zones",
+            "price": 14,
+            "isFreeForMembers": false
+        },
+        {
+            "id": "autumn-evening-stroll",
+            "name": "Evening Wildlife Hunt",
+            "description": "Evening tour observing nocturnal animal activities and twilight behaviors.",
+            "season": "AUTUMN",
+            "daysOfWeek": [
+                "TUESDAY",
+                "THURSDAY",
+                "FRIDAY"
+            ],
+            "time": "19:00",
+            "location": "Nocturnal Zone",
+            "price": 9,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "autumn-educational-workshop",
+            "name": "Educational Wildlife Workshop",
+            "description": "Interactive workshop covering wildlife facts, conservation, and ecology.",
+            "season": "AUTUMN",
+            "daysOfWeek": [
+                "MONDAY",
+                "WEDNESDAY"
+            ],
+            "time": "15:30",
+            "location": "Educational Room",
+            "price": 6,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "autumn-animal-care-demo",
+            "name": "Animal Care Demonstration",
+            "description": "Watch zookeepers demonstrate daily care and feeding routines for various animals.",
+            "season": "AUTUMN",
+            "daysOfWeek": [
+                "WEDNESDAY",
+                "SUNDAY"
+            ],
+            "time": "16:00",
+            "location": "Amphitheater",
+            "price": 0,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "autumn-nature-sketching",
+            "name": "Nature Sketching Class",
+            "description": "Artistic class combining nature observation with sketching and drawing techniques.",
+            "season": "AUTUMN",
+            "daysOfWeek": [
+                "SATURDAY"
+            ],
+            "time": "17:30",
+            "location": "Gardens",
+            "price": 11,
+            "isFreeForMembers": false
+        },
+        {
+            "id": "winter-arctic-talk",
+            "name": "Arctic Animals Talk and Presentation",
+            "description": "Fascinating presentation about polar species and Arctic ecosystem conservation.",
+            "season": "WINTER",
+            "daysOfWeek": [
+                "MONDAY",
+                "WEDNESDAY"
+            ],
+            "time": "19:00",
+            "location": "Amphitheater",
+            "price": 5,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "winter-indoor-aquatic",
+            "name": "Indoor Aquatic Center Tour",
+            "description": "Guided tour of indoor aquatic facilities and climate-controlled habitats.",
+            "season": "WINTER",
+            "daysOfWeek": [
+                "TUESDAY",
+                "THURSDAY"
+            ],
+            "time": "15:00",
+            "location": "Aquarium",
+            "price": 8,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "winter-holiday-lights",
+            "name": "Holiday Lights and Zoo Tour",
+            "description": "Evening tour celebrating seasonal decorations and festive zoo atmosphere.",
+            "season": "WINTER",
+            "daysOfWeek": [
+                "FRIDAY",
+                "SATURDAY",
+                "SUNDAY"
+            ],
+            "time": "18:00",
+            "location": "Various Zones",
+            "price": 13,
+            "isFreeForMembers": false
+        },
+        {
+            "id": "winter-animal-wellness",
+            "name": "Animal Wellness and Health Talk",
+            "description": "Educational session on how zoos ensure animal health, nutrition, and well-being.",
+            "season": "WINTER",
+            "daysOfWeek": [
+                "MONDAY",
+                "FRIDAY"
+            ],
+            "time": "16:00",
+            "location": "Educational Room",
+            "price": 0,
+            "isFreeForMembers": true
+        },
+        {
+            "id": "winter-conservation-film",
+            "name": "Conservation Documentary Film Screening",
+            "description": "Screening of award-winning conservation and wildlife documentary films.",
+            "season": "WINTER",
+            "daysOfWeek": [
+                "THURSDAY"
+            ],
+            "time": "17:30",
+            "location": "Theater",
+            "price": 16,
+            "isFreeForMembers": false
+        }
+    ]
+}
