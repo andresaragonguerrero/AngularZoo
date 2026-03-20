@@ -1,0 +1,144 @@
+.modal-backdrop {
+    position: fixed;
+    inset: 0;
+    z-index: 300;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(20, 20, 16, 0.65);
+}
+
+.modal {
+    width: min(480px, 90vw);
+    padding: var(--space-7) var(--space-6);
+    display: grid;
+    gap: var(--space-5);
+    background-color: var(--background-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.modal h2 {
+    font-size: 22px;
+    font-family: var(--primary-font-family);
+    font-weight: 700;
+    color: var(--text-color);
+    padding-bottom: var(--space-3);
+    border-bottom: 2px solid var(--accent-color);
+}
+
+.modal p {
+    font-size: 15px;
+    font-family: var(--secondary-font-family);
+    color: var(--text-muted);
+}
+
+.modal p strong {
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.modal ul {
+    display: grid;
+    gap: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    background-color: var(--background-subtle);
+}
+
+.modal ul li {
+    font-size: 15px;
+    font-family: var(--secondary-font-family);
+    color: var(--text-color);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.modal ul li::before {
+    content: "";
+    flex-shrink: 0;
+    width: 5px;
+    height: 5px;
+    background-color: var(--accent-color);
+    border-radius: 50%;
+}
+
+.modal h3 {
+    font-size: 20px;
+    font-family: var(--primary-font-family);
+    font-weight: 700;
+    color: var(--secondary-color);
+}
+
+.actions {
+    display: flex;
+    gap: var(--space-3);
+    justify-content: flex-end;
+}
+
+.button {
+    padding: var(--space-2) var(--space-6);
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    isolation: isolate;
+    font-size: 13px;
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--background-color);
+    background-color: var(--secondary-color);
+    border: 1px solid var(--secondary-color);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.button::before {
+    content: "";
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-color: var(--secondary-700);
+    transition: width 0.2s ease-out;
+}
+
+.button:hover::before {
+    width: 100%;
+}
+
+.button:active {
+    transform: scale(0.97);
+}
+
+.button-secondary {
+    color: var(--secondary-color);
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+}
+
+.button-secondary::before {
+    background-color: var(--background-muted);
+}
+
+.button-secondary:hover {
+    color: var(--secondary-color);
+}
+
+@media (max-width: 480px) {
+    .modal {
+        padding: var(--space-5) var(--space-4);
+        gap: var(--space-4);
+    }
+
+    .actions {
+        flex-direction: column-reverse;
+    }
+
+    .button {
+        width: 100%;
+        text-align: center;
+    }
+}
