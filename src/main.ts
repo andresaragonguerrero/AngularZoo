@@ -4,10 +4,11 @@ import { routes } from './app/app.routes';
 import { App } from './app/app';
 
 import { provideHttpClient } from '@angular/common/http';
-import { importProvidersFrom } from '@angular/core';
+import { APP_INITIALIZER, importProvidersFrom, isDevMode } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { LanguageService } from './app/services/language.service';
 import { registerLocaleData } from '@angular/common';
+import { inject } from '@vercel/analytics';
 
 import localeEs from '@angular/common/locales/es';
 import localeEn from '@angular/common/locales/en';
@@ -26,6 +27,13 @@ bootstrapApplication(App, {
         defaultLanguage: 'es',
       })
     ),
-    LanguageService
+    LanguageService,
+    {
+      provide: APP_INITIALIZER,
+      useFactory: () => {
+        return () => inject({ mode: isDevMode() ? 'development' : 'production' });
+      },
+      multi: true
+    }
   ]
 }).catch((err) => console.error(err));
