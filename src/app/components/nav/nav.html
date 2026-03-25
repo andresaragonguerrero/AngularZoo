@@ -1,20 +1,26 @@
 <ul class="nav-list">
   <li class="button button-nav">
-    <a class="nav-link" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}" aria-label="Inicio">Inicio</a>
+    <a class="nav-link" routerLink="/home" routerLinkActive="active" (click)="onClick()"
+      [routerLinkActiveOptions]="{exact: true}" aria-label="Inicio">Inicio</a>
   </li>
   <li class="button button-nav">
-    <a class="nav-link" routerLink="/animals" routerLinkActive="active" aria-label="Animales">Animales</a>
+    <a class="nav-link" routerLink="/animals" routerLinkActive="active" (click)="onClick()"
+      aria-label="Animales">Animales</a>
   </li>
   <li class="button button-nav">
-    <a class="nav-link" routerLink="/favorite-animals" routerLinkActive="active" aria-label="Animales favoritos">Favoritos</a>
+    <a class="nav-link" routerLink="/favorite-animals" routerLinkActive="active" (click)="onClick()"
+      aria-label="Animales favoritos">Favoritos</a>
   </li>
   <li class="button button-nav">
-    <a class="nav-link" routerLink="/tickets" routerLinkActive="active" aria-label="Entradas">Entradas</a>
+    <a class="nav-link" routerLink="/tickets" routerLinkActive="active" (click)="onClick()"
+      aria-label="Entradas">Entradas</a>
   </li>
   <li class="button button-nav">
-    <a class="nav-link" routerLink="/courses" routerLinkActive="active" aria-label="Cursos">Cursos</a>
+    <a class="nav-link" routerLink="/courses" routerLinkActive="active" (click)="onClick()"
+      aria-label="Cursos">Cursos</a>
   </li>
   <li class="button button-nav">
-    <a class="nav-link" routerLink="/activities" routerLinkActive="active" aria-label="Actividades">Actividades</a>
+    <a class="nav-link" routerLink="/activities" routerLinkActive="active" (click)="onClick()"
+      aria-label="Actividades">Actividades</a>
   </li>
 </ul>

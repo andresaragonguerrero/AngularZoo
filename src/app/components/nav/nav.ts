@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { RouterLink, RouterModule } from '@angular/router';
 
 @Component({
@@ -11,5 +11,9 @@ import { RouterLink, RouterModule } from '@angular/router';
   styleUrl: './nav.scss',
 })
 export class Nav {
+  @Output() linkClicked = new EventEmitter<void>();
 
+  onClick(): void {
+    this.linkClicked.emit();
+  }
 }

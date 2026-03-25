@@ -45,7 +45,7 @@
       </svg>
     </button>
 
-    <app-nav class="nav-component nav-component--drawer"></app-nav>
+    <app-nav class="nav-component nav-component--drawer" (linkClicked)="isHamOpen.set(false)"></app-nav>
 
     <div class="drawer-bottom">
       <app-auth class="auth-component"></app-auth>
