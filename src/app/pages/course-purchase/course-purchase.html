@@ -10,14 +10,14 @@
 
             @if (selectedCourse) {
             <div class="course-card">
-                <h2>{{ selectedCourse.name }}</h2>
 
-                <p>{{ selectedCourse.description }}</p>
-                <p>Inicio: {{ selectedCourse.startDate }}</p>
-                <p>Precio: {{ getPrice(selectedCourse) }} €</p>
+                <h2>{{ getLocalizedField(selectedCourse.name) }}</h2>
+                <p>{{ getLocalizedField(selectedCourse.description) }}</p>
+                <p>{{ 'COURSE_FORM.START_DATE' | translate }} {{ selectedCourse.startDate }}</p>
+                <p>{{ 'COURSE_FORM.PRICE' | translate }} {{ getPrice(selectedCourse) }} €</p>
 
                 <button class="button submit-button-guest" (click)="enroll(selectedCourse)">
-                    Inscribirse
+                    {{ 'COURSE_FORM.ENROLL' | translate }}
                 </button>
             </div>
             }

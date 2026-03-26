@@ -28,18 +28,16 @@
             <div class="animal-card__content">
                 <div class="animal-card__meta">
                     <span class="diet-badge" [ngClass]="getDietClass(animal.dieta)">
-                        {{ animal.dieta }}
+                        {{ getLocalizedField(animal.dieta) }}
                     </span>
                     <span class="status-badge" [ngClass]="getConservationStatusClass(animal.estadoConservacion)">
-                        {{ animal.estadoConservacion }}
+                        {{ getLocalizedField(animal.estadoConservacion) }}
                     </span>
                 </div>
-                <h3>{{ animal.nombre }}</h3>
+                <h3 class="animal-card__name">{{ getLocalizedField(animal.nombre) }}</h3>
                 <p class="animal-card__scientific">{{ animal.nombreCientifico }}</p>
-                <p class="animal-card__description">{{ animal.descripcion }}</p>
-                <p class="animal-card__weight">
-                    Peso: {{ formatWeight(animal.pesoMinimo, animal.pesoMaximo) }}
-                </p>
+                <p class="animal-card__description">{{ getLocalizedField(animal.descripcion) }}</p>
+                <p class="animal-card__weight">{{ 'ANIMAL_LIST.WEIGHT' | translate }} {{ formatWeight(animal.pesoMinimo, animal.pesoMaximo) }}</p>
             </div>
 
             <div class="animal-card__actions">
@@ -48,14 +46,14 @@
                     ★
                 </button>
                 <a class="animal-card__detail" [routerLink]="['/animals', animal.id]">
-                    Ver detalle
+                    {{ 'ANIMAL_LIST.DETAIL' | translate }}
                 </a>
             </div>
 
         </article>
 
         } @empty {
-        <div class="animal-list__empty">No se encontraron animales.</div>
+        <div class="animal-list__empty">{{ 'ANIMAL_LIST.NO_ANIMALS' | translate }}</div>
         }
 
     </div>

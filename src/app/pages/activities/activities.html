@@ -19,8 +19,8 @@
                     <span class="activity-compact-card__index">{{ (i + 1).toString().padStart(2, '0') }}</span>
                     <span class="activity-compact-card__season">{{ activity.season | seasonLabel }}</span>
                 </div>
-                <h3 class="activity-compact-card__name">{{ activity.name }}</h3>
-                <p class="activity-compact-card__description">{{ activity.description }}</p>
+                <h3 class="activity-compact-card__name">{{ getLocalizedField(activity.name) }}</h3>
+                <p class="activity-compact-card__description">{{ getLocalizedField(activity.description) }}</p>
                 <button class="activity-compact-card__cta" (click)="enroll(activity.id)">
                     {{ 'ACTIVITIES.ENROLL' | translate }}
                 </button>
@@ -37,17 +37,15 @@
             @for (activity of activities; track activity.id) {
             <div class="activity-card">
                 <div class="activity-card__content">
-                    <h2>{{ activity.name }}</h2>
-                    <p>{{ activity.description }}</p>
-                    <p>Inicio: {{ activity.season | seasonLabel }}</p>
-                    <p>Precio: {{ activity.price }} €</p>
+                    <h2>{{ getLocalizedField(activity.name) }}</h2>
+                    <p>{{ getLocalizedField(activity.description) }}</p>
+                    <p>{{ 'ACTIVITIES.START_SEASON' | translate }} {{ activity.season | seasonLabel }}</p>
+                    <p>{{ 'ACTIVITIES.PRICE' | translate }} {{ activity.price }} €</p>
 
                     <button class="button submit-button-guest" (click)="enroll(activity.id)">
                         {{ 'ACTIVITIES.ENROLL' | translate }}
                     </button>
                 </div>
-                <!-- <img class="activity-card__image" alt="actividad"
-                    src="/assets/images/general/group-image.jpg"> -->
             </div>
             }
         </article>

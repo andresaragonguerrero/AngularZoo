@@ -10,16 +10,15 @@
             @for (course of courses; track course.id) {
             <div class="course-card">
                 <div class="course-card__content">
-                    <h2>{{ course.name }}</h2>
-                    <p>{{ course.description }}</p>
-                    <p>Inicio: {{ course.startDate }}</p>
-                    <p>Precio: {{ course.price }} €</p>
+                    <h2>{{ getLocalizedField(course.name) }}</h2>
+                    <p>{{ getLocalizedField(course.description) }}</p>
+                    <p>{{ 'COURSES.START_DATE' | translate }} {{ course.startDate }}</p>
+                    <p>{{ 'COURSES.PRICE' | translate }} {{ course.price }} €</p>
 
                     <button class="button submit-button-guest" (click)="enroll(course.id)">
                         {{ 'COURSES.ENROLL' | translate }}
                     </button>
                 </div>
-                <!-- <img class="course-card__image" alt="curso" src="/assets/images/animals/abeja-miel.jpg"> -->
             </div>
             }
         </article>

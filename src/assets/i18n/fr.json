@@ -154,6 +154,8 @@
     "DISCOUNTS": "Reductions automatiques",
     "PRIORITY_ACCESS": "Accès prioritaire aux inscriptions",
     "MEMBER_BENEFITS": "Avantages pour les membres",
+    "START_SEASON": "Season de commencement :",
+    "PRICE": "Prix :",
     "SUBTITLE": "Les membres bénéficient de réductions automatiques, d'activités gratuites sélectionnées et d'un accès prioritaire aux inscriptions."
   },
   "TICKETS": {
@@ -185,7 +187,9 @@
     "FREE_COURSES": "Cours gratuits sélectionnés",
     "DISCOUNTS": "Réductions automatiques",
     "PRIORITY_ACCESS": "Accès prioritaire aux inscriptions",
-    "BECOME_MEMBER": "Devenir membre"
+    "BECOME_MEMBER": "Devenir membre",
+    "START_DATE": "Date de commencement :",
+    "PRICE": "Prix :"
   },
   "COURSE_FORM": {
     "ENROLL_COURSE": "Inscription au cours",
@@ -193,12 +197,25 @@
     "CONFIRM_ENROLLMENT": "Confirmer l'inscription",
     "RECEIPT": "Reçu",
     "COURSE": "Cours :",
+    "START_DATE": "Date de commencement :",
+    "PRICE": "Prix :",
     "AMOUNT_PAID": "Montant payé :",
     "DATE": "Date :"
   },
   "ACTIVITY_PURCHASE": {
     "ENROLL_ACTIVITY": "Inscription à des activités",
-    "ENROLL": "S'inscrire"
+    "ENROLL": "S'inscrire",
+    "DAYS_OF_WEEK": "Jours de la semaine :",
+    "PRICE": "Prix : ",
+    "DAYS": {
+      "MONDAY": "Lundi",
+      "TUESDAY": "Mardi",
+      "WEDNESDAY": "Mercredi",
+      "THURSDAY": "Jeudi",
+      "FRIDAY": "Vendredi",
+      "SATURDAY": "Samedi",
+      "SUNDAY": "Dimanche"
+    }
   },
   "TICKET_PURCHASE": {
     "GET_TICKETS": "Obtenir des billets",

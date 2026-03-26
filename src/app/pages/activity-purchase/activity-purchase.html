@@ -10,14 +10,14 @@
 
             @if (selectedActivity) {
             <div class="activity-card">
-                <h2>{{ selectedActivity.name }}</h2>
+                <h2>{{ getLocalizedField(selectedActivity.name) }}</h2>
 
-                <p>{{ selectedActivity.description }}</p>
-                <p>Días: {{ selectedActivity.daysOfWeek.join(', ') }}</p>
-                <p>Precio: {{ getPrice(selectedActivity) }} €</p>
+                <p>{{ getLocalizedField(selectedActivity.description) }}</p>
+                <p>{{ 'ACTIVITY_PURCHASE.DAYS_OF_WEEK' | translate }} {{ getTranslatedDays(selectedActivity.daysOfWeek) }}</p>
+                <p>{{ 'ACTIVITY_PURCHASE.PRICE' | translate }} {{ getPrice(selectedActivity) }} €</p>
 
                 <button class="button submit-button-guest" (click)="enroll(selectedActivity)">
-                    Inscribirse
+                    {{ 'ACTIVITY_PURCHASE.ENROLL' | translate }}
                 </button>
             </div>
             }

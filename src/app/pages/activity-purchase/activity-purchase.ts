@@ -1,6 +1,9 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map } from 'rxjs/operators';
 
 // Servicios
 import { ActivityService } from '../../services/activity.service';
@@ -8,6 +11,7 @@ import { AuthService } from '../../services/auth.service';
 
 // Modelos
 import { Activity } from '../../models/activity.interface';
+import { LocalizedString } from '../../models/localize.interface';
 
 @Component({
   selector: 'app-activity-purchase',
@@ -24,6 +28,12 @@ export class ActivityPurchase implements OnInit {
   private readonly router = inject(Router);
   private readonly activityService = inject(ActivityService);
   private readonly authService = inject(AuthService);
+  private readonly translate = inject(TranslateService);
+
+  private readonly currentLang = toSignal(
+    this.translate.onLangChange.pipe(map(e => e.lang)),
+    { initialValue: this.translate.currentLang ?? 'es' }
+  );
 
   activities: Activity[] = [];
   selectedActivity?: Activity;
@@ -111,5 +121,14 @@ export class ActivityPurchase implements OnInit {
     this.router.navigate(['/register'], {
       queryParams: { becomeMember: true }
     });
+  }
+
+  getLocalizedField(field: LocalizedString): string {
+    const lang = this.currentLang() as 'es' | 'en' | 'fr';
+    return field[lang] ?? field['es'];
+  }
+
+  getTranslatedDays(days: string[]): string {
+    return days.map(day => this.translate.instant('ACTIVITY_PURCHASE.DAYS.' + day)).join(', ');
   }
 }

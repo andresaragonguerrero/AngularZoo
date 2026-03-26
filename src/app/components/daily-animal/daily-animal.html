@@ -16,14 +16,14 @@
     <div class="home-animal__card">
         <span class="home-animal__eyebrow">{{ 'HOME.DID_YOU_KNOW' | translate }}</span>
 
-        <h2 class="home-animal__name">{{ animal.nombre }}</h2>
+        <h2 class="home-animal__name">{{ getLocalizedField(animal.nombre) }}</h2>
 
-        <p class="home-animal__description">{{ animal.descripcion }}</p>
+        <p class="home-animal__description">{{ getLocalizedField(animal.descripcion) }}</p>
 
         <ul class="home-animal__meta">
             <li class="home-animal__meta-item">
                 <span class="home-animal__meta-label">{{ 'ANIMAL_LIST.DIET' | translate }}</span>
-                <span class="home-animal__meta-value">{{ animal.dieta }}</span>
+                <span class="home-animal__meta-value">{{ getLocalizedField(animal.dieta) }}</span>
             </li>
             <li class="home-animal__meta-item">
                 <span class="home-animal__meta-label">{{ 'ANIMAL_LIST.LIFE_SPAN' | translate }}</span>
@@ -35,7 +35,7 @@
             </li>
             <li class="home-animal__meta-item">
                 <span class="home-animal__meta-label">{{ 'ANIMAL_LIST.STATUS' | translate }}</span>
-                <span class="home-animal__meta-value">{{ animal.estadoConservacion }}</span>
+                <span class="home-animal__meta-value">{{ getLocalizedField(animal.estadoConservacion) }}</span>
             </li>
         </ul>
 

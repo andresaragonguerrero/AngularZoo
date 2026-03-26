@@ -2,8 +2,16 @@
     "courses": [
         {
             "id": "spring-bird-watching",
-            "name": "Observación e identificación de aves",
-            "description": "Aprende a identificar especies de aves nativas y migratorias mediante la observación y la guía de expertos.",
+            "name": {
+                "es": "Observación e identificación de aves",
+                "en": "Bird watching and identification",
+                "fr": "Observation et identification des oiseaux"
+            },
+            "description": {
+                "es": "Aprende a identificar especies de aves nativas y migratorias mediante la observación y la guía de expertos.",
+                "en": "Learn to identify native and migratory bird species through observation and expert guidance.",
+                "fr": "Apprenez à identifier les espèces d'oiseaux indigènes et migrateurs grâce à l'observation et aux conseils d'experts."
+            },
             "season": "SPRING",
             "startDate": "2026-03-15",
             "capacity": 20,
@@ -12,8 +20,16 @@
         },
         {
             "id": "spring-wildlife-photography",
-            "name": "Fundamentos de fotografía de vida salvaje",
-            "description": "Domina las técnicas para capturar impresionantes fotografías de fauna en entornos naturales.",
+            "name": {
+                "es": "Fundamentos de fotografía de vida salvaje",
+                "en": "Wildlife photography fundamentals",
+                "fr": "Fondamentaux de la photographie de la vie sauvage"
+            },
+            "description": {
+                "es": "Domina las técnicas para capturar impresionantes fotografías de fauna en entornos naturales.",
+                "en": "Master the techniques to capture stunning wildlife photographs in natural environments.",
+                "fr": "Maîtrisez les techniques pour capturer d'impressionnantes photographies de la faune dans des environnements naturels."
+            },
             "season": "SPRING",
             "startDate": "2026-04-01",
             "capacity": 15,
@@ -22,8 +38,16 @@
         },
         {
             "id": "spring-conservation-talk",
-            "name": "Conservación de especies en peligro",
-            "description": "Descubre cómo los zoológicos contribuyen a la protección de especies en peligro mediante programas de cría y restauración de hábitats.",
+            "name": {
+                "es": "Conservación de especies en peligro",
+                "en": "Endangered species conservation",
+                "fr": "Conservation des espèces en danger"
+            },
+            "description": {
+                "es": "Descubre cómo los zoológicos contribuyen a la protección de especies en peligro mediante programas de cría y restauración de hábitats.",
+                "en": "Discover how zoos contribute to the protection of endangered species through breeding programs and habitat restoration.",
+                "fr": "Découvrez comment les zoos contribuent à la protection des espèces en danger grâce à des programmes d'élevage et à la restauration des habitats."
+            },
             "season": "SPRING",
             "startDate": "2026-03-22",
             "capacity": 25,
@@ -32,8 +56,16 @@
         },
         {
             "id": "spring-animal-behavior",
-            "name": "Comportamiento animal y ecología",
-            "description": "Estudia los patrones de comportamiento y las relaciones ecológicas de diversas especies animales.",
+            "name": {
+                "es": "Comportamiento animal y ecología",
+                "en": "Animal behavior and ecology",
+                "fr": "Comportement animal et écologie"
+            },
+            "description": {
+                "es": "Estudia los patrones de comportamiento y las relaciones ecológicas de diversas especies animales.",
+                "en": "Study behavior patterns and ecological relationships of various animal species.",
+                "fr": "Étudiez les schémas comportementaux et les relations écologiques de diverses espèces animales."
+            },
             "season": "SPRING",
             "startDate": "2026-04-10",
             "capacity": 22,
@@ -42,8 +74,16 @@
         },
         {
             "id": "spring-garden-biodiversity",
-            "name": "Jardín del zoo y biodiversidad vegetal",
-            "description": "Explora los jardines botánicos y aprende sobre las especies vegetales que apoyan los hábitats del zoo.",
+            "name": {
+                "es": "Jardín del zoo y biodiversidad vegetal",
+                "en": "Zoo garden and plant biodiversity",
+                "fr": "Jardin du zoo et biodiversité végétale"
+            },
+            "description": {
+                "es": "Explora los jardines botánicos y aprende sobre las especies vegetales que apoyan los hábitats del zoo.",
+                "en": "Explore botanical gardens and learn about the plant species that support zoo habitats.",
+                "fr": "Explorez les jardins botaniques et découvrez les espèces végétales qui soutiennent les habitats du zoo."
+            },
             "season": "SPRING",
             "startDate": "2026-05-05",
             "capacity": 18,
@@ -52,8 +92,16 @@
         },
         {
             "id": "summer-big-cats",
-            "name": "Grandes felinos: leones y tigres",
-            "description": "Estudio en profundidad de especies felinas, incluyendo comportamiento, fisiología y estado de conservación.",
+            "name": {
+                "es": "Grandes felinos: leones y tigres",
+                "en": "Big cats: lions and tigers",
+                "fr": "Grands félins : lions et tigres"
+            },
+            "description": {
+                "es": "Estudio en profundidad de especies felinas, incluyendo comportamiento, fisiología y estado de conservación.",
+                "en": "In-depth study of feline species, including behavior, physiology, and conservation status.",
+                "fr": "Étude approfondie des espèces félines, incluant le comportement, la physiologie et le statut de conservation."
+            },
             "season": "SUMMER",
             "startDate": "2026-06-10",
             "capacity": 25,
@@ -62,8 +110,16 @@
         },
         {
             "id": "summer-reptile-care",
-            "name": "Cuidado y manejo de reptiles",
-            "description": "Aprende técnicas adecuadas de manejo y cuidados de reptiles y anfibios.",
+            "name": {
+                "es": "Cuidado y manejo de reptiles",
+                "en": "Reptile care and handling",
+                "fr": "Soin et manipulation des reptiles"
+            },
+            "description": {
+                "es": "Aprende técnicas adecuadas de manejo y cuidados de reptiles y anfibios.",
+                "en": "Learn proper handling and care techniques for reptiles and amphibians.",
+                "fr": "Apprenez les techniques appropriées de manipulation et de soin des reptiles et des amphibiens."
+            },
             "season": "SUMMER",
             "startDate": "2026-07-01",
             "capacity": 12,
@@ -72,8 +128,16 @@
         },
         {
             "id": "summer-aquatic-life",
-            "name": "Vida acuática y conservación",
-            "description": "Explora ecosistemas de agua dulce y marinos y su importancia en la conservación global.",
+            "name": {
+                "es": "Vida acuática y conservación",
+                "en": "Aquatic life and conservation",
+                "fr": "Vie aquatique et conservation"
+            },
+            "description": {
+                "es": "Explora ecosistemas de agua dulce y marinos y su importancia en la conservación global.",
+                "en": "Explore freshwater and marine ecosystems and their importance in global conservation.",
+                "fr": "Explorez les écosystèmes d'eau douce et marins et leur importance pour la conservation mondiale."
+            },
             "season": "SUMMER",
             "startDate": "2026-06-20",
             "capacity": 20,
@@ -82,8 +146,16 @@
         },
         {
             "id": "summer-primate-study",
-            "name": "Comportamiento y cognición de primates",
-            "description": "Investiga la inteligencia, estructuras sociales y conexiones evolutivas de los primates.",
+            "name": {
+                "es": "Comportamiento y cognición de primates",
+                "en": "Primate behavior and cognition",
+                "fr": "Comportement et cognition des primates"
+            },
+            "description": {
+                "es": "Investiga la inteligencia, estructuras sociales y conexiones evolutivas de los primates.",
+                "en": "Investigate primate intelligence, social structures, and evolutionary connections.",
+                "fr": "Étudiez l'intelligence, les structures sociales et les liens évolutifs des primates."
+            },
             "season": "SUMMER",
             "startDate": "2026-07-15",
             "capacity": 18,
@@ -92,8 +164,16 @@
         },
         {
             "id": "summer-zoo-nutrition",
-            "name": "Nutrición animal en zoológicos",
-            "description": "Guía completa sobre necesidades dietéticas y gestión nutricional de diversas especies animales.",
+            "name": {
+                "es": "Nutrición animal en zoológicos",
+                "en": "Animal nutrition in zoos",
+                "fr": "Nutrition animale dans les zoos"
+            },
+            "description": {
+                "es": "Guía completa sobre necesidades dietéticas y gestión nutricional de diversas especies animales.",
+                "en": "Comprehensive guide to dietary needs and nutritional management of various animal species.",
+                "fr": "Guide complet sur les besoins diététiques et la gestion nutritionnelle de diverses espèces animales."
+            },
             "season": "SUMMER",
             "startDate": "2026-08-01",
             "capacity": 16,
@@ -102,8 +182,16 @@
         },
         {
             "id": "autumn-migration-patterns",
-            "name": "Patrones de migración de aves",
-            "description": "Comprende las rutas migratorias, su temporalidad y las amenazas que enfrentan las aves migratorias.",
+            "name": {
+                "es": "Patrones de migración de aves",
+                "en": "Bird migration patterns",
+                "fr": "Schémas de migration des oiseaux"
+            },
+            "description": {
+                "es": "Comprende las rutas migratorias, su temporalidad y las amenazas que enfrentan las aves migratorias.",
+                "en": "Understand migratory routes, timing, and the threats faced by migratory birds.",
+                "fr": "Comprenez les routes migratoires, leur calendrier et les menaces auxquelles sont confrontés les oiseaux migrateurs."
+            },
             "season": "AUTUMN",
             "startDate": "2026-09-15",
             "capacity": 24,
@@ -112,8 +200,16 @@
         },
         {
             "id": "autumn-veterinary-basics",
-            "name": "Fundamentos de veterinaria",
-            "description": "Introducción a la ciencia veterinaria y al cuidado médico en instalaciones zoológicas.",
+            "name": {
+                "es": "Fundamentos de veterinaria",
+                "en": "Veterinary fundamentals",
+                "fr": "Fondamentaux de la médecine vétérinaire"
+            },
+            "description": {
+                "es": "Introducción a la ciencia veterinaria y al cuidado médico en instalaciones zoológicas.",
+                "en": "Introduction to veterinary science and medical care in zoological facilities.",
+                "fr": "Introduction à la science vétérinaire et aux soins médicaux dans les installations zoologiques."
+            },
             "season": "AUTUMN",
             "startDate": "2026-10-01",
             "capacity": 14,
@@ -122,8 +218,16 @@
         },
         {
             "id": "autumn-habitat-restoration",
-            "name": "Técnicas de restauración de hábitats",
-            "description": "Aprende métodos para restaurar y mantener hábitats naturales dentro y fuera del zoo.",
+            "name": {
+                "es": "Técnicas de restauración de hábitats",
+                "en": "Habitat restoration techniques",
+                "fr": "Techniques de restauration des habitats"
+            },
+            "description": {
+                "es": "Aprende métodos para restaurar y mantener hábitats naturales dentro y fuera del zoo.",
+                "en": "Learn methods to restore and maintain natural habitats inside and outside the zoo.",
+                "fr": "Apprenez les méthodes de restauration et de maintien des habitats naturels à l'intérieur et à l'extérieur du zoo."
+            },
             "season": "AUTUMN",
             "startDate": "2026-09-20",
             "capacity": 19,
@@ -132,8 +236,16 @@
         },
         {
             "id": "autumn-endangered-species",
-            "name": "Programas de protección de especies en peligro",
-            "description": "Explora iniciativas globales para proteger especies en peligro crítico de extinción.",
+            "name": {
+                "es": "Programas de protección de especies en peligro",
+                "en": "Endangered species protection programs",
+                "fr": "Programmes de protection des espèces en danger"
+            },
+            "description": {
+                "es": "Explora iniciativas globales para proteger especies en peligro crítico de extinción.",
+                "en": "Explore global initiatives to protect critically endangered species.",
+                "fr": "Explorez les initiatives mondiales pour protéger les espèces en danger critique d'extinction."
+            },
             "season": "AUTUMN",
             "startDate": "2026-10-15",
             "capacity": 23,
@@ -142,8 +254,16 @@
         },
         {
             "id": "autumn-wildlife-conservation",
-            "name": "Estrategias de conservación de fauna",
-            "description": "Visión general de estrategias de conservación y su implementación a nivel mundial.",
+            "name": {
+                "es": "Estrategias de conservación de fauna",
+                "en": "Wildlife conservation strategies",
+                "fr": "Stratégies de conservation de la faune"
+            },
+            "description": {
+                "es": "Visión general de estrategias de conservación y su implementación a nivel mundial.",
+                "en": "Overview of conservation strategies and their global implementation.",
+                "fr": "Aperçu des stratégies de conservation et de leur mise en œuvre à l'échelle mondiale."
+            },
             "season": "AUTUMN",
             "startDate": "2026-11-01",
             "capacity": 21,
@@ -152,8 +272,16 @@
         },
         {
             "id": "winter-arctic-animals",
-            "name": "Animales del Ártico y cambio climático",
-            "description": "Estudia especies árticas y el impacto del cambio climático en los ecosistemas polares.",
+            "name": {
+                "es": "Animales del Ártico y cambio climático",
+                "en": "Arctic animals and climate change",
+                "fr": "Animaux de l'Arctique et changement climatique"
+            },
+            "description": {
+                "es": "Estudia especies árticas y el impacto del cambio climático en los ecosistemas polares.",
+                "en": "Study Arctic species and the impact of climate change on polar ecosystems.",
+                "fr": "Étudiez les espèces arctiques et l'impact du changement climatique sur les écosystèmes polaires."
+            },
             "season": "WINTER",
             "startDate": "2026-12-10",
             "capacity": 22,
@@ -162,8 +290,16 @@
         },
         {
             "id": "winter-zoo-management",
-            "name": "Gestión y operaciones de zoológicos",
-            "description": "Descubre cómo se gestionan, financian y mantienen los zoológicos.",
+            "name": {
+                "es": "Gestión y operaciones de zoológicos",
+                "en": "Zoo management and operations",
+                "fr": "Gestion et opérations des zoos"
+            },
+            "description": {
+                "es": "Descubre cómo se gestionan, financian y mantienen los zoológicos.",
+                "en": "Discover how zoos are managed, funded, and maintained.",
+                "fr": "Découvrez comment les zoos sont gérés, financés et entretenus."
+            },
             "season": "WINTER",
             "startDate": "2026-01-15",
             "capacity": 17,
@@ -172,8 +308,16 @@
         },
         {
             "id": "winter-wildlife-genetics",
-            "name": "Genética y evolución de la fauna",
-            "description": "Explora la diversidad genética, la biología evolutiva y los programas de cría selectiva.",
+            "name": {
+                "es": "Genética y evolución de la fauna",
+                "en": "Wildlife genetics and evolution",
+                "fr": "Génétique et évolution de la faune"
+            },
+            "description": {
+                "es": "Explora la diversidad genética, la biología evolutiva y los programas de cría selectiva.",
+                "en": "Explore genetic diversity, evolutionary biology, and selective breeding programs.",
+                "fr": "Explorez la diversité génétique, la biologie évolutive et les programmes d'élevage sélectif."
+            },
             "season": "WINTER",
             "startDate": "2026-12-20",
             "capacity": 16,
@@ -182,8 +326,16 @@
         },
         {
             "id": "winter-animal-enrichment",
-            "name": "Enriquecimiento y bienestar animal",
-            "description": "Descubre cómo las actividades de enriquecimiento mejoran el comportamiento y bienestar animal.",
+            "name": {
+                "es": "Enriquecimiento y bienestar animal",
+                "en": "Animal enrichment and welfare",
+                "fr": "Enrichissement et bien-être animal"
+            },
+            "description": {
+                "es": "Descubre cómo las actividades de enriquecimiento mejoran el comportamiento y bienestar animal.",
+                "en": "Discover how enrichment activities improve animal behavior and welfare.",
+                "fr": "Découvrez comment les activités d'enrichissement améliorent le comportement et le bien-être animal."
+            },
             "season": "WINTER",
             "startDate": "2026-01-25",
             "capacity": 20,
@@ -192,8 +344,16 @@
         },
         {
             "id": "winter-global-ecosystems",
-            "name": "Ecosistemas globales y biodiversidad",
-            "description": "Recorrido por los principales ecosistemas de la Tierra y la biodiversidad que albergan.",
+            "name": {
+                "es": "Ecosistemas globales y biodiversidad",
+                "en": "Global ecosystems and biodiversity",
+                "fr": "Écosystèmes mondiaux et biodiversité"
+            },
+            "description": {
+                "es": "Recorrido por los principales ecosistemas de la Tierra y la biodiversidad que albergan.",
+                "en": "A journey through Earth's major ecosystems and the biodiversity they hold.",
+                "fr": "Un voyage à travers les principaux écosystèmes de la Terre et la biodiversité qu'ils abritent."
+            },
             "season": "WINTER",
             "startDate": "2026-02-10",
             "capacity": 26,
@@ -204,8 +364,16 @@
     "activities": [
         {
             "id": "spring-animal-encounters",
-            "name": "Encuentro con animales del zoo",
-            "description": "Sesión interactiva para conocer de cerca animales del zoo, apta para todas las edades.",
+            "name": {
+                "es": "Encuentro con animales del zoo",
+                "en": "Zoo animal encounters",
+                "fr": "Rencontre avec les animaux du zoo"
+            },
+            "description": {
+                "es": "Sesión interactiva para conocer de cerca animales del zoo, apta para todas las edades.",
+                "en": "Interactive session to get up close with zoo animals, suitable for all ages.",
+                "fr": "Séance interactive pour découvrir de près les animaux du zoo, adaptée à tous les âges."
+            },
             "season": "SPRING",
             "daysOfWeek": [
                 "MONDAY",
@@ -218,8 +386,16 @@
         },
         {
             "id": "spring-guided-safari",
-            "name": "Safari guiado",
-            "description": "Recorrido guiado por el zoo explorando hábitats y aprendiendo sobre las especies.",
+            "name": {
+                "es": "Safari guiado",
+                "en": "Guided safari",
+                "fr": "Safari guidé"
+            },
+            "description": {
+                "es": "Recorrido guiado por el zoo explorando hábitats y aprendiendo sobre las especies.",
+                "en": "Guided tour through the zoo exploring habitats and learning about the species.",
+                "fr": "Visite guidée du zoo pour explorer les habitats et en apprendre davantage sur les espèces."
+            },
             "season": "SPRING",
             "daysOfWeek": [
                 "TUESDAY",
@@ -232,8 +408,16 @@
         },
         {
             "id": "spring-nature-walk",
-            "name": "Paseo natural y observación de aves",
-            "description": "Recorrido tranquilo centrado en la identificación de aves en entornos naturales.",
+            "name": {
+                "es": "Paseo natural y observación de aves",
+                "en": "Nature walk and bird watching",
+                "fr": "Promenade en pleine nature et observation des oiseaux"
+            },
+            "description": {
+                "es": "Recorrido tranquilo centrado en la identificación de aves en entornos naturales.",
+                "en": "A leisurely walk focused on identifying birds in natural environments.",
+                "fr": "Une promenade tranquille axée sur l'identification des oiseaux dans des environnements naturels."
+            },
             "season": "SPRING",
             "daysOfWeek": [
                 "SATURDAY",
@@ -246,8 +430,16 @@
         },
         {
             "id": "spring-educational-talk",
-            "name": "Charla educativa sobre fauna",
-            "description": "Presentación dirigida por expertos sobre fauna y conservación.",
+            "name": {
+                "es": "Charla educativa sobre fauna",
+                "en": "Educational wildlife talk",
+                "fr": "Conférence éducative sur la faune"
+            },
+            "description": {
+                "es": "Presentación dirigida por expertos sobre fauna y conservación.",
+                "en": "Expert-led presentation on wildlife and conservation.",
+                "fr": "Présentation animée par des experts sur la faune et la conservation."
+            },
             "season": "SPRING",
             "daysOfWeek": [
                 "WEDNESDAY",
@@ -260,8 +452,16 @@
         },
         {
             "id": "spring-children-zoo-camp",
-            "name": "Actividades infantiles del zoo",
-            "description": "Actividades educativas y divertidas para niños de 5 a 12 años.",
+            "name": {
+                "es": "Actividades infantiles del zoo",
+                "en": "Children's zoo activities",
+                "fr": "Activités pour enfants au zoo"
+            },
+            "description": {
+                "es": "Actividades educativas y divertidas para niños de 5 a 12 años.",
+                "en": "Educational and fun activities for children aged 5 to 12.",
+                "fr": "Activités éducatives et ludiques pour les enfants de 5 à 12 ans."
+            },
             "season": "SPRING",
             "daysOfWeek": [
                 "MONDAY",
@@ -275,8 +475,16 @@
         },
         {
             "id": "summer-big-cat-experience",
-            "name": "Experiencia de alimentación de grandes felinos",
-            "description": "Observa y aprende sobre la alimentación de leones, tigres y otros felinos.",
+            "name": {
+                "es": "Experiencia de alimentación de grandes felinos",
+                "en": "Big cat feeding experience",
+                "fr": "Expérience de nourrissage des grands félins"
+            },
+            "description": {
+                "es": "Observa y aprende sobre la alimentación de leones, tigres y otros felinos.",
+                "en": "Observe and learn about the feeding of lions, tigers, and other felines.",
+                "fr": "Observez et découvrez le nourrissage des lions, des tigres et d'autres félins."
+            },
             "season": "SUMMER",
             "daysOfWeek": [
                 "TUESDAY",
@@ -289,8 +497,16 @@
         },
         {
             "id": "summer-aquarium-tour",
-            "name": "Visita guiada al acuario",
-            "description": "Exploración en profundidad de ecosistemas acuáticos y conservación marina.",
+            "name": {
+                "es": "Visita guiada al acuario",
+                "en": "Guided aquarium tour",
+                "fr": "Visite guidée de l'aquarium"
+            },
+            "description": {
+                "es": "Exploración en profundidad de ecosistemas acuáticos y conservación marina.",
+                "en": "In-depth exploration of aquatic ecosystems and marine conservation.",
+                "fr": "Exploration approfondie des écosystèmes aquatiques et de la conservation marine."
+            },
             "season": "SUMMER",
             "daysOfWeek": [
                 "MONDAY",
@@ -304,8 +520,16 @@
         },
         {
             "id": "summer-reptile-show",
-            "name": "Espectáculo de reptiles",
-            "description": "Demostración educativa con reptiles en vivo y datos curiosos.",
+            "name": {
+                "es": "Espectáculo de reptiles",
+                "en": "Reptile show",
+                "fr": "Spectacle de reptiles"
+            },
+            "description": {
+                "es": "Demostración educativa con reptiles en vivo y datos curiosos.",
+                "en": "Educational demonstration with live reptiles and curious facts.",
+                "fr": "Démonstration éducative avec des reptiles vivants et des faits insolites."
+            },
             "season": "SUMMER",
             "daysOfWeek": [
                 "THURSDAY",
@@ -318,8 +542,16 @@
         },
         {
             "id": "summer-primate-observation",
-            "name": "Observación de primates",
-            "description": "Sesión guiada sobre comportamiento y vida social de primates.",
+            "name": {
+                "es": "Observación de primates",
+                "en": "Primate observation",
+                "fr": "Observation des primates"
+            },
+            "description": {
+                "es": "Sesión guiada sobre comportamiento y vida social de primates.",
+                "en": "Guided session on primate behavior and social life.",
+                "fr": "Séance guidée sur le comportement et la vie sociale des primates."
+            },
             "season": "SUMMER",
             "daysOfWeek": [
                 "MONDAY",
@@ -332,8 +564,16 @@
         },
         {
             "id": "summer-junior-zookeeper",
-            "name": "Programa de joven cuidador",
-            "description": "Programa interactivo donde los niños aprenden tareas de cuidado animal.",
+            "name": {
+                "es": "Programa de joven cuidador",
+                "en": "Junior zookeeper program",
+                "fr": "Programme de jeune soigneur"
+            },
+            "description": {
+                "es": "Programa interactivo donde los niños aprenden tareas de cuidado animal.",
+                "en": "Interactive program where children learn animal care tasks.",
+                "fr": "Programme interactif où les enfants apprennent les tâches de soin des animaux."
+            },
             "season": "SUMMER",
             "daysOfWeek": [
                 "TUESDAY",
@@ -347,8 +587,16 @@
         },
         {
             "id": "autumn-photography-walk",
-            "name": "Paseo fotográfico guiado",
-            "description": "Recorrido matutino optimizado para fotografía de fauna.",
+            "name": {
+                "es": "Paseo fotográfico guiado",
+                "en": "Guided photography walk",
+                "fr": "Promenade photographique guidée"
+            },
+            "description": {
+                "es": "Recorrido matutino optimizado para fotografía de fauna.",
+                "en": "Morning tour optimized for wildlife photography.",
+                "fr": "Visite matinale optimisée pour la photographie de la faune."
+            },
             "season": "AUTUMN",
             "daysOfWeek": [
                 "SATURDAY",
@@ -361,8 +609,16 @@
         },
         {
             "id": "autumn-evening-stroll",
-            "name": "Ruta nocturna de fauna",
-            "description": "Tour nocturno observando animales activos al atardecer.",
+            "name": {
+                "es": "Ruta nocturna de fauna",
+                "en": "Evening wildlife stroll",
+                "fr": "Randonnée nocturne de la faune"
+            },
+            "description": {
+                "es": "Tour nocturno observando animales activos al atardecer.",
+                "en": "Night tour observing animals active at dusk.",
+                "fr": "Visite nocturne pour observer les animaux actifs au crépuscule."
+            },
             "season": "AUTUMN",
             "daysOfWeek": [
                 "TUESDAY",
@@ -376,8 +632,16 @@
         },
         {
             "id": "autumn-educational-workshop",
-            "name": "Taller educativo de fauna",
-            "description": "Taller interactivo sobre fauna, conservación y ecología.",
+            "name": {
+                "es": "Taller educativo de fauna",
+                "en": "Educational wildlife workshop",
+                "fr": "Atelier éducatif sur la faune"
+            },
+            "description": {
+                "es": "Taller interactivo sobre fauna, conservación y ecología.",
+                "en": "Interactive workshop on wildlife, conservation, and ecology.",
+                "fr": "Atelier interactif sur la faune, la conservation et l'écologie."
+            },
             "season": "AUTUMN",
             "daysOfWeek": [
                 "MONDAY",
@@ -390,8 +654,16 @@
         },
         {
             "id": "autumn-animal-care-demo",
-            "name": "Demostración de cuidado animal",
-            "description": "Observa cómo los cuidadores realizan tareas diarias de alimentación y cuidado.",
+            "name": {
+                "es": "Demostración de cuidado animal",
+                "en": "Animal care demonstration",
+                "fr": "Démonstration de soins aux animaux"
+            },
+            "description": {
+                "es": "Observa cómo los cuidadores realizan tareas diarias de alimentación y cuidado.",
+                "en": "Observe how keepers perform daily feeding and care tasks.",
+                "fr": "Observez comment les soigneurs effectuent les tâches quotidiennes de nourrissage et de soins."
+            },
             "season": "AUTUMN",
             "daysOfWeek": [
                 "WEDNESDAY",
@@ -404,8 +676,16 @@
         },
         {
             "id": "autumn-nature-sketching",
-            "name": "Clase de dibujo de naturaleza",
-            "description": "Clase artística combinando observación de la naturaleza y dibujo.",
+            "name": {
+                "es": "Clase de dibujo de naturaleza",
+                "en": "Nature sketching class",
+                "fr": "Cours de dessin de nature"
+            },
+            "description": {
+                "es": "Clase artística combinando observación de la naturaleza y dibujo.",
+                "en": "Art class combining nature observation and sketching.",
+                "fr": "Cours d'art combinant l'observation de la nature et le dessin."
+            },
             "season": "AUTUMN",
             "daysOfWeek": [
                 "SATURDAY"
@@ -417,8 +697,16 @@
         },
         {
             "id": "winter-arctic-talk",
-            "name": "Charla sobre animales del Ártico",
-            "description": "Presentación sobre especies polares y conservación del Ártico.",
+            "name": {
+                "es": "Charla sobre animales del Ártico",
+                "en": "Arctic animals talk",
+                "fr": "Conférence sur les animaux de l'Arctique"
+            },
+            "description": {
+                "es": "Presentación sobre especies polares y conservación del Ártico.",
+                "en": "Presentation on polar species and Arctic conservation.",
+                "fr": "Présentation sur les espèces polaires et la conservation de l'Arctique."
+            },
             "season": "WINTER",
             "daysOfWeek": [
                 "MONDAY",
@@ -431,8 +719,16 @@
         },
         {
             "id": "winter-indoor-aquatic",
-            "name": "Visita al centro acuático interior",
-            "description": "Recorrido por instalaciones acuáticas interiores y hábitats controlados.",
+            "name": {
+                "es": "Visita al centro acuático interior",
+                "en": "Indoor aquatic center visit",
+                "fr": "Visite du centre aquatique intérieur"
+            },
+            "description": {
+                "es": "Recorrido por instalaciones acuáticas interiores y hábitats controlados.",
+                "en": "Tour of indoor aquatic facilities and controlled habitats.",
+                "fr": "Visite des installations aquatiques intérieures et des habitats contrôlés."
+            },
             "season": "WINTER",
             "daysOfWeek": [
                 "TUESDAY",
@@ -445,8 +741,16 @@
         },
         {
             "id": "winter-holiday-lights",
-            "name": "Tour de luces navideñas",
-            "description": "Recorrido nocturno con decoración festiva en el zoo.",
+            "name": {
+                "es": "Tour de luces navideñas",
+                "en": "Holiday lights tour",
+                "fr": "Tour des lumières de Noël"
+            },
+            "description": {
+                "es": "Recorrido nocturno con decoración festiva en el zoo.",
+                "en": "Night tour with festive decorations in the zoo.",
+                "fr": "Visite nocturne avec décorations festives dans le zoo."
+            },
             "season": "WINTER",
             "daysOfWeek": [
                 "FRIDAY",
@@ -460,8 +764,16 @@
         },
         {
             "id": "winter-animal-wellness",
-            "name": "Charla sobre bienestar animal",
-            "description": "Sesión sobre salud, nutrición y bienestar en zoológicos.",
+            "name": {
+                "es": "Charla sobre bienestar animal",
+                "en": "Animal wellness talk",
+                "fr": "Conférence sur le bien-être animal"
+            },
+            "description": {
+                "es": "Sesión sobre salud, nutrición y bienestar en zoológicos.",
+                "en": "Session on health, nutrition, and wellness in zoos.",
+                "fr": "Séance sur la santé, la nutrition et le bien-être dans les zoos."
+            },
             "season": "WINTER",
             "daysOfWeek": [
                 "MONDAY",
@@ -474,8 +786,16 @@
         },
         {
             "id": "winter-conservation-film",
-            "name": "Proyección de documental de conservación",
-            "description": "Proyección de documentales premiados sobre fauna y conservación.",
+            "name": {
+                "es": "Proyección de documental de conservación",
+                "en": "Conservation documentary screening",
+                "fr": "Projection d'un documentaire sur la conservation"
+            },
+            "description": {
+                "es": "Proyección de documentales premiados sobre fauna y conservación.",
+                "en": "Screening of award-winning documentaries on wildlife and conservation.",
+                "fr": "Projection de documentaires primés sur la faune et la conservation."
+            },
             "season": "WINTER",
             "daysOfWeek": [
                 "THURSDAY"

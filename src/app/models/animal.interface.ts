@@ -1,15 +1,17 @@
+import { LocalizedString } from "./localize.interface";
+
 export interface Animal {
   id: number;
-  nombre: string;
+  nombre: LocalizedString;
   nombreCientifico: string;
-  descripcion: string;
+  descripcion: LocalizedString;
   imagen: string;
-  dieta: 'herbívoro' | 'carnívoro' | 'omnívoro' | 'insectívoro';
+  dieta: LocalizedString;
   ecosistemaId: number;
   continente: string;
-  estadoConservacion: 'preocupación menor' | 'vulnerable' | 'en peligro' | 'en peligro crítico' | 'extinto';
-  esperanzaVida: number; // en años
-  pesoMinimo: number; // en kg
-  pesoMaximo: number; // en kg
-  curiosidades: string[];
+  estadoConservacion: LocalizedString;
+  esperanzaVida: number;
+  pesoMinimo: number;
+  pesoMaximo: number;
+  curiosidades: LocalizedString[];
 }

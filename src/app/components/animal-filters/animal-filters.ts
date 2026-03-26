@@ -15,25 +15,25 @@ import { Animal } from '../../models/animal.interface';
 })
 export class AnimalFilters {
   @Output() searchChange = new EventEmitter<string>();
-  @Output() dietChange = new EventEmitter<Animal['dieta'] | ''>();
   @Output() continentChange = new EventEmitter<string | ''>();
-  @Output() conservationStatusChange = new EventEmitter<Animal['estadoConservacion'] | ''>();
   @Output() clear = new EventEmitter<void>();
+  @Output() dietChange = new EventEmitter<string>();
+  @Output() conservationStatusChange = new EventEmitter<string>();
 
   onSearch(term: string): void {
     this.searchChange.emit(term);
   }
 
   onDietChange(diet: string): void {
-    this.dietChange.emit(diet as Animal['dieta'] | '');
+    this.dietChange.emit(diet);
+  }
+
+  onConservationStatusChange(conservationStatus: string): void {
+    this.conservationStatusChange.emit(conservationStatus);
   }
 
   onContinentChange(continent: string): void {
     this.continentChange.emit(continent);
-  }
-
-  onConservationStatusChange(conservationStatus: string): void {
-    this.conservationStatusChange.emit(conservationStatus as Animal['estadoConservacion'] | '');
   }
 
   onClear(): void {

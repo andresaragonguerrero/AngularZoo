@@ -1,17 +1,20 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input } from '@angular/core';
+import { Component, inject, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map } from 'rxjs/operators';
 
 // Modelos
 import { Animal } from '../../models/animal.interface';
+import { LocalizedString } from '../../models/localize.interface';
 
 // Repositorios
 import { FavoriteAnimalsRepository } from '../../repositories/favoriteAnimals.repository';
 
 // Servicios
 import { AuthService } from '../../services/auth.service';
-
 
 @Component({
   selector: 'app-animal-list',
@@ -32,10 +35,14 @@ export class AnimalList {
   private readonly favorites = new Set<number>();
   readonly brokenImages = new Set<number>();
 
-  constructor(
-    private readonly authService: AuthService,
-    private readonly favoriteAnimalsRepository: FavoriteAnimalsRepository
-  ) { }
+  private readonly authService = inject(AuthService);
+  private readonly favoriteAnimalsRepository = inject(FavoriteAnimalsRepository);
+  private readonly translate = inject(TranslateService);
+
+  private readonly currentLang = toSignal(
+    this.translate.onLangChange.pipe(map(e => e.lang)),
+    { initialValue: this.translate.currentLang ?? 'es' }
+  );
 
   private getUserId(): string | null {
     return this.authService.currentUser()?.id ?? null;
@@ -49,20 +56,19 @@ export class AnimalList {
     return min === max ? `${min} kg` : `${min} - ${max} kg`;
   }
 
-  getConservationStatusClass(status: string): string {
+  getConservationStatusClass(status: LocalizedString): string {
     const map: Record<string, string> = {
-      'preocupación menor': 'status-lc',
       'vulnerable': 'status-vu',
-      'en peligro': 'status-en',
-      'en peligro crítico': 'status-cr',
-      'extinto': 'status-ex'
+      'endangered': 'status-en',
+      'critically endangered': 'status-cr',
+      'least concern': 'status-lc',
+      'extinct': 'status-ex'
     };
-
-    return map[status] ?? 'status-unknown';
+    return map[status.en] ?? 'status-unknown';
   }
 
-  getDietClass(diet: string): string {
-    return `diet-${diet}`;
+  getDietClass(diet: LocalizedString): string {
+    return `diet-${diet.en}`;
   }
 
   handleImageError(event: Event, animalId: number): void {
@@ -86,5 +92,10 @@ export class AnimalList {
     } else {
       this.favoriteAnimalsRepository.add(userId, animalId);
     }
+  }
+
+  getLocalizedField(field: LocalizedString): string {
+    const lang = this.currentLang() as 'es' | 'en' | 'fr';
+    return field[lang] ?? field['es'];
   }
 }

@@ -52,13 +52,13 @@ export class AnimalsComponent implements OnInit {
     this.applyFilters();
   }
 
-  onContinentChange(continent: string): void {
-    this.continentFilter = continent;
+  onConservationStatusChange(status: string): void {
+    this.conservationStatusFilter = status;
     this.applyFilters();
   }
 
-  onConservationStatusChange(status: string): void {
-    this.conservationStatusFilter = status;
+  onContinentChange(continent: string): void {
+    this.continentFilter = continent;
     this.applyFilters();
   }
 
@@ -82,28 +82,21 @@ export class AnimalsComponent implements OnInit {
 
   private applyFilters(): void {
     this.filteredAnimals = this.animals.filter(animal => {
-
       const matchesSearch =
         !this.searchTerm ||
-        animal.nombre.toLowerCase().includes(this.searchTerm) ||
+        animal.nombre.es.toLowerCase().includes(this.searchTerm) ||
         animal.nombreCientifico.toLowerCase().includes(this.searchTerm) ||
-        animal.descripcion.toLowerCase().includes(this.searchTerm);
-
+        animal.descripcion.es.toLowerCase().includes(this.searchTerm);
       const matchesDiet =
-        !this.dietFilter || animal.dieta === this.dietFilter;
-
+        !this.dietFilter || animal.dieta.en === this.dietFilter;
       const matchesContinent =
         !this.continentFilter || animal.continente === this.continentFilter;
-
       const matchesConservationStatus =
         !this.conservationStatusFilter ||
-        animal.estadoConservacion === this.conservationStatusFilter;
-
+        animal.estadoConservacion.en === this.conservationStatusFilter;
       return matchesSearch && matchesDiet && matchesContinent && matchesConservationStatus;
     });
-
     const totalPages = Math.ceil(this.filteredAnimals.length / this.pageSize);
-
     if (this.currentPage > totalPages) {
       this.currentPage = 1;
     }

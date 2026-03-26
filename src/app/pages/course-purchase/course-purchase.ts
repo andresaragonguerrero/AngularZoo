@@ -1,6 +1,9 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map } from 'rxjs/operators';
 
 // Servicios
 import { CourseService } from '../../services/course.service';
@@ -8,6 +11,7 @@ import { AuthService } from '../../services/auth.service';
 
 // Modelos
 import { Course } from '../../models/course.interface';
+import { LocalizedString } from '../../models/localize.interface';
 
 @Component({
   selector: 'app-course-purchase',
@@ -25,6 +29,12 @@ export class CoursePurchase implements OnInit {
   private readonly router = inject(Router);
   private readonly courseService = inject(CourseService);
   private readonly authService = inject(AuthService);
+  private readonly translate = inject(TranslateService);
+
+  private readonly currentLang = toSignal(
+    this.translate.onLangChange.pipe(map(e => e.lang)),
+    { initialValue: this.translate.currentLang ?? 'es' }
+  );
 
   courses: Course[] = [];
   selectedCourse?: Course;
@@ -36,6 +46,7 @@ export class CoursePurchase implements OnInit {
 
     this.courseService.getCoursesForCurrentSeason()
       .subscribe(courses => {
+        console.log('Cursos recibidos:', JSON.stringify(courses[0]));
         this.courses = courses;
 
         this.route.queryParams.subscribe(params => {
@@ -92,5 +103,10 @@ export class CoursePurchase implements OnInit {
     this.router.navigate(['/register'], {
       queryParams: { becomeMember: true }
     });
+  }
+
+  getLocalizedField(field: LocalizedString): string {
+    const lang = this.currentLang() as 'es' | 'en' | 'fr';
+    return field[lang] ?? field['es'];
   }
 }

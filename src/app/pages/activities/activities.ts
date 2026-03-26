@@ -1,14 +1,17 @@
 import { Component, computed, inject, Input, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
+import { toSignal } from '@angular/core/rxjs-interop';
+import { map } from 'rxjs/operators';
 
 // servicios
 import { ActivityService } from '../../services/activity.service';
 import { AuthService } from '../../services/auth.service';
 
-
 // modelos
 import { Activity } from '../../models/activity.interface';
+import { LocalizedString } from '../../models/localize.interface';
 
 // pipes
 import { SeasonPipe } from '../../pipes/season.pipe';
@@ -32,6 +35,11 @@ export class ActivityComponent implements OnInit {
   private readonly activityService = inject(ActivityService);
   private readonly authService = inject(AuthService);
   private readonly router = inject(Router);
+  private readonly translate = inject(TranslateService);
+  private readonly currentLang = toSignal(
+    this.translate.onLangChange.pipe(map(e => e.lang)),
+    { initialValue: this.translate.currentLang ?? 'es' }
+  );
 
   activities: Activity[] = [];
 
@@ -64,5 +72,10 @@ export class ActivityComponent implements OnInit {
         mode
       }
     });
+  }
+
+  getLocalizedField(field: LocalizedString): string {
+    const lang = this.currentLang() as 'es' | 'en' | 'fr';
+    return field[lang] ?? field['es'];
   }
 }

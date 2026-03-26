@@ -13,6 +13,24 @@ export class AnimalService {
 
   constructor(private readonly http: HttpClient) { }
 
+  getAnimalsByDiet(diet: string): Observable<Animal[]> {
+    return this.filterAnimals(a => a.dieta.en === diet);
+  }
+
+  getAnimalsByConservationStatus(status: string): Observable<Animal[]> {
+    return this.filterAnimals(a => a.estadoConservacion.en === status);
+  }
+
+  searchAnimals(searchTerm: string): Observable<Animal[]> {
+    const term = searchTerm.toLowerCase().trim();
+    return this.filterAnimals(a =>
+      a.nombre.es.toLowerCase().includes(term) ||
+      a.nombreCientifico.toLowerCase().includes(term) ||
+      a.descripcion.es.toLowerCase().includes(term)
+    );
+  }
+
+
   getAnimals(): Observable<Animal[]> {
     // La estrategia que se emplea evita que, cada vez que se quiera obtener un animal,
     // se tenga que consumir el JSON
@@ -36,26 +54,8 @@ export class AnimalService {
     return this.filterAnimals(a => a.ecosistemaId === ecosystemId);
   }
 
-  getAnimalsByDiet(diet: Animal['dieta']): Observable<Animal[]> {
-    return this.filterAnimals(a => a.dieta === diet);
-  }
-
   getAnimalsByContinent(continent: string): Observable<Animal[]> {
     return this.filterAnimals(a => a.continente === continent);
-  }
-
-  getAnimalsByConservationStatus(status: Animal['estadoConservacion']): Observable<Animal[]> {
-    return this.filterAnimals(a => a.estadoConservacion === status);
-  }
-
-  searchAnimals(searchTerm: string): Observable<Animal[]> {
-    const term = searchTerm.toLowerCase().trim();
-
-    return this.filterAnimals(a =>
-      a.nombre.toLowerCase().includes(term) ||
-      a.nombreCientifico.toLowerCase().includes(term) ||
-      a.descripcion.toLowerCase().includes(term)
-    );
   }
 
   getRandomAnimal(): Observable<Animal | null> {
