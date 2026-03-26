@@ -9,7 +9,8 @@
     <!-- Nombre -->
     <div class="form-group">
       <label class="label" for="firstName">{{ 'REGISTER_FORM.FIRST_NAME' | translate }}</label>
-      <input class="input-text" id="firstName" type="text" formControlName="firstName" [placeholder]="'REGISTER_FORM.FIRST_NAME_PLACEHOLDER' | translate"
+      <input class="input-text" id="firstName" type="text" formControlName="firstName"
+        [placeholder]="'REGISTER_FORM.FIRST_NAME_PLACEHOLDER' | translate"
         [class.error]="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched">
 
       @if (registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched) {
@@ -22,7 +23,8 @@
     <!-- Apellido -->
     <div class="form-group">
       <label class="label" for="lastName">{{ 'REGISTER_FORM.LAST_NAME' | translate }}</label>
-      <input class="input-text" id="lastName" type="text" formControlName="lastName" [placeholder]="'REGISTER_FORM.LAST_NAME_PLACEHOLDER' | translate"
+      <input class="input-text" id="lastName" type="text" formControlName="lastName"
+        [placeholder]="'REGISTER_FORM.LAST_NAME_PLACEHOLDER' | translate"
         [class.error]="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched">
 
       @if (registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched) {
@@ -35,43 +37,44 @@
     <!-- Email -->
     <div class="form-group">
       <label class="label" for="email">{{ 'REGISTER_FORM.EMAIL' | translate }}</label>
-      <input class="input-text" id="email" type="email" formControlName="email" [placeholder]="'REGISTER_FORM.EMAIL_PLACEHOLDER' | translate"
+      <input class="input-text" id="email" type="email" formControlName="email"
+        [placeholder]="'REGISTER_FORM.EMAIL_PLACEHOLDER' | translate"
         [class.error]="(registerForm.get('email')?.invalid && registerForm.get('email')?.touched) || emailExists">
 
       @if (registerForm.get('email')?.invalid && registerForm.get('email')?.touched) {
       <small class="small">
-        Introduce un email válido
+        {{ 'REGISTER_FORM.EMAIL_INVALID' | translate }}
       </small>
       }
 
       @if (emailExists) {
       <small class="small error-message">
-        Este email ya está registrado
+        {{ 'REGISTER_FORM.EMAIL_EXISTS' | translate }}
       </small>
       }
     </div>
 
     <!-- Contraseña -->
     <div class="form-group">
-      <label class="label" for="password">Contraseña</label>
+      <label class="label" for="password">{{ 'REGISTER_FORM.PASSWORD' | translate }}</label>
       <input class="input-text" id="password" type="password" formControlName="password">
 
       @if (registerForm.get('password')?.invalid && registerForm.get('password')?.touched) {
       <small class="small">
-        Mínimo 6 caracteres, una mayúscula y un número
+        {{ 'REGISTER_FORM.PASSWORD_MIN' | translate }}
       </small>
       }
     </div>
 
     <!-- Edad -->
     <div class="form-group">
-      <label class="label" for="age">Edad</label>
+      <label class="label" for="age">{{ 'REGISTER_FORM.AGE' | translate }}</label>
       <input class="input-text" id="age" type="number" formControlName="age" placeholder="30" min="0" max="120"
         [class.error]="registerForm.get('age')?.invalid && registerForm.get('age')?.touched">
 
       @if (registerForm.get('age')?.invalid && registerForm.get('age')?.touched) {
       <small class="small">
-        La edad debe estar entre 0 y 120 años
+        {{ 'REGISTER_FORM.AGE_INVALID' | translate }}
       </small>
       }
     </div>
@@ -80,12 +83,12 @@
     <div class="form-group checkbox">
       <input class="input-checkbox" type="checkbox" formControlName="agreeToTerms" id="agreeToTerms">
       <label for="agreeToTerms" class="label">
-        Acepto los términos y condiciones del zoo
+        {{ 'REGISTER_FORM.AGREE_TO_TERMS' | translate }}
       </label>
 
       @if (registerForm.get('agreeToTerms')?.invalid && registerForm.get('agreeToTerms')?.touched) {
       <small class="small">
-        Debes aceptar los términos
+        {{ 'REGISTER_FORM.AGREE_TO_TERMS_REQUIRED' | translate }}
       </small>
       }
     </div>
@@ -94,10 +97,10 @@
     <div class="form-group checkbox">
       <input class="input-checkbox" type="checkbox" formControlName="becomeMember" id="becomeMember">
       <label for="becomeMember" class="label">
-        Quiero hacerme socio (50% descuento en todas las entradas)
+        {{ 'REGISTER_FORM.BECOME_MEMBER' | translate }}
       </label>
       <small class="small">
-        Puedes cambiar esta opción después en tu perfil
+        {{ 'REGISTER_FORM.BECOME_MEMBER_INFO' | translate }}
       </small>
     </div>
 
@@ -111,7 +114,7 @@
 
   <!-- Submit -->
   <button type="submit" class="submit-button" [disabled]="!registerForm.valid || isLoading || authIsLoading()">
-    {{ (isLoading || authIsLoading()) ? 'Registrando...' : 'Registrarse' }}
+    {{ (isLoading || authIsLoading()) ? ('REGISTER_FORM.LOADING' | translate) : ('REGISTER_FORM.SUBMIT' | translate) }}
   </button>
 
   @if (false) { <!-- true para debug -->

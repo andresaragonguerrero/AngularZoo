@@ -112,7 +112,16 @@
     "EMAIL_PLACEHOLDER": "email@email.com",
     "EMAIL_INVALID": "Enter a valid email",
     "EMAIL_EXISTS": "This email is already registered",
-    "PASSWORD": "Password"
+    "PASSWORD": "Password",
+    "PASSWORD_MIN": "Minimum 6 characters, one uppercase letter and one number",
+    "AGE": "Age",
+    "AGE_INVALID": "The age must be between 0 and 120 years",
+    "AGREE_TO_TERMS": "I agree to the terms and conditions",
+    "AGREE_TO_TERMS_REQUIRED": "You must agree to the terms and conditions",
+    "BECOME_MEMBER": "I’d like to become a member (50% discount on all tickets)",
+    "BECOME_MEMBER_INFO": "You can modify this option later in your profile",
+    "LOADING": "Registering...",
+    "SUBMIT": "Sign up"
   },
   "FAVORITE_ANIMALS": {
     "TITLE": "Favorite animals",
