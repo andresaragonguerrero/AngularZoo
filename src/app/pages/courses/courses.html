@@ -1,7 +1,7 @@
 <div class="content-wrapper">
 
     <section class="section-header">
-        <h1 class="section-title">Cursos disponibles</h1>
+        <h1 class="section-title">{{ 'COURSES.AVAILABLE_COURSES' | translate }}</h1>
     </section>
 
     <section class="section-form-display">
@@ -16,7 +16,7 @@
                     <p>Precio: {{ course.price }} €</p>
 
                     <button class="button submit-button-guest" (click)="enroll(course.id)">
-                        Inscribirse
+                        {{ 'COURSES.ENROLL' | translate }}
                     </button>
                 </div>
                 <!-- <img class="course-card__image" alt="curso" src="/assets/images/animals/abeja-miel.jpg"> -->
@@ -27,18 +27,16 @@
         <article class="article article-member-admission">
 
             <span class="badge-member">
-                Exclusivo miembros
+                {{ 'COURSES.EXCLUSIVE_MEMBERS' | translate }}
             </span>
 
             <div class="article-header">
 
                 <h2 class="article-title">
-                    Ventajas de ser socio
+                    {{ 'COURSES.ADVANTAGES' | translate }}
                 </h2>
                 <h3 class="article-subtitle">
-                    Los socios disfrutan de descuentos automáticos,
-                    cursos gratuitos seleccionados y acceso prioritario
-                    a las inscripciones.
+                    {{ 'COURSES.ADVANTAGES_DESC' | translate }}
                 </h3>
 
             </div>
@@ -47,24 +45,24 @@
 
                 <li class="article-content-row">
                     <p class="content-ticket-age">
-                        Cursos gratuitos seleccionados
+                        {{ 'COURSES.FREE_COURSES' | translate }}
                     </p>
                 </li>
                 <li class="article-content-row">
                     <p class="content-ticket-age">
-                        Descuentos automáticos
+                        {{ 'COURSES.DISCOUNTS' | translate }}
                     </p>
                 </li>
                 <li class="article-content-row">
                     <p class="content-ticket-age">
-                        Acceso prioritario a inscripciones
+                        {{ 'COURSES.PRIORITY_ACCESS' | translate }}
                     </p>
                 </li>
 
             </ul>
 
             <button class="button submit-button-member" routerLink="/register" [queryParams]="{ becomeMember: true }">
-                Hazte socio
+                {{ 'COURSES.BECOME_MEMBER' | translate }}
             </button>
         </article>
     </section>

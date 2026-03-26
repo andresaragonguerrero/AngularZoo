@@ -1,11 +1,15 @@
 import { Component, signal } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 // servicios
 import { ThemeService } from '../../services/theme.service';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-page-settings',
-  imports: [],
+  imports: [
+    TranslateModule,
+  ],
   templateUrl: './page-settings.html',
   styleUrl: './page-settings.scss',
 })
@@ -14,9 +18,13 @@ export class PageSettings {
   theme = signal<'light' | 'dark'>('light');
   contrast = signal(false);
   settingsOpen = signal(true);
+  langOpen = signal(false);
+
+  readonly languages: ('es' | 'en' | 'fr')[] = ['es', 'en', 'fr'];
 
   constructor(
     private readonly themeService: ThemeService,
+    private readonly languageService: LanguageService,
   ) {
     // obtener el tema guardado
     this.theme.set(this.themeService.getTheme());
@@ -64,5 +72,18 @@ export class PageSettings {
   // lógica para colapsar los iconos de la configuración
   toggleColapsed() {
     this.settingsOpen.set(!this.settingsOpen());
+  }
+
+  // lógica del idioma
+  toggleLang() {
+    this.langOpen.set(!this.langOpen());
+  }
+  
+  setLanguage(lang: 'es' | 'en' | 'fr') {
+    this.languageService.setLanguage(lang);
+  }
+
+  get currentLanguage() {
+    return this.languageService.currentLanguage;
   }
 }

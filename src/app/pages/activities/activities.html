@@ -2,15 +2,15 @@
 
     @if (variant === 'default') {
     <section class="section-header">
-        <h1 class="section-title">Actividades disponibles</h1>
+        <h1 class="section-title">{{ 'ACTIVITIES.AVAILABLE_ACTIVITIES' | translate }}</h1>
     </section>
     }
 
     @if (variant === 'compact') {
     <section class="activities-compact">
         <div class="activities-compact__header">
-            <span class="activities-compact__eyebrow">Temporada actual</span>
-            <h2 class="activities-compact__title">Actividades disponibles</h2>
+            <span class="activities-compact__eyebrow">{{ 'ACTIVITIES.SEASON' | translate }}</span>
+            <h2 class="activities-compact__title">{{ 'ACTIVITIES.AVAILABLE_ACTIVITIES' | translate }}</h2>
         </div>
         <div class="activities-compact__grid">
             @for (activity of activities; track activity.id; let i = $index) {
@@ -22,7 +22,7 @@
                 <h3 class="activity-compact-card__name">{{ activity.name }}</h3>
                 <p class="activity-compact-card__description">{{ activity.description }}</p>
                 <button class="activity-compact-card__cta" (click)="enroll(activity.id)">
-                    Inscribirse
+                    {{ 'ACTIVITIES.ENROLL' | translate }}
                 </button>
             </article>
             }
@@ -43,7 +43,7 @@
                     <p>Precio: {{ activity.price }} €</p>
 
                     <button class="button submit-button-guest" (click)="enroll(activity.id)">
-                        Inscribirse
+                        {{ 'ACTIVITIES.ENROLL' | translate }}
                     </button>
                 </div>
                 <!-- <img class="activity-card__image" alt="actividad"
@@ -55,18 +55,16 @@
         <article class="article article-member-admission">
 
             <span class="badge-member">
-                Exclusivo miembros
+                {{ 'ACTIVITIES.MEMBER_BADGE' | translate }}
             </span>
 
             <div class="article-header">
 
                 <h2 class="article-title">
-                    Ventajas de ser socio
+                    {{ 'ACTIVITIES.MEMBER_BENEFITS' | translate }}
                 </h2>
                 <h3 class="article-subtitle">
-                    Los socios disfrutan de descuentos automáticos,
-                    actividades gratuitas seleccionadas y acceso prioritario
-                    a las inscripciones.
+                    {{ 'ACTIVITIES.SUBTITLE' | translate }}
                 </h3>
 
             </div>
@@ -75,24 +73,24 @@
 
                 <li class="article-content-row">
                     <p class="content-ticket-age">
-                        Actividades gratuitas seleccionadas
+                        {{ 'ACTIVITIES.FREE_ACTIVITIES' | translate }}
                     </p>
                 </li>
                 <li class="article-content-row">
                     <p class="content-ticket-age">
-                        Descuentos automáticos
+                        {{ 'ACTIVITIES.DISCOUNTS' | translate }}
                     </p>
                 </li>
                 <li class="article-content-row">
                     <p class="content-ticket-age">
-                        Acceso prioritario a inscripciones
+                       {{ 'ACTIVITIES.PRIORITY_ACCESS' | translate }}
                     </p>
                 </li>
 
             </ul>
 
             <button class="button submit-button-member" routerLink="/register" [queryParams]="{ becomeMember: true }">
-                Hazte socio
+                {{ 'ACTIVITIES.BECOME_MEMBER' | translate }}
             </button>
         </article>
     </section>

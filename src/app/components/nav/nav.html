@@ -1,26 +1,26 @@
 <ul class="nav-list">
   <li class="button button-nav">
     <a class="nav-link" routerLink="/home" routerLinkActive="active" (click)="onClick()"
-      [routerLinkActiveOptions]="{exact: true}" aria-label="Inicio">Inicio</a>
+      [routerLinkActiveOptions]="{exact: true}" [attr.aria-label]="'NAV.HOME' | translate">{{ 'NAV.HOME' | translate }}</a>
   </li>
   <li class="button button-nav">
     <a class="nav-link" routerLink="/animals" routerLinkActive="active" (click)="onClick()"
-      aria-label="Animales">Animales</a>
+      [attr.aria-label]="'NAV.ANIMALS' | translate">{{ 'NAV.ANIMALS' | translate }}</a>
   </li>
   <li class="button button-nav">
     <a class="nav-link" routerLink="/favorite-animals" routerLinkActive="active" (click)="onClick()"
-      aria-label="Animales favoritos">Favoritos</a>
+      [attr.aria-label]="'NAV.FAVORITES' | translate">{{ 'NAV.FAVORITES' | translate }}</a>
   </li>
   <li class="button button-nav">
     <a class="nav-link" routerLink="/tickets" routerLinkActive="active" (click)="onClick()"
-      aria-label="Entradas">Entradas</a>
+      [attr.aria-label]="'NAV.TICKETS' | translate">{{ 'NAV.TICKETS' | translate }}</a>
   </li>
   <li class="button button-nav">
     <a class="nav-link" routerLink="/courses" routerLinkActive="active" (click)="onClick()"
-      aria-label="Cursos">Cursos</a>
+      [attr.aria-label]="'NAV.COURSES' | translate">{{ 'NAV.COURSES' | translate }}</a>
   </li>
   <li class="button button-nav">
     <a class="nav-link" routerLink="/activities" routerLinkActive="active" (click)="onClick()"
-      aria-label="Actividades">Actividades</a>
+      [attr.aria-label]="'NAV.ACTIVITIES' | translate">{{ 'NAV.ACTIVITIES' | translate }}</a>
   </li>
 </ul>

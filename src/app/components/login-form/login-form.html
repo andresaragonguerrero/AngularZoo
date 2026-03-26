@@ -1,30 +1,31 @@
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="login-form">
 
   <section class="form-header">
-    <h2 class="form-title">Inicia sesión</h2>
-    <h3 class="form-subtitle">Rellena los campos de abajo para acceder a descuentos</h3>
+    <h2 class="form-title">{{ 'LOGIN_FORM.TITLE' | translate }}</h2>
+    <h3 class="form-subtitle">{{ 'LOGIN_FORM.SUBTITLE' | translate }}</h3>
   </section>
 
   <section class="form-body">
     <!-- Email -->
     <div class="field">
-      <label class="field-label" for="email">Email</label>
-      <input class="field-input" id="email" type="email" formControlName="email" placeholder="email@email.com"
-        autocomplete="off" [class.is-invalid]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
+      <label class="field-label" for="email">{{ 'LOGIN_FORM.EMAIL' | translate }}</label>
+      <input class="field-input" id="email" type="email" formControlName="email"
+        [placeholder]="'LOGIN_FORM.EMAIL_PLACEHOLDER' | translate" autocomplete="off"
+        [class.is-invalid]="loginForm.get('email')?.invalid && loginForm.get('email')?.touched">
       @if (loginForm.get('email')?.invalid && loginForm.get('email')?.touched) {
       <small class="field-error">
-        Introduce un email válido
+        {{ 'LOGIN_FORM.EMAIL_INVALID' | translate }}
       </small>
       }
     </div>
 
     <!-- Password -->
     <div class="field">
-      <label class="field-label" for="password">Contraseña</label>
+      <label class="field-label" for="password">{{ 'LOGIN_FORM.PASSWORD' | translate }}</label>
 
       <div class="password-wrapper">
         <input class="field-input" [type]="showPassword() ? 'text' : 'password'" id="password"
-          formControlName="password" placeholder="••••••••"
+          formControlName="password" [placeholder]="'LOGIN_FORM.PASSWORD_PLACEHOLDER' | translate"
           [class.is-invalid]="loginForm.get('password')?.invalid && loginForm.get('password')?.touched">
 
         <button type="button" (click)="togglePasswordVisibility()" class="password-toggle">
@@ -34,7 +35,7 @@
 
       @if (loginForm.get('password')?.invalid && loginForm.get('password')?.touched) {
       <small class="field-error">
-        Mínimo 6 caracteres
+        {{ 'LOGIN_FORM.PASSWORD_MIN' | translate }}
       </small>
       }
     </div>
@@ -49,14 +50,27 @@
 
   <!-- Submit -->
   <button type="submit" [disabled]="!loginForm.valid || isLoading() || authIsLoading()" class="button submit-button">
-    {{ (isLoading() || authIsLoading()) ? 'Iniciando sesión...' : 'Iniciar sesión' }}
+
+    {{ (isLoading() || authIsLoading())
+    ? ('LOGIN_FORM.LOADING' | translate)
+    : ('LOGIN_FORM.SUBMIT' | translate)
+    }}
   </button>
 
   <!-- Enlaces -->
   <div class="form-footer">
-    <p><span class="footer-text">¿No tienes cuenta? </span><a routerLink="/register" class="footer-link"
-        (click)="$event.stopPropagation()">Regístrate aquí</a></p>
-    <p><a href="#" class="footer-link">¿Olvidaste tu contraseña?</a></p>
+    <p>
+      <span class="footer-text">{{ 'LOGIN_FORM.NO_ACCOUNT' | translate }}</span>
+      <a routerLink="/register" class="footer-link" (click)="$event.stopPropagation()">
+        {{ 'LOGIN_FORM.REGISTER' | translate }}
+      </a>
+    </p>
+
+    <p>
+      <a href="#" class="footer-link">
+        {{ 'LOGIN_FORM.FORGOT_PASSWORD' | translate }}
+      </a>
+    </p>
   </div>
 
 </form>

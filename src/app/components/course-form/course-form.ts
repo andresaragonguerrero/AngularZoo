@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Input, Output, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
 
 // Servicios
 import { CourseService } from '../../services/course.service';
@@ -12,7 +13,11 @@ import { Course } from '../../models/course.interface';
 @Component({
   selector: 'app-course-form',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [
+    CommonModule, 
+    FormsModule,
+     TranslateModule,
+  ],
   templateUrl: './course-form.html',
   styleUrl: './course-form.scss'
 })

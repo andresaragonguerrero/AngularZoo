@@ -1,11 +1,11 @@
 <header class="section-header">
-    <h1 class="section-title">Animales favoritos</h1>
+    <h1 class="section-title">{{ 'FAVORITE_ANIMALS.TITLE' | translate }}</h1>
 </header>
 
 <section class="favorite-animals">
 
     @if (isLoading) {
-    <p class="favorite-animals__loading">Cargando animales favoritos...</p>
+    <p class="favorite-animals__loading">{{ 'FAVORITE_ANIMALS.LOADING' | translate }}</p>
     }
 
     @if (error) {
@@ -19,9 +19,9 @@
         <article class="animal-entry" [class.animal-entry--reversed]="i % 2 !== 0">
 
             <div class="animal-entry__info">
-                <button class="animal-entry__favorite active" (click)="toggleFavorite(animal.id)">
-                    ★ Quitar de favoritos
-                </button>
+                    <button class="animal-entry__favorite active" (click)="toggleFavorite(animal.id)">
+                        ★ {{ 'FAVORITE_ANIMALS.REMOVE_FAVORITE' | translate }}
+                    </button>
 
                 <span class="animal-entry__index">{{ (i + 1).toString().padStart(2, '0') }}</span>
                 <h3 class="animal-entry__name">{{ animal.nombre }}</h3>

@@ -1,9 +1,11 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 // Componentes
 import { ScheduleActivities } from '../../components/schedule-activities/schedule-activities';
+
 
 @Component({
   selector: 'app-park-info',
@@ -11,6 +13,7 @@ import { ScheduleActivities } from '../../components/schedule-activities/schedul
     CommonModule,
     RouterModule,
     ScheduleActivities,
+    TranslateModule,
   ],
   templateUrl: './park-info.html',
   styleUrl: './park-info.scss',

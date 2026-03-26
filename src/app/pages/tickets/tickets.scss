@@ -104,13 +104,16 @@
 }
 
 .article-member-admission .content-ticket-price {
-    color: var(--primary-color);
+    color: var(--secondary-color);
 }
 
 .submit-button-guest,
 .submit-button-member {
+    height: 3rem;
     width: 12rem;
+
     position: relative;
+
     overflow: hidden;
     isolation: isolate;
 }

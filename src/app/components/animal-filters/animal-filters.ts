@@ -1,11 +1,15 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 // Modelos
 import { Animal } from '../../models/animal.interface';
 
+
 @Component({
   selector: 'app-animal-filters',
-  imports: [],
+  imports: [
+    TranslateModule,
+  ],
   templateUrl: './animal-filters.html',
   styleUrl: './animal-filters.scss',
 })

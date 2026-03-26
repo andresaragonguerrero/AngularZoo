@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 // Servicios
 import { AuthService } from '../../services/auth.service';
@@ -11,6 +12,7 @@ import { AuthService } from '../../services/auth.service';
   imports: [
     ReactiveFormsModule,
     CommonModule,
+    TranslateModule,
   ],
   templateUrl: './register-form.html',
   styleUrl: './register-form.scss',

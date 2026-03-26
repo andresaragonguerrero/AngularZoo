@@ -1,16 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { Component, computed, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 // Servicios
 import { AuthService } from '../../services/auth.service';
 import { NotificationService } from '../../services/notification.service';
 
+
 @Component({
   selector: 'app-auth',
   imports: [
     CommonModule,
-    RouterLink
+    RouterLink,
+    TranslateModule,
   ],
   templateUrl: './auth.html',
   styleUrl: './auth.scss',

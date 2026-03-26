@@ -1,6 +1,6 @@
 <div class="content-wrapper">
     <section class="section-header">
-        <h1 class="section-title">En construcción</h1>
+        <h1 class="section-title">{{ 'COMING_SOON.TITLE' | translate }}</h1>
     </section>
 
     <section class="coming-soon">
@@ -12,13 +12,12 @@
         </div>
 
         <div class="coming-soon__body">
-            <span class="coming-soon__eyebrow">Senda Animal</span>
-            <h2 class="coming-soon__title">Estamos trabajando en ello</h2>
+            <span class="coming-soon__eyebrow">{{ 'HEADER.SITE_TITLE' | translate }}</span>
+            <h2 class="coming-soon__title">{{ 'COMING_SOON.TITLE' | translate }}</h2>
             <p class="coming-soon__description">
-                Esta sección está en desarrollo. Pronto estará disponible con todo el contenido. Gracias por tu
-                comprensión.
+                {{ 'COMING_SOON.DESCRIPTION' | translate }}
             </p>
-            <a class="coming-soon__cta" routerLink="/home" routerLinkActive="active">Volver al inicio</a>
+            <a class="coming-soon__cta" routerLink="/home" routerLinkActive="active">{{ 'COMING_SOON.BACK_HOME' | translate }}</a>
         </div>
     </section>
 </div>

@@ -1,10 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-animal-pagination',
   imports: [
     CommonModule,
+    TranslateModule,
   ],
   templateUrl: './animal-pagination.html',
   styleUrl: './animal-pagination.scss',

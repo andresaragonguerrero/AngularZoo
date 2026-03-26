@@ -1,0 +1,246 @@
+{
+  "NAV": {
+    "HOME": "Home",
+    "ANIMALS": "Animals",
+    "FAVORITES": "Favorites",
+    "TICKETS": "Tickets",
+    "COURSES": "Courses",
+    "ACTIVITIES": "Activities"
+  },
+  "HEADER": {
+    "SITE_TITLE": "Senda Animal",
+    "SITE_TAGLINE": "A wild reserve",
+    "OPEN_MENU": "Open menu",
+    "CLOSE_MENU": "Close menu"
+  },
+  "FOOTER": {
+    "COLLABORATORS": "Our collaborators:",
+    "CONTACT_US": "Contact us",
+    "WORK_WITH_US": "Work with us",
+    "ABOUT_US": "About us",
+    "PARTICIPATE": "Get involved",
+    "TICKETS": "Tickets",
+    "COURSES": "Courses",
+    "ACTIVITIES": "Activities",
+    "PRIVACY_POLICY": "Privacy policy",
+    "COOKIE_SETTINGS": "Cookie settings",
+    "LEGAL_NOTICE": "Legal notice",
+    "TERMS": "Terms and conditions",
+    "COPYRIGHT_1": "All website content is owned unless otherwise stated.",
+    "COPYRIGHT_2": "All rights reserved."
+  },
+  "ANIMAL_LIST": {
+    "TITLE": "Animal list",
+    "LOADING": "Loading animals...",
+    "NO_ANIMALS": "No animals found.",
+    "DETAIL": "See details",
+    "WEIGHT": "Weight:",
+    "DIET": "Diet:",
+    "LIFE_SPAN": "Life span:",
+    "STATUS": "Conservation status:"
+  },
+  "ANIMAL_FILTERS": {
+    "SEARCH_PLACEHOLDER": "Search animal...",
+    "ALL_DIETS": "All diets",
+    "HERBIVORE": "Herbivore",
+    "CARNIVORE": "Carnivore",
+    "OMNIVORE": "Omnivore",
+    "INSECTIVORE": "Insectivore",
+    "ALL_CONTINENTS": "All continents",
+    "AFRICA": "Africa",
+    "EUROPE": "Europe",
+    "ASIA": "Asia",
+    "AMERICA": "America",
+    "OCEANIA": "Oceania",
+    "ALL_CONSERVATION": "All conservation statuses",
+    "LEAST_CONCERN": "Least concern",
+    "VULNERABLE": "Vulnerable",
+    "ENDANGERED": "Endangered",
+    "CRITICALLY_ENDANGERED": "Critically endangered",
+    "EXTINCT": "Extinct",
+    "CLEAR_FILTERS": "Clear filters"
+  },
+  "ANIMAL_PAGINATION": {
+    "PREVIOUS": "Previous",
+    "NEXT": "Next"
+  },
+  "TICKET_FORM": {
+    "SENIOR": "Senior",
+    "MEMBER_PRICE": "Member price:",
+    "INFO_DETAIL": "| over 65 years",
+    "MIN_VALUE": "Minimum value: 0"
+  },
+  "TICKET_SUMMARY_MODAL": {
+    "PURCHASE_SUMMARY": "Purchase summary",
+    "USER_TYPE": "User type:",
+    "MEMBER": "Member",
+    "NON_MEMBER": "Non-member",
+    "ADULTS": "Adults:",
+    "CHILDREN": "Children:",
+    "SENIORS": "Seniors:",
+    "TOTAL": "Total:",
+    "CONFIRM": "Confirm",
+    "CANCEL": "Cancel"
+  },
+  "LOGIN_FORM": {
+    "TITLE": "Sign in",
+    "SUBTITLE": "Fill in the fields below to access discounts",
+    "EMAIL": "Email",
+    "EMAIL_PLACEHOLDER": "email@email.com",
+    "EMAIL_INVALID": "Enter a valid email",
+    "PASSWORD": "Password",
+    "PASSWORD_PLACEHOLDER": "••••••••",
+    "PASSWORD_MIN": "Minimum 6 characters",
+    "LOADING": "Signing in...",
+    "SUBMIT": "Sign in",
+    "NO_ACCOUNT": "Don't have an account? ",
+    "REGISTER_LINK": "Register here",
+    "FORGOT_PASSWORD": "Forgot your password?",
+    "ERROR": "Error",
+    "REGISTER": "Sign up here"
+  },
+  "REGISTER_FORM": {
+    "TITLE": "Sign up",
+    "DESCRIPTION": "Fill in the fields below to access discounts",
+    "FIRST_NAME": "First name",
+    "FIRST_NAME_PLACEHOLDER": "First name...",
+    "FIRST_NAME_REQUIRED": "First name is required (minimum 2 characters)",
+    "LAST_NAME": "Last name",
+    "LAST_NAME_PLACEHOLDER": "Last name...",
+    "LAST_NAME_REQUIRED": "Last name is required",
+    "EMAIL": "Email",
+    "EMAIL_PLACEHOLDER": "email@email.com",
+    "EMAIL_INVALID": "Enter a valid email",
+    "EMAIL_EXISTS": "This email is already registered",
+    "PASSWORD": "Password"
+  },
+  "FAVORITE_ANIMALS": {
+    "TITLE": "Favorite animals",
+    "LOADING": "Loading favorite animals...",
+    "NO_FAVORITES": "You have no favorite animals yet.",
+    "EXPLORE_ANIMALS": "Explore animals",
+    "REMOVE_FAVORITE": "Remove from favorites"
+  },
+  "HOME": {
+    "SAVE_WILDLIFE": "We save wildlife,",
+    "RETURN_FREEDOM": "we return freedom",
+    "ANIMAL_OF_THE_DAY": "Animal of the day",
+    "DID_YOU_KNOW": "Did you know...?",
+    "SEE_FULL_PROFILE": "See full profile",
+    "LEARN_MORE": "Learn more!",
+    "NO_ANIMAL_TODAY": "No animal found for today."
+  },
+  "PARK_INFO": {
+    "ABOUT_ZOO": "About our zoo",
+    "ABOUT_ZOO_DESC": "Learn all about our zoo: the wild animal rehabilitation center, our history, mission, values, and more.",
+    "DISCOVER_MORE": "Discover more about us!",
+    "VISITOR_INFO": "Visitor information",
+    "WHAT_TO_KNOW": "What you should know before coming",
+    "IMPORTANT_INFO": "Important information",
+    "FAQ": "Frequently asked questions",
+    "RULES": "Important rules",
+    "LOCATION": "Location",
+    "MAP": "Map",
+    "GET_DIRECTIONS": "Get directions"
+  },
+  "ACTIVITIES": {
+    "AVAILABLE_ACTIVITIES": "Available activities",
+    "ENROLL": "Enroll",
+    "EXCLUSIVE_MEMBERS": "Members only",
+    "SEASON": "Current season",
+    "MEMBER_BADGE": "Members only",
+    "BECOME_MEMBER": "Become a member",
+    "FREE_ACTIVITIES": "Selected free activities",
+    "DISCOUNTS": "Automatic discounts",
+    "PRIORITY_ACCESS": "Priority access to activities",
+    "MEMBER_BENEFITS": "Benefits for members",
+    "SUBTITLE": "Members enjoy automatic discounts, selected free activities and priority access to bookings."
+  },
+  "TICKETS": {
+    "PURCHASE_TICKETS": "Ticket purchase",
+    "ZOO_ACCESS": "Zoo access",
+    "INCLUDES_ALL": "Admission includes all park areas except those with activities exclusive to members. All visitors must have a specific entry date.",
+    "SENIORS": "Seniors",
+    "SENIORS_INFO": "(over 65 years)",
+    "ADULTS": "Adults",
+    "ADULTS_INFO": "(over 18 years)",
+    "YOUTH": "Youth",
+    "YOUTH_INFO": "(over 3 years)",
+    "CHILDREN": "Children",
+    "CHILDREN_INFO": "(under 3 years)",
+    "FREE_ENTRY": "Free entry",
+    "BUY_TICKETS": "Get your tickets now",
+    "MEMBER_BADGE": "Members only",
+    "MEMBER_ACCESS": "Member access",
+    "MEMBER_SUBTITLE": "All members must reserve a specific date for tickets. Your membership number is required to make a reservation.",
+    "MEMBER_DISCOUNT": "50% discount on tickets",
+    "BUY_MEMBERSHIP_TICKETS": "Book tickets now"
+  },
+  "COURSES": {
+    "AVAILABLE_COURSES": "Available courses",
+    "ENROLL": "Enroll",
+    "EXCLUSIVE_MEMBERS": "Members only",
+    "ADVANTAGES": "Membership advantages",
+    "ADVANTAGES_DESC": "Members enjoy automatic discounts, selected free courses, and priority access to enrollments.",
+    "FREE_COURSES": "Selected free courses",
+    "DISCOUNTS": "Automatic discounts",
+    "PRIORITY_ACCESS": "Priority access to enrollments",
+    "BECOME_MEMBER": "Become a member"
+  },
+  "COURSE_FORM": {
+    "ENROLL_COURSE": "Course enrollment",
+    "FREE_FOR_MEMBERS": "Free course for members",
+    "CONFIRM_ENROLLMENT": "Confirm enrollment",
+    "RECEIPT": "Receipt",
+    "COURSE": "Course:",
+    "AMOUNT_PAID": "Amount paid:",
+    "DATE": "Date:"
+  },
+  "ACTIVITY_PURCHASE": {
+    "ENROLL_ACTIVITY": "Activity enrollment",
+    "ENROLL": "Enroll"
+  },
+  "TICKET_PURCHASE": {
+    "GET_TICKETS": "Get tickets",
+    "ZOO_ACCESS": "Zoo access",
+    "CURRENT_SCHEDULE": "Current daily schedule is 2pm - 10pm.",
+    "REMINDER": "Reminder",
+    "FREE_ENTRY_CHILDREN": "Children under 2 years have free entry.",
+    "CONDITIONS_TITLE": "Mock title text",
+    "CONDITION_1": "Mock condition text 1",
+    "CONDITION_2": "Mock condition text 2",
+    "CONDITION_3": "Mock condition text 3",
+    "SENIORS_INFO": "| over 65 years",
+    "ADULTS_INFO": "| over 18 years",
+    "YOUTH_INFO": "| over 3 years",
+    "CHILD_INFO": "| under 3 years",
+    "HOUR": "Hour",
+    "SELECT_HOUR": "Select hour",
+    "MIN_ONE_TICKET": "At least one ticket must be selected",
+    "BUY_TICKETS": "Buy tickets",
+    "MINIMUM_VALUE": "Minimum value is 0",
+    "DATE": "Visit date",
+    "SENIORS": "Seniors",
+    "ADULTS": "Adults",
+    "CHILDREN": "Children"
+  },
+  "REGISTER_PAGE": {
+    "REGISTER": "Register"
+  },
+  "COMING_SOON": {
+    "TITLE": "We're working on it",
+    "DESCRIPTION": "This section is under development. It will be available soon with all content. Thank you for your understanding.",
+    "BACK_HOME": "Back to home"
+  },
+  "SCHEDULE": {
+    "TITLE": "Schedule",
+    "NOTE": "(Wednesday to Sunday: 2pm - 10pm)",
+    "ACTIVITIES_OPENING": "Zoo opening",
+    "ACTIVITIES_CLOSING": "Zoo closed",
+    "MORE_INFO": "More information about schedule"
+  },
+  "LOGIN_PAGE": {
+    "TITLE": "Want to be a member?",
+    "REGISTER": "Join us"
+  }
+}

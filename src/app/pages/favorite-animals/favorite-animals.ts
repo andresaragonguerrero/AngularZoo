@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 
+import { TranslateModule } from '@ngx-translate/core';
+
 // Servicios
 import { AnimalService } from '../../services/animal.service';
 import { FavoriteAnimalsService } from '../../services/favorite-animals.service';
@@ -14,6 +16,7 @@ import { Animal } from '../../models/animal.interface';
   imports: [
     CommonModule,
     RouterModule,
+    TranslateModule,
   ],
   templateUrl: './favorite-animals.html',
   styleUrl: './favorite-animals.scss',

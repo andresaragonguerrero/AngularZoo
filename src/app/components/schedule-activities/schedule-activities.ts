@@ -1,4 +1,5 @@
 import { Component, inject, OnInit } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 // Services
 import { ActivityService } from '../../services/activity.service';
@@ -8,7 +9,9 @@ import { Activity } from '../../models/activity.interface';
 
 @Component({
   selector: 'app-schedule-activities',
-  imports: [],
+  imports: [
+    TranslateModule,
+  ],
   templateUrl: './schedule-activities.html',
   styleUrl: './schedule-activities.scss',
 })

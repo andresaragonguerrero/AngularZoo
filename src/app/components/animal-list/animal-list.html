@@ -1,11 +1,11 @@
 <section class="animal-list">
 
     <header class="animal-list__header">
-        <h2>Listado de animales</h2>
+        <h2>{{ 'ANIMAL_LIST.TITLE' | translate }}</h2>
     </header>
 
     @if (isLoading) {
-    <div class="animal-list__loading">Cargando animales...</div>
+    <div class="animal-list__loading">{{ 'ANIMAL_LIST.LOADING' | translate }}</div>
     }
 
     @if (error) {

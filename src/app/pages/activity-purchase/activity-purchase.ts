@@ -1,5 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 // Servicios
 import { ActivityService } from '../../services/activity.service';
@@ -12,6 +13,7 @@ import { Activity } from '../../models/activity.interface';
   selector: 'app-activity-purchase',
   imports: [
     RouterModule,
+    TranslateModule,
   ],
   templateUrl: './activity-purchase.html',
   styleUrl: './activity-purchase.scss',

@@ -2,16 +2,16 @@
 
     @if (course) {
 
-    <h3>Inscripción a curso</h3>
+    <h3>{{ 'COURSE_FORM.ENROLL_COURSE' | translate }}</h3>
 
     <p>{{ course.name }}</p>
 
     @if (isMember && course.isFreeForMembers) {
-    <p>💡 Curso gratuito para socios</p>
+    <p>💡 {{ 'COURSE_FORM.FREE_FOR_MEMBERS' | translate }}</p>
     }
 
     <button (click)="confirmEnrollment()">
-        Confirmar inscripción
+        {{ 'COURSE_FORM.CONFIRM_ENROLLMENT' | translate }}
     </button>
 
     }
@@ -19,11 +19,11 @@
     @if (receipt) {
 
     <div class="receipt-box">
-        <h4>Recibo</h4>
+        <h4>{{ 'COURSE_FORM.RECEIPT' | translate }}</h4>
 
-        <p>Curso: {{ receipt.courseName }}</p>
-        <p>Importe pagado: {{ receipt.pricePaid }} €</p>
-        <p>Fecha: {{ receipt.date }}</p>
+        <p>{{ 'COURSE_FORM.COURSE' | translate }} {{ receipt.courseName }}</p>
+        <p>{{ 'COURSE_FORM.AMOUNT_PAID' | translate }} {{ receipt.pricePaid }} €</p>
+        <p>{{ 'COURSE_FORM.DATE' | translate }} {{ receipt.date }}</p>
     </div>
 
     }

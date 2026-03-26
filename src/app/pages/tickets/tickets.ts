@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { Router, RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 // Servicios
 import { PriceCalculatorService } from '../../services/price-calculator.service';
@@ -9,6 +10,7 @@ import { AuthService } from '../../services/auth.service';
   selector: 'app-tickets',
   imports: [
     RouterLink,
+    TranslateModule,
   ],
   templateUrl: './tickets.html',
   styleUrl: './tickets.scss',

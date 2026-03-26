@@ -1,38 +1,38 @@
 <div class="filters">
 
     <div class="filters__search">
-        <input type="text" placeholder="Buscar animal..." #search (input)="onSearch(search.value)" />
+        <input type="text" [placeholder]="'ANIMAL_FILTERS.SEARCH_PLACEHOLDER' | translate" #search (input)="onSearch(search.value)" />
     </div>
 
     <div class="filters__controls">
 
         <select #diet (change)="onDietChange(diet.value)">
-            <option value="">Todas las dietas</option>
-            <option value="herbívoro">Herbívoro</option>
-            <option value="carnívoro">Carnívoro</option>
-            <option value="omnívoro">Omnívoro</option>
-            <option value="insectívoro">Insectívoro</option>
+            <option value="">{{ 'ANIMAL_FILTERS.ALL_DIETS' | translate }}</option>
+            <option value="herbívoro">{{ 'ANIMAL_FILTERS.HERBIVORE' | translate }}</option>
+            <option value="carnívoro">{{ 'ANIMAL_FILTERS.CARNIVORE' | translate }}</option>
+            <option value="omnívoro">{{ 'ANIMAL_FILTERS.OMNIVORE' | translate }}</option>
+            <option value="insectívoro">{{ 'ANIMAL_FILTERS.INSECTIVORE' | translate }}</option>
         </select>
 
         <select #continent (change)="onContinentChange(continent.value)">
-            <option value="">Todos los continentes</option>
-            <option value="África">África</option>
-            <option value="Europa">Europa</option>
-            <option value="Asia">Asia</option>
-            <option value="América">América</option>
-            <option value="Oceanía">Oceanía</option>
+            <option value="">{{ 'ANIMAL_FILTERS.ALL_CONTINENTS' | translate }}</option>
+            <option value="África">{{ 'ANIMAL_FILTERS.AFRICA' | translate }}</option>
+            <option value="Europa">{{ 'ANIMAL_FILTERS.EUROPE' | translate }}</option>
+            <option value="Asia">{{ 'ANIMAL_FILTERS.ASIA' | translate }}</option>
+            <option value="América">{{ 'ANIMAL_FILTERS.AMERICA' | translate }}</option>
+            <option value="Oceanía">{{ 'ANIMAL_FILTERS.OCEANIA' | translate }}</option>
         </select>
 
         <select #conservationStatus (change)="onConservationStatusChange(conservationStatus.value)">
-            <option value="">Todos los estados de conservación</option>
-            <option value="preocupación menor">Preocupación menor</option>
-            <option value="vulnerable">Vulnerable</option>
-            <option value="en peligro">En peligro</option>
-            <option value="en peligro crítico">En peligro crítico</option>
-            <option value="extinto">Extinto</option>
+            <option value="">{{ 'ANIMAL_FILTERS.ALL_CONSERVATION' | translate }}</option>
+            <option value="preocupación menor">{{ 'ANIMAL_FILTERS.LEAST_CONCERN' | translate }}</option>
+            <option value="vulnerable">{{ 'ANIMAL_FILTERS.VULNERABLE' | translate }}</option>
+            <option value="en peligro">{{ 'ANIMAL_FILTERS.ENDANGERED' | translate }}</option>
+            <option value="en peligro crítico">{{ 'ANIMAL_FILTERS.CRITICALLY_ENDANGERED' | translate }}</option>
+            <option value="extinto">{{ 'ANIMAL_FILTERS.EXTINCT' | translate }}</option>
         </select>
 
-        <button class="filters__clear" (click)="onClear()">Limpiar filtros</button>
+        <button class="filters__clear" (click)="onClear()">{{ 'ANIMAL_FILTERS.CLEAR_FILTERS' | translate }}</button>
 
     </div>
 

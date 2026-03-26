@@ -8,6 +8,7 @@ import {
   ReactiveFormsModule,
 } from '@angular/forms';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 // Servicios
 import { TicketService } from '../../services/ticket.service';
@@ -20,7 +21,8 @@ import { TicketSummaryModal } from '../ticket-summary-modal/ticket-summary-modal
   imports: [
     ReactiveFormsModule,
     CommonModule,
-    TicketSummaryModal
+    TicketSummaryModal,
+    TranslateModule,
   ],
   templateUrl: './ticket-form.html',
   styleUrl: './ticket-form.scss',

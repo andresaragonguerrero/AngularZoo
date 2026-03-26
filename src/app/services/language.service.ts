@@ -1,10 +1,9 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable, signal } from '@angular/core';
-
-// Servicios
 import { TranslateService } from '@ngx-translate/core';
 
 type SupportedLanguage = 'es' | 'en' | 'fr';
+const STORAGE_KEY = 'lang';
+const SUPPORTED: SupportedLanguage[] = ['es', 'en', 'fr'];
 
 @Injectable({
   providedIn: 'root',
@@ -12,33 +11,31 @@ type SupportedLanguage = 'es' | 'en' | 'fr';
 export class LanguageService {
   currentLanguage = signal<SupportedLanguage>('es');
 
-  constructor(private readonly translate: TranslateService, private http: HttpClient) {
-    translate.addLangs(['es', 'en', 'fr']);
+  constructor(private readonly translate: TranslateService) {
+    const saved = localStorage.getItem(STORAGE_KEY) as SupportedLanguage | null;
+    const initial: SupportedLanguage =
+      saved && SUPPORTED.includes(saved) ? saved : 'es';
 
-    this.loadTranslations('es');
-    this.loadTranslations('en');
-    this.loadTranslations('fr');
-
-    translate.use('es');
-    this.currentLanguage.set('es');
+    translate.addLangs(SUPPORTED);
+    translate.use(initial);
+    this.currentLanguage.set(initial);
   }
 
-  setLanguage(lang: 'es' | 'en' | 'fr') {
-    if (this.translate.getLangs().includes(lang)) {
-      this.translate.use(lang);
-      this.currentLanguage.set(lang);
-    } else {
-      console.warn(`Idioma ${lang} no soportado.`);
+  setLanguage(lang: SupportedLanguage): void {
+    if (!SUPPORTED.includes(lang)) {
+      console.warn(`Idioma "${lang}" no soportado.`);
+      return;
     }
+    this.translate.use(lang);
+    this.currentLanguage.set(lang);
+    localStorage.setItem(STORAGE_KEY, lang);
   }
 
-  getCurrentLanguage(): 'es' | 'en' | 'fr' {
+  getCurrentLanguage(): SupportedLanguage {
     return this.currentLanguage();
   }
 
-  private loadTranslations(lang: string) {
-    this.http.get(`./assets/i18n/${lang}.json`).subscribe((translations: any) => {
-      this.translate.setTranslation(lang, translations);
-    });
+  getSupportedLanguages(): SupportedLanguage[] {
+    return SUPPORTED;
   }
 }

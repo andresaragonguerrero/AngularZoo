@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 // Modelos
 import { Animal } from '../../models/animal.interface';
@@ -11,11 +12,13 @@ import { FavoriteAnimalsRepository } from '../../repositories/favoriteAnimals.re
 // Servicios
 import { AuthService } from '../../services/auth.service';
 
+
 @Component({
   selector: 'app-animal-list',
   imports: [
     CommonModule,
     RouterModule,
+    TranslateModule,
   ],
   templateUrl: './animal-list.html',
   styleUrl: './animal-list.scss',

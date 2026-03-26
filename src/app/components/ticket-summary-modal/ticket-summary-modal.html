@@ -2,28 +2,28 @@
     
   <div class="modal">
 
-    <h2>Resumen de compra</h2>
+    <h2>{{ 'TICKET_SUMMARY_MODAL.PURCHASE_SUMMARY' | translate }}</h2>
 
     <p>
-      Tipo de usuario:
-      <strong>{{ isMember ? 'Socio' : 'No socio' }}</strong>
+      {{ 'TICKET_SUMMARY_MODAL.USER_TYPE' | translate }}
+      <strong>{{ isMember ? ('TICKET_SUMMARY_MODAL.MEMBER' | translate) : ('TICKET_SUMMARY_MODAL.NON_MEMBER' | translate) }}</strong>
     </p>
 
     <ul>
-      <li>Adultos: {{ quantities.ADULT }}</li>
-      <li>Niños: {{ quantities.CHILD }}</li>
-      <li>Seniors: {{ quantities.SENIOR }}</li>
+      <li>{{ 'TICKET_SUMMARY_MODAL.ADULTS' | translate }} {{ quantities.ADULT }}</li>
+      <li>{{ 'TICKET_SUMMARY_MODAL.CHILDREN' | translate }} {{ quantities.CHILD }}</li>
+      <li>{{ 'TICKET_SUMMARY_MODAL.SENIORS' | translate }} {{ quantities.SENIOR }}</li>
     </ul>
 
-    <h3>Total: {{ total }} €</h3>
+    <h3>{{ 'TICKET_SUMMARY_MODAL.TOTAL' | translate }} {{ total }} €</h3>
 
     <div class="actions">
       <button class="button" (click)="confirm.emit()">
-        Confirmar
+        {{ 'TICKET_SUMMARY_MODAL.CONFIRM' | translate }}
       </button>
 
       <button class="button button-secondary" (click)="cancel.emit()">
-        Cancelar
+        {{ 'TICKET_SUMMARY_MODAL.CANCEL' | translate }}
       </button>
     </div>
 

@@ -2,7 +2,7 @@
 
   <div class="form-group">
     <div class="label-container">
-      <label for="senior" class="label">Senior</label>
+      <label for="senior" class="label">{{ "TICKET_PURCHASE.SENIORS" | translate }}</label>
       
       <!-- mensaje de información -->
       @if (isMember()) {
@@ -13,7 +13,7 @@
           <path
             d="M-70.843013-15H31.177404l-4.156987 10H-75zm0 20H22.863429l-4.156987 10H-75zM38.302222-32.13938a50 50 0 1 0 0 64.278761v14.04438a60 60 0 1 1 4.231556-88.502524z" />
         </svg>
-        <span class="text-info__detail"> | mayores de 65 años</span>
+        <span class="text-info__detail">{{ "TICKET_PURCHASE.SENIORS_INFO" | translate }}</span>
       </em>
       }
 
@@ -25,7 +25,7 @@
           <path
             d="M-70.843013-15H31.177404l-4.156987 10H-75zm0 20H22.863429l-4.156987 10H-75zM38.302222-32.13938a50 50 0 1 0 0 64.278761v14.04438a60 60 0 1 1 4.231556-88.502524z" />
         </svg>
-        <span class="text-info__detail"> | mayores de 65 años</span>
+        <span class="text-info__detail">{{ "TICKET_PURCHASE.SENIORS_INFO" | translate }}</span>
       </em>
       }
     </div>
@@ -52,7 +52,7 @@
       <!-- mensaje de error -->
       @if (ticketForm.get('senior')?.invalid && ticketForm.get('senior')?.touched) {
       <div class="error-message">
-        Valor mínimo: 0
+        {{ "TICKET_PURCHASE. MINIMUM_VALUE" | translate }}
       </div>
       }
     </div>
@@ -60,7 +60,7 @@
 
   <div class="form-group">
     <div class="label-container">
-      <label for="adult" class="label">Adulto</label>
+      <label for="adult" class="label">{{ "TICKET_PURCHASE.ADULTS" | translate }}</label>
 
       <!-- mensaje de información -->
       @if (isMember()) {
@@ -71,7 +71,7 @@
           <path
             d="M-70.843013-15H31.177404l-4.156987 10H-75zm0 20H22.863429l-4.156987 10H-75zM38.302222-32.13938a50 50 0 1 0 0 64.278761v14.04438a60 60 0 1 1 4.231556-88.502524z" />
         </svg>
-        <span class="text-info__detail"> | mayores de 18 años</span>
+        <span class="text-info__detail">{{ "TICKET_PURCHASE.ADULTS_INFO" | translate }}</span>
       </em>
       }
 
@@ -83,7 +83,7 @@
           <path
             d="M-70.843013-15H31.177404l-4.156987 10H-75zm0 20H22.863429l-4.156987 10H-75zM38.302222-32.13938a50 50 0 1 0 0 64.278761v14.04438a60 60 0 1 1 4.231556-88.502524z" />
         </svg>
-        <span class="text-info__detail"> | mayores de 18 años</span>
+        <span class="text-info__detail">{{ "TICKET_PURCHASE.ADULTS_INFO" | translate }}</span>
       </em>
       }
     </div>
@@ -116,7 +116,7 @@
 
   <div class="form-group">
     <div class="label-container">
-      <label for="child" class="label">Niño</label>
+      <label for="child" class="label">{{ "TICKET_PURCHASE.CHILDREN" | translate }}</label>
       <!-- mensaje de información -->
       @if (isMember()) {
       <em class="text-info">
@@ -126,7 +126,7 @@
           <path
             d="M-70.843013-15H31.177404l-4.156987 10H-75zm0 20H22.863429l-4.156987 10H-75zM38.302222-32.13938a50 50 0 1 0 0 64.278761v14.04438a60 60 0 1 1 4.231556-88.502524z" />
         </svg>
-        <span class="text-info__detail"> | mayores de 3 años</span>
+        <span class="text-info__detail">{{ "TICKET_PURCHASE.CHILD_INFO" | translate }}</span>
       </em>
       }
 
@@ -138,7 +138,7 @@
           <path
             d="M-70.843013-15H31.177404l-4.156987 10H-75zm0 20H22.863429l-4.156987 10H-75zM38.302222-32.13938a50 50 0 1 0 0 64.278761v14.04438a60 60 0 1 1 4.231556-88.502524z" />
         </svg>
-        <span class="text-info__detail"> | mayores de 3 años</span>
+        <span class="text-info__detail">{{ "TICKET_PURCHASE.CHILD_INFO" | translate }}</span>
       </em>
       }
     </div>
@@ -172,14 +172,14 @@
 
   <!-- selección de fecha -->
   <div class="date-selection">
-    <label for="date">Fecha de visita</label>
+    <label for="date">{{ 'TICKET_PURCHASE.DATE' | translate }}</label>
     <input type="date" id="date" formControlName="date" [min]="today" (change)="onDateChange()" />
   </div>
 
   <div class="hour-selection" *ngIf="availableHours.length > 0">
-    <label for="hour">Hora de entrada</label>
+    <label for="hour">{{ 'TICKET_PURCHASE.HOUR' | translate }}</label>
     <select id="hour" formControlName="hour">
-      <option value="">Selecciona una hora</option>
+      <option value="">{{ 'TICKET_PURCHASE.SELECT_HOUR' | translate }}</option>
       <option *ngFor="let hour of availableHours" [value]="hour">
         {{ hour }}
       </option>
@@ -188,11 +188,11 @@
 
   @if (ticketForm.errors?.['minOneTicket'] && ticketForm.touched) {
   <div class="error-message">
-    Debes comprar al menos 1 entrada
+    {{ 'TICKET_PURCHASE.MIN_ONE_TICKET' | translate }}
   </div>
   }
 
-  <button type="submit" class="submit-button">Comprar entradas</button>
+  <button type="submit" class="submit-button">{{ "TICKET_PURCHASE.BUY_TICKETS" | translate }}</button>
 
   @if (showSummary){
   <app-ticket-summary-modal [quantities]="ticketService.quantities()" [total]="ticketService.total()"

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 // Modelos
 import { Animal } from '../../models/animal.interface';
@@ -8,12 +9,12 @@ import { Animal } from '../../models/animal.interface';
 // Servicios
 import { AnimalService } from '../../services/animal.service';
 
-
 @Component({
   selector: 'app-daily-animal',
   imports: [
     CommonModule,
     RouterModule,
+    TranslateModule,
   ],
   templateUrl: './daily-animal.html',
   styleUrl: './daily-animal.scss',

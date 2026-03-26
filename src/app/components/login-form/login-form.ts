@@ -2,6 +2,7 @@ import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 // Servicios
 import { AuthService, LoginCredentials } from '../../services/auth.service';
@@ -13,6 +14,7 @@ import { NotificationService } from '../../services/notification.service';
     ReactiveFormsModule,
     RouterLink,
     CommonModule,
+    TranslateModule,
   ],
   templateUrl: './login-form.html',
   styleUrl: './login-form.scss'

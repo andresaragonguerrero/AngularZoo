@@ -1,43 +1,41 @@
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()" class="register-form">
 
   <section class="section__form-header">
-    <h2 class="form-title">Regístrate y hazte socio</h2>
-    <h3 class="form-description">
-      Rellena los campos de abajo para acceder a descuentos
-    </h3>
+    <h2 class="form-title">{{ 'REGISTER_FORM.TITLE' | translate }}</h2>
+    <h3 class="form-description">{{ 'REGISTER_FORM.DESCRIPTION' | translate }}</h3>
   </section>
 
   <section class="section__form-content">
     <!-- Nombre -->
     <div class="form-group">
-      <label class="label" for="firstName">Nombre</label>
-      <input class="input-text" id="firstName" type="text" formControlName="firstName" placeholder="Nombre..."
+      <label class="label" for="firstName">{{ 'REGISTER_FORM.FIRST_NAME' | translate }}</label>
+      <input class="input-text" id="firstName" type="text" formControlName="firstName" [placeholder]="'REGISTER_FORM.FIRST_NAME_PLACEHOLDER' | translate"
         [class.error]="registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched">
 
       @if (registerForm.get('firstName')?.invalid && registerForm.get('firstName')?.touched) {
       <small class="small">
-        El nombre es requerido (mínimo 2 caracteres)
+        {{ 'REGISTER_FORM.FIRST_NAME_REQUIRED' | translate }}
       </small>
       }
     </div>
 
     <!-- Apellido -->
     <div class="form-group">
-      <label class="label" for="lastName">Apellido</label>
-      <input class="input-text" id="lastName" type="text" formControlName="lastName" placeholder="Apellido..."
+      <label class="label" for="lastName">{{ 'REGISTER_FORM.LAST_NAME' | translate }}</label>
+      <input class="input-text" id="lastName" type="text" formControlName="lastName" [placeholder]="'REGISTER_FORM.LAST_NAME_PLACEHOLDER' | translate"
         [class.error]="registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched">
 
       @if (registerForm.get('lastName')?.invalid && registerForm.get('lastName')?.touched) {
       <small class="small">
-        El apellido es requerido
+        {{ 'REGISTER_FORM.LAST_NAME_REQUIRED' | translate }}
       </small>
       }
     </div>
 
     <!-- Email -->
     <div class="form-group">
-      <label class="label" for="email">Email</label>
-      <input class="input-text" id="email" type="email" formControlName="email" placeholder="email@email.com"
+      <label class="label" for="email">{{ 'REGISTER_FORM.EMAIL' | translate }}</label>
+      <input class="input-text" id="email" type="email" formControlName="email" [placeholder]="'REGISTER_FORM.EMAIL_PLACEHOLDER' | translate"
         [class.error]="(registerForm.get('email')?.invalid && registerForm.get('email')?.touched) || emailExists">
 
       @if (registerForm.get('email')?.invalid && registerForm.get('email')?.touched) {

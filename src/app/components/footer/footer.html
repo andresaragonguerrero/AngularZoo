@@ -1,7 +1,7 @@
 <!-- sección colaboradores -->
 <section class="section-collaborators">
 
-  <h2 class="article-title">Nuestros colaboradores: </h2>
+  <h2 class="article-title">{{ 'FOOTER.COLLABORATORS' | translate }}</h2>
 
   <div class="container-list-logos">
     <!-- logos realizados por Oleg Coada -->
@@ -15,18 +15,25 @@
 
 <section class="section-links">
   <nav class="navbar-links-zoo" aria-label="navbar-links-zoo">
-    <a class="navbar-link" routerLink="/home" routerLinkActive="active" aria-label="Inicio">Inicio</a>
-    <a class="navbar-link" routerLink="/animals" routerLinkActive="active" aria-label="Animales">Animales</a>
-    <a class="navbar-link" routerLink="/tickets" routerLinkActive="active" aria-label="Entradas">Entradas</a>
-    <a class="navbar-link" routerLink="/courses" routerLinkActive="active" aria-label="Cursos">Cursos</a>
-    <a class="navbar-link" routerLink="/activities" routerLinkActive="active" aria-label="Actividades">Actividades</a>
+    <a class="navbar-link" routerLink="/home" routerLinkActive="active" [attr.aria-label]="'NAV.HOME' | translate">{{
+      'NAV.HOME' | translate }}</a>
+    <a class="navbar-link" routerLink="/animals" routerLinkActive="active"
+      [attr.aria-label]="'NAV.ANIMALS' | translate">{{ 'NAV.ANIMALS' | translate }}</a>
+    <a class="navbar-link" routerLink="/tickets" routerLinkActive="active"
+      [attr.aria-label]="'NAV.TICKETS' | translate">{{ 'NAV.TICKETS' | translate }}</a>
+    <a class="navbar-link" routerLink="/courses" routerLinkActive="active"
+      [attr.aria-label]="'NAV.COURSES' | translate">{{ 'NAV.COURSES' | translate }}</a>
+    <a class="navbar-link" routerLink="/activities" routerLinkActive="active"
+      [attr.aria-label]="'NAV.ACTIVITIES' | translate">{{ 'NAV.ACTIVITIES' | translate }}</a>
   </nav>
 
   <article class="article-business-info">
     <nav class="navbar-links-business" aria-label="navbar-links-business">
-      <a class="navbar-link" routerLink="/coming-soon" routerLinkActive="active">Contacta con nosotros</a>
-      <a class="navbar-link" routerLink="/coming-soon" routerLinkActive="active">Trabaja con nosotros</a>
-      <a class="navbar-link" routerLink="/coming-soon" routerLinkActive="active">Sobre nosotros</a>
+      <a class="navbar-link" routerLink="/coming-soon" routerLinkActive="active">{{ 'FOOTER.CONTACT_US' | translate
+        }}</a>
+      <a class="navbar-link" routerLink="/coming-soon" routerLinkActive="active">{{ 'FOOTER.WORK_WITH_US' | translate
+        }}</a>
+      <a class="navbar-link" routerLink="/coming-soon" routerLinkActive="active">{{ 'FOOTER.ABOUT_US' | translate }}</a>
     </nav>
     <div class="container-networks">
       <!-- facebook -->
@@ -66,11 +73,11 @@
   </article>
 
   <article class="article-tickets-purchase">
-    <h2 class="article-title">Participa </h2>
+    <h2 class="article-title">{{ 'FOOTER.PARTICIPATE' | translate }}</h2>
     <nav class="navbar-links-tickets" aria-label="navbar-links-tickets">
-      <a class="navbar-link" routerLink="/tickets" routerLinkActive="active" aria-label="Entradas">Entradas</a>
-      <a class="navbar-link" routerLink="/courses" routerLinkActive="active" aria-label="Cursos">Cursos</a>
-      <a class="navbar-link" routerLink="/activities" routerLinkActive="active" aria-label="Actividades">Actividades</a>
+      <a class="navbar-link" routerLink="/tickets">{{ 'FOOTER.TICKETS' | translate }}</a>
+      <a class="navbar-link" routerLink="/courses">{{ 'FOOTER.COURSES' | translate }}</a>
+      <a class="navbar-link" routerLink="/activities">{{ 'FOOTER.ACTIVITIES' | translate }}</a>
     </nav>
   </article>
 </section>
@@ -88,18 +95,18 @@
   </article>
 
   <nav class="navbar-policies" aria-label="navbar-policies">
-    <a class="navbar-link" routerLink="/coming-soon" routerLinkActive="active">Políticas de privacidad</a>
-    <a class="navbar-link" routerLink="/coming-soon" routerLinkActive="active">Configuración de cookies</a>
-    <a class="navbar-link" routerLink="/coming-soon" routerLinkActive="active">Aviso legal</a>
-    <a class="navbar-link" routerLink="/coming-soon" routerLinkActive="active">Términos y condiciones</a>
+    <a class="navbar-link" routerLink="/coming-soon" routerLinkActive="active">{{ 'FOOTER.PRIVACY_POLICY' | translate }}</a>
+    <a class="navbar-link" routerLink="/coming-soon" routerLinkActive="active">{{ 'FOOTER.COOKIE_SETTINGS' | translate }}</a>
+    <a class="navbar-link" routerLink="/coming-soon" routerLinkActive="active">{{ 'FOOTER.LEGAL_NOTICE' | translate }}</a>
+    <a class="navbar-link" routerLink="/coming-soon" routerLinkActive="active">{{ 'FOOTER.TERMS' | translate }}</a>
   </nav>
 
   <article class="article-copyright">
     <p class="text-copyright">
-      Todo el contenido del sitio web tiene propiedad salvo que se indique lo contrario.
+      {{ 'FOOTER.COPYRIGHT_1' | translate }}
     </p>
     <p class="text-copyright">
-      Todos los derechos reservados.
+      {{ 'FOOTER.COPYRIGHT_2' | translate }}
     </p>
   </article>
 </section>

@@ -10,7 +10,7 @@
             </g>
         </svg>
 
-        Anterior
+        {{ 'ANIMAL_PAGINATION.PREVIOUS' | translate }}
     </button>
 
     @for (page of pages; track page) {
@@ -20,7 +20,7 @@
     }
 
     <button type="button" (click)="next()" [disabled]="currentPage === totalPages">
-        Siguiente
+        {{ 'ANIMAL_PAGINATION.NEXT' | translate }}
 
         <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"
             fill="currentColor">

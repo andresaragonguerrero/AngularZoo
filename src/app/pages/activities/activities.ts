@@ -1,9 +1,11 @@
 import { Component, computed, inject, Input, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 // servicios
 import { ActivityService } from '../../services/activity.service';
 import { AuthService } from '../../services/auth.service';
+
 
 // modelos
 import { Activity } from '../../models/activity.interface';
@@ -16,6 +18,7 @@ import { SeasonPipe } from '../../pipes/season.pipe';
   imports: [
     RouterModule,
     SeasonPipe,
+    TranslateModule,
   ],
   templateUrl: './activities.html',
   styleUrl: './activities.scss',

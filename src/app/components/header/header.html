@@ -4,8 +4,8 @@
   <div class="header-top">
 
     <div class="branding">
-      <h1 class="site-title">Senda Animal</h1>
-      <p class="site-tagline">Una reserva salvaje</p>
+      <h1 class="site-title">{{ 'HEADER.SITE_TITLE' | translate }}</h1>
+      <p class="site-tagline">{{ 'HEADER.SITE_TAGLINE' | translate }}</p>
     </div>
 
     <!-- Desktop: auth + settings -->
@@ -15,7 +15,7 @@
     </div>
 
     <!-- Móvil: botón hamburguesa -->
-    <button class="ham-button" type="button" (click)="toggleHam()" aria-label="Abrir menú">
+    <button class="ham-button" type="button" (click)="toggleHam()" [attr.aria-label]="'HEADER.OPEN_MENU' | translate">
       <svg class="svg-icon ham-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24px" height="24px"
         fill="currentColor">
         <rect y="10.5" width="24" height="3" />
@@ -37,7 +37,7 @@
   <!-- Drawer móvil -->
   <div class="drawer" [class.is-open]="isHamOpen()">
 
-    <button class="drawer-close" type="button" (click)="toggleHam()" aria-label="Cerrar menú">
+    <button class="drawer-close" type="button" (click)="toggleHam()" [attr.aria-label]="'HEADER.CLOSE_MENU' | translate">
       <svg class="svg-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
         width="24px" height="24px" fill="currentColor">
         <polygon

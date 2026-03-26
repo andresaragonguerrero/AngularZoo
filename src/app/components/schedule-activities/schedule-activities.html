@@ -1,7 +1,7 @@
 <ul class="info-block">
     <li class="info-block-row">
         <p class="info-block-content">14:00</p>
-        <p class="info-block-content">Apertura del zoo</p>
+        <p class="info-block-content">{{ 'SCHEDULE.ACTIVITIES_OPENING' | translate }}</p>
     </li>
     
     @for (activity of activities; track activity.id) {
@@ -13,6 +13,6 @@
 
     <li class="info-block-row">
         <p class="info-block-content">22:00</p>
-        <p class="info-block-content">Cierre del zoo</p>
+        <p class="info-block-content">{{ 'SCHEDULE.ACTIVITIES_CLOSING' | translate}}</p>
     </li>
 </ul>

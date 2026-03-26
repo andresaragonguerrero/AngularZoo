@@ -1,5 +1,6 @@
 import { Component, computed, inject, OnInit } from '@angular/core';
 import { Router, RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 // Services
 import { CourseService } from '../../services/course.service';
@@ -13,6 +14,7 @@ import { Course } from '../../models/course.interface';
   standalone: true,
   imports: [
     RouterModule,
+    TranslateModule,
   ],
   templateUrl: './courses.html',
   styleUrl: './courses.scss'

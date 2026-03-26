@@ -1,6 +1,7 @@
 import { Component, inject, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { TranslateModule } from '@ngx-translate/core';
 
 // Componentes
 import { PageSettings } from "../page-settings/page-settings";
@@ -18,7 +19,8 @@ import { HeaderService } from '../../services/header.service';
     CommonModule,
     PageSettings,
     Nav,
-    Auth
+    Auth,
+    TranslateModule,
   ],
   templateUrl: './header.html',
   styleUrl: './header.scss',
