@@ -45,7 +45,8 @@
                     [class.active]="isFavorite(animal.id)">
                     ★
                 </button>
-                <a class="animal-card__detail" [routerLink]="['/animals', animal.id]">
+                <!-- sustituir [routerLink]="['/animals', animal.id]" -->
+                <a class="animal-card__detail" routerLink="/coming-soon">
                     {{ 'ANIMAL_LIST.DETAIL' | translate }}
                 </a>
             </div>
