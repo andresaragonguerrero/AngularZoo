@@ -6,7 +6,7 @@ import { HttpClient, provideHttpClient } from '@angular/common/http';
 import { importProvidersFrom } from '@angular/core';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader, TRANSLATE_HTTP_LOADER_CONFIG } from '@ngx-translate/http-loader';
-import { LanguageService } from './app/services/language.service';
+import { LanguageService } from './app/shared/services/language.service';
 import { registerLocaleData } from '@angular/common';
 
 import localeEs from '@angular/common/locales/es';

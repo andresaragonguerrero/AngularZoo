@@ -2,11 +2,11 @@ import { Component, inject } from '@angular/core';
 import { NavigationEnd, Router, RouterOutlet } from '@angular/router';
 
 // componentes
-import { Header } from './components/header/header';
-import { Footer } from './components/footer/footer';
+import { Header } from './shared/components/header/header';
+import { Footer } from './shared/components/footer/footer';
 
 // servicios
-import { HeaderService } from './services/header.service';
+import { HeaderService } from './shared/services/header.service';
 import { filter } from 'rxjs';
 
 @Component({

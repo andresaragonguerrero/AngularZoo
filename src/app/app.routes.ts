@@ -2,21 +2,21 @@ import { Routes } from '@angular/router';
 
 // componentes de las páginas
 import { HomeComponent } from './pages/home/home';
-import { AnimalsComponent } from './pages/animals/animals';
+import { AnimalsComponent } from './features/animals/pages/animals/animals';
 import { EcosystemsComponent } from './pages/ecosystems/ecosystems';
-import { TicketsComponent } from './pages/tickets/tickets';
-import { LoginPage } from './pages/login-page/login-page';
-import { RegisterPage } from './pages/register-page/register-page';
-import { TicketPurchase } from './pages/ticket-purchase/ticket-purchase';
-import { CourseComponent } from './pages/courses/courses';
-import { ActivityComponent } from './pages/activities/activities';
-import { CoursePurchase } from './pages/course-purchase/course-purchase';
-import { ActivityPurchase } from './pages/activity-purchase/activity-purchase';
-import { FavoriteAnimals } from './pages/favorite-animals/favorite-animals';
+import { TicketsComponent } from './features/tickets/pages/tickets/tickets';
+import { LoginPage } from './features/auth/pages/login-page/login-page';
+import { RegisterPage } from './features/auth/pages/register-page/register-page';
+import { TicketPurchase } from './features/tickets/pages/ticket-purchase/ticket-purchase';
+import { CourseComponent } from './features/courses/pages/courses/courses';
+import { ActivityComponent } from './features/activities/pages/activities/activities';
+import { CoursePurchase } from './features/courses/pages/course-purchase/course-purchase';
+import { ActivityPurchase } from './features/activities/pages/activity-purchase/activity-purchase';
+import { FavoriteAnimals } from './features/animals/pages/favorite-animals/favorite-animals';
 import { ComingSoon } from './pages/coming-soon/coming-soon';
 
 // Guards
-import { AuthGuard } from './guards/auth';
+import { AuthGuard } from './features/auth/guards/auth';
 
 export const routes: Routes = [
   {
@@ -76,7 +76,7 @@ export const routes: Routes = [
   {
     path: 'animals/:id',
     loadComponent: () =>
-      import('./pages/animal-detail/animal-detail').then(m => m.AnimalDetail)
+      import('./features/animals/pages/animal-detail/animal-detail').then(m => m.AnimalDetail)
   },
   {
     path: 'coming-soon',
