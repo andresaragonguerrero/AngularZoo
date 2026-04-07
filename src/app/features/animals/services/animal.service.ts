@@ -14,11 +14,19 @@ export class AnimalService {
   constructor(private readonly http: HttpClient) { }
 
   getAnimalsByDiet(diet: string): Observable<Animal[]> {
-    return this.filterAnimals(a => a.dieta.en === diet);
+    if (!diet) return this.getAnimals();
+
+    return this.filterAnimals(a =>
+      a.dieta.en.toLowerCase() === diet.toLowerCase()
+    );
   }
 
   getAnimalsByConservationStatus(status: string): Observable<Animal[]> {
-    return this.filterAnimals(a => a.estadoConservacion.en === status);
+    if (!status) return this.getAnimals();
+
+    return this.filterAnimals(a =>
+      a.estadoConservacion.en.toLowerCase().replace(' ', '_') === status.toLowerCase()
+    );
   }
 
   searchAnimals(searchTerm: string): Observable<Animal[]> {
@@ -29,7 +37,6 @@ export class AnimalService {
       a.descripcion.es.toLowerCase().includes(term)
     );
   }
-
 
   getAnimals(): Observable<Animal[]> {
     // La estrategia que se emplea evita que, cada vez que se quiera obtener un animal,
@@ -55,7 +62,11 @@ export class AnimalService {
   }
 
   getAnimalsByContinent(continent: string): Observable<Animal[]> {
-    return this.filterAnimals(a => a.continente === continent);
+    if (!continent) return this.getAnimals();
+
+    return this.filterAnimals(a =>
+      a.continente.toLowerCase().trim() === continent.toLowerCase().trim()
+    );
   }
 
   getRandomAnimal(): Observable<Animal | null> {

@@ -2,25 +2,34 @@
     {
         "id": 1,
         "nombre": {
+            "key": "lion",
             "es": "León",
             "en": "Lion",
             "fr": "Lion"
         },
         "nombreCientifico": "Panthera leo",
         "descripcion": {
+            "key": "large_feline_considered_the_king_of_the_jungle_males_possess_a_characteristic_mane",
             "es": "Felino de gran tamaño, considerado el rey de la selva. Los machos poseen una melena característica.",
             "en": "Large feline, considered the king of the jungle. Males possess a characteristic mane.",
             "fr": "Grand félin, considéré comme le roi de la jungle. Les mâles possèdent une crinière caractéristique."
         },
         "imagen": "/assets/images/animals/leon.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 1,
-        "continente": "África",
+        "continente": {
+            "key": "africa",
+            "es": "África",
+            "en": "Africa",
+            "fr": "Afrique"
+        },
         "estadoConservacion": {
+            "key": "vulnerable",
             "es": "vulnerable",
             "en": "vulnerable",
             "fr": "vulnérable"
@@ -30,16 +39,19 @@
         "pesoMaximo": 250,
         "curiosidades": [
             {
+                "key": "lions_are_the_only_felines_that_live_in_groups",
                 "es": "Los leones son los únicos felinos que viven en grupo",
                 "en": "Lions are the only felines that live in groups",
                 "fr": "Les lions sont les seuls félins qui vivent en groupe"
             },
             {
+                "key": "they_sleep_up_to_20_hours_a_day",
                 "es": "Duermen hasta 20 horas al día",
                 "en": "They sleep up to 20 hours a day",
                 "fr": "Ils dorment jusqu'à 20 heures par jour"
             },
             {
+                "key": "the_roar_can_be_heard_from_9_km_away",
                 "es": "El rugido puede escucharse desde 9 km de distancia",
                 "en": "The roar can be heard from 9 km away",
                 "fr": "Le rugissement peut être entendu à 9 km de distance"
@@ -49,25 +61,34 @@
     {
         "id": 2,
         "nombre": {
+            "key": "african_elephant",
             "es": "Elefante africano",
             "en": "African Elephant",
             "fr": "Éléphant d'Afrique"
         },
         "nombreCientifico": "Loxodonta africana",
         "descripcion": {
+            "key": "the_largest_land_animal_on_the_planet_known_for_its_intelligence_and_exceptional_memory",
             "es": "El animal terrestre más grande del planeta, conocido por su inteligencia y memoria excepcional.",
             "en": "The largest land animal on the planet, known for its intelligence and exceptional memory.",
             "fr": "Le plus grand animal terrestre de la planète, connu pour son intelligence et sa mémoire exceptionnelle."
         },
         "imagen": "/assets/images/animals/elefante-africano.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 1,
-        "continente": "África",
+        "continente": {
+            "key": "africa",
+            "es": "África",
+            "en": "Africa",
+            "fr": "Afrique"
+        },
         "estadoConservacion": {
+            "key": "vulnerable",
             "es": "vulnerable",
             "en": "vulnerable",
             "fr": "vulnérable"
@@ -77,16 +98,19 @@
         "pesoMaximo": 7000,
         "curiosidades": [
             {
+                "key": "they_can_recognize_themselves_in_a_mirror",
                 "es": "Pueden reconocerse a sí mismos en un espejo",
                 "en": "They can recognize themselves in a mirror",
                 "fr": "Ils peuvent se reconnaître dans un miroir"
             },
             {
+                "key": "their_tusks_never_stop_growing",
                 "es": "Sus colmillos nunca dejan de crecer",
                 "en": "Their tusks never stop growing",
                 "fr": "Leurs défenses ne cessent jamás de croître"
             },
             {
+                "key": "they_use_tools_to_obtain_water_and_food",
                 "es": "Utilizan herramientas para obtener agua y alimento",
                 "en": "They use tools to obtain water and food",
                 "fr": "Ils utilisent des outils pour obtenir de l'eau et de la nourriture"
@@ -96,25 +120,34 @@
     {
         "id": 3,
         "nombre": {
+            "key": "giraffe",
             "es": "Jirafa",
             "en": "Giraffe",
             "fr": "Girafe"
         },
         "nombreCientifico": "Giraffa camelopardalis",
         "descripcion": {
+            "key": "the_tallest_land_mammal_with_an_extraordinarily_long_neck_that_can_reach_2_meters",
             "es": "El mamífero terrestre más alto, con un cuello extraordinariamente largo que puede alcanzar 2 metros.",
             "en": "The tallest land mammal, with an extraordinarily long neck that can reach 2 meters.",
             "fr": "Le plus haut mammifère terrestre, avec un cou extraordinairement long qui peut atteindre 2 mètres."
         },
         "imagen": "/assets/images/animals/jirafa.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 1,
-        "continente": "África",
+        "continente": {
+            "key": "africa",
+            "es": "África",
+            "en": "Africa",
+            "fr": "Afrique"
+        },
         "estadoConservacion": {
+            "key": "vulnerable",
             "es": "vulnerable",
             "en": "vulnerable",
             "fr": "vulnérable"
@@ -124,16 +157,19 @@
         "pesoMaximo": 1900,
         "curiosidades": [
             {
+                "key": "their_tongue_can_measure_more_than_53_cm",
                 "es": "Su lengua puede medir más de 53 cm",
                 "en": "Their tongue can measure more than 53 cm",
                 "fr": "Leur langue peut mesurer plus de 53 cm"
             },
             {
+                "key": "they_do_not_have_functional_vocal_cords",
                 "es": "No tienen cuerdas vocales funcionales",
                 "en": "They do not have functional vocal cords",
                 "fr": "Ils n'ont pas de cordes vocales fonctionnelles"
             },
             {
+                "key": "they_can_sleep_while_standing_up",
                 "es": "Pueden dormir mientras están de pie",
                 "en": "They can sleep while standing up",
                 "fr": "Ils peuvent dormir en restant debout"
@@ -143,25 +179,34 @@
     {
         "id": 4,
         "nombre": {
+            "key": "black_rhinoceros",
             "es": "Rinoceronte negro",
             "en": "Black Rhinoceros",
             "fr": "Rhinocéros noir"
         },
         "nombreCientifico": "Diceros bicornis",
         "descripcion": {
+            "key": "medium_sized_rhinoceros_with_two_horns_considered_one_of_the_most_endangered_mammals",
             "es": "Rinoceronte de tamaño mediano con dos cuernos, considerado uno de los mamíferos más amenazados.",
             "en": "Medium-sized rhinoceros with two horns, considered one of the most endangered mammals.",
             "fr": "Rhinocéros de taille moyenne avec deux cornes, considéré comme l'un des mammifères les plus menacés."
         },
         "imagen": "/assets/images/animals/rinoceronte-negro.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 1,
-        "continente": "África",
+        "continente": {
+            "key": "africa",
+            "es": "África",
+            "en": "Africa",
+            "fr": "Afrique"
+        },
         "estadoConservacion": {
+            "key": "critically_endangered",
             "es": "en peligro crítico",
             "en": "critically endangered",
             "fr": "en danger critique"
@@ -171,16 +216,19 @@
         "pesoMaximo": 1400,
         "curiosidades": [
             {
+                "key": "their_horns_are_made_of_keratin_like_human_nails",
                 "es": "Sus cuernos están hechos de queratina, como las uñas humanas",
                 "en": "Their horns are made of keratin, like human nails",
                 "fr": "Leurs cornes sont faites de kératine, comme les ongles humains"
             },
             {
+                "key": "they_can_reach_speeds_of_50_km_h",
                 "es": "Pueden alcanzar velocidades de 50 km/h",
                 "en": "They can reach speeds of 50 km/h",
                 "fr": "Ils peuvent atteindre des vitesses de 50 km/h"
             },
             {
+                "key": "they_have_very_poor_vision_but_excellent_smell",
                 "es": "Tienen muy mala visión pero excelente olfato",
                 "en": "They have very poor vision but excellent smell",
                 "fr": "Ils ont une très mauvaise vision mais un excellent odorat"
@@ -190,25 +238,34 @@
     {
         "id": 5,
         "nombre": {
+            "key": "zebra",
             "es": "Cebra",
             "en": "Zebra",
             "fr": "Zèbre"
         },
         "nombreCientifico": "Equus quagga",
         "descripcion": {
+            "key": "herbivorous_equine_with_distinctive_black_and_white_stripes_that_act_as_camouflage",
             "es": "Equino herbívoro con distintivas rayas blancas y negras que actúan como camuflaje.",
             "en": "Herbivorous equine with distinctive black and white stripes that act as camouflage.",
             "fr": "Équidé herbivore avec des rayures noires et blanches distinctives qui servent de camouflage."
         },
         "imagen": "/assets/images/animals/cebra.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 1,
-        "continente": "África",
+        "continente": {
+            "key": "africa",
+            "es": "África",
+            "en": "Africa",
+            "fr": "Afrique"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -218,16 +275,19 @@
         "pesoMaximo": 385,
         "curiosidades": [
             {
+                "key": "the_stripes_are_unique_like_fingerprints",
                 "es": "Las rayas son únicas como las huellas dactilares",
                 "en": "The stripes are unique like fingerprints",
                 "fr": "Les rayures sont uniques comme les empreintes digitales"
             },
             {
+                "key": "they_can_run_at_65_km_h",
                 "es": "Pueden correr a 65 km/h",
                 "en": "They can run at 65 km/h",
                 "fr": "Ils peuvent courir à 65 km/h"
             },
             {
+                "key": "mother_and_calf_memorize_each_other_by_sounds",
                 "es": "La madre y la cría se memorizan mutuamente por sonidos",
                 "en": "Mother and calf memorize each other by sounds",
                 "fr": "La mère et le petit se mémorisent mutuellement par les sons"
@@ -237,25 +297,34 @@
     {
         "id": 6,
         "nombre": {
+            "key": "hippopotamus",
             "es": "Hipopótamo",
             "en": "Hippopotamus",
             "fr": "Hippopotame"
         },
         "nombreCientifico": "Hippopotamus amphibius",
         "descripcion": {
+            "key": "large_semi_aquatic_mammal_the_third_heaviest_on_the_planet",
             "es": "Mamífero semiacuático de gran tamaño, el tercero más pesado del planeta.",
             "en": "Large semi-aquatic mammal, the third heaviest on the planet.",
             "fr": "Grand mammifère semi-aquatique, le troisième plus lourd de la planète."
         },
         "imagen": "/assets/images/animals/hipopotamo.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 7,
-        "continente": "África",
+        "continente": {
+            "key": "africa",
+            "es": "África",
+            "en": "Africa",
+            "fr": "Afrique"
+        },
         "estadoConservacion": {
+            "key": "vulnerable",
             "es": "vulnerable",
             "en": "vulnerable",
             "fr": "vulnérable"
@@ -265,16 +334,19 @@
         "pesoMaximo": 4000,
         "curiosidades": [
             {
+                "key": "they_can_hold_their_breath_for_up_to_5_minutes",
                 "es": "Pueden aguantar la respiración hasta 5 minutos",
                 "en": "They can hold their breath for up to 5 minutes",
                 "fr": "Ils peuvent rester en apnée jusqu'à 5 minutes"
             },
             {
+                "key": "their_sweat_is_red_and_acts_as_sunscreen",
                 "es": "Su sudor es de color rojo y actúa como protector solar",
                 "en": "Their sweat is red and acts as sunscreen",
                 "fr": "Leur sueur est rouge et agit comme un écran solaire"
             },
             {
+                "key": "they_are_faster_than_humans_on_land",
                 "es": "Son más rápidos que los humanos en tierra",
                 "en": "They are faster than humans on land",
                 "fr": "Ils sont plus rapides que les humains sur terre"
@@ -284,25 +356,34 @@
     {
         "id": 7,
         "nombre": {
+            "key": "bengal_tiger",
             "es": "Tigre de Bengala",
             "en": "Bengal Tiger",
             "fr": "Tigre du Bengale"
         },
         "nombreCientifico": "Panthera tigris tigris",
         "descripcion": {
+            "key": "large_feline_with_orange_fur_and_black_stripes_a_symbol_of_asian_wildlife",
             "es": "Felino de gran tamaño con un pelaje anaranjado con rayas negras, símbolo de la vida salvaje asiática.",
             "en": "Large feline with orange fur and black stripes, a symbol of Asian wildlife.",
             "fr": "Grand félin au pelage orange rayé de noir, symbole de la vie sauvage asiatique."
         },
         "imagen": "/assets/images/animals/tigre-bengala.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 2,
-        "continente": "Asia",
+        "continente": {
+            "key": "asia",
+            "es": "Asia",
+            "en": "Asia",
+            "fr": "Asie"
+        },
         "estadoConservacion": {
+            "key": "endangered",
             "es": "en peligro",
             "en": "endangered",
             "fr": "en danger"
@@ -312,16 +393,19 @@
         "pesoMaximo": 260,
         "curiosidades": [
             {
+                "key": "each_tiger_has_a_unique_stripe_pattern",
                 "es": "Cada tigre tiene un patrón de rayas único",
                 "en": "Each tiger has a unique stripe pattern",
                 "fr": "Chaque tigre possède un motif de rayures unique"
             },
             {
+                "key": "they_are_excellent_swimmers",
                 "es": "Son excelentes nadadores",
                 "en": "They are excellent swimmers",
                 "fr": "Ce sont d'excellents nageurs"
             },
             {
+                "key": "they_can_eat_up_to_30_kg_of_meat_in_one_meal",
                 "es": "Pueden comer hasta 30 kg de carne en una comida",
                 "en": "They can eat up to 30 kg of meat in one meal",
                 "fr": "Ils peuvent manger jusqu'à 30 kg de viande en un seul repas"
@@ -331,25 +415,34 @@
     {
         "id": 8,
         "nombre": {
+            "key": "giant_panda",
             "es": "Panda gigante",
             "en": "Giant Panda",
             "fr": "Panda géant"
         },
         "nombreCientifico": "Ailuropoda melanoleuca",
         "descripcion": {
+            "key": "rare_and_endangered_black_and_white_bear_almost_herbivorous_feeding_mainly_on_bamboo",
             "es": "Oso blanco y negro raro y en peligro, casi herbívoro que se alimenta principalmente de bambú.",
             "en": "Rare and endangered black and white bear, almost herbivorous, feeding mainly on bamboo.",
             "fr": "Ours noir et blanc rare et menacé, presque herbivore, se nourrissant principalement de bambou."
         },
         "imagen": "/assets/images/animals/panda-gigante.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 4,
-        "continente": "Asia",
+        "continente": {
+            "key": "asia",
+            "es": "Asia",
+            "en": "Asia",
+            "fr": "Asie"
+        },
         "estadoConservacion": {
+            "key": "vulnerable",
             "es": "vulnerable",
             "en": "vulnerable",
             "fr": "vulnérable"
@@ -359,16 +452,19 @@
         "pesoMaximo": 135,
         "curiosidades": [
             {
+                "key": "panda_bears_spend_12_16_hours_a_day_eating_bamboo",
                 "es": "Los osos panda dedican 12-16 horas diarias a comer bambú",
                 "en": "Panda bears spend 12-16 hours a day eating bamboo",
                 "fr": "Les pandas passent 12 à 16 heures par jour à manger du bambou"
             },
             {
+                "key": "their_bone_structure_appears_to_be_adapted_to_be_carnivorous",
                 "es": "Su estructura ósea parece estar adaptada para ser carnívora",
                 "en": "Their bone structure appears to be adapted to be carnivorous",
                 "fr": "Leur structure osseuse semble être adaptée pour être carnivore"
             },
             {
+                "key": "the_chinese_government_uses_them_in_international_diplomacy",
                 "es": "El gobierno chino los utiliza en diplomacia internacional",
                 "en": "The Chinese government uses them in international diplomacy",
                 "fr": "Le gouvernement chinois les utilise dans la diplomatie internationale"
@@ -378,25 +474,34 @@
     {
         "id": 9,
         "nombre": {
+            "key": "koala",
             "es": "Koala",
             "en": "Koala",
             "fr": "Koala"
         },
         "nombreCientifico": "Phascolarctos cinereus",
         "descripcion": {
+            "key": "arboreal_marsupial_from_australia_small_and_furry_that_sleeps_most_of_the_day",
             "es": "Marsupial arbóreo de Australia, pequeño y peludo, que duerme la mayor parte del día.",
             "en": "Arboreal marsupial from Australia, small and furry, that sleeps most of the day.",
             "fr": "Marsupial arboricole d'Australie, petit et poilu, qui dort la majeure partie de la journée."
         },
         "imagen": "/assets/images/animals/koala.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 10,
-        "continente": "Oceanía",
+        "continente": {
+            "key": "oceania",
+            "es": "Oceanía",
+            "en": "Oceania",
+            "fr": "Océanie"
+        },
         "estadoConservacion": {
+            "key": "vulnerable",
             "es": "vulnerable",
             "en": "vulnerable",
             "fr": "vulnérable"
@@ -406,16 +511,19 @@
         "pesoMaximo": 15,
         "curiosidades": [
             {
+                "key": "they_don_t_drink_water_they_get_it_from_eucalyptus_leaves",
                 "es": "No beben agua, la obtienen de las hojas de eucalipto",
                 "en": "They don't drink water; they get it from eucalyptus leaves",
                 "fr": "Ils ne boivent pas d'eau ; ils l'obtiennent des feuilles d'eucalyptus"
             },
             {
+                "key": "they_have_fingerprints_similar_to_humans",
                 "es": "Tienen huellas dactilares similares a los humanos",
                 "en": "They have fingerprints similar to humans",
                 "fr": "Ils ont des empreintes digitales similaires à celles des humains"
             },
             {
+                "key": "their_name_means_no_drink_in_aboriginal_language",
                 "es": "Su nombre significa 'no bebe' en idioma aborigen",
                 "en": "Their name means 'no drink' in Aboriginal language",
                 "fr": "Leur nom signifie 'ne boit pas' en langue aborigène"
@@ -425,25 +533,34 @@
     {
         "id": 10,
         "nombre": {
+            "key": "red_kangaroo",
             "es": "Canguro rojo",
             "en": "Red Kangaroo",
             "fr": "Kangourou roux"
         },
         "nombreCientifico": "Osphranter rufus",
         "descripcion": {
+            "key": "largest_australian_marsupial_known_for_its_extraordinary_leaps",
             "es": "Marsupial australiano más grande, conocido por sus saltos extraordinarios.",
             "en": "Largest Australian marsupial, known for its extraordinary leaps.",
             "fr": "Le plus grand marsupial australien, connu pour ses bonds extraordinaires."
         },
         "imagen": "/assets/images/animals/canguro-rojo.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 9,
-        "continente": "Oceanía",
+        "continente": {
+            "key": "oceania",
+            "es": "Oceanía",
+            "en": "Oceania",
+            "fr": "Océanie"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -453,16 +570,19 @@
         "pesoMaximo": 90,
         "curiosidades": [
             {
+                "key": "they_can_jump_up_to_9_meters_in_distance",
                 "es": "Pueden saltar hasta 9 metros de distancia",
                 "en": "They can jump up to 9 meters in distance",
                 "fr": "Ils peuvent sauter jusqu'à 9 mètres de distance"
             },
             {
+                "key": "they_use_their_tail_as_a_fifth_leg",
                 "es": "Utilizan su cola como 'quinta pata'",
                 "en": "They use their tail as a 'fifth leg'",
                 "fr": "Ils utilisent leur queue comme une 'cinquième patte'"
             },
             {
+                "key": "they_are_more_energy_efficient_than_placental_mammals",
                 "es": "Son más eficientes energéticamente que los mamíferos placentarios",
                 "en": "They are more energy efficient than placental mammals",
                 "fr": "Ils sont plus économes en énergie que les mammifères placentaires"
@@ -472,25 +592,34 @@
     {
         "id": 11,
         "nombre": {
+            "key": "jaguar",
             "es": "Jaguar",
             "en": "Jaguar",
             "fr": "Jaguar"
         },
         "nombreCientifico": "Panthera onca",
         "descripcion": {
+            "key": "large_american_feline_the_largest_predator_in_south_america",
             "es": "Felino americano de gran tamaño, el depredador más grande de América del Sur.",
             "en": "Large American feline, the largest predator in South America.",
             "fr": "Grand félin américain, le plus grand prédateur d'Amérique du Sud."
         },
         "imagen": "/assets/images/animals/jaguar.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 2,
-        "continente": "América del Sur",
+        "continente": {
+            "key": "south_america",
+            "es": "América del Sur",
+            "en": "South America",
+            "fr": "Amérique du Sud"
+        },
         "estadoConservacion": {
+            "key": "vulnerable",
             "es": "vulnerable",
             "en": "vulnerable",
             "fr": "vulnérable"
@@ -500,16 +629,19 @@
         "pesoMaximo": 158,
         "curiosidades": [
             {
+                "key": "they_are_excellent_swimmers_unlike_other_big_cats",
                 "es": "Son excelentes nadadores, a diferencia de otros grandes felinos",
                 "en": "They are excellent swimmers, unlike other big cats",
                 "fr": "Ce sont d'excellents nageurs, contrairement aux autres grands félins"
             },
             {
+                "key": "they_can_crack_caiman_shells_with_their_jaws",
                 "es": "Pueden abrir las conchas de caimanes con sus mandíbulas",
                 "en": "They can crack caiman shells with their jaws",
                 "fr": "Ils peuvent briser les carapaces des caïmans avec leurs mâchoires"
             },
             {
+                "key": "they_have_the_strongest_bite_of_all_big_cats",
                 "es": "Tienen el mordisco más fuerte de todos los grandes felinos",
                 "en": "They have the strongest bite of all big cats",
                 "fr": "Ils ont la morsure la plus puissante de tous los grands félins"
@@ -519,25 +651,34 @@
     {
         "id": 12,
         "nombre": {
+            "key": "green_anaconda",
             "es": "Anaconda verde",
             "en": "Green Anaconda",
             "fr": "Anaconda vert"
         },
         "nombreCientifico": "Eunectes murinus",
         "descripcion": {
+            "key": "large_semi_aquatic_snake_one_of_the_largest_snakes_in_the_world",
             "es": "Serpiente semiacuática de gran tamaño, una de las serpientes más grandes del mundo.",
             "en": "Large semi-aquatic snake, one of the largest snakes in the world.",
             "fr": "Grand serpent semi-aquatique, l'un des plus grands serpents au monde."
         },
         "imagen": "/assets/images/animals/anaconda-verde.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 2,
-        "continente": "América del Sur",
+        "continente": {
+            "key": "south_america",
+            "es": "América del Sur",
+            "en": "South America",
+            "fr": "Amérique du Sud"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -547,16 +688,19 @@
         "pesoMaximo": 70,
         "curiosidades": [
             {
+                "key": "they_can_reach_more_than_6_meters_in_length",
                 "es": "Pueden alcanzar más de 6 metros de largo",
                 "en": "They can reach more than 6 meters in length",
                 "fr": "Ils peuvent atteindre plus de 6 mètres de long"
             },
             {
+                "key": "their_eyes_and_nostrils_are_on_top_of_the_head_to_breathe_underwater",
                 "es": "Sus ojos y fosas nasales están en la parte superior de la cabeza para respirar bajo el agua",
                 "en": "Their eyes and nostrils are on top of the head to breathe underwater",
                 "fr": "Leurs yeux et leurs narines sont sur le dessus de la tête pour respirer sous l'eau"
             },
             {
+                "key": "they_are_not_venomous_they_are_constrictors",
                 "es": "No tienen veneno, son constrictoras",
                 "en": "They are not venomous; they are constrictors",
                 "fr": "Ils ne sont pas venimeux ; ce sont des constricteurs"
@@ -566,25 +710,34 @@
     {
         "id": 13,
         "nombre": {
+            "key": "spectacled_bear",
             "es": "Oso de anteojos",
             "en": "Spectacled Bear",
             "fr": "Ours à lunettes"
         },
         "nombreCientifico": "Tremarctos ornatus",
         "descripcion": {
+            "key": "black_bear_with_white_markings_around_the_eyes_endemic_to_south_america",
             "es": "Oso negro con marcas blancas alrededor de los ojos, endémico de América del Sur.",
             "en": "Black bear with white markings around the eyes, endemic to South America.",
             "fr": "Ours noir avec des marques blanches autour des yeux, endémique d'Amérique du Sud."
         },
         "imagen": "/assets/images/animals/oso-anteojos.jpg",
         "dieta": {
+            "key": "omnivore",
             "es": "omnívoro",
             "en": "omnivore",
             "fr": "omnivore"
         },
         "ecosistemaId": 8,
-        "continente": "América del Sur",
+        "continente": {
+            "key": "south_america",
+            "es": "América del Sur",
+            "en": "South America",
+            "fr": "Amérique du Sud"
+        },
         "estadoConservacion": {
+            "key": "vulnerable",
             "es": "vulnerable",
             "en": "vulnerable",
             "fr": "vulnérable"
@@ -594,16 +747,19 @@
         "pesoMaximo": 200,
         "curiosidades": [
             {
+                "key": "they_are_exceptional_tree_climbers",
                 "es": "Son excepcionales trepadores de árboles",
                 "en": "They are exceptional tree climbers",
                 "fr": "Ce sont des grimpeurs d'arbres exceptionnels"
             },
             {
+                "key": "they_are_the_only_bears_living_in_south_america",
                 "es": "Son los únicos osos que viven en América del Sur",
                 "en": "They are the only bears living in South America",
                 "fr": "Ce sont les seuls ours vivant en Amérique du Sud"
             },
             {
+                "key": "they_mainly_eat_fruits_and_vegetables",
                 "es": "Principalmente comen frutas y vegetales",
                 "en": "They mainly eat fruits and vegetables",
                 "fr": "Ils mangent principalement des fruits et des légumes"
@@ -613,25 +769,34 @@
     {
         "id": 14,
         "nombre": {
+            "key": "american_bison",
             "es": "Bisonte americano",
             "en": "American Bison",
             "fr": "Bison d'Amérique"
         },
         "nombreCientifico": "Bison bison",
         "descripcion": {
+            "key": "large_bovine_from_the_american_continent_symbol_of_the_great_plains_fauna",
             "es": "Bovino de gran tamaño del continente americano, símbolo de la fauna de las Grandes Llanuras.",
             "en": "Large bovine from the American continent, symbol of the Great Plains fauna.",
             "fr": "Grand bovin du continent américain, symbole de la faune des Grandes Plaines."
         },
         "imagen": "/assets/images/animals/bisonte-americano.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 9,
-        "continente": "América del Norte",
+        "continente": {
+            "key": "north_america",
+            "es": "América del Norte",
+            "en": "North America",
+            "fr": "Amérique du Nord"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -641,16 +806,19 @@
         "pesoMaximo": 900,
         "curiosidades": [
             {
+                "key": "they_can_run_up_to_55_km_h_despite_their_size",
                 "es": "Pueden correr hasta 55 km/h a pesar de su tamaño",
                 "en": "They can run up to 55 km/h despite their size",
                 "fr": "Ils peuvent courir jusqu'à 55 km/h malgré leur taille"
             },
             {
+                "key": "historically_they_exceeded_60_million_individuals",
                 "es": "Históricamente superaban los 60 millones de individuos",
                 "en": "Historically they exceeded 60 million individuals",
                 "fr": "Historiquement, ils dépassaient les 60 millions d'individus"
             },
             {
+                "key": "their_population_was_decimated_to_fewer_than_1000_in_the_19th_century",
                 "es": "Su población fue diezmada a menos de 1000 en el siglo XIX",
                 "en": "Their population was decimated to fewer than 1000 in the 19th century",
                 "fr": "Leur population a été décimée à moins de 1000 au XIXe siècle"
@@ -660,25 +828,34 @@
     {
         "id": 15,
         "nombre": {
+            "key": "grizzly_bear",
             "es": "Oso grizzly",
             "en": "Grizzly Bear",
             "fr": "Ours grizzly"
         },
         "nombreCientifico": "Ursus arctos horribilis",
         "descripcion": {
+            "key": "large_bear_from_north_america_known_for_its_aggressiveness_and_strength",
             "es": "Oso de gran tamaño de América del Norte, conocido por su agresividad y fuerza.",
             "en": "Large bear from North America, known for its aggressiveness and strength.",
             "fr": "Grand ours d'Amérique du Nord, connu pour son agressivité et sa force."
         },
         "imagen": "/assets/images/animals/oso-grizzly.jpg",
         "dieta": {
+            "key": "omnivore",
             "es": "omnívoro",
             "en": "omnivore",
             "fr": "omnivore"
         },
         "ecosistemaId": 8,
-        "continente": "América del Norte",
+        "continente": {
+            "key": "north_america",
+            "es": "América del Norte",
+            "en": "North America",
+            "fr": "Amérique du Nord"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -688,16 +865,19 @@
         "pesoMaximo": 360,
         "curiosidades": [
             {
+                "key": "they_can_run_at_55_km_h",
                 "es": "Pueden correr a 55 km/h",
                 "en": "They can run at 55 km/h",
                 "fr": "Ils peuvent courir à 55 km/h"
             },
             {
+                "key": "their_sense_of_smell_is_7_times_better_than_a_bloodhound_s",
                 "es": "Su sentido del olfato es 7 veces mejor que el de un bloodhound",
                 "en": "Their sense of smell is 7 times better than a bloodhound's",
                 "fr": "Leur odorat est 7 fois meilleur que celui d'un limier"
             },
             {
+                "key": "they_are_mainly_herbivores",
                 "es": "Son principalmente herbívoros",
                 "en": "They are mainly herbivores",
                 "fr": "Ils sont principalement herbivores"
@@ -707,25 +887,34 @@
     {
         "id": 16,
         "nombre": {
+            "key": "bald_eagle",
             "es": "Águila calva",
             "en": "Bald Eagle",
             "fr": "Pygargue à tête blanche"
         },
         "nombreCientifico": "Haliaeetus leucocephalus",
         "descripcion": {
+            "key": "bird_of_prey_from_north_america_national_symbol_of_the_united_states",
             "es": "Ave rapaz de América del Norte, símbolo nacional de Estados Unidos.",
             "en": "Bird of prey from North America, national symbol of the United States.",
             "fr": "Oiseau de proie d'Amérique du Nord, symbole national des États-Unis."
         },
         "imagen": "/assets/images/animals/aguila-calva.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 10,
-        "continente": "América del Norte",
+        "continente": {
+            "key": "north_america",
+            "es": "América del Norte",
+            "en": "North America",
+            "fr": "Amérique du Nord"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -735,16 +924,19 @@
         "pesoMaximo": 6,
         "curiosidades": [
             {
+                "key": "they_can_reach_speeds_of_160_km_h_in_a_dive",
                 "es": "Pueden alcanzar velocidades de 160 km/h en picada",
                 "en": "They can reach speeds of 160 km/h in a dive",
                 "fr": "Ils peuvent atteindre des vitesses de 160 km/h en piqué"
             },
             {
+                "key": "their_vision_is_8_times_better_than_human_vision",
                 "es": "Su visión es 8 veces mejor que la humana",
                 "en": "Their vision is 8 times better than human vision",
                 "fr": "Leur vision est 8 fois supérieure à celle de l'homme"
             },
             {
+                "key": "they_do_not_acquire_the_white_characteristics_until_4_5_years_old",
                 "es": "No adquieren las características blancas hasta los 4-5 años",
                 "en": "They do not acquire the white characteristics until 4-5 years old",
                 "fr": "Ils n'acquièrent pas les caractéristiques blanches avant 4 ou 5 ans"
@@ -754,25 +946,34 @@
     {
         "id": 17,
         "nombre": {
+            "key": "grey_wolf",
             "es": "Lobo gris",
             "en": "Grey Wolf",
             "fr": "Loup gris"
         },
         "nombreCientifico": "Canis lupus",
         "descripcion": {
+            "key": "large_wild_canid_apex_predator_of_various_regions_in_the_northern_hemisphere",
             "es": "Cánido salvaje de gran tamaño, depredador ápice de diversas regiones del hemisferio norte.",
             "en": "Large wild canid, apex predator of various regions in the Northern Hemisphere.",
             "fr": "Grand canidé sauvage, prédateur d'élite de diverses régions de l'hémisphère nord."
         },
         "imagen": "/assets/images/animals/lobo-gris.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 4,
-        "continente": "Europa",
+        "continente": {
+            "key": "europe",
+            "es": "Europa",
+            "en": "Europe",
+            "fr": "Europe"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -782,16 +983,19 @@
         "pesoMaximo": 80,
         "curiosidades": [
             {
+                "key": "they_live_in_hierarchically_organized_packs",
                 "es": "Viven en manadas jerárquicamente organizadas",
                 "en": "They live in hierarchically organized packs",
                 "fr": "Ils vivent en meutes organisées de manière hiérarchique"
             },
             {
+                "key": "their_howl_can_be_heard_from_10_km_away",
                 "es": "Su aullido puede escucharse desde 10 km de distancia",
                 "en": "Their howl can be heard from 10 km away",
                 "fr": "Leur hurlement peut être entendu à 10 km de distance"
             },
             {
+                "key": "they_can_fast_for_up_to_2_weeks",
                 "es": "Pueden ayunar hasta 2 semanas",
                 "en": "They can fast for up to 2 weeks",
                 "fr": "Ils peuvent jeûner jusqu'à 2 semaines"
@@ -801,25 +1005,34 @@
     {
         "id": 18,
         "nombre": {
+            "key": "reindeer",
             "es": "Reno",
             "en": "Reindeer",
             "fr": "Renne"
         },
         "nombreCientifico": "Rangifer tarandus",
         "descripcion": {
+            "key": "arctic_deer_the_only_genus_where_both_sexes_carry_antlers",
             "es": "Cérvido ártico, único género donde ambos sexos portan cuernos.",
             "en": "Arctic deer, the only genus where both sexes carry antlers.",
             "fr": "Cervidé arctique, seul genre où les deux sexes portent des bois."
         },
         "imagen": "/assets/images/animals/reno.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 5,
-        "continente": "Europa",
+        "continente": {
+            "key": "europe",
+            "es": "Europa",
+            "en": "Europe",
+            "fr": "Europe"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -829,16 +1042,19 @@
         "pesoMaximo": 240,
         "curiosidades": [
             {
+                "key": "their_hooves_adapt_to_the_seasons_being_softer_in_summer",
                 "es": "Sus cascos se adaptan a las estaciones, siendo más blandos en verano",
                 "en": "Their hooves adapt to the seasons, being softer in summer",
                 "fr": "Leurs sabots s'adaptent aux saisons, étant plus mous en été"
             },
             {
+                "key": "they_can_see_ultraviolet_light",
                 "es": "Pueden ver luz ultravioleta",
                 "en": "They can see ultraviolet light",
                 "fr": "Ils peuvent voir la lumière ultraviolette"
             },
             {
+                "key": "they_migrate_more_than_any_other_land_mammal",
                 "es": "Migran más que cualquier otro terrestre mamífero",
                 "en": "They migrate more than any other land mammal",
                 "fr": "Ils migrent plus que tout autre mammifère terrestre"
@@ -848,25 +1064,34 @@
     {
         "id": 19,
         "nombre": {
+            "key": "eurasian_lynx",
             "es": "Lince euroasiático",
             "en": "Eurasian Lynx",
             "fr": "Lynx boréal"
         },
         "nombreCientifico": "Lynx lynx",
         "descripcion": {
+            "key": "medium_sized_feline_from_northern_europe_characterized_by_its_tufted_ears",
             "es": "Felino de tamaño medio del norte de Europa, caracterizado por sus orejas con pinceles.",
             "en": "Medium-sized feline from Northern Europe, characterized by its tufted ears.",
             "fr": "Félin de taille moyenne d'Europe du Nord, caractérisé par ses oreilles avec des pinceaux."
         },
         "imagen": "/assets/images/animals/lince-euroasiatico.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 4,
-        "continente": "Europa",
+        "continente": {
+            "key": "europe",
+            "es": "Europa",
+            "en": "Europe",
+            "fr": "Europe"
+        },
         "estadoConservacion": {
+            "key": "vulnerable",
             "es": "vulnerable",
             "en": "vulnerable",
             "fr": "vulnérable"
@@ -876,16 +1101,19 @@
         "pesoMaximo": 36,
         "curiosidades": [
             {
+                "key": "they_can_jump_up_to_4_meters",
                 "es": "Pueden saltar hasta 4 metros",
                 "en": "They can jump up to 4 meters",
                 "fr": "Ils peuvent sauter jusqu'à 4 mètres"
             },
             {
+                "key": "their_ears_have_20_muscles_for_precise_orientation",
                 "es": "Sus orejas tienen 20 músculos para una orientación precisa",
                 "en": "Their ears have 20 muscles for precise orientation",
                 "fr": "Leurs oreilles possèdent 20 muscles pour une orientation précise"
             },
             {
+                "key": "they_are_mainly_nocturnal",
                 "es": "Son principalmente nocturnos",
                 "en": "They are mainly nocturnal",
                 "fr": "Ils sont principalement nocturnes"
@@ -895,25 +1123,34 @@
     {
         "id": 20,
         "nombre": {
+            "key": "blue_whale",
             "es": "Ballena azul",
             "en": "Blue Whale",
             "fr": "Baleine bleue"
         },
         "nombreCientifico": "Balaenoptera musculus",
         "descripcion": {
+            "key": "the_largest_mammal_to_ever_exist_a_marine_animal_of_extraordinary_size",
             "es": "El mamífero más grande que jamás haya existido, animal marino de tamaño extraordinario.",
             "en": "The largest mammal to ever exist, a marine animal of extraordinary size.",
             "fr": "Le plus grand mammifère ayant jamais existé, un animal marin d'une taille extraordinaire."
         },
         "imagen": "/assets/images/animals/ballena-azul.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 6,
-        "continente": "Oceanía",
+        "continente": {
+            "key": "oceania",
+            "es": "Oceanía",
+            "en": "Oceania",
+            "fr": "Océanie"
+        },
         "estadoConservacion": {
+            "key": "endangered",
             "es": "en peligro",
             "en": "endangered",
             "fr": "en danger"
@@ -923,16 +1160,19 @@
         "pesoMaximo": 200000,
         "curiosidades": [
             {
+                "key": "its_heart_weighs_as_much_as_a_small_car",
                 "es": "Su corazón pesa como un automóvil pequeño",
                 "en": "Its heart weighs as much as a small car",
                 "fr": "Son cœur pèse autant qu'une petite voiture"
             },
             {
+                "key": "they_can_consume_4_tons_of_food_daily",
                 "es": "Pueden consumir 4 toneladas de alimento diario",
                 "en": "They can consume 4 tons of food daily",
                 "fr": "Ils peuvent consommer 4 tonnes de nourriture par jour"
             },
             {
+                "key": "its_tongue_can_weigh_as_much_as_an_elephant",
                 "es": "Su lengua puede pesar tanto como un elefante",
                 "en": "Its tongue can weigh as much as an elephant",
                 "fr": "Sa langue peut peser aussi lourd qu'un éléphant"
@@ -942,25 +1182,34 @@
     {
         "id": 21,
         "nombre": {
+            "key": "bottlenose_dolphin",
             "es": "Delfín mular",
             "en": "Bottlenose Dolphin",
             "fr": "Grand dauphin"
         },
         "nombreCientifico": "Tursiops truncatus",
         "descripcion": {
+            "key": "highly_intelligent_cetacean_known_for_its_interaction_with_humans",
             "es": "Cetáceo altamente inteligente, conocido por su interacción con humanos.",
             "en": "Highly intelligent cetacean, known for its interaction with humans.",
             "fr": "Cétacé très intelligent, connu pour son interaction avec les humains."
         },
         "imagen": "/assets/images/animals/delfin-mular.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 6,
-        "continente": "Oceanía",
+        "continente": {
+            "key": "oceania",
+            "es": "Oceanía",
+            "en": "Oceania",
+            "fr": "Océanie"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -970,16 +1219,19 @@
         "pesoMaximo": 650,
         "curiosidades": [
             {
+                "key": "they_can_recognize_each_other_by_unique_whistles",
                 "es": "Pueden reconocerse por silbidos únicos",
                 "en": "They can recognize each other by unique whistles",
                 "fr": "Ils peuvent se reconnaître par des sifflements uniques"
             },
             {
+                "key": "they_have_a_cerebral_cortex_comparable_to_primates",
                 "es": "Tienen una corteza cerebral comparable a los primates",
                 "en": "They have a cerebral cortex comparable to primates",
                 "fr": "Ils ont un cortex cérébral comparable à celui des primates"
             },
             {
+                "key": "they_sleep_with_one_eye_open",
                 "es": "Duermen con un ojo abierto",
                 "en": "They sleep with one eye open",
                 "fr": "Ils dorment avec un œil ouvert"
@@ -989,25 +1241,34 @@
     {
         "id": 22,
         "nombre": {
+            "key": "emperor_penguin",
             "es": "Pingüino emperador",
             "en": "Emperor Penguin",
             "fr": "Manchot empereur"
         },
         "nombreCientifico": "Aptenodytes forsteri",
         "descripcion": {
+            "key": "the_largest_penguin_species_endemic_to_antarctica",
             "es": "La especie de pingüino más grande, endémico de la Antártida.",
             "en": "The largest penguin species, endemic to Antarctica.",
             "fr": "La plus grande espèce de manchot, endémique de l'Antarctique."
         },
         "imagen": "/assets/images/animals/pinguino-emperador.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 5,
-        "continente": "Antártida",
+        "continente": {
+            "key": "antarctica",
+            "es": "Antártida",
+            "en": "Antarctica",
+            "fr": "Antarctique"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -1017,16 +1278,19 @@
         "pesoMaximo": 45,
         "curiosidades": [
             {
+                "key": "males_fast_for_up_to_120_days_during_reproduction",
                 "es": "Los machos ayunan hasta 120 días durante la reproducción",
                 "en": "Males fast for up to 120 days during reproduction",
                 "fr": "Les mâles jeûnent jusqu'à 120 jours pendant la reproduction"
             },
             {
+                "key": "they_can_dive_deeper_than_500_meters",
                 "es": "Pueden bucear más de 500 metros de profundidad",
                 "en": "They can dive deeper than 500 meters",
                 "fr": "Ils peuvent plonger à plus de 500 mètres de profondeur"
             },
             {
+                "key": "their_body_fat_represents_36_of_their_weight",
                 "es": "Su grasa corporal representa el 36% de su peso",
                 "en": "Their body fat represents 36% of their weight",
                 "fr": "Leur graisse corporelle représente 36 % de leur poids"
@@ -1036,25 +1300,34 @@
     {
         "id": 23,
         "nombre": {
+            "key": "weddell_seal",
             "es": "Foca de Weddell",
             "en": "Weddell Seal",
             "fr": "Phoque de Weddell"
         },
         "nombreCientifico": "Leptonychotes weddellii",
         "descripcion": {
+            "key": "antarctic_marine_seal_adapted_to_very_cold_waters",
             "es": "Foca marina de la Antártida, adaptada a aguas muy frías.",
             "en": "Antarctic marine seal, adapted to very cold waters.",
             "fr": "Phoque marin de l'Antarctique, adapté aux eaux très froides."
         },
         "imagen": "/assets/images/animals/foca-weddell.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 5,
-        "continente": "Antártida",
+        "continente": {
+            "key": "antarctica",
+            "es": "Antártida",
+            "en": "Antarctica",
+            "fr": "Antarctique"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -1064,16 +1337,19 @@
         "pesoMaximo": 500,
         "curiosidades": [
             {
+                "key": "they_can_dive_up_to_600_meters",
                 "es": "Pueden bucear hasta 600 metros",
                 "en": "They can dive up to 600 meters",
                 "fr": "Ils peuvent plonger jusqu'à 600 mètres"
             },
             {
+                "key": "they_have_a_6_cm_thick_layer_of_fat",
                 "es": "Tienen una capa de grasa de 6 cm de espesor",
                 "en": "They have a 6 cm thick layer of fat",
                 "fr": "Ils ont une couche de graisse de 6 cm d'épaisseur"
             },
             {
+                "key": "they_are_able_to_maintain_holes_in_the_ice",
                 "es": "Son capaces de mantener agujeros en el hielo",
                 "en": "They are able to maintain holes in the ice",
                 "fr": "Ils sont capables de maintenir des trous dans la glace"
@@ -1083,25 +1359,34 @@
     {
         "id": 24,
         "nombre": {
+            "key": "monarch_butterfly",
             "es": "Mariposa monarca",
             "en": "Monarch Butterfly",
             "fr": "Monarque"
         },
         "nombreCientifico": "Danaus plexippus",
         "descripcion": {
+            "key": "insect_known_for_its_multi_generational_migration_between_north_america_and_mexico",
             "es": "Insecto conocido por su migración de múltiples generaciones entre América del Norte y México.",
             "en": "Insect known for its multi-generational migration between North America and Mexico.",
             "fr": "Insecte connu pour sa migration multigénérationnelle entre l'Amérique du Nord et le Mexique."
         },
         "imagen": "/assets/images/animals/mariposa-monarca.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 9,
-        "continente": "América del Norte",
+        "continente": {
+            "key": "north_america",
+            "es": "América del Norte",
+            "en": "North America",
+            "fr": "Amérique du Nord"
+        },
         "estadoConservacion": {
+            "key": "vulnerable",
             "es": "vulnerable",
             "en": "vulnerable",
             "fr": "vulnérable"
@@ -1111,16 +1396,19 @@
         "pesoMaximo": 0.0007,
         "curiosidades": [
             {
+                "key": "they_migrate_up_to_3000_km",
                 "es": "Migran hasta 3000 km",
                 "en": "They migrate up to 3000 km",
                 "fr": "Ils migrent jusqu'à 3000 km"
             },
             {
+                "key": "they_have_5_eyes_in_total",
                 "es": "Tienen 5 ojos en total",
                 "en": "They have 5 eyes in total",
                 "fr": "Ils ont 5 yeux au total"
             },
             {
+                "key": "the_larvae_are_poisonous",
                 "es": "Las larvas son venenosas",
                 "en": "The larvae are poisonous",
                 "fr": "Les larves sont venimeuses"
@@ -1130,25 +1418,34 @@
     {
         "id": 25,
         "nombre": {
+            "key": "nile_crocodile",
             "es": "Cocodrilo del Nilo",
             "en": "Nile Crocodile",
             "fr": "Crocodile du Nil"
         },
         "nombreCientifico": "Crocodylus niloticus",
         "descripcion": {
+            "key": "large_semi_aquatic_reptile_apex_predator_of_african_rivers_and_lakes",
             "es": "Reptil semiacuático de gran tamaño, depredador ápice de ríos y lagos africanos.",
             "en": "Large semi-aquatic reptile, apex predator of African rivers and lakes.",
             "fr": "Grand reptile semi-aquatique, prédateur d'élite des rivières et lacs africains."
         },
         "imagen": "/assets/images/animals/cocodrilo-nilo.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 7,
-        "continente": "África",
+        "continente": {
+            "key": "africa",
+            "es": "África",
+            "en": "Africa",
+            "fr": "Afrique"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -1158,16 +1455,19 @@
         "pesoMaximo": 750,
         "curiosidades": [
             {
+                "key": "they_can_go_without_eating_for_several_years",
                 "es": "Pueden no comer durante varios años",
                 "en": "They can go without eating for several years",
                 "fr": "Ils peuvent rester plusieurs années sans manger"
             },
             {
+                "key": "their_teeth_are_replaced_throughout_their_life",
                 "es": "Sus dientes se reemplazan durante toda la vida",
                 "en": "Their teeth are replaced throughout their life",
                 "fr": "Leurs dents se remplacent tout au long de leur vie"
             },
             {
+                "key": "they_have_the_most_powerful_bite_in_nature",
                 "es": "Tienen el mordisco más potente de la naturaleza",
                 "en": "They have the most powerful bite in nature",
                 "fr": "Ils ont la morsure la plus puissante de la nature"
@@ -1177,25 +1477,34 @@
     {
         "id": 26,
         "nombre": {
+            "key": "african_buffalo",
             "es": "Búfalo africano",
             "en": "African Buffalo",
             "fr": "Buffle d'Afrique"
         },
         "nombreCientifico": "Syncerus caffer",
         "descripcion": {
+            "key": "robust_bovine_considered_one_of_the_most_dangerous_animals_in_africa",
             "es": "Bovino robusto considerado uno de los animales más peligrosos de África.",
             "en": "Robust bovine considered one of the most dangerous animals in Africa.",
             "fr": "Bovin robuste considéré comme l'un des animaux les plus dangereux d'Afrique."
         },
         "imagen": "/assets/images/animals/bufalo-africano.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 1,
-        "continente": "África",
+        "continente": {
+            "key": "africa",
+            "es": "África",
+            "en": "Africa",
+            "fr": "Afrique"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -1205,16 +1514,19 @@
         "pesoMaximo": 1000,
         "curiosidades": [
             {
+                "key": "they_can_attack_lions",
                 "es": "Pueden atacar a los leones",
                 "en": "They can attack lions",
                 "fr": "Ils peuvent attaquer les lions"
             },
             {
+                "key": "males_horns_fuse_into_a_bony_structure",
                 "es": "Los cuernos de los machos se fusionan en una estructura ósea",
                 "en": "Males' horns fuse into a bony structure",
                 "fr": "Les cornes des mâles fusionnent en une structure osseuse"
             },
             {
+                "key": "they_live_in_herds_that_can_exceed_1000_individuals",
                 "es": "Viven en rebaños que pueden superar los 1000 individuos",
                 "en": "They live in herds that can exceed 1000 individuals",
                 "fr": "Ils vivent en troupeaux pouvant dépasser 1000 individus"
@@ -1224,25 +1536,34 @@
     {
         "id": 27,
         "nombre": {
+            "key": "poison_dart_frog",
             "es": "Rana flecha venenosa",
             "en": "Poison Dart Frog",
             "fr": "Dendrobate"
         },
         "nombreCientifico": "Dendrobatidae",
         "descripcion": {
+            "key": "small_amphibian_characterized_by_bright_colors_and_lethal_poison",
             "es": "Anfibio pequeño caracterizado por sus colores brillantes y veneno letal.",
             "en": "Small amphibian characterized by bright colors and lethal poison.",
             "fr": "Petit amphibien caractérisé par ses couleurs vives et son venin mortel."
         },
         "imagen": "/assets/images/animals/rana-flecha-venenosa.jpg",
         "dieta": {
+            "key": "insectivore",
             "es": "insectívoro",
             "en": "insectivore",
             "fr": "insectivore"
         },
         "ecosistemaId": 2,
-        "continente": "América del Sur",
+        "continente": {
+            "key": "south_america",
+            "es": "América del Sur",
+            "en": "South America",
+            "fr": "Amérique du Sud"
+        },
         "estadoConservacion": {
+            "key": "vulnerable",
             "es": "vulnerable",
             "en": "vulnerable",
             "fr": "vulnérable"
@@ -1252,16 +1573,19 @@
         "pesoMaximo": 0.005,
         "curiosidades": [
             {
+                "key": "their_poison_comes_from_their_insect_diet",
                 "es": "Su veneno proviene de su dieta de insectos",
                 "en": "Their poison comes from their insect diet",
                 "fr": "Leur venin provient de leur alimentation à base d'insectes"
             },
             {
+                "key": "a_single_frog_contains_enough_poison_to_kill_10_people",
                 "es": "Una sola rana contiene suficiente veneno para matar 10 personas",
                 "en": "A single frog contains enough poison to kill 10 people",
                 "fr": "Une seule grenouille contient assez de venin pour tuer 10 personnes"
             },
             {
+                "key": "bright_colors_warn_predators",
                 "es": "Los colores brillantes advierten a los depredadores",
                 "en": "Bright colors warn predators",
                 "fr": "Les couleurs vives avertissent les prédateurs"
@@ -1271,25 +1595,34 @@
     {
         "id": 28,
         "nombre": {
+            "key": "blue_and_yellow_macaw",
             "es": "Guacamayo azul",
             "en": "Blue-and-yellow Macaw",
             "fr": "Ara bleu"
         },
         "nombreCientifico": "Ara ararauna",
         "descripcion": {
+            "key": "large_parrot_with_blue_and_yellow_plumage_common_in_tropical_forests",
             "es": "Ave psitaciforme grande con plumaje azul y amarillo, común en selvas tropicales.",
             "en": "Large parrot with blue and yellow plumage, common in tropical forests.",
             "fr": "Grand perroquet au plumage bleu et jaune, commun dans les forêts tropicales."
         },
         "imagen": "/assets/images/animals/loro-guacamayo-azul.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 2,
-        "continente": "América del Sur",
+        "continente": {
+            "key": "south_america",
+            "es": "América del Sur",
+            "en": "South America",
+            "fr": "Amérique du Sud"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -1299,16 +1632,19 @@
         "pesoMaximo": 1.3,
         "curiosidades": [
             {
+                "key": "they_can_live_for_more_than_60_years_in_captivity",
                 "es": "Pueden vivir más de 60 años en cautiverio",
                 "en": "They can live for more than 60 years in captivity",
                 "fr": "Ils peuvent vivre plus de 60 ans en captivité"
             },
             {
+                "key": "they_have_a_scream_that_reaches_130_decibels",
                 "es": "Tienen un grito que alcanza los 130 decibeles",
                 "en": "They have a scream that reaches 130 decibels",
                 "fr": "Ils ont un cri qui atteint 130 décibels"
             },
             {
+                "key": "they_are_capable_of_mimicking_human_voices",
                 "es": "Son capaces de imitar la voz humana",
                 "en": "They are capable of mimicking human voices",
                 "fr": "Ils sont capables d'imiter la voix humaine"
@@ -1318,25 +1654,34 @@
     {
         "id": 29,
         "nombre": {
+            "key": "capybara",
             "es": "Capibara",
             "en": "Capybara",
             "fr": "Capybara"
         },
         "nombreCientifico": "Hydrochoerus hydrochaeris",
         "descripcion": {
+            "key": "the_largest_living_rodent_semi_aquatic_from_south_america",
             "es": "El roedor viviente más grande, semiacuático de América del Sur.",
             "en": "The largest living rodent, semi-aquatic from South America.",
             "fr": "Le plus grand rongeur vivant, semi-aquatique d'Amérique du Sud."
         },
         "imagen": "/assets/images/animals/capibara.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 2,
-        "continente": "América del Sur",
+        "continente": {
+            "key": "south_america",
+            "es": "América del Sur",
+            "en": "South America",
+            "fr": "Amérique du Sud"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -1346,16 +1691,19 @@
         "pesoMaximo": 65,
         "curiosidades": [
             {
+                "key": "their_feet_have_webs_between_the_toes",
                 "es": "Sus patas tienen membranas entre los dedos",
                 "en": "Their feet have webs between the toes",
                 "fr": "Leurs pattes ont des membranes entre les doigts"
             },
             {
+                "key": "they_can_hold_their_breath_for_up_to_5_minutes",
                 "es": "Pueden contener la respiración hasta 5 minutos",
                 "en": "They can hold their breath for up to 5 minutes",
                 "fr": "Ils peuvent rester en apnée jusqu'à 5 minutes"
             },
             {
+                "key": "they_live_in_groups_of_10_20_individuals",
                 "es": "Viven en grupos de 10-20 individuos",
                 "en": "They live in groups of 10-20 individuals",
                 "fr": "Ils vivent en groupes de 10 à 20 individus"
@@ -1365,25 +1713,34 @@
     {
         "id": 30,
         "nombre": {
+            "key": "king_cobra",
             "es": "Cobra real",
             "en": "King Cobra",
             "fr": "Cobra royal"
         },
         "nombreCientifico": "Ophiophagus hannah",
         "descripcion": {
+            "key": "the_world_s_longest_venomous_snake_native_to_southeast_asia",
             "es": "La serpiente venenosa más larga del mundo, nativa del sudeste asiático.",
             "en": "The world's longest venomous snake, native to Southeast Asia.",
             "fr": "Le plus long serpent venimeux au monde, originaire d'Asie du Sud-Est."
         },
         "imagen": "/assets/images/animals/cobra-real.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 2,
-        "continente": "Asia",
+        "continente": {
+            "key": "asia",
+            "es": "Asia",
+            "en": "Asia",
+            "fr": "Asie"
+        },
         "estadoConservacion": {
+            "key": "vulnerable",
             "es": "vulnerable",
             "en": "vulnerable",
             "fr": "vulnérable"
@@ -1393,16 +1750,19 @@
         "pesoMaximo": 13,
         "curiosidades": [
             {
+                "key": "they_can_reach_more_than_5_meters_in_length",
                 "es": "Pueden alcanzar más de 5 metros de largo",
                 "en": "They can reach more than 5 meters in length",
                 "fr": "Ils peuvent atteindre plus de 5 mètres de long"
             },
             {
+                "key": "their_venom_can_kill_an_elephant",
                 "es": "Su veneno puede matar a un elefante",
                 "en": "Their venom can kill an elephant",
                 "fr": "Leur venin peut tuer un éléphant"
             },
             {
+                "key": "they_feed_mainly_on_other_snakes",
                 "es": "Se alimentan principalmente de otras serpientes",
                 "en": "They feed mainly on other snakes",
                 "fr": "Ils se nourrissent principalement d'autres serpents"
@@ -1412,25 +1772,34 @@
     {
         "id": 31,
         "nombre": {
+            "key": "orangutan",
             "es": "Orangután",
             "en": "Orangutan",
             "fr": "Orang-outan"
         },
         "nombreCientifico": "Pongo",
         "descripcion": {
+            "key": "endangered_great_ape_widely_considered_close_to_humans_in_intelligence",
             "es": "Gran simio en peligro de extinción, ampliamente considerado cerca del ser humano en inteligencia.",
             "en": "Endangered great ape, widely considered close to humans in intelligence.",
             "fr": "Grand singe en danger, largement considéré comme proche de l'homme en intelligence."
         },
         "imagen": "/assets/images/animals/orangutan.jpg",
         "dieta": {
+            "key": "omnivore",
             "es": "omnívoro",
             "en": "omnivore",
             "fr": "omnivore"
         },
         "ecosistemaId": 2,
-        "continente": "Asia",
+        "continente": {
+            "key": "asia",
+            "es": "Asia",
+            "en": "Asia",
+            "fr": "Asie"
+        },
         "estadoConservacion": {
+            "key": "critically_endangered",
             "es": "en peligro crítico",
             "en": "critically endangered",
             "fr": "en danger critique"
@@ -1440,16 +1809,19 @@
         "pesoMaximo": 90,
         "curiosidades": [
             {
+                "key": "97_of_their_dna_is_identical_to_humans",
                 "es": "El 97% de su ADN es idéntico al humano",
                 "en": "97% of their DNA is identical to humans",
                 "fr": "97 % de leur ADN est identique à celui de l'homme"
             },
             {
+                "key": "they_are_primarily_solitary",
                 "es": "Son principalmente solitarios",
                 "en": "They are primarily solitary",
                 "fr": "Ils sont principalement solitaires"
             },
             {
+                "key": "they_use_tools_in_their_natural_environment",
                 "es": "Utilizan herramientas en su ambiente natural",
                 "en": "They use tools in their natural environment",
                 "fr": "Ils utilisent des outils dans leur milieu naturel"
@@ -1459,25 +1831,34 @@
     {
         "id": 32,
         "nombre": {
+            "key": "javan_rhinoceros",
             "es": "Rinoceronte de Java",
             "en": "Javan Rhinoceros",
             "fr": "Rhinocéros de Java"
         },
         "nombreCientifico": "Rhinoceros sondaicus",
         "descripcion": {
+            "key": "critically_endangered_rhinoceros_one_of_the_rarest_mammals_on_the_planet",
             "es": "Rinoceronte en peligro crítico, uno de los mamíferos más raros del planeta.",
             "en": "Critically endangered rhinoceros, one of the rarest mammals on the planet.",
             "fr": "Rhinocéros en danger critique, l'un des mammifères les plus rares de la planète."
         },
         "imagen": "/assets/images/animals/rinoceronte-java.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 2,
-        "continente": "Asia",
+        "continente": {
+            "key": "asia",
+            "es": "Asia",
+            "en": "Asia",
+            "fr": "Asie"
+        },
         "estadoConservacion": {
+            "key": "critically_endangered",
             "es": "en peligro crítico",
             "en": "critically endangered",
             "fr": "en danger critique"
@@ -1487,16 +1868,19 @@
         "pesoMaximo": 1400,
         "curiosidades": [
             {
+                "key": "fewer_than_80_individuals_remain_in_the_wild",
                 "es": "Menos de 80 individuos permanecen en la naturaleza",
                 "en": "Fewer than 80 individuals remain in the wild",
                 "fr": "Moins de 80 individus subsistent à l'état sauvage"
             },
             {
+                "key": "the_male_has_a_horn_up_to_26_cm_long",
                 "es": "El macho tiene un cuerno de hasta 26 cm",
                 "en": "The male has a horn up to 26 cm long",
                 "fr": "Le mâle a une corne pouvant atteindre 26 cm"
             },
             {
+                "key": "it_is_the_most_threatened_rhinoceros_species",
                 "es": "Es la especie de rinoceronte más amenazada",
                 "en": "It is the most threatened rhinoceros species",
                 "fr": "C'est l'espèce de rhinocéros la plus menacée"
@@ -1506,25 +1890,34 @@
     {
         "id": 33,
         "nombre": {
+            "key": "honey_bee",
             "es": "Abeja de miel",
             "en": "Honey Bee",
             "fr": "Abeille domestique"
         },
         "nombreCientifico": "Apis mellifera",
         "descripcion": {
+            "key": "social_hymenopteran_insect_producer_of_honey_and_wax",
             "es": "Insecto social himenóptero productor de miel y cera.",
             "en": "Social hymenopteran insect producer of honey and wax.",
             "fr": "Insecte hyménoptère social producteur de miel et de cire."
         },
         "imagen": "/assets/images/animals/abeja-miel.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 9,
-        "continente": "Europa",
+        "continente": {
+            "key": "europe",
+            "es": "Europa",
+            "en": "Europe",
+            "fr": "Europe"
+        },
         "estadoConservacion": {
+            "key": "data_deficient",
             "es": "datos insuficientes",
             "en": "data deficient",
             "fr": "données insuffisantes"
@@ -1534,16 +1927,19 @@
         "pesoMaximo": 0.0001,
         "curiosidades": [
             {
+                "key": "a_colony_has_20_000_60_000_bees",
                 "es": "Una colonia tiene 20,000-60,000 abejas",
                 "en": "A colony has 20,000-60,000 bees",
                 "fr": "Une colonie compte entre 20 000 et 60 000 abeilles"
             },
             {
+                "key": "they_perform_a_dance_to_communicate_food_location",
                 "es": "Realizan una danza para comunicar la ubicación del alimento",
                 "en": "They perform a dance to communicate food location",
                 "fr": "Elles effectuent une danse pour communiquer l'emplacement de la nourriture"
             },
             {
+                "key": "they_are_responsible_for_pollinating_one_third_of_our_food",
                 "es": "Son responsables de la polinización de un tercio de nuestra comida",
                 "en": "They are responsible for pollinating one-third of our food",
                 "fr": "Elles sont responsables de la pollinisation d'un tiers de notre nourriture"
@@ -1553,25 +1949,34 @@
     {
         "id": 34,
         "nombre": {
+            "key": "green_sea_turtle",
             "es": "Tortuga marina verde",
             "en": "Green Sea Turtle",
             "fr": "Tortue verte"
         },
         "nombreCientifico": "Chelonia mydas",
         "descripcion": {
+            "key": "large_marine_reptile_a_long_distance_migratory_species",
             "es": "Reptil marino grande, especie migratoria a larga distancia.",
             "en": "Large marine reptile, a long-distance migratory species.",
             "fr": "Grand reptile marin, espèce migratrice à longue distance."
         },
         "imagen": "/assets/images/animals/tortuga-marina-verde.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 6,
-        "continente": "Oceanía",
+        "continente": {
+            "key": "oceania",
+            "es": "Oceanía",
+            "en": "Oceania",
+            "fr": "Océanie"
+        },
         "estadoConservacion": {
+            "key": "endangered",
             "es": "en peligro",
             "en": "endangered",
             "fr": "en danger"
@@ -1581,16 +1986,19 @@
         "pesoMaximo": 200,
         "curiosidades": [
             {
+                "key": "they_return_to_the_same_beach_where_they_were_born_to_lay_eggs",
                 "es": "Regresan a la misma playa donde nacieron para desovar",
                 "en": "They return to the same beach where they were born to lay eggs",
                 "fr": "Elles retournent sur la même plage où elles sont nées pour pondre"
             },
             {
+                "key": "they_can_dive_for_hours_before_coming_up_for_air",
                 "es": "Pueden bucear durante horas antes de salir a respirar",
                 "en": "They can dive for hours before coming up for air",
                 "fr": "Elles peuvent plonger pendant des heures avant de remonter respirer"
             },
             {
+                "key": "their_diet_changes_drastically_as_they_grow",
                 "es": "Su dieta cambia drásticamente a medida que crecen",
                 "en": "Their diet changes drastically as they grow",
                 "fr": "Leur régime alimentaire change radicalement à mesure qu'elles grandissent"
@@ -1600,25 +2008,34 @@
     {
         "id": 35,
         "nombre": {
+            "key": "magellanic_penguin",
             "es": "Pingüino de Magallanes",
             "en": "Magellanic Penguin",
             "fr": "Manchot de Magellan"
         },
         "nombreCientifico": "Spheniscus magellanicus",
         "descripcion": {
+            "key": "medium_sized_penguin_from_south_america_migratory",
             "es": "Pingüino de tamaño mediano de América del Sur, migratorio.",
             "en": "Medium-sized penguin from South America, migratory.",
             "fr": "Manchot de taille moyenne d'Amérique du Sud, migrateur."
         },
         "imagen": "/assets/images/animals/pinguino-magallanes.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 6,
-        "continente": "América del Sur",
+        "continente": {
+            "key": "south_america",
+            "es": "América del Sur",
+            "en": "South America",
+            "fr": "Amérique du Sud"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -1628,16 +2045,19 @@
         "pesoMaximo": 3.8,
         "curiosidades": [
             {
+                "key": "they_nest_in_underground_burrows",
                 "es": "Anidan en madrigueras bajo tierra",
                 "en": "They nest in underground burrows",
                 "fr": "Ils nichent dans des terriers souterrains"
             },
             {
+                "key": "they_migrate_over_3000_km_in_search_of_food",
                 "es": "Migran más de 3000 km en busca de alimento",
                 "en": "They migrate over 3000 km in search of food",
                 "fr": "Ils migrent plus de 3000 km à la recherche de nourriture"
             },
             {
+                "key": "they_have_unique_individual_vocalizations",
                 "es": "Tienen vocalizaciones individuales únicas",
                 "en": "They have unique individual vocalizations",
                 "fr": "Ils ont des vocalisations individuelles uniques"
@@ -1647,25 +2067,34 @@
     {
         "id": 36,
         "nombre": {
+            "key": "atlantic_salmon",
             "es": "Salmón del Atlántico",
             "en": "Atlantic Salmon",
             "fr": "Saumon atlantique"
         },
         "nombreCientifico": "Salmo salar",
         "descripcion": {
+            "key": "anadromous_fish_that_performs_complex_migrations_between_oceans_and_rivers",
             "es": "Pez anádromo que realiza migraciones complejas entre océanos y ríos.",
             "en": "Anadromous fish that performs complex migrations between oceans and rivers.",
             "fr": "Poisson anadrome effectuant des migrations complexes entre les océans et les rivières."
         },
         "imagen": "/assets/images/animals/salmon-atlantico.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 7,
-        "continente": "Europa",
+        "continente": {
+            "key": "europe",
+            "es": "Europa",
+            "en": "Europe",
+            "fr": "Europe"
+        },
         "estadoConservacion": {
+            "key": "endangered",
             "es": "en peligro",
             "en": "endangered",
             "fr": "en danger"
@@ -1675,16 +2104,19 @@
         "pesoMaximo": 47,
         "curiosidades": [
             {
+                "key": "they_can_jump_obstacles_up_to_3_6_meters_high",
                 "es": "Pueden saltar obstáculos de hasta 3.6 metros",
                 "en": "They can jump obstacles up to 3.6 meters high",
                 "fr": "Ils peuvent sauter des obstacles jusqu'à 3,6 mètres de haut"
             },
             {
+                "key": "they_return_to_the_exact_river_where_they_were_born",
                 "es": "Regresan al río exacto donde nacieron",
                 "en": "They return to the exact river where they were born",
                 "fr": "Ils retournent exactement dans la rivière où ils sont nés"
             },
             {
+                "key": "they_stop_eating_when_entering_fresh_water_to_breed",
                 "es": "Dejan de comer cuando entran en agua dulce para reproducirse",
                 "en": "They stop eating when entering fresh water to breed",
                 "fr": "Ils cessent de manger lorsqu'ils entrent en eau douce pour se reproduire"
@@ -1694,25 +2126,34 @@
     {
         "id": 37,
         "nombre": {
+            "key": "saltwater_crocodile",
             "es": "Cocodrilo de agua salada",
             "en": "Saltwater Crocodile",
             "fr": "Crocodile marin"
         },
         "nombreCientifico": "Crocodylus porosus",
         "descripcion": {
+            "key": "the_largest_living_reptile_marine_and_fluvial_predator",
             "es": "El reptil viviente más grande, depredador marino y fluvial.",
             "en": "The largest living reptile, marine and fluvial predator.",
             "fr": "Le plus grand reptile vivant, prédateur marin et fluvial."
         },
         "imagen": "/assets/images/animals/cocodrilo-australiano.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 6,
-        "continente": "Oceanía",
+        "continente": {
+            "key": "oceania",
+            "es": "Oceanía",
+            "en": "Oceania",
+            "fr": "Océanie"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -1722,16 +2163,19 @@
         "pesoMaximo": 1000,
         "curiosidades": [
             {
+                "key": "they_can_reach_6_meters_in_length",
                 "es": "Pueden alcanzar 6 metros de largo",
                 "en": "They can reach 6 meters in length",
                 "fr": "Ils peuvent atteindre 6 mètres de long"
             },
             {
+                "key": "they_can_cross_vast_expanses_of_ocean",
                 "es": "Pueden cruzar vastas extensiones de océano",
                 "en": "They can cross vast expanses of ocean",
                 "fr": "Ils peuvent traverser de vastes étendues d'océan"
             },
             {
+                "key": "they_have_the_highest_bite_pressure_of_any_animal",
                 "es": "Tienen la mayor presión de mordida de cualquier animal",
                 "en": "They have the highest bite pressure of any animal",
                 "fr": "Ils ont la pression de morsure la plus élevée de tous les animaux"
@@ -1741,25 +2185,34 @@
     {
         "id": 38,
         "nombre": {
+            "key": "quokka",
             "es": "Quokka",
             "en": "Quokka",
             "fr": "Quokka"
         },
         "nombreCientifico": "Setonix brachyurus",
         "descripcion": {
+            "key": "small_australian_marsupial_known_for_its_friendly_appearance",
             "es": "Pequeño marsupial australiano conocido por su apariencia amigable.",
             "en": "Small Australian marsupial known for its friendly appearance.",
             "fr": "Petit marsupial australien connu pour son apparence amicale."
         },
         "imagen": "/assets/images/animals/quokka.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 9,
-        "continente": "Oceanía",
+        "continente": {
+            "key": "oceania",
+            "es": "Oceanía",
+            "en": "Oceania",
+            "fr": "Océanie"
+        },
         "estadoConservacion": {
+            "key": "vulnerable",
             "es": "vulnerable",
             "en": "vulnerable",
             "fr": "vulnérable"
@@ -1769,16 +2222,19 @@
         "pesoMaximo": 5,
         "curiosidades": [
             {
+                "key": "they_appear_to_smile_due_to_the_structure_of_their_jaws",
                 "es": "Parecen sonreír debido a la estructura de sus mandíbulas",
                 "en": "They appear to smile due to the structure of their jaws",
                 "fr": "Ils semblent sourire en raison de la structure de leurs mâchoires"
             },
             {
+                "key": "they_are_endemic_to_western_australia",
                 "es": "Son endémicos de Australia occidental",
                 "en": "They are endemic to Western Australia",
                 "fr": "Ils sont endémiques d'Australie occidentale"
             },
             {
+                "key": "they_have_few_natural_predators_on_rottnest_island",
                 "es": "Tienen escasos depredadores naturales en la isla Rottnest",
                 "en": "They have few natural predators on Rottnest Island",
                 "fr": "Ils ont peu de prédateurs naturels sur l'île de Rottnest"
@@ -1788,25 +2244,34 @@
     {
         "id": 39,
         "nombre": {
+            "key": "toco_toucan",
             "es": "Tucán toco",
             "en": "Toco Toucan",
             "fr": "Toucan toco"
         },
         "nombreCientifico": "Ramphastos toco",
         "descripcion": {
+            "key": "tropical_bird_characterized_by_its_enormously_large_and_colorful_beak",
             "es": "Ave tropical caracterizada por su pico enormemente grande y colorido.",
             "en": "Tropical bird characterized by its enormously large and colorful beak.",
             "fr": "Oiseau tropical caractérisé par son bec énormément grand et coloré."
         },
         "imagen": "/assets/images/animals/tucan.jpg",
         "dieta": {
+            "key": "omnivore",
             "es": "omnívoro",
             "en": "omnivore",
             "fr": "omnivore"
         },
         "ecosistemaId": 2,
-        "continente": "América del Sur",
+        "continente": {
+            "key": "south_america",
+            "es": "América del Sur",
+            "en": "South America",
+            "fr": "Amérique du Sud"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -1816,16 +2281,19 @@
         "pesoMaximo": 0.8,
         "curiosidades": [
             {
+                "key": "their_beak_is_very_light_despite_its_size",
                 "es": "Su pico es muy ligero a pesar de su tamaño",
                 "en": "Their beak is very light despite its size",
                 "fr": "Leur bec est très léger malgré sa taille"
             },
             {
+                "key": "they_are_primarily_frugivorous",
                 "es": "Son principalmente frugívoros",
                 "en": "They are primarily frugivorous",
                 "fr": "Ils sont principalement frugivores"
             },
             {
+                "key": "their_beak_helps_regulate_their_body_temperature",
                 "es": "Su pico ayuda a regular su temperatura corporal",
                 "en": "Their beak helps regulate their body temperature",
                 "fr": "Leur bec aide à réguler leur température corporelle"
@@ -1835,25 +2303,34 @@
     {
         "id": 40,
         "nombre": {
+            "key": "european_mink",
             "es": "Visón europeo",
             "en": "European Mink",
             "fr": "Vison d'Europe"
         },
         "nombreCientifico": "Mustela lutreola",
         "descripcion": {
+            "key": "small_semi_aquatic_carnivore_in_critical_danger_of_extinction",
             "es": "Pequeño carnívoro semiacuático en peligro crítico de extinción.",
             "en": "Small semi-aquatic carnivore in critical danger of extinction.",
             "fr": "Petit carnivore semi-aquatique en danger critique d'extinction."
         },
         "imagen": "/assets/images/animals/vison-europeo.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 7,
-        "continente": "Europa",
+        "continente": {
+            "key": "europe",
+            "es": "Europa",
+            "en": "Europe",
+            "fr": "Europe"
+        },
         "estadoConservacion": {
+            "key": "critically_endangered",
             "es": "en peligro crítico",
             "en": "critically endangered",
             "fr": "en danger critique"
@@ -1863,16 +2340,19 @@
         "pesoMaximo": 0.75,
         "curiosidades": [
             {
+                "key": "they_have_an_exceptional_sense_of_smell",
                 "es": "Tienen un sentido del olfato excepcional",
                 "en": "They have an exceptional sense of smell",
                 "fr": "Ils ont un sens de l'odorat exceptionnel"
             },
             {
+                "key": "they_mark_their_territory_with_anal_glands",
                 "es": "Marcan su territorio con glándulas anales",
                 "en": "They mark their territory with anal glands",
                 "fr": "Ils marquent leur territoire avec des glandes anales"
             },
             {
+                "key": "their_population_has_declined_due_to_competition_with_the_american_mink",
                 "es": "Su población ha disminuido por competencia con el visón americano",
                 "en": "Their population has declined due to competition with the American mink",
                 "fr": "Leur population a décliné en raison de la compétition avec le vison d'Amérique"
@@ -1882,25 +2362,34 @@
     {
         "id": 41,
         "nombre": {
+            "key": "kangaroo_rat",
             "es": "Rata canguro",
             "en": "Kangaroo Rat",
             "fr": "Rat-kangourou"
         },
         "nombreCientifico": "Dipodomys",
         "descripcion": {
+            "key": "small_desert_rodent_that_can_jump_like_a_kangaroo",
             "es": "Pequeño roedor del desierto que puede saltar como un canguro.",
             "en": "Small desert rodent that can jump like a kangaroo.",
             "fr": "Petit rongeur du désert qui peut sauter comme un kangourou."
         },
         "imagen": "/assets/images/animals/rata-canguro.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 3,
-        "continente": "América del Norte",
+        "continente": {
+            "key": "north_america",
+            "es": "América del Norte",
+            "en": "North America",
+            "fr": "Amérique du Nord"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -1910,16 +2399,19 @@
         "pesoMaximo": 0.18,
         "curiosidades": [
             {
+                "key": "they_have_cheek_pouches_to_store_seeds",
                 "es": "Tienen bolsas en las mejillas para almacenar semillas",
                 "en": "They have cheek pouches to store seeds",
                 "fr": "Ils ont des abajoues pour stocker les graines"
             },
             {
+                "key": "they_almost_never_drink_water_they_get_it_from_seeds",
                 "es": "Casi nunca beben agua; la obtienen de las semillas",
                 "en": "They almost never drink water; they get it from seeds",
                 "fr": "Ils ne boivent presque jamais d'eau ; ils l'obtiennent des graines"
             },
             {
+                "key": "they_can_jump_up_to_2_meters_to_escape_predators",
                 "es": "Pueden saltar hasta 2 metros para escapar de depredadores",
                 "en": "They can jump up to 2 meters to escape predators",
                 "fr": "Ils peuvent sauter jusqu'à 2 mètres pour échapper aux prédateurs"
@@ -1929,25 +2421,34 @@
     {
         "id": 42,
         "nombre": {
+            "key": "green_iguana",
             "es": "Iguana verde",
             "en": "Green Iguana",
             "fr": "Iguane vert"
         },
         "nombreCientifico": "Iguana iguana",
         "descripcion": {
+            "key": "large_herbivorous_reptile_from_central_and_south_america",
             "es": "Reptil herbívoro grande de América Central y del Sur.",
             "en": "Large herbivorous reptile from Central and South America.",
             "fr": "Grand reptile herbivore d'Amérique centrale et du Sud."
         },
         "imagen": "/assets/images/animals/iguana-verde.jpg",
         "dieta": {
+            "key": "herbivore",
             "es": "herbívoro",
             "en": "herbivore",
             "fr": "herbivore"
         },
         "ecosistemaId": 2,
-        "continente": "América Central",
+        "continente": {
+            "key": "central_america",
+            "es": "América Central",
+            "en": "Central America",
+            "fr": "Amérique centrale"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -1957,16 +2458,19 @@
         "pesoMaximo": 10,
         "curiosidades": [
             {
+                "key": "they_have_a_third_eye_on_their_head_to_detect_light",
                 "es": "Tienen un 'tercer ojo' en la cabeza para detectar luz",
                 "en": "They have a 'third eye' on their head to detect light",
                 "fr": "Ils ont un « troisième œil » sur la tête pour détecter la lumière"
             },
             {
+                "key": "they_are_excellent_swimmers",
                 "es": "Son excelentes nadadoras",
                 "en": "They are excellent swimmers",
                 "fr": "Ce sont d'excellentes nageuses"
             },
             {
+                "key": "they_use_their_tail_as_a_whip_for_defense",
                 "es": "Utilizan su cola como látigo para defenderse",
                 "en": "They use their tail as a whip for defense",
                 "fr": "Elles utilisent leur queue comme un fouet pour se défendre"
@@ -1976,25 +2480,34 @@
     {
         "id": 43,
         "nombre": {
+            "key": "vampire_bat",
             "es": "Murciélago vampiro",
             "en": "Vampire Bat",
             "fr": "Vampire commun"
         },
         "nombreCientifico": "Desmodus rotundus",
         "descripcion": {
+            "key": "hematophagous_bat_known_for_feeding_on_the_blood_of_birds_and_livestock",
             "es": "Murciélago hematófago conocido por alimentarse de sangre de aves y ganado.",
             "en": "Hematophagous bat known for feeding on the blood of birds and livestock.",
             "fr": "Chauve-souris hématophage connue pour se nourrir du sang des oiseaux et du bétail."
         },
         "imagen": "/assets/images/animals/murcielago-vampiro.jpg",
         "dieta": {
+            "key": "hematophagous",
             "es": "hematófago",
             "en": "hematophagous",
             "fr": "hématophage"
         },
         "ecosistemaId": 2,
-        "continente": "América del Sur",
+        "continente": {
+            "key": "south_america",
+            "es": "América del Sur",
+            "en": "South America",
+            "fr": "Amérique du Sud"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -2004,16 +2517,19 @@
         "pesoMaximo": 0.05,
         "curiosidades": [
             {
+                "key": "they_have_anticoagulant_enzymes_in_their_saliva",
                 "es": "Tienen enzimas anticoagulantes en la saliva",
                 "en": "They have anticoagulant enzymes in their saliva",
                 "fr": "Ils ont des enzymes anticoagulantes dans leur salive"
             },
             {
+                "key": "they_share_regurgitated_blood_with_hungry_colony_members",
                 "es": "Comparten sangre regurgitada con miembros hambrientos de la colonia",
                 "en": "They share regurgitated blood with hungry colony members",
                 "fr": "Ils partagent du sang régurgité avec les membres affamés de la colonie"
             },
             {
+                "key": "they_can_run_and_jump_on_the_ground_with_great_agility",
                 "es": "Pueden correr y saltar sobre el suelo con gran agilidad",
                 "en": "They can run and jump on the ground with great agility",
                 "fr": "Ils peuvent courir et sauter sur le sol avec une grande agilité"
@@ -2023,25 +2539,34 @@
     {
         "id": 44,
         "nombre": {
+            "key": "yacare_caiman",
             "es": "Caimán yacaré",
             "en": "Yacare Caiman",
             "fr": "Caïman yacaré"
         },
         "nombreCientifico": "Caiman yacare",
         "descripcion": {
+            "key": "semi_aquatic_south_american_reptile_common_in_the_pantanal",
             "es": "Reptil semiacuático de América del Sur, común en el Pantanal.",
             "en": "Semi-aquatic South American reptile, common in the Pantanal.",
             "fr": "Reptile semi-aquatique d'Amérique du Sud, commun dans le Pantanal."
         },
         "imagen": "/assets/images/animals/caiman-yacare.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 7,
-        "continente": "América del Sur",
+        "continente": {
+            "key": "south_america",
+            "es": "América del Sur",
+            "en": "South America",
+            "fr": "Amérique du Sud"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -2051,16 +2576,19 @@
         "pesoMaximo": 70,
         "curiosidades": [
             {
+                "key": "their_primary_diet_consists_of_fish_and_aquatic_snails",
                 "es": "Su dieta principal consiste en peces y caracoles acuáticos",
                 "en": "Their primary diet consists of fish and aquatic snails",
                 "fr": "Leur régime principal se compose de poissons et d'escargots aquatiques"
             },
             {
+                "key": "their_eyes_glow_in_the_dark_when_light_is_shone_on_them",
                 "es": "Sus ojos brillan en la oscuridad cuando se les ilumina",
                 "en": "Their eyes glow in the dark when light is shone on them",
                 "fr": "Leurs yeux brillent dans l'obscurité lorsqu'ils sont éclairés"
             },
             {
+                "key": "they_are_essential_for_the_balance_of_river_ecosystems",
                 "es": "Son fundamentales para el equilibrio de los ecosistemas fluviales",
                 "en": "They are essential for the balance of river ecosystems",
                 "fr": "Ils sont essentiels à l'équilibre des écosystèmes fluviaux"
@@ -2070,25 +2598,34 @@
     {
         "id": 45,
         "nombre": {
+            "key": "emu",
             "es": "Emú",
             "en": "Emu",
             "fr": "Émeu"
         },
         "nombreCientifico": "Dromaius novaehollandiae",
         "descripcion": {
+            "key": "large_australian_flightless_bird_the_second_largest_in_the_world",
             "es": "Gran ave no voladora australiana, la segunda más grande del mundo.",
             "en": "Large Australian flightless bird, the second largest in the world.",
             "fr": "Grand oiseau coureur australien, le deuxième plus grand au monde."
         },
         "imagen": "/assets/images/animals/emu.jpg",
         "dieta": {
+            "key": "omnivore",
             "es": "omnívoro",
             "en": "omnivore",
             "fr": "omnivore"
         },
         "ecosistemaId": 9,
-        "continente": "Oceanía",
+        "continente": {
+            "key": "oceania",
+            "es": "Oceanía",
+            "en": "Oceania",
+            "fr": "Océanie"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -2098,16 +2635,19 @@
         "pesoMaximo": 60,
         "curiosidades": [
             {
+                "key": "they_can_run_at_50_km_h",
                 "es": "Pueden correr a 50 km/h",
                 "en": "They can run at 50 km/h",
                 "fr": "Ils peuvent courir à 50 km/h"
             },
             {
+                "key": "the_male_incubates_the_eggs_and_raises_the_chicks",
                 "es": "El macho es quien incuba los huevos y cría a los polluelos",
                 "en": "The male incubates the eggs and raises the chicks",
                 "fr": "C'est le mâle qui incube les œufs et élève les poussins"
             },
             {
+                "key": "they_have_two_sets_of_eyelids_one_for_blinking_and_one_for_dust",
                 "es": "Tienen dos juegos de párpados, uno para parpadear y otro para el polvo",
                 "en": "They have two sets of eyelids, one for blinking and one for dust",
                 "fr": "Ils ont deux paires de paupières, une pour cligner et l'autre pour la poussière"
@@ -2117,25 +2657,34 @@
     {
         "id": 46,
         "nombre": {
+            "key": "dingo",
             "es": "Dingo",
             "en": "Dingo",
             "fr": "Dingo"
         },
         "nombreCientifico": "Canis lupus dingo",
         "descripcion": {
+            "key": "wild_australian_canid_descendant_of_asian_wolves",
             "es": "Cánido salvaje de Australia, descendiente de lobos asiáticos.",
             "en": "Wild Australian canid, descendant of Asian wolves.",
             "fr": "Canidé sauvage d'Australie, descendant des loups asiatiques."
         },
         "imagen": "/assets/images/animals/dingo.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 9,
-        "continente": "Oceanía",
+        "continente": {
+            "key": "oceania",
+            "es": "Oceanía",
+            "en": "Oceania",
+            "fr": "Océanie"
+        },
         "estadoConservacion": {
+            "key": "vulnerable",
             "es": "vulnerable",
             "en": "vulnerable",
             "fr": "vulnérable"
@@ -2145,16 +2694,19 @@
         "pesoMaximo": 24,
         "curiosidades": [
             {
+                "key": "they_dont_bark_like_dogs_they_usually_howl_like_wolves",
                 "es": "No ladran como los perros; suelen aullar como los lobos",
                 "en": "They don't bark like dogs; they usually howl like wolves",
                 "fr": "Ils n'aboient pas comme les chiens ; ils hurlent comme les loups"
             },
             {
+                "key": "they_have_very_flexible_wrists_allowing_them_to_climb",
                 "es": "Tienen muñecas muy flexibles, lo que les permite trepar",
                 "en": "They have very flexible wrists, allowing them to climb",
                 "fr": "Ils ont des poignets très souples, ce qui leur permet de grimper"
             },
             {
+                "key": "they_are_australias_largest_land_predators",
                 "es": "Son los depredadores terrestres más grandes de Australia",
                 "en": "They are Australia's largest land predators",
                 "fr": "Ce sont les plus grands prédateurs terrestres d'Australie"
@@ -2164,25 +2716,34 @@
     {
         "id": 47,
         "nombre": {
+            "key": "ocelot",
             "es": "Ocelote",
             "en": "Ocelot",
             "fr": "Ocelot"
         },
         "nombreCientifico": "Leopardus pardalis",
         "descripcion": {
+            "key": "medium_sized_feline_with_a_unique_spotted_coat_native_to_the_americas",
             "es": "Felino de tamaño medio con un pelaje moteado único, nativo de América.",
             "en": "Medium-sized feline with a unique spotted coat, native to the Americas.",
             "fr": "Félin de taille moyenne au pelage tacheté unique, originaire d'Amérique."
         },
         "imagen": "/assets/images/animals/ocelote.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 2,
-        "continente": "América Central",
+        "continente": {
+            "key": "central_america",
+            "es": "América Central",
+            "en": "Central America",
+            "fr": "Amérique centrale"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -2192,16 +2753,19 @@
         "pesoMaximo": 15,
         "curiosidades": [
             {
+                "key": "each_specimen_has_a_unique_pattern_of_spots",
                 "es": "Cada ejemplar tiene un patrón de manchas irrepetible",
                 "en": "Each specimen has a unique pattern of spots",
                 "fr": "Chaque individu a un motif de taches unique"
             },
             {
+                "key": "they_were_sacred_to_civilizations_like_the_aztecs_and_mayans",
                 "es": "Eran sagrados para civilizaciones como los aztecas y mayas",
                 "en": "They were sacred to civilizations like the Aztecs and Mayans",
                 "fr": "Ils étaient sacrés pour des civilisations comme les Aztèques et les Mayas"
             },
             {
+                "key": "unlike_other_cats_they_dont_mind_water",
                 "es": "A diferencia de otros gatos, no les disgusta el agua",
                 "en": "Unlike other cats, they don't mind water",
                 "fr": "Contrairement aux autres félins, ils n'aiment pas l'eau"
@@ -2211,25 +2775,34 @@
     {
         "id": 48,
         "nombre": {
+            "key": "cheetah",
             "es": "Guepardo",
             "en": "Cheetah",
             "fr": "Guépard"
         },
         "nombreCientifico": "Acinonyx jubatus",
         "descripcion": {
+            "key": "the_worlds_fastest_land_animal_an_expert_in_short_sprints",
             "es": "El animal terrestre más rápido del mundo, experto en carreras cortas.",
             "en": "The world's fastest land animal, an expert in short sprints.",
             "fr": "L'animal terrestre le plus rapide au monde, expert des sprints courts."
         },
         "imagen": "/assets/images/animals/chita.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 1,
-        "continente": "África",
+        "continente": {
+            "key": "africa",
+            "es": "África",
+            "en": "Africa",
+            "fr": "Afrique"
+        },
         "estadoConservacion": {
+            "key": "vulnerable",
             "es": "vulnerable",
             "en": "vulnerable",
             "fr": "vulnérable"
@@ -2239,16 +2812,19 @@
         "pesoMaximo": 72,
         "curiosidades": [
             {
+                "key": "they_accelerate_from_0_to_100_km_h_in_just_3_seconds",
                 "es": "Aceleran de 0 a 100 km/h en solo 3 segundos",
                 "en": "They accelerate from 0 to 100 km/h in just 3 seconds",
                 "fr": "Ils passent de 0 à 100 km/h en seulement 3 secondes"
             },
             {
+                "key": "their_claws_are_not_retractable_providing_traction_while_running",
                 "es": "Sus garras no son retráctiles, lo que les da tracción al correr",
                 "en": "Their claws are not retractable, providing traction while running",
                 "fr": "Leurs griffes ne sont pas rétractiles, ce qui leur donne de l'adhérence"
             },
             {
+                "key": "the_black_lines_on_their_face_help_reduce_sun_glare",
                 "es": "Las líneas negras en su cara ayudan a reducir el brillo del sol",
                 "en": "The black lines on their face help reduce sun glare",
                 "fr": "Les lignes noires sur leur face aident à réduire l'éblouissement du soleil"
@@ -2258,25 +2834,34 @@
     {
         "id": 49,
         "nombre": {
+            "key": "northeast_african_cheetah",
             "es": "Guepardo del noreste africano",
             "en": "Northeast African Cheetah",
             "fr": "Guépard d'Afrique du Nord-Est"
         },
         "nombreCientifico": "Acinonyx jubatus soemmeringii",
         "descripcion": {
+            "key": "cheetah_subspecies_adapted_to_more_arid_climates_in_northeast_africa",
             "es": "Subespecie de guepardo adaptada a climas más áridos del noreste de África.",
             "en": "Cheetah subspecies adapted to more arid climates in Northeast Africa.",
             "fr": "Sous-espèce de guépard adaptée aux climats plus arides d'Afrique du Nord-Est."
         },
         "imagen": "/assets/images/animals/guepardo-africano.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 3,
-        "continente": "África",
+        "continente": {
+            "key": "africa",
+            "es": "África",
+            "en": "Africa",
+            "fr": "Afrique"
+        },
         "estadoConservacion": {
+            "key": "endangered",
             "es": "en peligro",
             "en": "endangered",
             "fr": "en danger"
@@ -2286,16 +2871,19 @@
         "pesoMaximo": 60,
         "curiosidades": [
             {
+                "key": "it_is_genetically_distinct_from_southern_african_populations",
                 "es": "Es genéticamente distinto a las poblaciones del sur de África",
                 "en": "It is genetically distinct from Southern African populations",
                 "fr": "Il est génétiquement distinct des populations d'Afrique australe"
             },
             {
+                "key": "their_populations_are_highly_fragmented",
                 "es": "Sus poblaciones están muy fragmentadas",
                 "en": "Their populations are highly fragmented",
                 "fr": "Leurs populations sont très fragmentées"
             },
             {
+                "key": "they_suffer_from_the_loss_of_natural_prey",
                 "es": "Sufren por la pérdida de presas naturales",
                 "en": "They suffer from the loss of natural prey",
                 "fr": "Ils souffrent de la perte de leurs proies naturelles"
@@ -2305,25 +2893,34 @@
     {
         "id": 50,
         "nombre": {
+            "key": "rattlesnake",
             "es": "Serpiente de cascabel",
             "en": "Rattlesnake",
             "fr": "Crotale"
         },
         "nombreCientifico": "Crotalus",
         "descripcion": {
+            "key": "venomous_snake_with_a_rattle_on_its_tail_used_for_warning",
             "es": "Serpiente venenosa con un cascabel en la cola usado para advertir.",
             "en": "Venomous snake with a rattle on its tail used for warning.",
             "fr": "Serpent venimeux doté d'une sonnette au bout de la queue pour avertir."
         },
         "imagen": "/assets/images/animals/culebra-cascabel.jpg",
         "dieta": {
+            "key": "carnivore",
             "es": "carnívoro",
             "en": "carnivore",
             "fr": "carnivore"
         },
         "ecosistemaId": 3,
-        "continente": "América del Norte",
+        "continente": {
+            "key": "north_america",
+            "es": "América del Norte",
+            "en": "North America",
+            "fr": "Amérique du Nord"
+        },
         "estadoConservacion": {
+            "key": "least_concern",
             "es": "preocupación menor",
             "en": "least concern",
             "fr": "préoccupation mineure"
@@ -2333,16 +2930,19 @@
         "pesoMaximo": 5,
         "curiosidades": [
             {
+                "key": "the_rattle_is_made_of_keratin_like_our_nails",
                 "es": "El cascabel está hecho de queratina, como nuestras uñas",
                 "en": "The rattle is made of keratin, like our nails",
                 "fr": "La sonnette est faite de kératine, comme nos ongles"
             },
             {
+                "key": "they_are_ovoviviparous_young_are_born_live_from_internal_eggs",
                 "es": "Son ovovivíparas: las crías nacen vivas de huevos internos",
                 "en": "They are ovoviviparous: young are born live from internal eggs",
                 "fr": "Elles sont ovovivipares : les petits naissent vivants d'œufs internes"
             },
             {
+                "key": "they_have_loreal_pits_to_detect_the_heat_of_their_prey",
                 "es": "Tienen fosetas loreales para detectar el calor de sus presas",
                 "en": "They have loreal pits to detect the heat of their prey",
                 "fr": "Elles ont des fossettes loreales pour détecter la chaleur de leurs proies"
