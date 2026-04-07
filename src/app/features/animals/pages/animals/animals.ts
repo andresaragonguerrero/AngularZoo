@@ -29,9 +29,9 @@ export class AnimalsComponent implements OnInit {
   readonly pageSize = 5;
 
   private searchTerm = '';
-  private dietFilter = '';
-  private continentFilter = '';
-  private conservationStatusFilter = '';
+  dietFilter = '';
+  continentFilter = '';
+  conservationStatusFilter = '';
 
   constructor(private readonly animalService: AnimalService) { }
 
@@ -67,7 +67,9 @@ export class AnimalsComponent implements OnInit {
     this.dietFilter = '';
     this.continentFilter = '';
     this.conservationStatusFilter = '';
+
     this.filteredAnimals = [...this.animals];
+    this.currentPage = 1;
   }
 
   get paginatedAnimals(): Animal[] {

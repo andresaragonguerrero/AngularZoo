@@ -1,8 +1,5 @@
-import { Component, EventEmitter, Output } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
-
-// Modelos
-import { Animal } from '../../models/animal.interface';
 
 @Component({
   selector: 'app-animal-filters',
@@ -13,6 +10,11 @@ import { Animal } from '../../models/animal.interface';
   styleUrl: './animal-filters.scss',
 })
 export class AnimalFilters {
+  
+  @Input() selectedDiet = '';
+  @Input() selectedContinent = '';
+  @Input() selectedConservationStatus = '';
+
   @Output() searchChange = new EventEmitter<string>();
   @Output() continentChange = new EventEmitter<string | ''>();
   @Output() clear = new EventEmitter<void>();

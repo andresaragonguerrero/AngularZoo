@@ -6,7 +6,7 @@
 
     <div class="filters__controls">
 
-        <select #diet (change)="onDietChange(diet.value)">
+        <select #diet [value]="selectedDiet" (change)="onDietChange(diet.value)">
             <option value="">{{ 'ANIMAL_FILTERS.ALL_DIETS' | translate }}</option>
             <option value="herbivore">{{ 'ANIMAL_FILTERS.HERBIVORE' | translate }}</option>
             <option value="carnivore">{{ 'ANIMAL_FILTERS.CARNIVORE' | translate }}</option>
@@ -14,7 +14,7 @@
             <option value="insectivore">{{ 'ANIMAL_FILTERS.INSECTIVORE' | translate }}</option>
         </select>
 
-        <select #continent (change)="onContinentChange(continent.value)">
+        <select #continent [value]="selectedContinent" (change)="onContinentChange(continent.value)">
             <option value="">{{ 'ANIMAL_FILTERS.ALL_CONTINENTS' | translate }}</option>
             <option value="africa">{{ 'ANIMAL_FILTERS.AFRICA' | translate }}</option>
             <option value="europe">{{ 'ANIMAL_FILTERS.EUROPE' | translate }}</option>
@@ -23,7 +23,7 @@
             <option value="oceania">{{ 'ANIMAL_FILTERS.OCEANIA' | translate }}</option>
         </select>
 
-        <select #conservationStatus (change)="onConservationStatusChange(conservationStatus.value)">
+        <select #conservationStatus [value]="selectedConservationStatus" (change)="onConservationStatusChange(conservationStatus.value)">
             <option value="">{{ 'ANIMAL_FILTERS.ALL_CONSERVATION' | translate }}</option>
             <option value="least_concern">{{ 'ANIMAL_FILTERS.LEAST_CONCERN' | translate }}</option>
             <option value="vulnerable">{{ 'ANIMAL_FILTERS.VULNERABLE' | translate }}</option>

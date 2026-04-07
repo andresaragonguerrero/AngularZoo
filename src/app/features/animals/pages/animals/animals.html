@@ -2,7 +2,8 @@
 
     <app-animal-filters (searchChange)="onSearch($event)" (dietChange)="onDietChange($event)"
         (continentChange)="onContinentChange($event)" (conservationStatusChange)="onConservationStatusChange($event)"
-        (clear)="onClear()">
+        (clear)="onClear()" [selectedDiet]="dietFilter" [selectedContinent]="continentFilter"
+        [selectedConservationStatus]="conservationStatusFilter">
     </app-animal-filters>
 
     <app-animal-list [animals]="paginatedAnimals">
