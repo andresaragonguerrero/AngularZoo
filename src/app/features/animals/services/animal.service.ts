@@ -25,7 +25,7 @@ export class AnimalService {
     if (!status) return this.getAnimals();
 
     return this.filterAnimals(a =>
-      a.estadoConservacion.en.toLowerCase().replace(' ', '_') === status.toLowerCase()
+      a.estadoConservacion.key === status
     );
   }
 
@@ -65,7 +65,7 @@ export class AnimalService {
     if (!continent) return this.getAnimals();
 
     return this.filterAnimals(a =>
-      a.continente.toLowerCase().trim() === continent.toLowerCase().trim()
+      a.continente.en.toLowerCase().trim() === continent.toLowerCase().trim()
     );
   }
 

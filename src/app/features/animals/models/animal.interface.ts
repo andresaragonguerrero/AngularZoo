@@ -8,7 +8,7 @@ export interface Animal {
   imagen: string;
   dieta: LocalizedString;
   ecosistemaId: number;
-  continente: string;
+  continente: LocalizedString;
   estadoConservacion: LocalizedString;
   esperanzaVida: number;
   pesoMinimo: number;

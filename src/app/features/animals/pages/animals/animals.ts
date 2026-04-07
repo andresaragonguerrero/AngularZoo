@@ -90,7 +90,7 @@ export class AnimalsComponent implements OnInit {
       const matchesDiet =
         !this.dietFilter || animal.dieta.en === this.dietFilter;
       const matchesContinent =
-        !this.continentFilter || animal.continente === this.continentFilter;
+        !this.continentFilter || animal.continente.en.toLowerCase() === this.continentFilter.toLowerCase();
       const matchesConservationStatus =
         !this.conservationStatusFilter ||
         animal.estadoConservacion.en === this.conservationStatusFilter;
