@@ -20,6 +20,7 @@ describe('TicketRepository', () => {
     const ticket: Ticket = {
       id: 'test-1',
       date: '2024-01-20',
+      hour: '10:00',
       quantities: { ADULT: 2, CHILD: 0, SENIOR: 0 },
       total: 40
     };
@@ -39,6 +40,7 @@ describe('TicketRepository', () => {
     const ticket1: Ticket = {
       id: 'test-1',
       date: '2024-01-20',
+      hour: '10:00',
       quantities: { ADULT: 1, CHILD: 0, SENIOR: 0 },
       total: 20
     };
@@ -46,6 +48,7 @@ describe('TicketRepository', () => {
     const ticket2: Ticket = {
       id: 'test-2',
       date: '2024-01-21',
+      hour: '10:00',
       quantities: { ADULT: 2, CHILD: 1, SENIOR: 0 },
       total: 52
     };
@@ -66,8 +69,8 @@ describe('TicketRepository', () => {
 
   it('debería retornar todos los tickets guardados', () => {
     const tickets: Ticket[] = [
-      { id: '1', date: '2024-01-20', quantities: { ADULT: 1, CHILD: 0, SENIOR: 0 }, total: 20 },
-      { id: '2', date: '2024-01-21', quantities: { ADULT: 2, CHILD: 0, SENIOR: 0 }, total: 40 }
+      { id: '1', date: '2024-01-20', hour: '10:00', quantities: { ADULT: 1, CHILD: 0, SENIOR: 0 }, total: 20 },
+      { id: '2', date: '2024-01-21', hour: '10:00', quantities: { ADULT: 2, CHILD: 0, SENIOR: 0 }, total: 40 }
     ];
     
     localStorage.setItem(STORAGE_KEY, JSON.stringify(tickets));
@@ -81,8 +84,8 @@ describe('TicketRepository', () => {
 
   it('debería encontrar ticket por ID', () => {
     const tickets: Ticket[] = [
-      { id: 'find-me', date: '2024-01-20', quantities: { ADULT: 1, CHILD: 0, SENIOR: 0 }, total: 20 },
-      { id: 'other', date: '2024-01-21', quantities: { ADULT: 2, CHILD: 0, SENIOR: 0 }, total: 40 }
+      { id: 'find-me', date: '2024-01-20', hour: '10:00', quantities: { ADULT: 1, CHILD: 0, SENIOR: 0 }, total: 20 },
+      { id: 'other', date: '2024-01-21', hour: '10:00', quantities: { ADULT: 2, CHILD: 0, SENIOR: 0 }, total: 40 }
     ];
     
     localStorage.setItem(STORAGE_KEY, JSON.stringify(tickets));
@@ -94,7 +97,7 @@ describe('TicketRepository', () => {
 
   it('debería retornar undefined si no encuentra el ID', () => {
     const tickets: Ticket[] = [
-      { id: '1', date: '2024-01-20', quantities: { ADULT: 1, CHILD: 0, SENIOR: 0 }, total: 20 }
+      { id: '1', date: '2024-01-20', hour: '10:00', quantities: { ADULT: 1, CHILD: 0, SENIOR: 0 }, total: 20 }
     ];
     
     localStorage.setItem(STORAGE_KEY, JSON.stringify(tickets));
@@ -106,8 +109,8 @@ describe('TicketRepository', () => {
 
   it('debería eliminar ticket por ID', () => {
     const tickets: Ticket[] = [
-      { id: 'delete-me', date: '2024-01-20', quantities: { ADULT: 1, CHILD: 0, SENIOR: 0 }, total: 20 },
-      { id: 'keep-me', date: '2024-01-21', quantities: { ADULT: 2, CHILD: 0, SENIOR: 0 }, total: 40 }
+      { id: 'delete-me', date: '2024-01-20', hour: '10:00', quantities: { ADULT: 1, CHILD: 0, SENIOR: 0 }, total: 20 },
+      { id: 'keep-me', date: '2024-01-21', hour: '10:00',  quantities: { ADULT: 2, CHILD: 0, SENIOR: 0 }, total: 40 }
     ];
     
     localStorage.setItem(STORAGE_KEY, JSON.stringify(tickets));
@@ -121,7 +124,7 @@ describe('TicketRepository', () => {
 
   it('no debería hacer nada si el ID no existe', () => {
     const tickets: Ticket[] = [
-      { id: '1', date: '2024-01-20', quantities: { ADULT: 1, CHILD: 0, SENIOR: 0 }, total: 20 }
+      { id: '1', date: '2024-01-20', hour: '10:00', quantities: { ADULT: 1, CHILD: 0, SENIOR: 0 }, total: 20 }
     ];
     
     localStorage.setItem(STORAGE_KEY, JSON.stringify(tickets));
@@ -135,7 +138,7 @@ describe('TicketRepository', () => {
 
   it('debería eliminar todos los tickets', () => {
     const tickets: Ticket[] = [
-      { id: '1', date: '2024-01-20', quantities: { ADULT: 1, CHILD: 0, SENIOR: 0 }, total: 20 }
+      { id: '1', date: '2024-01-20', hour: '10:00', quantities: { ADULT: 1, CHILD: 0, SENIOR: 0 }, total: 20 }
     ];
     
     localStorage.setItem(STORAGE_KEY, JSON.stringify(tickets));
@@ -148,8 +151,8 @@ describe('TicketRepository', () => {
 
   it('debería retornar el último ticket guardado', () => {
     const tickets: Ticket[] = [
-      { id: 'first', date: '2024-01-20', quantities: { ADULT: 1, CHILD: 0, SENIOR: 0 }, total: 20 },
-      { id: 'last', date: '2024-01-21', quantities: { ADULT: 2, CHILD: 0, SENIOR: 0 }, total: 40 }
+      { id: 'first', date: '2024-01-20', hour: '10:00', quantities: { ADULT: 1, CHILD: 0, SENIOR: 0 }, total: 20 },
+      { id: 'last', date: '2024-01-21', hour: '10:00', quantities: { ADULT: 2, CHILD: 0, SENIOR: 0 }, total: 40 }
     ];
     
     localStorage.setItem(STORAGE_KEY, JSON.stringify(tickets));
@@ -170,8 +173,8 @@ describe('TicketRepository', () => {
 
   it('debería retornar el número correcto de tickets', () => {
     const tickets: Ticket[] = [
-      { id: '1', date: '2024-01-20', quantities: { ADULT: 1, CHILD: 0, SENIOR: 0 }, total: 20 },
-      { id: '2', date: '2024-01-21', quantities: { ADULT: 2, CHILD: 0, SENIOR: 0 }, total: 40 }
+      { id: '1', date: '2024-01-20', hour: '10:00', quantities: { ADULT: 1, CHILD: 0, SENIOR: 0 }, total: 20 },
+      { id: '2', date: '2024-01-21', hour: '10:00', quantities: { ADULT: 2, CHILD: 0, SENIOR: 0 }, total: 40 }
     ];
     
     localStorage.setItem(STORAGE_KEY, JSON.stringify(tickets));
