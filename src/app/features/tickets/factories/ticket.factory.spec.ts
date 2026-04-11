@@ -22,6 +22,7 @@ describe('TicketFactory', () => {
     it('debería prevenir cantidades negativas', () => {
       const data = {
         date: '2024-01-20',
+        hour: '10:00',
         quantities: { ADULT: -5, CHILD: 0, SENIOR: -1 } as TicketQuantities,
         total: -30
       };
@@ -36,6 +37,7 @@ describe('TicketFactory', () => {
     it('debería usar fecha por defecto si no se proporciona', () => {
       const data = {
         date: '',
+        hour: '10:00',
         quantities: { ADULT: 1, CHILD: 0, SENIOR: 0 } as TicketQuantities,
         total: 20
       };
@@ -48,6 +50,7 @@ describe('TicketFactory', () => {
     it('debería crear un ticket con datos básicos', () => {
       const data = {
         date: '2024-01-20',
+        hour: '10:00',
         quantities: { ADULT: 2, CHILD: 1, SENIOR: 0 } as TicketQuantities,
         total: 52
       };
@@ -61,6 +64,7 @@ describe('TicketFactory', () => {
     it('debería manejar valores undefined en cantidades', () => {
       const data = {
         date: '2024-01-20',
+        hour: '10:00',
         quantities: { ADULT: undefined, CHILD: 2, SENIOR: 1 } as any,
         total: 39
       };
