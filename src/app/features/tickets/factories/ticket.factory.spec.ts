@@ -1,5 +1,5 @@
 import { TicketFactory } from './ticket.factory';
-import { TicketQuantities } from '../models/ticket-type';
+import { TicketQuantities } from '../models/ticket-type.interface';
 
 describe('TicketFactory', () => {
   let factory: TicketFactory;
