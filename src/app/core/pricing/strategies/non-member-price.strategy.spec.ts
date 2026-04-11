@@ -1,5 +1,5 @@
 import { NonMemberPriceStrategy } from './non-member-price.strategy';
-import { TICKET_PRICES } from '../models/ticket-type';
+import { TICKET_PRICES } from '../../../features/tickets/models/ticket-type.interface';
 
 describe('NonMemberPriceStrategy', () => {
   let strategy: NonMemberPriceStrategy;

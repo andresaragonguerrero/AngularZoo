@@ -1,7 +1,7 @@
 import { TestBed } from '@angular/core/testing';
 import { PriceCalculatorService } from './price-calculator.service';
-import { MemberPriceStrategy } from '../core/princing/strategies/member-price.strategy';
-import { NonMemberPriceStrategy } from '../core/princing/strategies/non-member-price.strategy';
+import { MemberPriceStrategy } from '../strategies/member-price.strategy';
+import { NonMemberPriceStrategy } from '../strategies/non-member-price.strategy';
 
 describe('PriceCalculatorService', () => {
   let service: PriceCalculatorService;
