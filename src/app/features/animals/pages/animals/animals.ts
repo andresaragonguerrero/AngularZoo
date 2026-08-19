@@ -25,6 +25,8 @@ export class AnimalsComponent implements OnInit {
   animals: Animal[] = [];
   filteredAnimals: Animal[] = [];
 
+  isLoading = true;
+
   currentPage = 1;
   readonly pageSize = 5;
 
@@ -36,9 +38,16 @@ export class AnimalsComponent implements OnInit {
   constructor(private readonly animalService: AnimalService) { }
 
   ngOnInit(): void {
-    this.animalService.getAnimals().subscribe(animals => {
-      this.animals = animals;
-      this.filteredAnimals = [...animals];
+    this.animalService.getAnimals().subscribe({
+      next: animals => {
+        this.animals = animals;
+        this.filteredAnimals = [...animals];
+        this.isLoading = false;
+      },
+      error: error => {
+        console.error('Error loading animals:', error);
+        this.isLoading = false;
+      }
     });
   }
 

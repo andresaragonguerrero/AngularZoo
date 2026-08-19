@@ -1,0 +1,159 @@
+.animal-list-skeleton {
+    width: 100%;
+}
+
+.animal-list-skeleton__grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: var(--space-7);
+}
+
+.animal-card-skeleton {
+    grid-column: span 2;
+    position: relative;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background-color: var(--secondary-200);
+}
+
+.animal-card-skeleton:nth-child(4) {
+    grid-column: 2 / span 2;
+}
+
+.animal-card-skeleton:nth-child(5) {
+    grid-column: 4 / span 2;
+}
+
+.animal-card-skeleton__image,
+.animal-card-skeleton__badge,
+.animal-card-skeleton__name,
+.animal-card-skeleton__scientific,
+.animal-card-skeleton__description span,
+.animal-card-skeleton__weight {
+    position: relative;
+    overflow: hidden;
+    background-color: var(--secondary-200);
+}
+
+.animal-card-skeleton__image::after,
+.animal-card-skeleton__badge::after,
+.animal-card-skeleton__name::after,
+.animal-card-skeleton__scientific::after,
+.animal-card-skeleton__description span::after,
+.animal-card-skeleton__weight::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(255, 255, 255, 0.35) 50%,
+            transparent 100%);
+    transform: translateX(-100%);
+    animation: animal-skeleton-shimmer 1.5s infinite;
+}
+
+@keyframes animal-skeleton-shimmer {
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+.animal-card-skeleton__image {
+    position: absolute;
+    inset: 0;
+    background-color: var(--secondary-200);
+}
+
+.animal-card-skeleton__content {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+
+    height: 12rem;
+    padding: var(--space-3) var(--space-6);
+
+    display: grid;
+    align-content: start;
+    gap: var(--space-3);
+
+    background-color: var(--secondary-300);
+}
+
+.animal-card-skeleton__meta {
+    display: flex;
+    gap: var(--space-2);
+    flex-wrap: wrap;
+}
+
+.animal-card-skeleton__badge {
+    width: 4rem;
+    height: 1.1rem;
+}
+
+.animal-card-skeleton__name {
+    width: 55%;
+    height: 1.5rem;
+}
+
+.animal-card-skeleton__scientific {
+    width: 45%;
+    height: 0.8rem;
+}
+
+.animal-card-skeleton__description {
+    display: grid;
+    gap: 0.35rem;
+}
+
+.animal-card-skeleton__description span {
+    display: block;
+    width: 100%;
+    height: 0.7rem;
+}
+
+.animal-card-skeleton__description span:nth-child(2) {
+    width: 90%;
+}
+
+.animal-card-skeleton__description span:nth-child(3) {
+    width: 70%;
+}
+
+.animal-card-skeleton__weight {
+    width: 35%;
+    height: 0.8rem;
+}
+
+@media (max-width: 1024px) {
+    .animal-list-skeleton__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-5);
+    }
+
+    .animal-card-skeleton,
+    .animal-card-skeleton:nth-child(4),
+    .animal-card-skeleton:nth-child(5) {
+        grid-column: span 1;
+    }
+}
+
+@media (max-width: 768px) {
+    .animal-list-skeleton__grid {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .animal-card-skeleton__content {
+        height: auto;
+        padding: var(--space-3) var(--space-4);
+    }
+}
+
+@media (max-width: 480px) {
+    .animal-card-skeleton__content {
+        padding: var(--space-2) var(--space-3);
+        gap: var(--space-2);
+    }
+}

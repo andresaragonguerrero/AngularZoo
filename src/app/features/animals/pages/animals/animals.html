@@ -6,7 +6,7 @@
         [selectedConservationStatus]="conservationStatusFilter">
     </app-animal-filters>
 
-    <app-animal-list [animals]="paginatedAnimals">
+    <app-animal-list [animals]="paginatedAnimals" [isLoading]="isLoading">
     </app-animal-list>
 
     <app-animal-pagination [totalItems]="filteredAnimals.length" [currentPage]="currentPage" [pageSize]="pageSize"

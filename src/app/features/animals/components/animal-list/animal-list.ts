@@ -5,6 +5,7 @@ import { TranslateModule } from '@ngx-translate/core';
 import { TranslateService } from '@ngx-translate/core';
 import { toSignal } from '@angular/core/rxjs-interop';
 import { map } from 'rxjs/operators';
+import { AnimalListSkeleton } from '../animal-list-skeleton/animal-list-skeleton';
 
 // Modelos
 import { Animal } from '../../models/animal.interface';
@@ -22,6 +23,7 @@ import { AuthService } from '../../../auth/services/auth.service';
     CommonModule,
     RouterModule,
     TranslateModule,
+    AnimalListSkeleton,
   ],
   templateUrl: './animal-list.html',
   styleUrl: './animal-list.scss',

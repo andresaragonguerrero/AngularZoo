@@ -5,7 +5,7 @@
     </header>
 
     @if (isLoading) {
-    <div class="animal-list__loading">{{ 'ANIMAL_LIST.LOADING' | translate }}</div>
+    <app-animal-list-skeleton></app-animal-list-skeleton>
     }
 
     @if (error) {
@@ -21,7 +21,7 @@
         <article class="animal-card">
 
             <img [src]="brokenImages.has(animal.id) ? '/assets/images/placeholder-animal.jpg' : animal.imagen"
-                [alt]="animal.nombre" (error)="handleImageError($event, animal.id)" />
+                [alt]="getLocalizedField(animal.nombre)" (error)="handleImageError($event, animal.id)" />
 
             <div class="animal-card__overlay"></div>
 
@@ -37,7 +37,8 @@
                 <h3 class="animal-card__name">{{ getLocalizedField(animal.nombre) }}</h3>
                 <p class="animal-card__scientific">{{ animal.nombreCientifico }}</p>
                 <p class="animal-card__description">{{ getLocalizedField(animal.descripcion) }}</p>
-                <p class="animal-card__weight">{{ 'ANIMAL_LIST.WEIGHT' | translate }} {{ formatWeight(animal.pesoMinimo, animal.pesoMaximo) }}</p>
+                <p class="animal-card__weight">{{ 'ANIMAL_LIST.WEIGHT' | translate }} {{ formatWeight(animal.pesoMinimo,
+                    animal.pesoMaximo) }}</p>
             </div>
 
             <div class="animal-card__actions">
