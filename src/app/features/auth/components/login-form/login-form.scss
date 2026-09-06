@@ -150,50 +150,47 @@
 .submit-button {
     position: relative;
     z-index: 1;
-
     overflow: hidden;
 
-    border: 2px solid var(--primary-color);
+    height: 2.5rem;
+    padding: 0 var(--space-4);
 
-    color: var(--primary-color);
-    background-color: var(--background-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
+    font-size: 16px;
+    font-family: var(--secondary-font-family);
+    font-weight: bold;
+
+    border: 2px solid var(--accent-color);
     cursor: pointer;
+    transition: all 0.2s ease-out;
 
-    transition: color 0.2s ease-out;
-}
+    &:not(:disabled) {
+        color: #ffffff;
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
 
-.submit-button:hover:not(:disabled) {
-    color: var(--background-color);
-}
+        &:hover {
+            opacity: 0.9;
+            box-shadow: var(--shadow-sm);
+        }
+    }
 
-.submit-button::before {
-    content: "";
+    &:disabled {
+        border-color: color-mix(in srgb, var(--text-color) 30%, transparent);
+        color: color-mix(in srgb, var(--text-color) 50%, transparent);
+        background-color: color-mix(in srgb, var(--text-color) 10%, transparent);
 
-    height: 100%;
-    width: 0%;
+        opacity: 0.6;
+        cursor: not-allowed;
+    }
 
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-
-    background-color: var(--primary-color);
-
-    transition: width 0.2s ease-out;
-}
-
-.submit-button:hover:not(:disabled)::before {
-    width: 100%;
-}
-
-.submit-button:disabled {
-    border-color: color-mix(in srgb, var(--text-color) 50%, transparent);
-    color: color-mix(in srgb, var(--text-color) 100%, transparent);
-    background: color-mix(in srgb, var(--text-color) 50%, transparent);
-
-    opacity: 0.6;
-    cursor: not-allowed;
+    &:focus-visible {
+        outline: 2px solid var(--accent-color);
+        outline-offset: 2px;
+    }
 }
 
 /* Footer */
